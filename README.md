@@ -437,8 +437,10 @@ You need the website deployed on Cloudflare first (§6), with `siteUrl` in `src/
    - Authorization callback URL: your site + `/oauth/callback`, e.g. `https://govt-jobs-finder.21-anshul-k.workers.dev/oauth/callback`
    - Click **Register application**, copy the **Client ID**, then click **Generate a new client secret** and copy it.
 2. **Add both values to Cloudflare:** Workers & Pages → `govt-jobs-finder` → **Settings → Variables and secrets** → **Add**:
-   - `GITHUB_OAUTH_CLIENT_ID` = the client ID (type *Text*)
-   - `GITHUB_OAUTH_CLIENT_SECRET` = the secret (type *Secret*)
+   - `GITHUB_OAUTH_CLIENT_ID` = the client ID
+   - `GITHUB_OAUTH_CLIENT_SECRET` = the secret
+
+   Choose type **Secret** for both, and add them under *Variables and secrets*, **not** under Build → Variables (build variables don't exist while the site runs).
 3. Click **Deploy** after adding them (Cloudflare asks), so the new values take effect.
 4. Open `https://<your-site>/admin/` and click **Login with GitHub**.
 

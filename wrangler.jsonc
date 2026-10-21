@@ -7,6 +7,8 @@
   "name": "govt-jobs-finder",
   "main": "worker/index.ts",
   "compatibility_date": "2026-10-01",
+  // Keep variables you add in the dashboard (Settings → Variables and secrets) on every deploy.
+  "keep_vars": true,
   "build": {
     "command": "npm run build:web"
   },
