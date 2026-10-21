@@ -204,7 +204,7 @@ This private chat is only for you, the admin. Your public Telegram/WhatsApp chan
 2. Edit `config/monitor.json` and replace `YOUR-GITHUB-USERNAME` in `userAgent` with your GitHub username. This tells site owners who is visiting and how to reach you.
 3. In the repository, go to **Settings → Secrets and variables → Actions → New repository secret** and add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`.
 4. Go to **Settings → Actions → General → Workflow permissions** and choose **Read and write permissions**. This lets the monitor commit its results.
-5. Go to the **Actions** tab, choose **Monitor official sources**, then **Run workflow**. The first run baselines every source and takes about 8 minutes. After that it runs by itself every 3 hours (00:00, 03:00, … UTC) and commits changes with messages like `[CF-Pages-Skip] monitor: 14 new links — SSC, UPPSC, TNPSC, +5 more`. The `[CF-Pages-Skip]` prefix stops Cloudflare from rebuilding the website for these commits, because drafts are never public.
+5. Go to the **Actions** tab, choose **Monitor official sources**, then **Run workflow**. The first run baselines every source and takes about 8 minutes. After that it runs by itself every 3 hours (00:00, 03:00, … UTC) and commits changes with messages like `[CF-Pages-Skip] monitor: 14 new links — SSC, UPPSC, TNPSC, +5 more`. Drafts are never public, so set the build watch paths in §6 to stop Cloudflare rebuilding the site for these commits. The `[CF-Pages-Skip]` prefix does the same if you ever use Cloudflare Pages instead of Workers.
 
 Each run commits to `data/`. Run `git pull` before editing anything locally.
 
@@ -323,23 +323,24 @@ UI text lives in `src/lib/i18n/`. `en.ts` has every string. `hi.ts` currently tr
 - **Speed:** the small stylesheet is inlined, the app's JavaScript loads right after the first paint, icons are inline SVG, and `_headers` caches hashed files for a year. Measured with Lighthouse (mobile): **Performance 97–99, Accessibility 100, Best Practices 100, SEO 100** on the home, job, state, category, admit card and tool pages.
 - Removes Expo's development-only pages from the output and adds a `404.html`.
 
-Clean URLs work out of the box: `dist/jobs/uppsc-pcs-2026.html` is served at `/jobs/uppsc-pcs-2026`.
+Clean URLs work out of the box: `dist/jobs/uppsc-pcs-2026.html` is served at `/jobs/uppsc-pcs-2026`, and unknown pages get `404.html`.
 
-### Deploy to Cloudflare Pages (free)
+### Deploy to Cloudflare (free)
 
-1. **Set your address first.** In `src/config/app.ts`, set `siteUrl` to the address you will use, for example `https://govt-jobs-finder.pages.dev` (step 4 shows the exact one) or your own domain. Canonical links, sitemaps and the apps all use it. Commit and push.
-2. Sign up at <https://dash.cloudflare.com> (free). Go to **Workers & Pages → Create → Pages → Connect to Git**, and pick your GitHub repository.
-3. Build settings:
-   - **Framework preset:** None
-   - **Build command:** `npm run build:web`
-   - **Build output directory:** `dist`
-   - Node.js 24 is picked up automatically from the `.nvmrc` file.
-4. Click **Save and Deploy**. After a few minutes your site is live at `https://<project-name>.pages.dev`. If that differs from the `siteUrl` you set, update `siteUrl` and push again.
-5. From now on, every push to `main` that changes the site (for example publishing a job) deploys automatically. Monitor commits are skipped, as explained above.
+The repo includes `wrangler.jsonc`, so Cloudflare deploys it as a **Worker with static assets**. `npx wrangler deploy` always runs our full build (`npm run build:web`) first. A tiny Worker script (`worker/index.ts`) handles only the admin login (`/oauth/*`) and website push (`/push/*`); everything else is served as static files.
 
-**Optional: daily rebuild.** This keeps "expired" labels and Google markup current on days with no new jobs. In Cloudflare, go to your Pages project → **Settings → Builds → Deploy hooks → Add deploy hook** (branch `main`) and copy the URL. In GitHub, add it as the repository secret `CLOUDFLARE_DEPLOY_HOOK`. The **Daily website rebuild** workflow then rebuilds every morning at 06:00 IST.
+1. **Set your address.** In `src/config/app.ts`, `siteUrl` must be your site's address. It's currently `https://govt-jobs-finder.21-anshul-k.workers.dev`. Canonical links, sitemaps, the admin login and the apps all use it.
+2. In <https://dash.cloudflare.com> go to **Workers & Pages → Create → Import a repository**, and pick this GitHub repo. The Worker **name must be `govt-jobs-finder`** (the `name` in `wrangler.jsonc`).
+3. Under the Worker's **Settings → Build**:
+   - **Build command:** leave it **empty**. Wrangler runs the build itself, and a second build command would only build twice.
+   - **Deploy command:** `npx wrangler deploy`
+   - **Build watch paths → Exclude:** `data/seen-links/*`, `data/monitor/*`, `data/jobs/drafts/*`, `data/jobs/rejected/*`, `reports/*`. The monitor's commits (every 3 hours) then don't rebuild the site for nothing.
+   - If a build ever fails with a Node.js version error, add a build variable `NODE_VERSION` = `24`.
+4. From now on, every push that changes the site deploys automatically, for example publishing a job in the admin panel.
 
-**Optional: your own domain.** In the Pages project, go to **Custom domains → Set up a domain**. A domain is the only cost (around ₹700–900/year for a `.in`). Update `siteUrl` afterwards.
+**Daily rebuild:** the **Daily website rebuild** workflow pushes an empty commit every morning (06:00 IST), which makes Cloudflare rebuild. This keeps "expired" labels and Google markup current. Nothing to set up.
+
+**Your own domain (optional):** Worker → **Settings → Domains & Routes → Add → Custom domain**. A domain is the only cost (around ₹700–900/year for a `.in`). Update `siteUrl` afterwards.
 
 ### Tell Google about the site
 
@@ -406,10 +407,10 @@ When it finishes (about 15 minutes on the free tier), open the link on your Andr
 
 ### Web push (experimental, off by default)
 
-The website can also send browser notifications. Browsers can't subscribe to FCM topics themselves, so a small free Cloudflare Pages Function (`functions/push/subscribe.ts`) does it for them using your service account.
+The website can also send browser notifications. Browsers can't subscribe to FCM topics themselves, so a small free route on your Cloudflare Worker (`functions/push/subscribe.ts`) does it for them using your service account.
 
 1. In Firebase, **Add app → Web** and copy the config values into `src/config/firebase-web.ts`. Under **Cloud Messaging → Web Push certificates**, generate a key pair and paste it as `vapidKey`.
-2. In Cloudflare Pages → your project → **Settings → Variables and secrets**, add `FIREBASE_SERVICE_ACCOUNT` (type: *Secret*) with the same JSON as in step 2.
+2. In Cloudflare → `govt-jobs-finder` → **Settings → Variables and secrets**, add `FIREBASE_SERVICE_ACCOUNT` (type: *Secret*) with the same JSON as in step 2.
 3. Set `webPush: true` in `src/config/features.ts`, push, and test in Chrome: open **Settings** on the site → Job alerts → On.
 
 This uses Google's topic-subscription API from Cloudflare. It hasn't been tested end-to-end with a real Firebase project yet, so try it on a test project first. Leaving it off has no effect on the apps.
@@ -428,20 +429,20 @@ Your admin panel is at **`https://<your-site>/admin/`**. It's [Decap CMS](https:
 
 ### One-time setup (10 minutes, free)
 
-You need the website deployed on Cloudflare Pages first (§6), with `siteUrl` in `src/config/app.ts` set to its address.
+You need the website deployed on Cloudflare first (§6), with `siteUrl` in `src/config/app.ts` set to its address.
 
 1. **Create a GitHub OAuth app:** GitHub → your profile picture → **Settings → Developer settings → OAuth Apps → New OAuth App**.
    - Application name: `Govt Jobs Admin`
-   - Homepage URL: your site, e.g. `https://govt-jobs-finder.pages.dev`
-   - Authorization callback URL: your site + `/oauth/callback`, e.g. `https://govt-jobs-finder.pages.dev/oauth/callback`
+   - Homepage URL: your site, e.g. `https://govt-jobs-finder.21-anshul-k.workers.dev`
+   - Authorization callback URL: your site + `/oauth/callback`, e.g. `https://govt-jobs-finder.21-anshul-k.workers.dev/oauth/callback`
    - Click **Register application**, copy the **Client ID**, then click **Generate a new client secret** and copy it.
-2. **Add both values to Cloudflare:** Workers & Pages → your project → **Settings → Variables and secrets** → Production:
+2. **Add both values to Cloudflare:** Workers & Pages → `govt-jobs-finder` → **Settings → Variables and secrets** → **Add**:
    - `GITHUB_OAUTH_CLIENT_ID` = the client ID (type *Text*)
    - `GITHUB_OAUTH_CLIENT_SECRET` = the secret (type *Secret*)
-3. **Redeploy:** Deployments → ⋯ → Retry deployment, so the new values take effect.
+3. Click **Deploy** after adding them (Cloudflare asks), so the new values take effect.
 4. Open `https://<your-site>/admin/` and click **Login with GitHub**.
 
-The small login helper runs as free Cloudflare Pages Functions in `functions/oauth/`.
+The small login helper (`functions/oauth/`, routed by `worker/index.ts`) runs free on your Cloudflare Worker.
 
 ### Reviewing a draft
 

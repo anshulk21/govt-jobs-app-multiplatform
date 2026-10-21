@@ -1,25 +1,24 @@
 name: Daily website rebuild
 
 # Rebuilds the website once a day so "days left", expired jobs and their search-engine
-# markup stay current even on days when nothing new is published.
-# Needs the CLOUDFLARE_DEPLOY_HOOK secret (see README → Deploy the website). Without it, this does nothing.
-
+# markup stay current even on days when nothing new is published. An empty commit always
+# triggers a Cloudflare build (build watch paths are bypassed for pushes with no file changes).
 on:
   schedule:
     - cron: '30 0 * * *' # 06:00 IST
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   rebuild:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Cloudflare Pages build
-        env:
-          HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
+      - uses: actions/checkout@v5
+      - name: Trigger a rebuild
         run: |
-          if [ -z "$HOOK" ]; then
-            echo "CLOUDFLARE_DEPLOY_HOOK secret not set — skipping."
-            exit 0
-          fi
-          curl -fsS -X POST "$HOOK" > /dev/null
-          echo "Rebuild triggered."
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "rebuild: daily website refresh"
+          git push

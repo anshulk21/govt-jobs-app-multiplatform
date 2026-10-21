@@ -1,0 +1,20 @@
+// Cloudflare Workers deployment (static website + 3 tiny server routes).
+// Workers Builds runs `npx wrangler deploy`, which first runs build.command below,
+// so the site is always built with our full pipeline whatever the dashboard says.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Must match the Worker's name in the Cloudflare dashboard.
+  "name": "govt-jobs-finder",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "build": {
+    "command": "npm run build:web"
+  },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Only these paths run the Worker script; everything else is served straight from dist/.
+    "run_worker_first": ["/oauth/*", "/push/*"]
+  }
+}
