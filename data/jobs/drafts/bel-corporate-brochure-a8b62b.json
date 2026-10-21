@@ -1,0 +1,37 @@
+{
+  "id": "a8b62b05ef",
+  "slug": "bel-corporate-brochure-a8b62b",
+  "status": "draft",
+  "title": "Corporate Brochure",
+  "organization": "Bharat Electronics Ltd",
+  "sourceId": "bel",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://bel-india.in/wp-content/uploads/2026/04/BEL-Corporate-Brochure.pdf",
+    "official": "https://bel-india.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T10:28:04.535Z",
+  "updatedAt": "2026-10-21T10:28:04.535Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

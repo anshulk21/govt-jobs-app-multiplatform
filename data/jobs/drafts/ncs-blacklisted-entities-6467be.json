@@ -1,0 +1,37 @@
+{
+  "id": "6467befd1a",
+  "slug": "ncs-blacklisted-entities-6467be",
+  "status": "draft",
+  "title": "Blacklisted Entities",
+  "organization": "National Career Service",
+  "sourceId": "ncs",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551955970.pdf?sv=2023-11-03&spr=https&st=2026-08-12T16%3A20%3A56Z&se=2028-08-12T16%3A25%3A56Z&sr=b&sp=r&sig=xxmfZ2IWn8GaGFjPWXNVCRTlfR65Q1F9Lgy69b8wV6w%3D",
+    "official": "https://ncs.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T10:28:04.535Z",
+  "updatedAt": "2026-10-21T10:28:04.535Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

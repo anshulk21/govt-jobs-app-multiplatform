@@ -1,0 +1,46 @@
+{
+  "id": "ee2f0fc1ab",
+  "slug": "rrc-swr-list-of-qualified-candidates-ee2f0f",
+  "status": "published",
+  "title": "List of Qualified candidates",
+  "organization": "RRC South Western Railway (Hubballi)",
+  "sourceId": "rrc-swr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrchubli.in/pdf/Batch-ALL_NoticeBoard_Qualified%2023-09-2026.pdf",
+    "official": "https://www.rrchubli.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.rrchubli.in/pdf/Batch-ALL_NoticeBoard_Qualified%2023-09-2026.pdf"
+    }
+  ],
+  "foundAt": "2026-10-21T10:28:04.535Z",
+  "updatedAt": "2026-10-21T10:45:49.377Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-10-21T10:45:49.377Z"
+}

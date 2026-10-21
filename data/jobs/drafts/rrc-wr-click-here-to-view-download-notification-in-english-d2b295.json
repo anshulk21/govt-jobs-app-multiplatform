@@ -1,0 +1,54 @@
+{
+  "id": "d2b2955839",
+  "slug": "rrc-wr-click-here-to-view-download-notification-in-english-d2b295",
+  "status": "draft",
+  "title": "/ Notification in English - Uploaded on 27-08-2026",
+  "organization": "RRC Western Railway (Mumbai)",
+  "sourceId": "rrc-wr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": 21,
+  "qualifications": [
+    "10th",
+    "12th",
+    "iti",
+    "graduate"
+  ],
+  "ageLimit": null,
+  "fee": "₹500, ₹400",
+  "dates": {
+    "notification": "2026-08-27",
+    "applyStart": null,
+    "lastDate": "2026-09-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrc-wr.com/rrwc/Files/aac5b3f0-87da-456c-ba00-a5db3041a436.pdf",
+    "official": "https://www.rrc-wr.com/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T10:28:04.535Z",
+  "updatedAt": "2026-10-21T10:28:04.535Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification",
+      "vacancies",
+      "fee",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "Closing Date and Time of online Applications 30-09-2026",
+      "dates.notification": "Dated 27-08-2026",
+      "vacancies": "21 posts",
+      "fee": "APPLICATION FEE: (i) For all candidates except those mentioned in sub-Para (ii) below Rs. 500/- (Rs. Five Hundred Only), with a provision of refunding Rs 400/- (Rs Four Hundred Only) to those who are",
+      "qualifications": "ELIGIBILITY CONDITIONS 3.1 AGE LIMIT Minimum 18 years and maximum 25 years as on 01/01/2027. Candidates born between 01/01/2002 and 01/01/2009 (both days inclusive) should only apply. 3.2 EDUCATIONAL QUALIFICATION:Candidates should possess"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Closing Date and Time of online Applications 30-09-2026”\n• Notification date: from “Dated 27-08-2026”\n• Vacancies: from “21 posts”\n• Fee: from “APPLICATION FEE: (i) For all candidates except those mentioned in sub-Para (ii) below Rs. 500/- (Rs. Five Hundred Only), with a provision of refunding Rs 400/- (Rs Four Hundred Only) to those who are”\n• Qualification: from “ELIGIBILITY CONDITIONS 3.1 AGE LIMIT Minimum 18 years and maximum 25 years as on 01/01/2027. Candidates born between 01/01/2002 and 01/01/2009 (both days inclusive) should only apply. 3.2 EDUCATIONAL QUALIFICATION:Candidates should possess”"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "dfe4203f8a",
+  "slug": "rrc-nwr-21-10-2026-revised-detailed-notification-for-dfe420",
+  "status": "published",
+  "title": "21-10-2026 Revised Detailed notification for Engagement of Apprentices against notification no. 04/2026 (NWR/AA) under Act Apprentices Act 1961",
+  "organization": "RRC North Western Railway (Jaipur)",
+  "sourceId": "rrc-nwr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "iti"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-21",
+    "applyStart": "2026-10-23",
+    "lastDate": "2026-11-22",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://rrcjaipur.in/storeWebFiles/1008_11718187.PDF",
+    "official": "https://www.rrcjaipur.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-21",
+      "url": "https://rrcjaipur.in/storeWebFiles/1008_11718187.PDF"
+    }
+  ],
+  "foundAt": "2026-10-21T10:28:04.535Z",
+  "updatedAt": "2026-10-21T10:45:49.377Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart",
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "closing date i.e. 22.11.2026",
+      "dates.applyStart": "start of Online Application 23.10.2026",
+      "dates.notification": "Date of Publication of Detailed Notification on RRC website 21.10.2026",
+      "qualifications": "Qualification Trades UR OBC SC ST EWS TOTAL VI HI LD MD 1 Electrician (Coaching) 20 13 08 04 05 50 00 01 01 00 01 ITI Pass in relevant trade to be eligible for consideration 2 Electrician (Power) 20 13 08 04 05 50 00 01 01 00 01 3 Electrici"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “closing date i.e. 22.11.2026”\n• Apply from: from “start of Online Application 23.10.2026”\n• Notification date: from “Date of Publication of Detailed Notification on RRC website 21.10.2026”\n• Qualification: from “Qualification Trades UR OBC SC ST EWS TOTAL VI HI LD MD 1 Electrician (Coaching) 20 13 08 04 05 50 00 01 01 00 01 ITI Pass in relevant trade to be eligible for consideration 2 Electrician (Power) 20 13 08 04 05 50 00 01 01 00 01 3 Electrici”",
+  "publishedAt": "2026-10-21T10:45:49.377Z"
+}

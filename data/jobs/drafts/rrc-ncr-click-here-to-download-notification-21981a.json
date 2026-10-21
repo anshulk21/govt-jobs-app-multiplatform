@@ -1,0 +1,47 @@
+{
+  "id": "21981af8c2",
+  "slug": "rrc-ncr-click-here-to-download-notification-21981a",
+  "status": "draft",
+  "title": "Notification",
+  "organization": "RRC North Central Railway (Prayagraj)",
+  "sourceId": "rrc-ncr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": "Up to 42 years",
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-28",
+    "applyStart": "2026-10-01",
+    "lastDate": "2026-10-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://rrcpryj.org/wp-content/uploads/2026/09/GDCE-Notification-No.-RRC-NCR-GDCE-01_2026.pdf",
+    "official": "https://rrcpryj.org/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T10:28:04.535Z",
+  "updatedAt": "2026-10-21T10:28:04.535Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart",
+      "dates.notification",
+      "ageLimit"
+    ],
+    "evidence": {
+      "dates.lastDate": "Closing Date and Time of Online Application 30.10.2026",
+      "dates.applyStart": "Opening Date of Online Application 01.10.2026",
+      "dates.notification": "Dated 28.09.2026",
+      "ageLimit": "upper age limit for UR candidates will be 42 years"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Closing Date and Time of Online Application 30.10.2026”\n• Apply from: from “Opening Date of Online Application 01.10.2026”\n• Notification date: from “Dated 28.09.2026”\n• Age limit: from “upper age limit for UR candidates will be 42 years”"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "011355a251",
+  "slug": "rrc-wr-click-here-to-view-download-notice-of-amendment-to-011355",
+  "status": "draft",
+  "title": "/ Notice of Amendment to the Notification regarding Volleyball Sport Discipline - Uploaded on 04-09-2026",
+  "organization": "RRC Western Railway (Mumbai)",
+  "sourceId": "rrc-wr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-27",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrc-wr.com/rrwc/Files/a06be1ce-7c5f-4afe-8daa-590c558b6a40.pdf",
+    "official": "https://www.rrc-wr.com/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T10:28:04.535Z",
+  "updatedAt": "2026-10-21T10:28:04.535Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 27/08/2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 27/08/2026”"
+}

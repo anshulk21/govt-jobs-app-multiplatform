@@ -1,0 +1,51 @@
+{
+  "id": "495e7a7620",
+  "slug": "rrc-sr-instruction-for-downloading-call-letter-495e7a",
+  "status": "published",
+  "title": "Instruction for Downloading Call letter",
+  "organization": "RRC Southern Railway (Chennai)",
+  "sourceId": "rrc-sr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrcmas.in/downloads/Instructions-for-downloaded-Instruction-09102026a.pdf",
+    "official": "https://www.rrcmas.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.rrcmas.in/downloads/Instructions-for-downloaded-Instruction-09102026a.pdf"
+    },
+    {
+      "stage": "admit-card",
+      "date": "2026-10-21",
+      "url": "https://www.rrcmas.in/downloads/Instructions-for-downloaded-Instruction-09102026a.pdf"
+    }
+  ],
+  "foundAt": "2026-10-21T10:28:04.535Z",
+  "updatedAt": "2026-10-21T10:45:49.377Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-10-21T10:45:49.377Z"
+}
