@@ -2,7 +2,7 @@ name: Monitor official sources
 
 on:
   schedule:
-    - cron: '0 */3 * * *' # every 3 hours (UTC)
+    - cron: '17 */3 * * *' # every 3 hours at :17 (GitHub often delays or skips runs at the top of the hour)
   workflow_dispatch:
     inputs:
       all:
