@@ -1,0 +1,42 @@
+{
+  "id": "1253269abd",
+  "slug": "jkssb-recruitment-calendar-125326",
+  "status": "draft",
+  "title": "Recruitment Calendar",
+  "organization": "J&K Services Selection Board",
+  "sourceId": "jkssb",
+  "level": "ut",
+  "state": "JK",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": 1,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-12-18",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jkssb.nic.in/pdf/Annual_calendar_2026_18122025.pdf",
+    "official": "https://jkssb.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T03:34:35.861Z",
+  "updatedAt": "2026-10-21T03:34:35.861Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 18-12-2025",
+      "vacancies": "Total posts 1"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "3e760303ac",
+  "slug": "as-slprb-notice-3e7603",
+  "status": "draft",
+  "title": "Notice",
+  "organization": "State Level Police Recruitment Board, Assam",
+  "sourceId": "as-slprb",
+  "level": "state",
+  "state": "AS",
+  "category": "Police",
+  "postName": null,
+  "vacancies": 1052,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-26",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://slprbassam.in/pdf/Notice2026/26022026/notice_reg_edit_option.pdf",
+    "official": "https://slprbassam.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T03:34:35.861Z",
+  "updatedAt": "2026-10-21T03:34:35.861Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.notification": "dated :26-02-2026",
+      "vacancies": "1052 posts"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "7d315afa89",
+  "slug": "dd-admin-investment-promotion-scheme-ips-2022-7d315a",
+  "status": "draft",
+  "title": "Investment Promotion Scheme (IPS) – 2022",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "engineering"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://swp.dddgov.in/assets/pdf/Notification_IPS_2022_DNH_DD.pdf",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T03:34:35.861Z",
+  "updatedAt": "2026-10-21T03:34:35.861Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "ELIGIBILITY: 1. New Manufacturing / Service units. 2. Existing Manufacturing / Service units which undertakes Expansion / Diversification. 3. Units which commence the commercial production during the operative period of Scheme. 4. Unit shal"
+    }
+  }
+}

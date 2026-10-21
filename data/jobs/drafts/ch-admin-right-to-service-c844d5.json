@@ -1,0 +1,40 @@
+{
+  "id": "c844d5cbfb",
+  "slug": "ch-admin-right-to-service-c844d5",
+  "status": "draft",
+  "title": "Right To Service",
+  "organization": "Chandigarh Administration",
+  "sourceId": "ch-admin",
+  "level": "ut",
+  "state": "CH",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2020-10-08",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://chandigarh.gov.in/files/updation2025/rtsnotification0905.pdf",
+    "official": "https://chandigarh.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T03:34:35.861Z",
+  "updatedAt": "2026-10-21T03:34:35.861Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 08.10.2020"
+    }
+  }
+}

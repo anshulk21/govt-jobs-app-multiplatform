@@ -1,0 +1,46 @@
+{
+  "id": "e320918326",
+  "slug": "ibps-notification-for-common-recruitment-process-for-crp-spl-e32091",
+  "status": "draft",
+  "title": "Notification for Common Recruitment Process for CRP- SPL-XVI",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "engineering"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2013-04-26",
+    "applyStart": null,
+    "lastDate": "2027-07-20",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.ibps.in/wp-content/uploads/Detailed-Notification-CRP-SPL-XVI_Final_V1_30.06.2026.pdf",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T03:34:35.861Z",
+  "updatedAt": "2026-10-21T03:34:35.861Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date of receipt of application i.e., 20.07.2027",
+      "dates.notification": "dated 26.04.2013",
+      "qualifications": "ELIGIBILITY CRITERIA 2 B. I NATIONALITY / CITIZENSHIP 3 B. II AGE 3 B. III RESERVATION FOR PERSONS WITH BENCHMARK DISABILITIES 4 B. III (i) GUIDELINES FOR PERSONS WITH BENCHMARK DISABILITIES/SPECIFIED DISABILITIES USING A SCRIBE 7 B. III (i"
+    }
+  }
+}
