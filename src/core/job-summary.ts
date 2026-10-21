@@ -18,7 +18,7 @@ export function jobSummaryHtml(job: Job, siteUrl: string, appName: string): stri
   body{font-family:-apple-system,Roboto,"Noto Sans","Noto Sans Devanagari",Arial,sans-serif;color:#0f172a;margin:32px;line-height:1.45}
   h1{font-size:22px;margin:0 0 4px} .org{color:#475569;margin:0 0 16px}
   table{border-collapse:collapse;width:100%;margin:12px 0} th,td{border:1px solid #cbd5e1;padding:6px 8px;text-align:left;vertical-align:top;font-size:13px}
-  th{width:32%;background:#f1f5f9} h2{font-size:15px;margin:18px 0 6px} a{color:#1d4ed8;word-break:break-all} .foot{margin-top:24px;font-size:11px;color:#64748b}
+  th{width:32%;background:#f6f4ee} h2{font-size:15px;margin:18px 0 6px} a{color:#c2340e;word-break:break-all} .foot{margin-top:24px;font-size:11px;color:#64748b}
 </style></head><body>
 <h1>${esc(job.title)}</h1><p class="org">${esc(job.organization)} · ${esc(placeName(job))} · ${esc(job.category)}</p>
 <table>

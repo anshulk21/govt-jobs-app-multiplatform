@@ -53,7 +53,7 @@ export default function SearchPage() {
           value={filters.query}
           onChangeText={(query) => setFilters((f) => ({ ...f, query }))}
           placeholder={t('home.searchPlaceholder')}
-          placeholderTextColor="#94a3b8"
+          placeholderTextColor="#948c7c"
           returnKeyType="search"
           autoCorrect={false}
           aria-label="Search jobs"

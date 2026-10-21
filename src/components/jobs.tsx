@@ -7,6 +7,7 @@ import type { JobSummary, TimelineEntry } from '@/core/types';
 import { useT } from '@/lib/settings';
 import { adPositions } from '@/lib/ad-rules';
 import { ListAd } from './ads';
+import { Reveal } from './motion';
 import { Badge, Button, Card, Chip, ChipRow, Icon, Message, Txt } from './ui';
 
 /** "5 days left", "Last day today", "Expired", or nothing if the date is unknown. */
@@ -21,12 +22,21 @@ export function DeadlineBadge({ lastDate, today }: { lastDate: string | null; to
 
 const STAGE_LABEL = Object.fromEntries(STAGES.map((s) => [s.id, s.label]));
 
+/** Colour of the stripe on a job card: vermilion = closing within 3 days, sun = within a week, pink = open. */
+function stripeClass(lastDate: string | null, today: string): string {
+  const d = daysLeft(lastDate, today);
+  if (d === null) return 'bg-rose';
+  if (d < 0) return 'bg-slate-200 dark:bg-slate-700';
+  return d <= 3 ? 'bg-brand-500' : d <= 7 ? 'bg-sun' : 'bg-pink';
+}
+
 export function JobCard({ job, today, updated }: { job: JobSummary; today: string; updated?: boolean }) {
   const t = useT();
   return (
     <Link href={`/jobs/${job.slug}`} asChild>
-      <Pressable className="rounded-2xl border border-slate-200 bg-white p-4 active:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:active:bg-slate-800">
-        <View className="gap-2">
+      <Pressable className="gj-card flex-row gap-3 rounded-3xl border border-slate-200 bg-white p-4 active:scale-[0.98] dark:border-slate-800 dark:bg-slate-900">
+        <View className={`w-1.5 self-stretch rounded-full ${stripeClass(job.lastDate, today)}`} />
+        <View className="flex-1 gap-2">
           <Txt variant="label" numberOfLines={3}>
             {job.title}
           </Txt>
@@ -74,10 +84,10 @@ export function JobList({ jobs, today, splitExpired = true, limit }: { jobs: Job
   return (
     <View className="gap-3">
       {shown.map((j, i) => (
-        <View key={j.slug} className="gap-3">
+        <Reveal key={j.slug} index={i} className="gap-3">
           <JobCard job={j} today={today} />
           {ads.has(i) ? <ListAd /> : null}
-        </View>
+        </Reveal>
       ))}
       {!open.length ? <Message icon="briefcase-outline" text={t('list.empty')} /> : null}
       {expired.length ? (
@@ -106,7 +116,7 @@ export function StatusTimeline({ timeline }: { timeline: TimelineEntry[] }) {
         return (
           <View key={stage.id} className="flex-row gap-3">
             <View className="items-center">
-              <View className={`h-4 w-4 rounded-full ${done ? 'bg-brand-700' : 'border-2 border-slate-300 dark:border-slate-600'}`} />
+              <View className={`h-4 w-4 rounded-full ${done ? 'bg-brand-500 ring-4 ring-brand-100 dark:ring-brand-900' : 'border-2 border-slate-300 dark:border-slate-600'}`} />
               {i < STAGES.length - 1 ? <View className={`w-0.5 flex-1 ${done ? 'bg-brand-200 dark:bg-brand-800' : 'bg-slate-200 dark:bg-slate-700'}`} /> : null}
             </View>
             <View className="flex-1 pb-4">

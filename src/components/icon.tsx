@@ -45,6 +45,16 @@ import Users from 'lucide-react-native/icons/users';
 import Wrench from 'lucide-react-native/icons/wrench';
 import X from 'lucide-react-native/icons/x';
 import { cssInterop } from 'nativewind';
+import Landmark from 'lucide-react-native/icons/landmark';
+import Building from 'lucide-react-native/icons/building';
+import Factory from 'lucide-react-native/icons/factory';
+import Zap from 'lucide-react-native/icons/zap';
+import HeartPulse from 'lucide-react-native/icons/heart-pulse';
+import Scale from 'lucide-react-native/icons/scale';
+import Shield from 'lucide-react-native/icons/shield';
+import Siren from 'lucide-react-native/icons/siren';
+import Sparkles from 'lucide-react-native/icons/sparkles';
+import TrainFront from 'lucide-react-native/icons/train-front';
 import { FILLED, type IconName, type IconProps } from './icon-names';
 
 const MAP: Record<IconName, LucideIcon> = {
@@ -97,6 +107,16 @@ const MAP: Record<IconName, LucideIcon> = {
   'shield-checkmark-outline': ShieldCheck,
   'trash-outline': Trash2,
   'trophy-outline': Trophy,
+  'bank-outline': Landmark,
+  'building-outline': Building,
+  'factory-outline': Factory,
+  'flash-outline': Zap,
+  'medkit-outline': HeartPulse,
+  'scale-outline': Scale,
+  'shield-outline': Shield,
+  'siren-outline': Siren,
+  'sparkles-outline': Sparkles,
+  'train-outline': TrainFront,
 };
 
 function Glyph({ name, size, color }: { name: IconName; size: number; color?: string }) {

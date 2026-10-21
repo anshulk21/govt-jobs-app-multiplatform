@@ -6,6 +6,13 @@ export const en = {
   'tab.tools': 'Tools',
   'tab.more': 'More',
 
+  'home.heroLine1': 'Latest',
+  'home.heroLine2': 'Sarkari jobs',
+  'home.heroLine3': 'in India',
+  'home.live': 'Live',
+  'home.statOpen': 'open jobs',
+  'home.statClosing': 'closing this week',
+  'home.statStates': 'states & UTs covered',
   'home.forYou': 'For you',
   'home.newToday': 'New today',
   'home.closingSoon': 'Closing soon',

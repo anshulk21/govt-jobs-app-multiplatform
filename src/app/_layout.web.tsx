@@ -1,5 +1,6 @@
 // Root layout for the website: header navigation, page, footer.
 import '../global.css';
+import '../web.css';
 import { Slot } from 'expo-router';
 import { Providers } from '@/components/providers';
 import { WebShell } from '@/components/web-shell';

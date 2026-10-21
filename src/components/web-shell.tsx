@@ -56,22 +56,22 @@ export function WebShell({ children }: { children: ReactNode }) {
   const isActive = (href: Href) => (href === '/' ? pathname === '/' : pathname.startsWith(String(href)));
   return (
     <View className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      <View role="banner" className="sticky top-0 z-10 border-b border-slate-200 bg-white/95 dark:border-slate-800 dark:bg-slate-900/95">
+      <View role="banner" className="sticky top-0 z-10 border-b border-slate-200 bg-slate-50/90 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90">
         <View className="mx-auto w-full max-w-5xl gap-1 px-4 pt-3">
           <Link href="/" asChild>
-            <Pressable className="flex-row items-center gap-2 self-start">
+            <Pressable className="gj-logo flex-row items-center gap-2 self-start">
               {/* Plain <img> (this file is web-only) so the logo is in the static HTML before JS loads. */}
               <img src="/logo.svg" alt="" width={32} height={32} />
-              <Text className="text-xl font-extrabold text-brand-700 dark:text-brand-200">{APP.name}</Text>
+              <Text className="text-xl font-black tracking-tight text-brand-700 dark:text-brand-200">{APP.name}</Text>
             </Pressable>
           </Link>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} role="navigation" contentContainerClassName="gap-1 pb-2">
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} role="navigation" className="gj-nav" contentContainerClassName="gap-1 pb-2">
             {NAV.map((n) => (
               <Link
                 key={String(n.href)}
                 href={n.href}
-                className={`rounded-lg px-3 py-2 text-sm font-semibold ${
-                  isActive(n.href) ? 'bg-brand-50 text-brand-700 dark:bg-brand-900 dark:text-brand-100' : 'text-slate-700 dark:text-slate-300'
+                className={`rounded-full px-3 py-2 text-xs font-extrabold uppercase tracking-wider ${
+                  isActive(n.href) ? 'bg-brand-700 text-white dark:bg-brand-600' : 'text-brand-800 dark:text-brand-200'
                 }`}
               >
                 {n.label}
@@ -91,16 +91,20 @@ export function WebShell({ children }: { children: ReactNode }) {
           </View>
         </View>
       </View>
-      <View role="contentinfo" className="border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
-        <View className="mx-auto w-full max-w-5xl gap-3 px-4 py-6">
-          <View className="flex-row flex-wrap gap-x-4 gap-y-2">
+      <View role="contentinfo" className="mt-8 rounded-t-[32px] bg-ink">
+        <View className="mx-auto w-full max-w-5xl gap-5 px-4 pb-8 pt-10">
+          <View>
+            <Text className="text-4xl font-black uppercase leading-none tracking-tighter text-brand-400 sm:text-6xl">Every sarkari job.</Text>
+            <Text className="text-4xl font-black uppercase leading-none tracking-tighter text-pink sm:text-6xl">One place.</Text>
+          </View>
+          <View className="flex-row flex-wrap gap-x-5 gap-y-2">
             {FOOTER.map((f) => (
-              <Link key={String(f.href)} href={f.href} className="text-sm text-slate-600 dark:text-slate-400">
+              <Link key={String(f.href)} href={f.href} className="text-sm font-semibold text-cream hover:text-sun">
                 {f.label}
               </Link>
             ))}
           </View>
-          <Text className="text-xs leading-5 text-slate-500 dark:text-slate-400">
+          <Text className="text-xs leading-5 text-slate-300">
             {APP.name} is not a government website and is not affiliated with any government body. Job details are summarised from official
             notifications; always verify on the official website before applying.
           </Text>

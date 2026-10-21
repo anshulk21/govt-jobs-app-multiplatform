@@ -45,6 +45,16 @@ import Trophy from 'lucide-react/dist/esm/icons/trophy.mjs';
 import Users from 'lucide-react/dist/esm/icons/users.mjs';
 import Wrench from 'lucide-react/dist/esm/icons/wrench.mjs';
 import X from 'lucide-react/dist/esm/icons/x.mjs';
+import Landmark from 'lucide-react/dist/esm/icons/landmark.mjs';
+import Building from 'lucide-react/dist/esm/icons/building.mjs';
+import Factory from 'lucide-react/dist/esm/icons/factory.mjs';
+import Zap from 'lucide-react/dist/esm/icons/zap.mjs';
+import HeartPulse from 'lucide-react/dist/esm/icons/heart-pulse.mjs';
+import Scale from 'lucide-react/dist/esm/icons/scale.mjs';
+import Shield from 'lucide-react/dist/esm/icons/shield.mjs';
+import Siren from 'lucide-react/dist/esm/icons/siren.mjs';
+import Sparkles from 'lucide-react/dist/esm/icons/sparkles.mjs';
+import TrainFront from 'lucide-react/dist/esm/icons/train-front.mjs';
 import { FILLED, type IconName, type IconProps } from './icon-names';
 
 const MAP: Record<IconName, LucideIcon> = {
@@ -97,6 +107,16 @@ const MAP: Record<IconName, LucideIcon> = {
   'shield-checkmark-outline': ShieldCheck,
   'trash-outline': Trash2,
   'trophy-outline': Trophy,
+  'bank-outline': Landmark,
+  'building-outline': Building,
+  'factory-outline': Factory,
+  'flash-outline': Zap,
+  'medkit-outline': HeartPulse,
+  'scale-outline': Scale,
+  'shield-outline': Shield,
+  'siren-outline': Siren,
+  'sparkles-outline': Sparkles,
+  'train-outline': TrainFront,
 };
 
 export function Icon({ name, size = 18, className = 'text-slate-500 dark:text-slate-400', color }: IconProps) {

@@ -1,0 +1,196 @@
+/* Website-only motion and hover effects (imported by src/app/_layout.web.tsx; the apps use Reanimated).
+   Classes start with gj- so they never clash with Tailwind. Everything is switched off for people who
+   ask their system for reduced motion. */
+
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: #ffa2b6;
+  color: #2a1610;
+}
+
+/* Entrance: cards and sections rise into place. */
+@keyframes gj-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.gj-reveal {
+  animation: gj-rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Hero headline: each line slides up from behind a mask. Transform only (no fade), so the
+   headline still counts as painted immediately. */
+@keyframes gj-slide {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: none;
+  }
+}
+.gj-line {
+  overflow: hidden;
+}
+.gj-line > * {
+  display: block;
+  animation: gj-slide 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.gj-line:nth-child(2) > * {
+  animation-delay: 0.08s;
+}
+.gj-line:nth-child(3) > * {
+  animation-delay: 0.16s;
+}
+
+/* Floating shapes behind the hero. */
+@keyframes gj-float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-10px, 14px) rotate(8deg);
+  }
+}
+.gj-float {
+  animation: gj-float 7s ease-in-out infinite;
+}
+.gj-float-slow {
+  animation: gj-float 11s ease-in-out infinite reverse;
+}
+
+/* Pulsing "live" dot. */
+@keyframes gj-ping {
+  0% {
+    box-shadow: 0 0 0 0 rgba(228, 61, 18, 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(228, 61, 18, 0);
+  }
+}
+.gj-ping {
+  animation: gj-ping 1.6s ease-out infinite;
+}
+
+/* Ticker of the newest jobs: the list is rendered twice and slides by half its width. */
+@keyframes gj-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.gj-marquee {
+  width: max-content;
+  animation: gj-marquee 45s linear infinite;
+}
+.gj-marquee:hover,
+.gj-marquee:focus-within {
+  animation-play-state: paused;
+}
+
+/* Hover and press feedback. */
+.gj-card,
+.gj-btn,
+.gj-chip,
+.gj-tile {
+  transition:
+    transform 0.2s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+@media (hover: hover) {
+  .gj-card:hover {
+    transform: translateY(-3px);
+    border-color: #f9a283;
+    box-shadow: 0 14px 28px -16px rgba(194, 52, 14, 0.45);
+  }
+  .gj-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px -10px rgba(194, 52, 14, 0.6);
+  }
+  .gj-chip:hover {
+    background-color: #c2340e;
+    border-color: #c2340e;
+    color: #fff;
+  }
+  .gj-tile:hover {
+    transform: translateY(-4px) rotate(-1.5deg);
+    box-shadow: 0 16px 30px -18px rgba(42, 22, 16, 0.6);
+  }
+  .gj-tile:hover .gj-tile-icon {
+    transform: rotate(-12deg) scale(1.15);
+  }
+  .gj-logo:hover img {
+    transform: rotate(-8deg) scale(1.08);
+  }
+}
+.gj-card:active,
+.gj-btn:active,
+.gj-tile:active {
+  transform: scale(0.97);
+}
+.gj-tile-icon,
+.gj-logo img {
+  transition: transform 0.25s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+
+/* Header links: underline grows on hover. */
+.gj-nav a {
+  position: relative;
+}
+.gj-nav a::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.gj-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Keyboard focus stays clearly visible. */
+a:focus-visible,
+[role='button']:focus-visible,
+[role='checkbox']:focus-visible,
+input:focus-visible {
+  outline: 3px solid #efb11d;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .gj-reveal,
+  .gj-line > *,
+  .gj-float,
+  .gj-float-slow,
+  .gj-ping,
+  .gj-marquee {
+    animation: none !important;
+  }
+  .gj-card,
+  .gj-btn,
+  .gj-chip,
+  .gj-tile,
+  .gj-tile-icon,
+  .gj-logo img {
+    transition: none !important;
+    transform: none !important;
+  }
+}

@@ -1,16 +1,17 @@
 import { router } from 'expo-router';
 import type { GenerateMetadataFunction, LoaderFunction } from 'expo-router/server';
 import { useMemo, useState } from 'react';
-import { Platform, TextInput, View } from 'react-native';
+import { Platform, Pressable, TextInput, View } from 'react-native';
 import { BannerSlot } from '@/components/ads';
+import { CategoryTiles, Hero, Ticker, homeStats, type HomeStats } from '@/components/home';
 import { JobCard, JobList } from '@/components/jobs';
 import { CommunityButtons } from '@/components/monetization';
 import { JsonLd } from '@/components/json-ld';
 import { Button, Card, ChipLink, ChipRow, Icon, Loading, Message, OfflineNotice, Screen, Section, Txt } from '@/components/ui';
 import { APP } from '@/config/app';
 import { apiPaths } from '@/core/api';
-import { CATEGORIES, QUALIFICATIONS, STATES, categorySlug } from '@/core/constants';
-import { byPublished, closingSoon, matchesPreferences, newToday, openJobs } from '@/core/jobs';
+import { QUALIFICATIONS, STATES } from '@/core/constants';
+import { byPublished, closingSoon, matchesPreferences, newToday, openJobs, todayIST } from '@/core/jobs';
 import { websiteJsonLd } from '@/core/structured-data';
 import type { JobListPayload } from '@/core/types';
 import { useApi } from '@/lib/api';
@@ -23,9 +24,12 @@ import { payloads } from '@/server/data';
 /** The pre-rendered home page carries only the newest jobs; the full list loads in the browser. */
 const HOME_HTML_JOBS = 60;
 
-export const loader: LoaderFunction<JobListPayload> = () => {
+type HomePayload = JobListPayload & { stats?: HomeStats };
+
+export const loader: LoaderFunction<HomePayload> = () => {
   const all = payloads.latest();
-  return { ...all, jobs: all.jobs.slice(0, HOME_HTML_JOBS) };
+  // Counts for the hero and category tiles come from every job, not just the ones in the HTML.
+  return { ...all, jobs: all.jobs.slice(0, HOME_HTML_JOBS), stats: homeStats(all.jobs, todayIST(new Date(all.generatedAt))) };
 };
 
 export const generateMetadata: GenerateMetadataFunction = () =>
@@ -42,18 +46,21 @@ function SearchBox() {
   const [q, setQ] = useState('');
   const go = () => router.push({ pathname: '/search', params: q.trim() ? { q: q.trim() } : {} });
   return (
-    <View className="flex-row items-center gap-2 rounded-xl border border-slate-300 bg-white px-3 dark:border-slate-700 dark:bg-slate-900">
-      <Icon name="search" />
+    <View className="flex-row items-center gap-2 rounded-full border-2 border-ink/10 bg-white py-1 pl-4 pr-1 shadow-sm dark:border-slate-700 dark:bg-slate-950">
+      <Icon name="search" className="text-brand-700 dark:text-brand-200" />
       <TextInput
         value={q}
         onChangeText={setQ}
         onSubmitEditing={go}
         returnKeyType="search"
         placeholder={t('home.searchPlaceholder')}
-        placeholderTextColor="#94a3b8"
+        placeholderTextColor="#948c7c"
         aria-label="Search jobs"
-        className="h-12 flex-1 text-base text-slate-900 dark:text-slate-100"
+        className="h-12 min-w-0 flex-1 text-base text-slate-900 dark:text-slate-100"
       />
+      <Pressable onPress={go} role="button" aria-label="Search" className="gj-btn h-11 w-11 items-center justify-center rounded-full bg-brand-700 active:scale-90">
+        <Icon name="chevron-forward" size={20} className="text-white" />
+      </Pressable>
     </View>
   );
 }
@@ -82,7 +89,7 @@ function ForYou({ jobs, today }: { jobs: JobListPayload['jobs']; today: string }
 
 export default function Home() {
   const { t } = useSettings();
-  const base = useRouteData<JobListPayload>(apiPaths.latest);
+  const base = useRouteData<HomePayload>(apiPaths.latest);
   // On the website the page HTML holds the newest jobs; fetch the full list for "For you" and "Closing soon".
   const full = useApi<JobListPayload>(Platform.OS === 'web' ? apiPaths.latest : null);
   const data = full.data ?? base.data;
@@ -92,16 +99,23 @@ export default function Home() {
     const jobs = data?.jobs ?? [];
     return { today: newToday(jobs, today), closing: closingSoon(jobs, today, 7), latest: [...openJobs(jobs, today)].sort(byPublished) };
   }, [data, today]);
+  // The pre-rendered page brings counts for all jobs; once the full list is here they're recounted.
+  const stats = useMemo(
+    () => (full.data || !base.data?.stats ? homeStats(data?.jobs ?? [], today) : base.data.stats),
+    [full.data, base.data, data, today],
+  );
 
   return (
     <Screen>
       <JsonLd data={websiteJsonLd(APP.siteUrl, APP.name, APP.tagline)} />
-      <View className="gap-1">
-        <Txt variant="h1">Latest Government Jobs in India</Txt>
-        <Txt variant="muted">{APP.tagline}</Txt>
-      </View>
-      <SearchBox />
+      <Hero stats={stats}>
+        <Txt variant="body" className="font-medium text-slate-600 dark:text-slate-300">
+          {APP.tagline}
+        </Txt>
+        <SearchBox />
+      </Hero>
       {base.offline ? <OfflineNotice /> : null}
+      <Ticker jobs={sections.latest.slice(0, 12)} />
 
       {!data ? (
         base.loading ? <Loading /> : <Message icon="cloud-offline-outline" text={t('common.error')} action={<Button kind="secondary" label={t('common.retry')} onPress={base.refresh} />} />
@@ -123,6 +137,10 @@ export default function Home() {
           </Section>
         </>
       )}
+
+      <Section title={t('home.browseCategories')} href="/categories">
+        <CategoryTiles counts={stats.byCategory} />
+      </Section>
 
       <Section title={t('home.updates')}>
         <View className="flex-row flex-wrap gap-2">
@@ -153,13 +171,6 @@ export default function Home() {
         </ChipRow>
       </Section>
 
-      <Section title={t('home.browseCategories')} href="/categories">
-        <ChipRow>
-          {CATEGORIES.map((c) => (
-            <ChipLink key={c} href={`/category/${categorySlug(c)}`} label={c} />
-          ))}
-        </ChipRow>
-      </Section>
 
       <Section title={t('home.browseQualifications')}>
         <ChipRow>

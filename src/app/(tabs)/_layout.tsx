@@ -12,7 +12,7 @@ const tabIcon = (name: IconName) =>
 export default function TabsLayout() {
   const t = useT();
   const { colorScheme } = useColorScheme();
-  const active = colorScheme === 'dark' ? '#bfdbfe' : '#1d4ed8';
+  const active = colorScheme === 'dark' ? '#ffc9b5' : '#c2340e';
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: active }}>
       <Tabs.Screen name="index" options={{ title: t('tab.home'), tabBarIcon: tabIcon('home') }} />

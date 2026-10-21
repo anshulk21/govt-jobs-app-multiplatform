@@ -13,7 +13,7 @@ export default function Root({ children }: PropsWithChildren) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="theme-color" content="#1d4ed8" />
+        <meta name="theme-color" content="#e43d12" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         {headNodes}
       </head>
