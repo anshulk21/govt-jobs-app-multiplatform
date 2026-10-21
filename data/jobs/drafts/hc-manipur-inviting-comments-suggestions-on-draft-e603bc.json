@@ -1,0 +1,41 @@
+{
+  "id": "e603bcc3af",
+  "slug": "hc-manipur-inviting-comments-suggestions-on-draft-e603bc",
+  "status": "draft",
+  "title": "\"Inviting Comments & Suggestions on draft 'Regulations for Used of AI in Courts 2026' \"***",
+  "organization": "High Court of Manipur",
+  "sourceId": "hc-manipur",
+  "level": "state",
+  "state": "MN",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-06-03",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcmimphal.nic.in/Documents/Final%20draft%20with%20Notice_v2.pdf",
+    "official": "https://hcmimphal.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T21:18:48.250Z",
+  "updatedAt": "2026-10-21T21:18:48.250Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 03.06.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 03.06.2026”"
+}

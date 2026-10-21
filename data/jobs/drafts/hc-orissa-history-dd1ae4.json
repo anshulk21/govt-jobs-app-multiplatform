@@ -1,0 +1,37 @@
+{
+  "id": "dd1ae43743",
+  "slug": "hc-orissa-history-dd1ae4",
+  "status": "draft",
+  "title": "History",
+  "organization": "Orissa High Court",
+  "sourceId": "hc-orissa",
+  "level": "state",
+  "state": "OD",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.orissahighcourt.nic.in/history.pdf",
+    "official": "https://www.orissahighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T21:18:48.250Z",
+  "updatedAt": "2026-10-21T21:18:48.250Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

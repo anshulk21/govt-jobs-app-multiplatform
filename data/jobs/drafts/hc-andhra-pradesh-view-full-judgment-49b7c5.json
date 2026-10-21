@@ -1,0 +1,43 @@
+{
+  "id": "49b7c56444",
+  "slug": "hc-andhra-pradesh-view-full-judgment-49b7c5",
+  "status": "draft",
+  "title": "Full Judgment",
+  "organization": "High Court of Andhra Pradesh",
+  "sourceId": "hc-andhra-pradesh",
+  "level": "state",
+  "state": "AP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "medical"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aphc.gov.in/docs/imp_judgements/00b6be8819f8d5a8f80e960b91122d3a.pdf",
+    "official": "https://aphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T21:18:48.250Z",
+  "updatedAt": "2026-10-21T21:18:48.250Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "Eligibility Cum Entrance Test NEET (UG), 2024 for admission to MBBS Course from the category of Persons with Disability (for short “PwD”) and Other Backward Classes (OBC) on 18.02.2024. 4. The application form had a disclaimer clause which"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “Eligibility Cum Entrance Test NEET (UG), 2024 for admission to MBBS Course from the category of Persons with Disability (for short “PwD”) and Other Backward Classes (OBC) on 18.02.2024. 4. The application form had a disclaimer clause which”"
+}
