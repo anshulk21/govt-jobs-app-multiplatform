@@ -1,0 +1,37 @@
+{
+  "id": "72f38bf559",
+  "slug": "jh-jbvnl-jeevan-pramaan-steps-manual-72f38b",
+  "status": "draft",
+  "title": "Jeevan Pramaan Steps Manual",
+  "organization": "Jharkhand Bijli Vitran Nigam Ltd",
+  "sourceId": "jh-jbvnl",
+  "level": "state",
+  "state": "JH",
+  "category": "Electricity",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jbvnl.co.in/upload/Steps%20for%20Jeevan%20Pramaan.pdf",
+    "official": "https://jbvnl.co.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T18:18:44.674Z",
+  "updatedAt": "2026-10-21T18:18:44.674Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

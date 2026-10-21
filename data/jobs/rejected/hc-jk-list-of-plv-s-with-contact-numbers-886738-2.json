@@ -1,0 +1,38 @@
+{
+  "id": "8867381323",
+  "slug": "hc-jk-list-of-plv-s-with-contact-numbers-886738-2",
+  "status": "rejected",
+  "title": "List of PLV's with Contact Numbers.",
+  "organization": "High Court of J&K and Ladakh (also LA)",
+  "sourceId": "hc-jk",
+  "level": "ut",
+  "state": "JK",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jkhighcourt.nic.in/List_of_PLVs_2020.pdf",
+    "official": "https://jkhighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T18:18:44.674Z",
+  "updatedAt": "2026-10-21T18:18:44.674Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2020).",
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}
