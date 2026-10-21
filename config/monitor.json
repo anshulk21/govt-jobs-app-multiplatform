@@ -109,6 +109,7 @@
   "autoPublish": {
     "mode": "smart",
     "staleDraftDays": 21,
+    "maxNoticeAgeDays": 180,
     "lowSignalSources": [
       "la-admin",
       "ld-admin",

@@ -26,7 +26,7 @@ export interface MonitorConfig {
    *   all   — publish everything that isn't junk
    *   off   — nothing; you publish in the admin panel
    */
-  autoPublish: { mode: 'smart' | 'all' | 'off'; staleDraftDays: number; lowSignalSources: string[] };
+  autoPublish: { mode: 'smart' | 'all' | 'off'; staleDraftDays: number; lowSignalSources: string[]; maxNoticeAgeDays?: number };
 }
 
 let cached: MonitorConfig | undefined;

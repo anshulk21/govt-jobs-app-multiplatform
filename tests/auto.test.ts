@@ -83,3 +83,29 @@ describe('auto-publish decisions', () => {
     expect(decide({ title: 'Apply for Advt no. 06/2026', sourceId: 'x', category: 'Other', links: { notification: '', official: '', apply: null }, foundAt: '2026-10-20T00:00:00Z' }, { ...cfg, mode: 'off' }, now).action).toBe('keep');
   });
 });
+
+describe('old notices', () => {
+  const cfg: AutoConfig = { mode: 'smart', staleDraftDays: 21, lowSignalSources: [] };
+  const now = new Date('2026-10-21T00:00:00Z');
+  const job = (title: string, notification = '', dates = {}) =>
+    decide({ title, sourceId: 'rrc-er', category: 'Railway', links: { notification, official: '', apply: null }, foundAt: '2026-10-21T00:00:00Z', dates }, cfg, now);
+
+  it('rejects notices whose newest date is long gone', () => {
+    expect(job('Urgent Notice for Re-medical of candidates of CEN-02/2018.')).toMatchObject({ action: 'reject', reason: 'old notice (newest date mentioned: 2018)' });
+    expect(job('Documents Verification Schedule From 25/04/2019 to 14/05/2019')).toMatchObject({ action: 'reject', reason: 'old notice (newest date mentioned: 2019-05-14)' });
+    expect(job('Notice and Schedule of DV & ME against CEN No.08/2024(Level1 posts)').action).toBe('reject');
+    expect(job('Admit card', 'https://example.gov.in/uploads/2019/05/admit.pdf').action).toBe('reject');
+  });
+
+  it('keeps current notices, last year’s ongoing ones, and anything with a future date', () => {
+    expect(job('Recruitment for Various Post 2026 (Live)').action).toBe('publish');
+    expect(job('Important Notice-Ref.:Advt. No.-05/2025: Regarding Postponement of PET').action).toBe('publish');
+    expect(job('Notification for Common Recruitment Process', '', { notification: '2013-04-26', lastDate: '2027-07-20' }).action).toBe('publish');
+    expect(job('Recruitment of Specialists On Contract – 2026-27').action).toBe('publish');
+  });
+
+  it('uses exact dates when given: older than 180 days is old', () => {
+    expect(job('Recruitment notice dated 02.03.2026').action).toBe('reject');
+    expect(job('Recruitment notice dated 15.10.2026').action).toBe('publish');
+  });
+});

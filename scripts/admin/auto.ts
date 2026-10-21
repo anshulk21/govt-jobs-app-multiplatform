@@ -75,15 +75,55 @@ export interface AutoConfig {
   mode: 'smart' | 'all' | 'off';
   staleDraftDays: number;
   lowSignalSources: string[];
+  /** Notices whose newest date is older than this are rejected (old items listed on source pages). */
+  maxNoticeAgeDays?: number;
 }
 
-export function decide(job: Pick<Job, 'title' | 'sourceId' | 'category' | 'links' | 'foundAt'>, cfg: AutoConfig, now: Date): AutoDecision {
+const DEFAULT_MAX_NOTICE_AGE_DAYS = 180;
+
+/**
+ * The most recent date a notice mentions, from its title, link and known dates. Exact dates
+ * (15.10.2026, 2026-10-15, 25/04/2019) give a day; a bare year (CEN-02/2018, 2025) counts as 31 Dec.
+ * Returns null when nothing date-like is found.
+ */
+export function newestMention(texts: string[], now: Date): { date: Date; exact: boolean } | null {
+  const maxYear = now.getUTCFullYear() + 1;
+  let best: { date: Date; exact: boolean } | null = null;
+  const consider = (y: number, m: number, d: number, exact: boolean) => {
+    if (y < 2000 || y > maxYear || m < 1 || m > 12 || d < 1 || d > 31) return;
+    const date = new Date(Date.UTC(y, m - 1, d));
+    if (!best || date > best.date) best = { date, exact };
+  };
+  for (const raw of texts) {
+    if (!raw) continue;
+    let t = raw;
+    for (const m of t.matchAll(/(?<!\d)(20\d\d)-(\d{1,2})-(\d{1,2})(?!\d)/g)) consider(+m[1]!, +m[2]!, +m[3]!, true);
+    for (const m of t.matchAll(/(?<!\d)(\d{1,2})[./-](\d{1,2})[./-](20\d\d)(?!\d)/g)) consider(+m[3]!, +m[2]!, +m[1]!, true);
+    t = t.replace(/(?<!\d)(20\d\d)-\d{1,2}-\d{1,2}(?!\d)|(?<!\d)\d{1,2}[./-]\d{1,2}[./-]20\d\d(?!\d)/g, ' ');
+    // "2026-27" is a session; its first year is what's mentioned.
+    for (const m of t.matchAll(/(?<!\d)(20\d\d)(?!\d)/g)) consider(+m[1]!, 12, 31, false);
+  }
+  return best;
+}
+
+
+export function decide(job: Pick<Job, 'title' | 'sourceId' | 'category' | 'links' | 'foundAt'> & { dates?: Partial<Job['dates']> }, cfg: AutoConfig, now: Date): AutoDecision {
   const title = cleanTitle(job.title);
   const text = `${title} ${job.links.notification}`;
   const stage = UPDATE.find(([re]) => re.test(title))?.[1] ?? null;
   const base = { title, stage };
   if (cfg.mode === 'off') return { ...base, action: 'keep', quiet: true, reason: 'auto-publishing is off' };
   if (JUNK.test(title)) return { ...base, action: 'reject', quiet: true, reason: 'not a job notice' };
+  // Source pages often still list notices from years ago; the monitor sees them as "new links".
+  const newest = newestMention([job.title, job.links.notification, job.dates?.notification ?? '', job.dates?.lastDate ?? '', job.dates?.exam ?? ''], now);
+  const maxAge = cfg.maxNoticeAgeDays ?? DEFAULT_MAX_NOTICE_AGE_DAYS;
+  // An exact date counts by days; a bare year only when it is two or more years back (a 2025
+  // recruitment can still have exams and results in 2026).
+  const old = newest && (newest.exact ? (now.getTime() - newest.date.getTime()) / 86_400_000 > maxAge : newest.date.getUTCFullYear() < now.getUTCFullYear() - 1);
+  if (newest && old) {
+    const when = newest.exact ? newest.date.toISOString().slice(0, 10) : String(newest.date.getUTCFullYear());
+    return { ...base, action: 'reject', quiet: true, reason: `old notice (newest date mentioned: ${when})` };
+  }
   if (title.replace(/[^\p{L}\p{N}]/gu, '').length < 8) {
     return stale(job, cfg, now) ?? { ...base, action: 'keep', quiet: true, reason: 'title too short to understand' };
   }
