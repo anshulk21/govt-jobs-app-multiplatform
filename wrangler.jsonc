@@ -9,6 +9,10 @@
   "compatibility_date": "2026-10-01",
   // Keep variables you add in the dashboard (Settings → Variables and secrets) on every deploy.
   "keep_vars": true,
+  // On-time starts for the monitor and the daily rebuild (worker/schedule.ts; times in UTC).
+  "triggers": {
+    "crons": ["17 */3 * * *", "30 0 * * *"]
+  },
   "build": {
     "command": "npm run build:web"
   },

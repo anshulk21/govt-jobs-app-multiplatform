@@ -204,9 +204,21 @@ This private chat is only for you, the admin. Your public Telegram/WhatsApp chan
 2. Edit `config/monitor.json` and replace `YOUR-GITHUB-USERNAME` in `userAgent` with your GitHub username. This tells site owners who is visiting and how to reach you.
 3. In the repository, go to **Settings → Secrets and variables → Actions → New repository secret** and add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`.
 4. Go to **Settings → Actions → General → Workflow permissions** and choose **Read and write permissions**. This lets the monitor commit its results.
-5. Go to the **Actions** tab, choose **Monitor official sources**, then **Run workflow**. The first run baselines every source and takes about 8 minutes. After that it runs by itself every 3 hours (00:00, 03:00, … UTC) and commits changes with messages like `[CF-Pages-Skip] monitor: 14 new links — SSC, UPPSC, TNPSC, +5 more`. Drafts are never public, so set the build watch paths in §6 to stop Cloudflare rebuilding the site for these commits. The `[CF-Pages-Skip]` prefix does the same if you ever use Cloudflare Pages instead of Workers.
+5. Go to the **Actions** tab, choose **Monitor official sources**, then **Run workflow**. The first run baselines every source and takes about 8 minutes. After that it runs by itself every 3 hours (at :17 past 00, 03, 06, … UTC) and commits changes with messages like `[CF-Pages-Skip] monitor: 14 new links — SSC, UPPSC, TNPSC, +5 more`. Drafts are never public, so set the build watch paths in §6 to stop Cloudflare rebuilding the site for these commits. The `[CF-Pages-Skip]` prefix does the same if you ever use Cloudflare Pages instead of Workers.
 
 Each run commits to `data/`. Run `git pull` before editing anything locally.
+
+#### Monitor runs on time (recommended)
+
+GitHub's own schedule is best-effort: on a new repository runs can start hours late or be skipped. The Cloudflare Worker fixes this. Its Cron Triggers (`wrangler.jsonc` → `triggers`) ask GitHub to start the monitor every 3 hours and the daily rebuild at 06:00 IST, on time. The GitHub schedule stays as a backup, and running twice is harmless. It needs one token:
+
+1. GitHub → your profile picture → **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
+2. Name `govt-jobs-finder worker`. Expiration: the longest offered, and set a reminder to renew it. **Repository access → Only select repositories →** this repository.
+3. **Permissions → Repository permissions → Actions: Read and write**. Nothing else. Then **Generate token** and copy it.
+4. Cloudflare → **Workers & Pages → govt-jobs-finder → Settings → Variables and secrets → Add**: type **Secret**, name `GITHUB_ACTIONS_TOKEN`, paste the token, **Deploy**.
+5. Check: `https://<your site>/oauth/status` shows `"GITHUB_ACTIONS_TOKEN": true`. After the next :17 past a 3rd hour (UTC), the Actions tab shows a new **Monitor official sources** run started by `workflow_dispatch`.
+
+The token can only start and read workflow runs in this one repository.
 
 ### Step 3 (optional): run on your own PC for sites that block GitHub
 
