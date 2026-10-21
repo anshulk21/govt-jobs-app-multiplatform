@@ -329,7 +329,7 @@ Clean URLs work out of the box: `dist/jobs/uppsc-pcs-2026.html` is served at `/j
 
 The repo includes `wrangler.jsonc`, so Cloudflare deploys it as a **Worker with static assets**. `npx wrangler deploy` always runs our full build (`npm run build:web`) first. A tiny Worker script (`worker/index.ts`) handles only the admin login (`/oauth/*`) and website push (`/push/*`); everything else is served as static files.
 
-1. **Set your address.** In `src/config/app.ts`, `siteUrl` must be your site's address. It's currently `https://govt-jobs-finder.21-anshul-k.workers.dev`. Canonical links, sitemaps, the admin login and the apps all use it.
+1. **Set your address.** In `src/config/app.ts`, `siteUrl` must be your site's address. It's currently `https://govtjobsfinder.com`. Canonical links, sitemaps, the admin login and the apps all use it.
 2. In <https://dash.cloudflare.com> go to **Workers & Pages → Create → Import a repository**, and pick this GitHub repo. The Worker **name must be `govt-jobs-finder`** (the `name` in `wrangler.jsonc`).
 3. Under the Worker's **Settings → Build**:
    - **Build command:** leave it **empty**. Wrangler runs the build itself, and a second build command would only build twice.
@@ -460,8 +460,8 @@ You need the website deployed on Cloudflare first (§6), with `siteUrl` in `src/
 
 1. **Create a GitHub OAuth app:** GitHub → your profile picture → **Settings → Developer settings → OAuth Apps → New OAuth App**.
    - Application name: `Govt Jobs Admin`
-   - Homepage URL: your site, e.g. `https://govt-jobs-finder.21-anshul-k.workers.dev`
-   - Authorization callback URL: your site + `/oauth/callback`, e.g. `https://govt-jobs-finder.21-anshul-k.workers.dev/oauth/callback`
+   - Homepage URL: your site, e.g. `https://govtjobsfinder.com`
+   - Authorization callback URL: your site + `/oauth/callback`, e.g. `https://govtjobsfinder.com/oauth/callback`
    - Click **Register application**, copy the **Client ID**, then click **Generate a new client secret** and copy it.
 2. **Add both values to Cloudflare:** Workers & Pages → `govt-jobs-finder` → **Settings → Variables and secrets** → **Add**:
    - `GITHUB_OAUTH_CLIENT_ID` = the client ID

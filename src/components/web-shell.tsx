@@ -58,8 +58,12 @@ export function WebShell({ children }: { children: ReactNode }) {
     <View className="min-h-screen bg-slate-50 dark:bg-slate-950">
       <View role="banner" className="sticky top-0 z-10 border-b border-slate-200 bg-white/95 dark:border-slate-800 dark:bg-slate-900/95">
         <View className="mx-auto w-full max-w-5xl gap-1 px-4 pt-3">
-          <Link href="/" className="text-xl font-extrabold text-brand-700 dark:text-brand-200">
-            {APP.name}
+          <Link href="/" asChild>
+            <Pressable className="flex-row items-center gap-2 self-start">
+              {/* Plain <img> (this file is web-only) so the logo is in the static HTML before JS loads. */}
+              <img src="/logo.svg" alt="" width={32} height={32} />
+              <Text className="text-xl font-extrabold text-brand-700 dark:text-brand-200">{APP.name}</Text>
+            </Pressable>
           </Link>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} role="navigation" contentContainerClassName="gap-1 pb-2">
             {NAV.map((n) => (

@@ -178,7 +178,7 @@ export function buildCmsConfig(siteUrl: string, repo: string) {
     local_backend: { url: 'http://localhost:8082/api/v1' },
     site_url: siteUrl,
     display_url: siteUrl,
-    logo_url: '/favicon.ico',
+    logo_url: '/logo.svg',
     media_folder: 'public/uploads',
     public_folder: '/uploads',
     editor: { preview: false },
