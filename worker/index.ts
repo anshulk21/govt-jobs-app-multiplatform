@@ -3,6 +3,7 @@
 //   GET  /oauth/auth       admin panel "Login with GitHub" (step 1)
 //   GET  /oauth/callback   admin panel login (step 2)
 //   POST /push/subscribe   website push topic subscriptions (only if web push is on)
+//   GET  /oauth/status     setup check: says which login settings the Worker can see (never their values)
 import { onRequestGet as oauthAuth } from '../functions/oauth/auth';
 import { onRequestGet as oauthCallback } from '../functions/oauth/callback';
 import { onRequestPost as pushSubscribe } from '../functions/push/subscribe';
@@ -14,10 +15,23 @@ interface Env {
   FIREBASE_SERVICE_ACCOUNT?: string;
 }
 
+/** Which admin-login settings this Worker can see. Shows names only, never values. */
+function setupStatus(env: Env): Response {
+  const names = Object.keys(env).filter((k) => k !== 'ASSETS');
+  return Response.json({
+    GITHUB_OAUTH_CLIENT_ID: Boolean(env.GITHUB_OAUTH_CLIENT_ID),
+    GITHUB_OAUTH_CLIENT_SECRET: Boolean(env.GITHUB_OAUTH_CLIENT_SECRET),
+    // Similar-looking names help spot typos such as a trailing space or wrong case.
+    similarNamesFound: names.filter((k) => /git|oauth|client/i.test(k)),
+    otherSettingsCount: names.length,
+  });
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const { pathname } = new URL(request.url);
     const method = request.method;
+    if (pathname === '/oauth/status' && method === 'GET') return setupStatus(env);
     if (pathname === '/oauth/auth' && method === 'GET') return oauthAuth({ request, env });
     if (pathname === '/oauth/callback' && method === 'GET') return oauthCallback({ request, env });
     if (pathname === '/push/subscribe' && method === 'POST') return pushSubscribe({ request, env });
