@@ -1,0 +1,50 @@
+{
+  "id": "72b0c3089b",
+  "slug": "as-slprb-notice-regarding-enhancement-of-upper-age-limit-for-72b0c3",
+  "status": "published",
+  "title": "Notice regarding enhancement of upper age limit for the post of Sub Inspector (UB) in Assam Police & Sub Inspector (AB) in Assam Commando Battalions and reopening of Online Application Portal for 14 (",
+  "organization": "State Level Police Recruitment Board, Assam",
+  "sourceId": "as-slprb",
+  "level": "state",
+  "state": "AS",
+  "category": "Police",
+  "postName": null,
+  "vacancies": 48,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-13",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://slprbassam.in/pdf/Notice2026/13022026/si_ub-notice-13022026.pdf",
+    "official": "https://slprbassam.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-02-13",
+      "url": "https://slprbassam.in/pdf/Notice2026/13022026/si_ub-notice-13022026.pdf"
+    }
+  ],
+  "foundAt": "2026-10-21T03:34:35.861Z",
+  "updatedAt": "2026-10-21T05:44:23.916Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.notification": "dated :13-02-2026",
+      "vacancies": "48 posts"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated :13-02-2026”\n• Vacancies: from “48 posts”",
+  "publishedAt": "2026-10-21T05:44:23.916Z"
+}

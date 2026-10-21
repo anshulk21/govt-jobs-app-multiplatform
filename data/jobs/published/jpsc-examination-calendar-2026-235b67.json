@@ -1,0 +1,44 @@
+{
+  "id": "235b674481",
+  "slug": "jpsc-examination-calendar-2026-235b67",
+  "status": "published",
+  "title": "Examination Calendar-2026",
+  "organization": "Jharkhand Public Service Commission",
+  "sourceId": "jpsc",
+  "level": "state",
+  "state": "JH",
+  "category": "PSC",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.jpsc.gov.in/data/Exam_Calendar_2026_dtd_09_07_2026.pdf",
+    "official": "https://www.jpsc.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.jpsc.gov.in/data/Exam_Calendar_2026_dtd_09_07_2026.pdf"
+    }
+  ],
+  "foundAt": "2026-10-21T03:34:35.861Z",
+  "updatedAt": "2026-10-21T05:44:23.916Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-10-21T05:44:23.916Z"
+}

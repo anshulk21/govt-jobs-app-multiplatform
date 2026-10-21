@@ -1,0 +1,44 @@
+{
+  "id": "957af79a1e",
+  "slug": "jkssb-permanent-district-code-957af7",
+  "status": "published",
+  "title": "Permanent District Code",
+  "organization": "J&K Services Selection Board",
+  "sourceId": "jkssb",
+  "level": "ut",
+  "state": "JK",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jkssb.nic.in/Pdf/PDC.pdf",
+    "official": "https://jkssb.nic.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://jkssb.nic.in/Pdf/PDC.pdf"
+    }
+  ],
+  "foundAt": "2026-10-21T03:34:35.861Z",
+  "updatedAt": "2026-10-21T05:44:23.916Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-10-21T05:44:23.916Z"
+}
