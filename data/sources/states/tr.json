@@ -1,0 +1,152 @@
+{
+  "level": "state",
+  "state": "TR",
+  "name": "Tripura",
+  "sources": [
+    {
+      "id": "tpsc",
+      "name": "Tripura Public Service Commission",
+      "url": "https://tpsc.tripura.gov.in/",
+      "level": "state",
+      "state": "TR",
+      "category": "PSC",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://tpsc.tripura.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "tr-police",
+      "name": "Tripura Police",
+      "url": "",
+      "level": "state",
+      "state": "TR",
+      "category": "Police",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: tripurapolice.gov.in does not resolve; find the current official URL, then enable."
+    },
+    {
+      "id": "hc-tripura",
+      "name": "High Court of Tripura",
+      "url": "https://thc.nic.in/",
+      "level": "state",
+      "state": "TR",
+      "category": "High Court",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://thc.nic.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "tr-teacher",
+      "name": "Tripura — Teacher / Education Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "TR",
+      "category": "Teaching",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "tr-health",
+      "name": "Tripura — Health / Medical Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "TR",
+      "category": "Health",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "tr-power",
+      "name": "Tripura — State power utility",
+      "url": "",
+      "level": "state",
+      "state": "TR",
+      "category": "Electricity",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    }
+  ]
+}

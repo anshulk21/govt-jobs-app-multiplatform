@@ -1,0 +1,33 @@
+name: Push notifications for published jobs
+
+# When jobs are published (or a published job gets an admit card/answer key/result),
+# notify matching users. Needs the FIREBASE_SERVICE_ACCOUNT secret (README → Push notifications).
+on:
+  push:
+    branches: [main]
+    paths: ['data/jobs/published/**']
+
+concurrency:
+  group: push-notify
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Send notifications
+        run: npm run push:published -- --before ${{ github.event.before }} --after ${{ github.sha }}
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}

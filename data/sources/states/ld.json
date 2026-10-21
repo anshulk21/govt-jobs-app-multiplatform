@@ -1,0 +1,30 @@
+{
+  "level": "ut",
+  "state": "LD",
+  "name": "Lakshadweep",
+  "sources": [
+    {
+      "id": "ld-admin",
+      "name": "Lakshadweep Administration",
+      "url": "https://lakshadweep.gov.in/",
+      "level": "ut",
+      "state": "LD",
+      "category": "Other",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://lakshadweep.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    }
+  ]
+}

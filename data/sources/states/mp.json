@@ -1,0 +1,128 @@
+{
+  "level": "state",
+  "state": "MP",
+  "name": "Madhya Pradesh",
+  "sources": [
+    {
+      "id": "mppsc",
+      "name": "Madhya Pradesh Public Service Commission",
+      "url": "https://mppsc.mp.gov.in/",
+      "level": "state",
+      "state": "MP",
+      "category": "PSC",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://mppsc.mp.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "mp-esb",
+      "name": "MP Employee Selection Board (also police & teacher posts)",
+      "url": "https://esb.mp.gov.in/",
+      "level": "state",
+      "state": "MP",
+      "category": "Subordinate Services",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": false,
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "mp-nhm",
+      "name": "National Health Mission, Madhya Pradesh",
+      "url": "https://www.nhmmp.gov.in/",
+      "level": "state",
+      "state": "MP",
+      "category": "Health",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://www.nhmmp.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "hc-madhya-pradesh",
+      "name": "High Court of Madhya Pradesh",
+      "url": "https://mphc.gov.in/",
+      "level": "state",
+      "state": "MP",
+      "category": "High Court",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://mphc.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "mp-mppgcl",
+      "name": "MP Power Generating Company Ltd",
+      "url": "https://mppgcl.mp.gov.in/",
+      "level": "state",
+      "state": "MP",
+      "category": "Electricity",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": false,
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    }
+  ]
+}

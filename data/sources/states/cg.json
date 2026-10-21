@@ -1,0 +1,130 @@
+{
+  "level": "state",
+  "state": "CG",
+  "name": "Chhattisgarh",
+  "sources": [
+    {
+      "id": "cgpsc",
+      "name": "Chhattisgarh Public Service Commission",
+      "url": "https://psc.cg.gov.in/",
+      "level": "state",
+      "state": "CG",
+      "category": "PSC",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://psc.cg.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "cg-vyapam",
+      "name": "Chhattisgarh Professional Examination Board (Vyapam)",
+      "url": "https://vyapam.cgstate.gov.in/",
+      "level": "state",
+      "state": "CG",
+      "category": "Subordinate Services",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": false,
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "cg-police",
+      "name": "Chhattisgarh Police",
+      "url": "https://cgpolice.gov.in/",
+      "level": "state",
+      "state": "CG",
+      "category": "Police",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://cgpolice.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "hc-chhattisgarh",
+      "name": "High Court of Chhattisgarh",
+      "url": "https://highcourt.cg.gov.in/",
+      "level": "state",
+      "state": "CG",
+      "category": "High Court",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://highcourt.cg.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "cg-cspdcl",
+      "name": "Chhattisgarh State Power Companies",
+      "url": "https://cspc.co.in/",
+      "level": "state",
+      "state": "CG",
+      "category": "Electricity",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": false,
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    }
+  ]
+}

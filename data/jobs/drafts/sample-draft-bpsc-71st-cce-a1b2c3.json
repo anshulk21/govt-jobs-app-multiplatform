@@ -1,0 +1,50 @@
+{
+  "id": "5932a94ac0",
+  "slug": "sample-draft-bpsc-71st-cce-a1b2c3",
+  "status": "draft",
+  "title": "Advt. No. 25/2026 — 71st Combined (Preliminary) Competitive Examination",
+  "organization": "Bihar Public Service Commission",
+  "sourceId": "bpsc",
+  "level": "state",
+  "state": "BR",
+  "category": "PSC",
+  "postName": null,
+  "vacancies": 1250,
+  "qualifications": [
+    "graduate"
+  ],
+  "ageLimit": "20–37 years",
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-11-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://bpsc.bihar.gov.in/sample-71st-cce.pdf",
+    "official": "https://bpsc.bihar.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "sample": true,
+  "foundAt": "2026-10-20T03:00:00.000Z",
+  "updatedAt": "2026-10-20T03:00:00.000Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "vacancies",
+      "dates.lastDate",
+      "ageLimit",
+      "qualifications"
+    ],
+    "evidence": {
+      "vacancies": "Total No. of Posts: 1250",
+      "dates.lastDate": "Last date for online application: 30.11.2026",
+      "ageLimit": "Age Limit: 20 to 37 years",
+      "qualifications": "Educational Qualification: Graduation from a recognised university"
+    }
+  },
+  "notes": "SAMPLE DATA for development. Not a real notification. Delete before launch."
+}

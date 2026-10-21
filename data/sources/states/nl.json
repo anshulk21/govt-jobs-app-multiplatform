@@ -1,0 +1,153 @@
+{
+  "level": "state",
+  "state": "NL",
+  "name": "Nagaland",
+  "sources": [
+    {
+      "id": "npsc",
+      "name": "Nagaland Public Service Commission",
+      "url": "",
+      "level": "state",
+      "state": "NL",
+      "category": "PSC",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "nl-nssb",
+      "name": "Nagaland Staff Selection Board",
+      "url": "",
+      "level": "state",
+      "state": "NL",
+      "category": "Subordinate Services",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "nl-police",
+      "name": "Nagaland — Police Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "NL",
+      "category": "Police",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "nl-teacher",
+      "name": "Nagaland — Teacher / Education Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "NL",
+      "category": "Teaching",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "nl-health",
+      "name": "Nagaland — Health / Medical Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "NL",
+      "category": "Health",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "nl-power",
+      "name": "Nagaland — State power utility",
+      "url": "",
+      "level": "state",
+      "state": "NL",
+      "category": "Electricity",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    }
+  ]
+}

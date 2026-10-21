@@ -1,0 +1,104 @@
+{
+  "level": "state",
+  "state": "KL",
+  "name": "Kerala",
+  "sources": [
+    {
+      "id": "kerala-psc",
+      "name": "Kerala Public Service Commission (also police & teacher posts)",
+      "url": "https://www.keralapsc.gov.in/",
+      "level": "state",
+      "state": "KL",
+      "category": "PSC",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://www.keralapsc.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "kl-nhm",
+      "name": "National Health Mission, Kerala (Arogyakeralam)",
+      "url": "https://arogyakeralam.gov.in/",
+      "level": "state",
+      "state": "KL",
+      "category": "Health",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://arogyakeralam.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "hc-kerala",
+      "name": "High Court of Kerala — Recruitment",
+      "url": "https://hckrecruitment.keralacourts.in/",
+      "level": "state",
+      "state": "KL",
+      "category": "High Court",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://hckrecruitment.keralacourts.in/hckrecruitment/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "kl-kseb",
+      "name": "Kerala State Electricity Board",
+      "url": "https://kseb.in/",
+      "level": "state",
+      "state": "KL",
+      "category": "Electricity",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://kseb.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    }
+  ]
+}

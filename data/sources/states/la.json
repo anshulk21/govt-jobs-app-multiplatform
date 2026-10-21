@@ -1,0 +1,30 @@
+{
+  "level": "ut",
+  "state": "LA",
+  "name": "Ladakh",
+  "sources": [
+    {
+      "id": "la-admin",
+      "name": "UT Ladakh Administration",
+      "url": "https://ladakh.gov.in/",
+      "level": "ut",
+      "state": "LA",
+      "category": "Other",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://ladakh.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    }
+  ]
+}

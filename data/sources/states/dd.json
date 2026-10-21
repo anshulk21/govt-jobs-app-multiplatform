@@ -1,0 +1,30 @@
+{
+  "level": "ut",
+  "state": "DD",
+  "name": "Dadra and Nagar Haveli and Daman and Diu",
+  "sources": [
+    {
+      "id": "dd-admin",
+      "name": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+      "url": "https://ddd.gov.in/",
+      "level": "ut",
+      "state": "DD",
+      "category": "Other",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://ddd.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    }
+  ]
+}

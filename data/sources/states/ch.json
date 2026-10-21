@@ -1,0 +1,56 @@
+{
+  "level": "ut",
+  "state": "CH",
+  "name": "Chandigarh",
+  "sources": [
+    {
+      "id": "ch-admin",
+      "name": "Chandigarh Administration",
+      "url": "https://chandigarh.gov.in/",
+      "level": "ut",
+      "state": "CH",
+      "category": "Other",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://chandigarh.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "ch-police",
+      "name": "Chandigarh Police",
+      "url": "https://chandigarhpolice.gov.in/",
+      "level": "ut",
+      "state": "CH",
+      "category": "Police",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://portal.chandigarhpolice.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    }
+  ]
+}

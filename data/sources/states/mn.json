@@ -1,0 +1,152 @@
+{
+  "level": "state",
+  "state": "MN",
+  "name": "Manipur",
+  "sources": [
+    {
+      "id": "mpsc-manipur",
+      "name": "Manipur Public Service Commission",
+      "url": "https://mpscmanipur.gov.in/",
+      "level": "state",
+      "state": "MN",
+      "category": "PSC",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://mpscmanipur.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "hc-manipur",
+      "name": "High Court of Manipur",
+      "url": "https://hcmimphal.nic.in/",
+      "level": "state",
+      "state": "MN",
+      "category": "High Court",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://hcmimphal.nic.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "mn-police",
+      "name": "Manipur — Police Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "MN",
+      "category": "Police",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "mn-teacher",
+      "name": "Manipur — Teacher / Education Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "MN",
+      "category": "Teaching",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "mn-health",
+      "name": "Manipur — Health / Medical Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "MN",
+      "category": "Health",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "mn-power",
+      "name": "Manipur — State power utility",
+      "url": "",
+      "level": "state",
+      "state": "MN",
+      "category": "Electricity",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    }
+  ]
+}

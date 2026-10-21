@@ -1,0 +1,153 @@
+{
+  "level": "state",
+  "state": "ML",
+  "name": "Meghalaya",
+  "sources": [
+    {
+      "id": "mpsc-meghalaya",
+      "name": "Meghalaya Public Service Commission",
+      "url": "https://mpsc.meghalaya.gov.in/",
+      "level": "state",
+      "state": "ML",
+      "category": "PSC",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://mpsc.meghalaya.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "ml-police",
+      "name": "Meghalaya Police",
+      "url": "https://megpolice.gov.in/",
+      "level": "state",
+      "state": "ML",
+      "category": "Police",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://megpolice.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "hc-meghalaya",
+      "name": "High Court of Meghalaya",
+      "url": "https://meghalayahighcourt.nic.in/",
+      "level": "state",
+      "state": "ML",
+      "category": "High Court",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://meghalayahighcourt.nic.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "ml-teacher",
+      "name": "Meghalaya — Teacher / Education Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "ML",
+      "category": "Teaching",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "ml-health",
+      "name": "Meghalaya — Health / Medical Recruitment Board",
+      "url": "",
+      "level": "state",
+      "state": "ML",
+      "category": "Health",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    },
+    {
+      "id": "ml-power",
+      "name": "Meghalaya — State power utility",
+      "url": "",
+      "level": "state",
+      "state": "ML",
+      "category": "Electricity",
+      "linkFilter": [
+        "career",
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "engagement",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+    }
+  ]
+}

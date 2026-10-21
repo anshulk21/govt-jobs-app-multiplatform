@@ -1,0 +1,30 @@
+{
+  "level": "ut",
+  "state": "PY",
+  "name": "Puducherry",
+  "sources": [
+    {
+      "id": "py-admin",
+      "name": "Government of Puducherry",
+      "url": "https://py.gov.in/",
+      "level": "ut",
+      "state": "PY",
+      "category": "Other",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://py.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    }
+  ]
+}

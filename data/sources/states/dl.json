@@ -1,0 +1,83 @@
+{
+  "level": "ut",
+  "state": "DL",
+  "name": "Delhi",
+  "sources": [
+    {
+      "id": "dsssb",
+      "name": "Delhi Subordinate Services Selection Board",
+      "url": "https://dsssb.delhi.gov.in/",
+      "level": "ut",
+      "state": "DL",
+      "category": "Subordinate Services",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://dsssb.delhi.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "dl-police",
+      "name": "Delhi Police",
+      "url": "https://delhipolice.gov.in/",
+      "level": "ut",
+      "state": "DL",
+      "category": "Police",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "notice",
+        "exam",
+        "admit",
+        "result",
+        "answer key",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "notes": "Constable/SI hiring is via SSC; this catches other notices.",
+      "finalUrl": "https://delhipolice.gov.in/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    },
+    {
+      "id": "hc-delhi",
+      "name": "Delhi High Court",
+      "url": "https://delhihighcourt.nic.in/",
+      "level": "ut",
+      "state": "DL",
+      "category": "High Court",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "normal",
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://delhihighcourt.nic.in/web/",
+      "lastVerifiedAt": "2026-10-20T16:07:00.916Z"
+    }
+  ]
+}

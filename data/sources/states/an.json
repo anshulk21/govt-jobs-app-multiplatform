@@ -1,0 +1,29 @@
+{
+  "level": "ut",
+  "state": "AN",
+  "name": "Andaman and Nicobar Islands",
+  "sources": [
+    {
+      "id": "an-admin",
+      "name": "Andaman & Nicobar Administration",
+      "url": "",
+      "level": "ut",
+      "state": "AN",
+      "category": "Other",
+      "linkFilter": [
+        "recruitment",
+        "notification",
+        "advt",
+        "advertisement",
+        "vacancy",
+        "vacancies",
+        "notice",
+        ".pdf"
+      ],
+      "priority": "high",
+      "enabled": false,
+      "verified": false,
+      "notes": "TODO: www.andaman.gov.in does not resolve; find the current official URL, then enable."
+    }
+  ]
+}
