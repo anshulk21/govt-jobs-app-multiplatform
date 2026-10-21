@@ -101,3 +101,25 @@ describe('review notes', () => {
     expect(reviewNotes({ extraction: { method: 'link-only', fields: [], evidence: {} } })).toContain('Only the link was read');
   });
 });
+
+describe('bulk selection', async () => {
+  const { selectDrafts } = await import('../scripts/admin/bulk');
+  const d = (slug: string, title: string, sourceId: string, state: string | null, extra = {}) => ({ slug, title, sourceId, state, level: state ? 'state' : 'central', ...extra });
+  const drafts = [
+    d('a', 'Advertisement for CSLE 2026', 'ar-apssb', 'AR'),
+    d('b', 'Annual Exam Calendar', 'ar-apssb', 'AR'),
+    d('c', 'IBPS PO Notification', 'ibps', null),
+    d('d', 'List of CPIOs', 'ch-admin', 'CH'),
+    d('e', 'Sample job', 'ssc', null, { sample: true }),
+  ];
+  const slugs = (f: Parameters<typeof selectDrafts>[1]) => selectDrafts(drafts, f).map((x) => x.slug);
+
+  it('selects by source, state, title words and limit, never samples', () => {
+    expect(slugs({})).toEqual(['a', 'b', 'c', 'd']);
+    expect(slugs({ sources: ['AR-APSSB'] })).toEqual(['a', 'b']);
+    expect(slugs({ states: ['central'] })).toEqual(['c']);
+    expect(slugs({ titleHas: ['advertisement', 'notification'] })).toEqual(['a', 'c']);
+    expect(slugs({ titleNot: ['calendar', 'cpio'] })).toEqual(['a', 'c']);
+    expect(slugs({ limit: 2 })).toEqual(['a', 'b']);
+  });
+});

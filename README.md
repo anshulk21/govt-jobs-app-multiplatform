@@ -471,6 +471,22 @@ Within a few minutes, the **Publish jobs** workflow (`.github/workflows/publish.
 
 To **unpublish** a job, open it under Published jobs, set Status back to Draft (or Rejected) and save.
 
+### Publishing or rejecting many drafts at once
+
+The admin panel edits one job at a time. To act on many, use GitHub: **Actions → Bulk update drafts → Run workflow**.
+
+- **Action:** publish or reject.
+- **Filters (all optional):**
+  - source IDs (e.g. `ssc,ibps,bpsc`)
+  - states (e.g. `UP,BR` or `central`)
+  - words the title must contain (e.g. `recruitment,advt,vacancy`)
+  - words to skip (e.g. `calendar,annexure`)
+  - a maximum number of jobs
+- **Dry run** is ticked by default: the run page lists exactly which drafts would go live, which would stay in Drafts (and why), and changes nothing. Untick it to apply.
+- **Notifications** are off by default, so users don't get dozens of alerts at once.
+
+Published this way, jobs go through the same checks as single publishing. They keep their automatic titles and values, though, so spot-check them on the site afterwards. A good routine: first **reject** the noise in bulk (e.g. source IDs `la-admin,ld-admin,dd-admin,ch-admin`), then **publish** the official recruitment bodies (e.g. `ssc,ibps,hssc,uppsc`).
+
 ### Admit card, answer key and result updates
 
 Open the job under **Published jobs** → **Status timeline** → **Add**. Choose the stage (e.g. *Admit Card*), the date and the official link, then save. The job's page updates, it appears on the Admit Card / Answer Key / Result pages, and **everyone who saved it gets a notification**.

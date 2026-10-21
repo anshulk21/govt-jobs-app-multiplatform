@@ -24,7 +24,8 @@
     "push:published": "tsx scripts/push/notify-published.ts",
     "push:reminders": "tsx scripts/push/daily-reminders.ts",
     "admin:apply": "tsx scripts/admin/apply.ts",
-    "admin:local": "npm run build:api && PORT=8082 npx --yes decap-server@3.11.5"
+    "admin:local": "npm run build:api && PORT=8082 npx --yes decap-server@3.11.5",
+    "admin:bulk": "tsx scripts/admin/bulk.ts"
   },
   "devDependencies": {
     "@types/node": "^20.19.43",

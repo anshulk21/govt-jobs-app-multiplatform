@@ -1,4 +1,21 @@
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
+
+/** A temporary project folder holding only the given published job files, used as the working directory. */
+function useJobs(files: Record<string, unknown>) {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'jobs-'));
+  const dir = path.join(root, 'data/jobs/published');
+  fs.mkdirSync(dir, { recursive: true });
+  for (const [name, job] of Object.entries(files)) fs.writeFileSync(path.join(dir, name), JSON.stringify(job));
+  vi.spyOn(process, 'cwd').mockReturnValue(root);
+}
+
+const REPO_PUBLISHED = path.join(__dirname, '../data/jobs/published');
+const samples = Object.fromEntries(
+  fs.readdirSync(REPO_PUBLISHED).filter((f) => f.startsWith('sample-')).map((f) => [f, JSON.parse(fs.readFileSync(path.join(REPO_PUBLISHED, f), 'utf8'))]),
+);
 
 afterEach(() => {
   vi.restoreAllMocks();
@@ -16,11 +33,21 @@ describe('src/server/data', () => {
   });
 
   it('hides sample jobs unless SAMPLE_JOBS=1', async () => {
+    useJobs(samples);
     const { publishedJobs } = await import('../src/server/data');
-    expect(publishedJobs().some((j) => j.sample)).toBe(false);
+    expect(publishedJobs()).toEqual([]);
+  });
+
+  it('hides sample jobs once a real job is published, even with SAMPLE_JOBS=1', async () => {
+    const real = { ...samples['sample-ssc-gd-constable-2026.json'], sample: undefined, slug: 'real-job', id: 'r1' };
+    useJobs({ ...samples, 'real-job.json': real });
+    process.env.SAMPLE_JOBS = '1';
+    const { publishedJobs } = await import('../src/server/data');
+    expect(publishedJobs().map((j) => j.slug)).toEqual(['real-job']);
   });
 
   it('builds API payloads from the sample jobs', async () => {
+    useJobs(samples);
     process.env.SAMPLE_JOBS = '1';
     const { apiFiles, payloads } = await import('../src/server/data');
     expect(payloads.latest().jobs).toHaveLength(5);
