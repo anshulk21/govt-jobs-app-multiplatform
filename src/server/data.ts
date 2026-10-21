@@ -28,10 +28,14 @@ export function publishedJobs(): Job[] {
   cache = files
     .map((f) => {
       const job = JSON.parse(fs.readFileSync(path.join(PUBLISHED_DIR, f), 'utf8')) as Job;
-      if (job.slug !== path.basename(f, '.json')) throw new Error(`${f}: "slug" must match the file name`);
+      if (job.slug !== path.basename(f, '.json')) {
+        // Just edited in the admin panel: the publish workflow renames it within minutes.
+        console.warn(`⚠ ${f}: slug "${job.slug}" doesn't match the file name yet — skipped in this build`);
+        return null;
+      }
       return job;
     })
-    .filter((j) => j.status === 'published');
+    .filter((j): j is Job => j !== null && j.status === 'published');
   const real = cache.filter((j) => !j.sample);
   cache = withSamples && real.length === 0 ? cache : real;
   return cache;

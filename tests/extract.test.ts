@@ -65,3 +65,18 @@ describe('extractDetails date labels', () => {
     expect(extractDetails('Date of Examination: to be announced\nAge as on 01.01.2027').dates.exam).toBeNull();
   });
 });
+
+describe('extractDetails safety checks', () => {
+  it('does not mistake the word "be" for B.E. (engineering)', () => {
+    const q = extractDetails('Educational Qualification: Candidates must be graduates. A degree (Graduation) in any discipline.').qualifications;
+    expect(q).toEqual(['graduate']);
+    expect(extractDetails('Eligibility: B.E./B.Tech in Civil Engineering').qualifications).toEqual(['engineering']);
+  });
+
+  it('drops dates implausibly far from when the notice was found', () => {
+    const d = extractDetails('Dated: 26.04.2013\nLast date for online application: 20.07.2026', '2026-06-30').dates;
+    expect(d.notification).toBeNull();
+    expect(d.lastDate).toBe('2026-07-20');
+    expect(extractDetails('Last date: 15.11.2031', '2026-10-20').dates.lastDate).toBeNull();
+  });
+});

@@ -31,7 +31,7 @@ export function chunkSitemap(name: string, urls: SitemapUrl[]): { name: string; 
 }
 
 export function robotsTxt(siteUrl: string): string {
-  return ['User-agent: *', 'Allow: /', 'Disallow: /api/', 'Disallow: /_expo/loaders/', '', `Sitemap: ${siteUrl}/sitemap.xml`, ''].join('\n');
+  return ['User-agent: *', 'Allow: /', 'Disallow: /api/', 'Disallow: /_expo/loaders/', 'Disallow: /admin/', '', `Sitemap: ${siteUrl}/sitemap.xml`, ''].join('\n');
 }
 
 export interface PageSeo {

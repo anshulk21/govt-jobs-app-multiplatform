@@ -1,6 +1,6 @@
 // Usage: npm run push:published -- --before <sha> --after <sha> [--dry-run] [--no-wait]
 //
-// Run by .github/workflows/push-on-publish.yml when data/jobs/published/ changes.
+// Run by .github/workflows/publish.yml after jobs are published or updated.
 //   - a job newly added to published/  → "New: …" to users whose choices match it
 //   - a published job that gained an admit card / answer key / result
 //                                       → update to users who saved it (topic job_<id>)

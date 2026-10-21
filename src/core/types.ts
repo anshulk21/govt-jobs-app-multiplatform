@@ -85,6 +85,8 @@ export interface Job {
   sample?: boolean;
   /** Free-text notes for the admin; never shown to users. */
   notes?: string;
+  /** What the monitor filled in automatically and from which text — shown to the admin in the CMS. */
+  review?: string;
   /** When the monitor first saw the link (ISO timestamp). */
   foundAt: string;
   updatedAt: string;

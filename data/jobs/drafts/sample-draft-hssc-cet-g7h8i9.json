@@ -26,7 +26,6 @@
     "apply": null
   },
   "timeline": [],
-  "sample": true,
   "foundAt": "2026-10-19T21:00:00.000Z",
   "updatedAt": "2026-10-19T21:00:00.000Z",
   "extraction": {
@@ -34,5 +33,7 @@
     "fields": [],
     "evidence": {}
   },
-  "notes": "SAMPLE DATA for development. Not a real notification. Delete before launch."
+  "sample": true,
+  "notes": "SAMPLE DATA for development. Not a real notification. Delete before launch.",
+  "review": "Only the link was read. Fill in the details from the official notification."
 }

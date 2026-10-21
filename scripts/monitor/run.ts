@@ -99,7 +99,7 @@ export async function runMonitor(opts: MonitorOptions, ctx: MonitorContext): Pro
     try {
       const { text } = await pdfToText(r.bytes, config.pdf.maxPages);
       if (text.replace(/\s/g, '').length < 50) return { extracted: null, error: 'PDF has no text layer (probably scanned)' };
-      return { extracted: extractDetails(text) };
+      return { extracted: extractDetails(text, startedIso.slice(0, 10)) };
     } catch (err) {
       return { extracted: null, error: `PDF could not be parsed (${(err as Error).message})` };
     }
@@ -115,7 +115,7 @@ export async function runMonitor(opts: MonitorOptions, ctx: MonitorContext): Pro
     }
     if (!extracted) {
       // Dates written in the link text itself, e.g. "… last date 15.11.2026".
-      const fromTitle = extractDetails(link.text);
+      const fromTitle = extractDetails(link.text, startedIso.slice(0, 10));
       if (Object.keys(fromTitle.evidence).length) extracted = fromTitle;
     }
     const job = makeDraft({ source, link, pageUrl, now: startedIso, extracted, method, error });

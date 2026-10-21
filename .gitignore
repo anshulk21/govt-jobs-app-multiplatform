@@ -14,3 +14,5 @@ android/
 # Firebase service-account keys are SECRETS — never commit them (use GitHub/Cloudflare secrets).
 *firebase-adminsdk*.json
 *service-account*.json
+.admin-commit-msg
+public/admin/config.yml

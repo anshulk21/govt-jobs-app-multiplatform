@@ -2,7 +2,7 @@
 
 One codebase for an **Android app, iOS app and SEO website** that lists Indian government job openings from official central, state and UT recruitment sites. A monitor checks those sites every few hours and turns new notices into draft jobs for you to review.
 
-> **Status:** built step by step. ✅ Part 1 (sources + verify script), ✅ Part 2 (monitor), ✅ Part 3 (app & website screens) and ✅ Part 4 (SEO + website deploy) and ✅ Part 5 (push notifications) are done. Admin and monetization come in later parts, and this README grows with each part.
+> **Status:** built step by step. ✅ Part 1 (sources + verify script), ✅ Part 2 (monitor), ✅ Part 3 (app & website screens) and ✅ Part 4 (SEO + website deploy) ✅ Part 5 (push notifications) and ✅ Part 6 (admin panel) are done. Monetization comes next, and this README grows with each part.
 
 ---
 
@@ -17,7 +17,7 @@ You need:
 git clone <your-repo-url> govt-jobs-finder
 cd govt-jobs-finder
 npm install
-npm test            # should print "Tests  114 passed"
+npm test            # should print "Tests  127 passed"
 ```
 
 ## 2. Project layout (so far)
@@ -358,9 +358,9 @@ When a user picks their states, categories and qualification, the app subscribes
 
 | When | Who gets it | Sent by |
 |---|---|---|
-| A job is published | Users whose states/categories/qualification match it, using the same rule as the app's *For you*. Example: "New: UP Police Constable 2026 — 12,000 posts. Last date 15 Nov." | `.github/workflows/push-on-publish.yml` |
+| A job is published | Users whose states/categories/qualification match it, using the same rule as the app's *For you*. Example: "New: UP Police Constable 2026 — 12,000 posts. Last date 15 Nov." | `.github/workflows/publish.yml` |
 | 3 days before a last date, 09:00 IST | The same matching users: "Last 3 days to apply" | `.github/workflows/push-reminders.yml` |
-| A published job gets an admit card, answer key or result | Users who **saved** that job | `push-on-publish.yml` |
+| A published job gets an admit card, answer key or result | Users who **saved** that job | `publish.yml` |
 | "Remind me" on a job | That user (scheduled on the phone, no server) | the app |
 
 The publish workflow waits until the website shows the new job (Cloudflare takes a few minutes) before sending, so tapping the notification always works. Sample jobs are never announced, and a job is not announced if its last date has already passed. FCM is free with no message limit.
@@ -414,7 +414,79 @@ The website can also send browser notifications. Browsers can't subscribe to FCM
 
 This uses Google's topic-subscription API from Cloudflare. It hasn't been tested end-to-end with a real Firebase project yet, so try it on a test project first. Leaving it off has no effect on the apps.
 
-## 8. Tests
+## 8. Admin panel (review and publish jobs)
+
+Your admin panel is at **`https://<your-site>/admin/`**. It's [Decap CMS](https://decapcms.org): a free editor that saves straight to your GitHub repo, so there's still no database. Only GitHub accounts with write access to the repository can log in.
+
+| Collection | What's in it |
+|---|---|
+| **Draft jobs** | New notices found by the monitor. Sort by date found, state, category or title; group by state or category; filter central jobs. |
+| **Published jobs** | Live on the website and in the apps. |
+| **Rejected** | Not jobs, or duplicates. Kept so they're never alerted again. |
+| **Sources — Central / States & UTs** | The official pages the monitor watches. |
+| **Sponsored & books** | Sponsored coaching cards and affiliate book links (used in Part 7). |
+
+### One-time setup (10 minutes, free)
+
+You need the website deployed on Cloudflare Pages first (§6), with `siteUrl` in `src/config/app.ts` set to its address.
+
+1. **Create a GitHub OAuth app:** GitHub → your profile picture → **Settings → Developer settings → OAuth Apps → New OAuth App**.
+   - Application name: `Govt Jobs Admin`
+   - Homepage URL: your site, e.g. `https://govt-jobs-finder.pages.dev`
+   - Authorization callback URL: your site + `/oauth/callback`, e.g. `https://govt-jobs-finder.pages.dev/oauth/callback`
+   - Click **Register application**, copy the **Client ID**, then click **Generate a new client secret** and copy it.
+2. **Add both values to Cloudflare:** Workers & Pages → your project → **Settings → Variables and secrets** → Production:
+   - `GITHUB_OAUTH_CLIENT_ID` = the client ID (type *Text*)
+   - `GITHUB_OAUTH_CLIENT_SECRET` = the secret (type *Secret*)
+3. **Redeploy:** Deployments → ⋯ → Retry deployment, so the new values take effect.
+4. Open `https://<your-site>/admin/` and click **Login with GitHub**.
+
+The small login helper runs as free Cloudflare Pages Functions in `functions/oauth/`.
+
+### Reviewing a draft
+
+1. Open **Draft jobs** and pick one. Read **Automatic checks**: it lists every value the monitor filled in and the exact sentence it came from. These can be wrong; for example, a date in the PDF may not be the last date.
+2. Open the **official notification** link and check everything against it.
+3. Fix the fields:
+   - **Title:** rewrite it in your own words, e.g. "IBPS PO Recruitment 2026".
+   - **Post, vacancies, qualification, age limit, fee and dates:** fill them in or correct them.
+   - **How to apply:** add it if you can.
+   - **Unknown values:** leave them empty. The site then shows "See official notification".
+4. Set **Status**:
+   - **Published:** it goes live.
+   - **Rejected:** not a job (tender, circular, list of officers…).
+   - Leave it as **Draft** to decide later.
+5. Click the blue button at the top (**Publish → Publish now**).
+
+   > ⚠️ Decap's top button is called "Publish", but it only **saves** your changes. Whether the job goes live is decided by the **Status** field.
+
+Within a few minutes, the **Publish jobs** workflow (`.github/workflows/publish.yml`) runs:
+
+- **Published jobs** are checked and moved to `data/jobs/published/`, stamped with the publish time and given a "Notification" timeline entry. Cloudflare rebuilds the website and JSON API, and matching users get a push notification.
+- **A job missing something essential** (organisation, official links, or the state for a state job) is **not** published. It stays in Drafts, and its **Admin notes** say what to fix.
+- **Rejected jobs** move to `data/jobs/rejected/`. The website isn't rebuilt for this.
+
+To **unpublish** a job, open it under Published jobs, set Status back to Draft (or Rejected) and save.
+
+### Admit card, answer key and result updates
+
+Open the job under **Published jobs** → **Status timeline** → **Add**. Choose the stage (e.g. *Admit Card*), the date and the official link, then save. The job's page updates, it appears on the Admit Card / Answer Key / Result pages, and **everyone who saved it gets a notification**.
+
+### Sources, sponsored cards and books
+
+- **Sources:** add, fix or disable the pages the monitor watches. The **Check data files** workflow tells you if something is wrong (e.g. a duplicate ID). Run `npm run verify-sources` afterwards to check new URLs.
+- **Sponsored & books:** add coaching cards (always labelled *Sponsored*) and affiliate book links. They're shown in the app and on the site from Part 7.
+
+### Try the admin on your computer (optional)
+
+```bash
+npm run admin:local     # terminal 1: lets the admin edit files on your computer, no login
+npm run web             # terminal 2
+```
+
+Then open <http://localhost:8081/admin/index.html> and click **Login**. Changes are saved straight into your local files (commit and push them yourself). Press Ctrl+C in both terminals to stop.
+
+## 9. Tests
 
 ```bash
 npm test            # unit tests

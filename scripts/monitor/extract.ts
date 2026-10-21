@@ -138,9 +138,10 @@ const QUAL_PATTERNS: [QualificationId, RegExp][] = [
   ['12th', /\b(?:12th|10\s*\+\s*2|intermediate|higher\s+secondary|hsc|senior\s+secondary)\b/i],
   ['iti', /\biti\b|industrial\s+training\s+institute|\bncvt\b|\bscvt\b/i],
   ['diploma', /\bdiploma\b/i],
-  ['graduate', /\b(?:bachelor'?s?\s+degree|graduat(?:e|ion)\s+(?:degree|in|from)|any\s+graduate|degree\s+(?:in|from)\s+(?:a\s+)?recogni[sz]ed)\b/i],
+  ['graduate', /\b(?:bachelor'?s?\s+degree|graduat(?:e|ion)\s+(?:degree|in|from)|any\s+graduate|degree\s+(?:in|from)\s+(?:a\s+)?recogni[sz]ed)\b|degree\s*\(\s*graduation\s*\)|graduation\)?\s+in\s+any\s+discipline/i],
   ['postgraduate', /\b(?:master'?s?\s+degree|post\s*-?\s*graduat(?:e|ion))\b/i],
-  ['engineering', /\b(?:b\.?\s*e\.?|b\.?\s*tech\.?|bachelor\s+of\s+(?:engineering|technology))(?=[\s,/)])/i],
+  // Dotted "B.E." only: an undotted "be" is the ordinary English word.
+  ['engineering', /(?:\bb\.\s?e\.|\bb\.?\s?tech\b|\bbachelor\s+of\s+(?:engineering|technology)\b)/i],
   ['medical', /\b(?:m\.?b\.?b\.?s|b\.?d\.?s)\b/i],
   ['nursing', /\b(?:b\.?\s*sc\.?\s*nursing|gnm|anm|nursing)\b/i],
   ['law', /\b(?:ll\.?b|degree\s+in\s+law|bachelor\s+of\s+laws?)\b/i],
@@ -156,12 +157,26 @@ function findQualifications(text: string): { ids: QualificationId[]; evidence: s
   return ids.length ? { ids, evidence: snippetAt(text, m.index!, 240) } : null;
 }
 
-export function extractDetails(text: string): Extracted {
+/** How far (in days) before/after the day the notice was found each kind of date can plausibly be. */
+const DATE_WINDOW: Record<keyof JobDates, [number, number]> = {
+  notification: [-730, 7],
+  applyStart: [-365, 180],
+  lastDate: [-365, 365],
+  exam: [-365, 730],
+};
+
+/**
+ * `foundOn` (yyyy-mm-dd, default today) is when the notice was found. Dates implausibly far
+ * from it (e.g. a 2013 "notification date" on a notice found in 2026) are dropped, not saved.
+ */
+export function extractDetails(text: string, foundOn: string = new Date().toISOString().slice(0, 10)): Extracted {
   const evidence: Record<string, string> = {};
   const dates: JobDates = { notification: null, applyStart: null, lastDate: null, exam: null };
+  const ref = Date.parse(foundOn);
   for (const key of Object.keys(LABELS) as (keyof typeof LABELS)[]) {
     const found = dateAfterLabel(text, LABELS[key]);
-    if (found) {
+    const offset = found ? (Date.parse(found.iso) - ref) / 86_400_000 : 0;
+    if (found && offset >= DATE_WINDOW[key][0] && offset <= DATE_WINDOW[key][1]) {
       dates[key] = found.iso;
       evidence[`dates.${key}`] = found.evidence;
     }

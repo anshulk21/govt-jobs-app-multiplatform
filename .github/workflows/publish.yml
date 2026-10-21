@@ -1,0 +1,56 @@
+name: Publish jobs
+
+# Runs when job files change (e.g. you save a job in the admin panel at /admin):
+#   1. moves jobs set to Published / Rejected into the right folder and checks them
+#   2. commits that (Cloudflare then rebuilds the website and JSON API)
+#   3. sends push notifications for newly published jobs and timeline updates
+# Commits made by the monitor (GITHUB_TOKEN) don't trigger this, by GitHub's design.
+on:
+  push:
+    branches: [main]
+    paths: ['data/jobs/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Move published / rejected jobs into place
+        run: npm run admin:apply -- --before "${{ github.event.before }}"
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/jobs
+          if [ ! -f .admin-commit-msg ] || git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -F .admin-commit-msg
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 10; done
+          fi
+
+      - name: Send push notifications
+        if: github.event_name == 'push'
+        run: npm run push:published -- --before "${{ github.event.before }}" --after HEAD
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}

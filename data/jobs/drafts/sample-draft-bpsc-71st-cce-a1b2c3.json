@@ -28,7 +28,6 @@
     "apply": null
   },
   "timeline": [],
-  "sample": true,
   "foundAt": "2026-10-20T03:00:00.000Z",
   "updatedAt": "2026-10-20T03:00:00.000Z",
   "extraction": {
@@ -46,5 +45,7 @@
       "qualifications": "Educational Qualification: Graduation from a recognised university"
     }
   },
-  "notes": "SAMPLE DATA for development. Not a real notification. Delete before launch."
+  "sample": true,
+  "notes": "SAMPLE DATA for development. Not a real notification. Delete before launch.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Vacancies: from “Total No. of Posts: 1250”\n• Last date: from “Last date for online application: 30.11.2026”\n• Age limit: from “Age Limit: 20 to 37 years”\n• Qualification: from “Educational Qualification: Graduation from a recognised university”"
 }
