@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  actions: write # to start the "Publish jobs" workflow for notifications
 
 # Never run two monitors at once (they would fight over the same files).
 concurrency:
@@ -40,6 +41,16 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
+      - name: Auto-publish new drafts
+        # Rules in scripts/admin/auto.ts; switch with "autoPublish.mode" in config/monitor.json.
+        run: |
+          echo "BEFORE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          npm run admin:auto
+          npm run admin:apply
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
@@ -49,9 +60,26 @@ jobs:
             echo "No changes."
             exit 0
           fi
-          git commit -F .monitor-commit-msg
+          MSG="$(cat .monitor-commit-msg)"
+          PUBLISHED=$(node -p "require('./.auto-publish.json').published" 2>/dev/null || echo 0)
+          REJECTED=$(node -p "require('./.auto-publish.json').rejected" 2>/dev/null || echo 0)
+          if [ "$PUBLISHED" -gt 0 ]; then
+            # Something went live: let Cloudflare rebuild the site.
+            MSG="${MSG#\[CF-Pages-Skip\] }; auto-published $PUBLISHED, rejected $REJECTED"
+            echo "PUBLISHED=$PUBLISHED" >> "$GITHUB_ENV"
+          elif [ "$REJECTED" -gt 0 ]; then
+            MSG="$MSG; auto-rejected $REJECTED"
+          fi
+          git commit -m "$MSG"
           for i in 1 2 3; do
             git pull --rebase && git push && exit 0
             sleep 10
           done
           exit 1
+
+      - name: Send notifications for auto-published jobs
+        # Commits pushed by this workflow don't start other workflows, so start "Publish jobs" directly.
+        if: env.PUBLISHED != ''
+        run: gh workflow run publish.yml -f before="$BEFORE"
+        env:
+          GH_TOKEN: ${{ github.token }}

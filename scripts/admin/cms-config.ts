@@ -28,6 +28,14 @@ export const JOB_FIELDS = [
     hint: 'Set to Published and save: within a few minutes the job is moved, the site rebuilds and matching users get a notification. Rejected jobs are never alerted again.',
   },
   {
+    name: 'autoPublished',
+    label: 'Published automatically, not checked yet',
+    widget: 'boolean',
+    required: false,
+    default: false,
+    hint: 'Untick after you have checked this job against the official notice (removes the "auto" note and enables Google job markup).',
+  },
+  {
     name: 'review',
     label: 'Automatic checks — read before publishing',
     widget: 'text',
@@ -100,6 +108,7 @@ export const JOB_FIELDS = [
   hidden('publishedAt'),
   hidden('extraction'),
   hidden('sample'),
+  hidden('quiet'),
 ];
 
 const jobCollection = (name: string, label: string, folder: string, extra: Record<string, unknown> = {}) => ({

@@ -65,6 +65,8 @@ export function normalizeJob(raw: Raw, now: string): Job {
     ...(str(raw.publishedAt) ? { publishedAt: str(raw.publishedAt)! } : {}),
     extraction,
     ...(raw.sample === true ? { sample: true } : {}),
+    ...(raw.autoPublished === true ? { autoPublished: true } : {}),
+    ...(raw.quiet === true ? { quiet: true } : {}),
     ...(str(raw.notes) ? { notes: str(raw.notes)! } : {}),
   };
   job.review = str(raw.review) ?? reviewNotes(job);

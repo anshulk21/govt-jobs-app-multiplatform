@@ -10,6 +10,11 @@ on:
     branches: [main]
     paths: ['data/jobs/**']
   workflow_dispatch:
+    inputs:
+      before:
+        description: Send notifications for jobs published since this commit (used by the monitor's auto-publishing)
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -37,6 +42,7 @@ jobs:
       - run: npm ci
 
       - name: Move published / rejected jobs into place
+        if: github.event_name == 'push' || inputs.before == ''
         run: npm run admin:apply -- --before "${{ github.event.before }}"
 
       - name: Commit
@@ -54,15 +60,15 @@ jobs:
           echo "after=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Send push notifications (Pro members first when Pro is on)
-        if: github.event_name == 'push'
-        run: npm run push:published -- --before "${{ github.event.before }}" --after HEAD --phase=first
+        if: github.event_name == 'push' || inputs.before != ''
+        run: npm run push:published -- --before "${{ github.event.before || inputs.before }}" --after HEAD --phase=first
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
 
   # When Pro is on: everyone else gets the same new-job alerts a little later.
   free-alerts:
     needs: publish
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' || inputs.before != ''
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -79,6 +85,6 @@ jobs:
       - run: npm ci
 
       - name: Send delayed alerts to non-Pro users
-        run: npm run push:published -- --before "${{ github.event.before }}" --after HEAD --phase=later
+        run: npm run push:published -- --before "${{ github.event.before || inputs.before }}" --after HEAD --phase=later
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}

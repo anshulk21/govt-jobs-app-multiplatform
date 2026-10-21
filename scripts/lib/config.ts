@@ -20,6 +20,13 @@ export interface MonitorConfig {
   exclude: string[];
   /** Link texts too vague to use as a title; nearby text is used instead. */
   genericLinkText: string[];
+  /**
+   * What happens to new drafts automatically after each monitor run:
+   *   smart — publish recruitments (with push) and exam updates, reject junk, keep unclear ones
+   *   all   — publish everything that isn't junk
+   *   off   — nothing; you publish in the admin panel
+   */
+  autoPublish: { mode: 'smart' | 'all' | 'off'; staleDraftDays: number; lowSignalSources: string[] };
 }
 
 let cached: MonitorConfig | undefined;

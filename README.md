@@ -17,7 +17,7 @@ You need:
 git clone <your-repo-url> govt-jobs-finder
 cd govt-jobs-finder
 npm install
-npm test            # should print "Tests  147 passed"
+npm test            # should print "Tests  157 passed"
 ```
 
 ## 2. Project layout (so far)
@@ -415,7 +415,34 @@ The website can also send browser notifications. Browsers can't subscribe to FCM
 
 This uses Google's topic-subscription API from Cloudflare. It hasn't been tested end-to-end with a real Firebase project yet, so try it on a test project first. Leaving it off has no effect on the apps.
 
-## 8. Admin panel (review and publish jobs)
+## 8. Publishing jobs: automatic, with an optional admin panel
+
+### Auto-publishing (no manual work needed)
+
+After every monitor run (every 3 hours, on GitHub), new drafts are handled automatically by the rules in `scripts/admin/auto.ts`:
+
+| The monitor found… | Result |
+|---|---|
+| A **new recruitment** ("Recruitment of…", "Advt No…", "Apply online", "भर्ती", "विज्ञापन") | Published **with a push notification** |
+| An **update** to a recruitment (postponement, corrigendum, document verification, press release) | Published quietly |
+| An **admit card, answer key or result** / merit list | Published quietly, and listed on the Admit Card / Answer Key / Result pages |
+| An exam notice from a PSC, SSC, police, railway, bank, teaching or health board | Published quietly |
+| **Junk**: crime reports, newspapers, land acquisition, officer lists, certificates, forms, tenders, general notices from UT administration sites | Rejected |
+| Unclear (e.g. just "Notice") | Left as a draft; rejected automatically after 21 days |
+
+Titles are cleaned (ALL-CAPS → normal case; "(369 KB)", "Click here", "%20" removed). Auto-published job pages show a short note asking users to check the official notification, and they don't get Google's job-posting markup until a person has checked them. You get a Telegram line after each run: "Auto-publish: 5 published (2 with a notification), 3 rejected…".
+
+**Switch:** `autoPublish.mode` in `config/monitor.json`:
+- `smart` (default): as above.
+- `all`: publish everything that isn't junk.
+- `off`: everything waits for you in the admin panel.
+
+`lowSignalSources` lists sources (UT administration websites) whose notices are rejected unless they're clearly about jobs.
+
+Optional extra care: open **Published jobs** in the admin panel, check an auto-published job and fix anything that's wrong. Then untick **"Published automatically, not checked yet"** to remove the note and enable Google's job markup.
+
+
+### Admin panel
 
 Your admin panel is at **`https://<your-site>/admin/`**. It's [Decap CMS](https://decapcms.org): a free editor that saves straight to your GitHub repo, so there's still no database. Only GitHub accounts with write access to the repository can log in.
 
@@ -427,7 +454,7 @@ Your admin panel is at **`https://<your-site>/admin/`**. It's [Decap CMS](https:
 | **Sources — Central / States & UTs** | The official pages the monitor watches. |
 | **Sponsored & books** | Sponsored coaching cards and affiliate book links (used in Part 7). |
 
-### One-time setup (10 minutes, free)
+#### One-time setup (10 minutes, free)
 
 You need the website deployed on Cloudflare first (§6), with `siteUrl` in `src/config/app.ts` set to its address.
 

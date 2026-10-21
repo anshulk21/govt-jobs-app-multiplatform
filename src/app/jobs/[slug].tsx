@@ -169,7 +169,15 @@ export default function JobPage() {
   return (
     <Screen>
       {Platform.OS !== 'web' ? <Stack.Screen options={{ title: job.organization }} /> : null}
-      {res.data ? <JsonLd data={[jobPostingJsonLd(job, APP.siteUrl, res.data.generatedAt), breadcrumbJsonLd(APP.siteUrl, crumbs(job))]} /> : null}
+      {res.data ? (
+        <JsonLd
+          data={[
+            // Google job markup only for jobs a person has checked (auto-published details may be incomplete).
+            job.autoPublished ? null : jobPostingJsonLd(job, APP.siteUrl, res.data.generatedAt),
+            breadcrumbJsonLd(APP.siteUrl, crumbs(job)),
+          ]}
+        />
+      ) : null}
       {Platform.OS === 'web' ? (
         <View role="navigation" aria-label="Breadcrumb" className="flex-row flex-wrap items-center gap-1">
           {crumbs(job)
@@ -185,6 +193,11 @@ export default function JobPage() {
         </View>
       ) : null}
       {job.sample ? <Badge tone="red">{t('job.sample')}</Badge> : null}
+      {job.autoPublished ? (
+        <Txt variant="small" className="rounded-lg bg-amber-50 px-3 py-2 text-amber-900 dark:bg-amber-950 dark:text-amber-200">
+          Added automatically from the official website. Some details may be missing — open the official notification below for complete information.
+        </Txt>
+      ) : null}
       {res.offline || (!res.data && offlineCopy) ? <OfflineNotice /> : null}
 
       <View className="gap-2">

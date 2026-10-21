@@ -105,5 +105,17 @@
     "notification",
     "notice",
     "advertisement"
-  ]
+  ],
+  "autoPublish": {
+    "mode": "smart",
+    "staleDraftDays": 21,
+    "lowSignalSources": [
+      "la-admin",
+      "ld-admin",
+      "dd-admin",
+      "ch-admin",
+      "an-admin",
+      "py-admin"
+    ]
+  }
 }

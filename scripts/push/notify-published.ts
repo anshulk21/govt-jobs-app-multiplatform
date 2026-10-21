@@ -114,6 +114,10 @@ async function main() {
       console.log(`Waiting for ${APP.siteUrl} to serve ${e.job.slug}…`);
       if (!(await waitForSite(e.job))) console.warn('⚠ Website not updated after 20 minutes — sending anyway.');
     }
+    if (e.kind === 'new' && e.job.quiet) {
+      console.log(`Not notifying ${e.job.slug}: published quietly (exam notice / result).`);
+      continue;
+    }
     if (e.kind === 'new') {
       const left = daysLeft(e.job.dates.lastDate, today);
       if (left !== null && left < 0) {

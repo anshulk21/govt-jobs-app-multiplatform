@@ -92,6 +92,10 @@ export interface Job {
   notes?: string;
   /** What the monitor filled in automatically and from which text — shown to the admin in the CMS. */
   review?: string;
+  /** Published by the auto-publisher without a human review (untick in the admin panel after checking). */
+  autoPublished?: boolean;
+  /** Don't send a push notification when published (exam notices, results…). */
+  quiet?: boolean;
   /** When the monitor first saw the link (ISO timestamp). */
   foundAt: string;
   updatedAt: string;
