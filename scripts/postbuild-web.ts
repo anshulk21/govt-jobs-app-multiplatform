@@ -37,7 +37,17 @@ for (const file of walk(DIST)) {
   if (rel === '_sitemap.html' || (/\[.+\]\.html$/.test(rel) && !rel.startsWith('_expo'))) fs.rmSync(file);
 }
 
-// 2. 404 page (Cloudflare Pages serves /404.html for unknown URLs).
+// Pages written as folder/index.html (e.g. quiz/index.html) become folder.html, so they're
+// served at /quiz like every other page instead of redirecting to /quiz/.
+for (const file of walk(DIST)) {
+  const rel = path.relative(DIST, file);
+  if (rel.endsWith('/index.html') && !rel.startsWith('_expo') && !rel.startsWith('admin/')) {
+    const flat = path.join(DIST, `${path.dirname(rel)}.html`);
+    if (!fs.existsSync(flat)) fs.renameSync(file, flat);
+  }
+}
+
+// 2. 404 page (Cloudflare serves /404.html for unknown URLs).
 const notFound = path.join(DIST, '+not-found.html');
 if (fs.existsSync(notFound)) fs.renameSync(notFound, path.join(DIST, '404.html'));
 
