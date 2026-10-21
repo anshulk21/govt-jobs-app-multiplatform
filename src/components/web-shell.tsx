@@ -5,6 +5,7 @@ import { Pressable, ScrollView, Text, View } from 'react-native';
 import { APP } from '@/config/app';
 import { readJson, writeJson } from '@/lib/storage';
 import { useSettings } from '@/lib/settings';
+import { BannerSlot } from './ads';
 import { Icon } from './ui';
 
 const NAV: { href: Href; label: string }[] = [
@@ -15,6 +16,7 @@ const NAV: { href: Href; label: string }[] = [
   { href: '/answer-key', label: 'Answer Key' },
   { href: '/result', label: 'Result' },
   { href: '/tools', label: 'Tools' },
+  { href: '/quiz', label: 'Mock Tests' },
   { href: '/saved', label: 'Saved' },
 ];
 
@@ -74,8 +76,16 @@ export function WebShell({ children }: { children: ReactNode }) {
           </ScrollView>
         </View>
       </View>
-      <View role="main" className="flex-1">
-        {children}
+      <View className="mx-auto w-full max-w-6xl flex-1 flex-row">
+        <View role="main" className="min-w-0 flex-1">
+          {children}
+        </View>
+        {/* Desktop only (≥1024px): sidebar ad. Hidden by CSS on phones, so nothing shifts. */}
+        <View role="complementary" className="hidden w-80 shrink-0 px-4 pt-4 lg:flex">
+          <View className="sticky top-28">
+            <BannerSlot placement="sidebar" />
+          </View>
+        </View>
       </View>
       <View role="contentinfo" className="border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
         <View className="mx-auto w-full max-w-5xl gap-3 px-4 py-6">

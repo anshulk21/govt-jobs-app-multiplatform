@@ -17,6 +17,6 @@
     "binding": "ASSETS",
     "not_found_handling": "404-page",
     // Only these paths run the Worker script; everything else is served straight from dist/.
-    "run_worker_first": ["/oauth/*", "/push/*"]
+    "run_worker_first": ["/oauth/*", "/push/*", "/pro/razorpay/*"]
   }
 }

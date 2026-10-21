@@ -6,6 +6,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'nativewind';
 import { useEffect } from 'react';
 import { Providers } from '@/components/providers';
+import { initAds } from '@/lib/ads';
 import { usePushNotifications } from '@/lib/push';
 import { useSettings } from '@/lib/settings';
 
@@ -21,6 +22,8 @@ function AppStack() {
   // First launch: ask for language, states, categories and qualification.
   useEffect(() => {
     if (ready && !onboarded) router.push('/onboarding');
+    // Google's consent form (if needed in the user's country) appears after onboarding, then ads start.
+    if (ready && onboarded) void initAds();
   }, [ready, onboarded]);
 
   // Tapping a reminder (local notification, or a job alert shown while the app was open) opens the job.

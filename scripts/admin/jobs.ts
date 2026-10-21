@@ -47,6 +47,9 @@ export function normalizeJob(raw: Raw, now: string): Job {
     vacancies: int(raw.vacancies),
     qualifications: [...new Set(quals)].filter((q): q is Job['qualifications'][number] => QUALIFICATIONS.some((x) => x.id === q)),
     ageLimit: str(raw.ageLimit),
+    ...(int(raw.ageMin) ? { ageMin: int(raw.ageMin) } : {}),
+    ...(int(raw.ageMax) ? { ageMax: int(raw.ageMax) } : {}),
+    ...(date(raw.ageAsOn) ? { ageAsOn: date(raw.ageAsOn) } : {}),
     fee: str(raw.fee),
     dates: {
       notification: date(raw.dates?.notification),

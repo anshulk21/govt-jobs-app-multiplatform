@@ -14,14 +14,16 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: publish
-  cancel-in-progress: false
-
 jobs:
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    # One publish at a time (the delayed free-user alerts below don't block this).
+    concurrency:
+      group: publish
+      cancel-in-progress: false
+    outputs:
+      after: ${{ steps.commit.outputs.after }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -38,6 +40,7 @@ jobs:
         run: npm run admin:apply -- --before "${{ github.event.before }}"
 
       - name: Commit
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -48,9 +51,34 @@ jobs:
             git commit -F .admin-commit-msg
             for i in 1 2 3; do git pull --rebase && git push && break; sleep 10; done
           fi
+          echo "after=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - name: Send push notifications
+      - name: Send push notifications (Pro members first when Pro is on)
         if: github.event_name == 'push'
-        run: npm run push:published -- --before "${{ github.event.before }}" --after HEAD
+        run: npm run push:published -- --before "${{ github.event.before }}" --after HEAD --phase=first
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+
+  # When Pro is on: everyone else gets the same new-job alerts a little later.
+  free-alerts:
+    needs: publish
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ needs.publish.outputs.after }}
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Send delayed alerts to non-Pro users
+        run: npm run push:published -- --before "${{ github.event.before }}" --after HEAD --phase=later
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}

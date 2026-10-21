@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { selectDrafts } from '../scripts/admin/bulk';
 import { commitMessageFor, normalizeJob, planJob, publishProblems } from '../scripts/admin/jobs';
 import { reviewNotes } from '../scripts/monitor/drafts';
 
@@ -102,8 +103,7 @@ describe('review notes', () => {
   });
 });
 
-describe('bulk selection', async () => {
-  const { selectDrafts } = await import('../scripts/admin/bulk');
+describe('bulk selection', () => {
   const d = (slug: string, title: string, sourceId: string, state: string | null, extra = {}) => ({ slug, title, sourceId, state, level: state ? 'state' : 'central', ...extra });
   const drafts = [
     d('a', 'Advertisement for CSLE 2026', 'ar-apssb', 'AR'),

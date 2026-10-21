@@ -1,5 +1,6 @@
 // Pure helpers for job data, shared by the build scripts and the app.
 import { STAGES, STATE_BY_CODE, type Category, type QualificationId, type StageId } from './constants';
+import { ageLimits } from './eligibility';
 import type { Job, JobSummary } from './types';
 
 /** Today's date in India (yyyy-mm-dd), regardless of the device or server timezone. */
@@ -47,6 +48,9 @@ export function toSummary(job: Job): JobSummary {
     qualifications: job.qualifications,
     vacancies: job.vacancies,
     lastDate: job.dates.lastDate,
+    applyStart: job.dates.applyStart,
+    examDate: job.dates.exam,
+    age: ageLimits(job),
     stage: latestStage(job),
     publishedAt: job.publishedAt ?? job.foundAt,
     updatedAt: job.updatedAt,

@@ -11,7 +11,7 @@ import { buildPdf, jpegSize } from '../src/lib/tools/pdf';
 
 const job = (over: Partial<JobSummary>): JobSummary => ({
   slug: 'x', title: 'UP Police Constable 2026', organization: 'UPPRPB', level: 'state', state: 'UP', category: 'Police',
-  qualifications: ['12th'], vacancies: 100, lastDate: '2026-11-15', stage: 'apply',
+  qualifications: ['12th'], vacancies: 100, lastDate: '2026-11-15', applyStart: null, examDate: null, age: { min: null, max: null, asOn: null }, stage: 'apply',
   publishedAt: '2026-10-20T04:00:00Z', updatedAt: '2026-10-20T04:00:00Z', ...over,
 });
 const TODAY = '2026-10-20';

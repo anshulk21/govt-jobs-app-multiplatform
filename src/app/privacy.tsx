@@ -32,7 +32,7 @@ export default function Privacy() {
         {
           heading: 'Advertising',
           paragraphs: [
-            'The free version shows ads from Google AdMob (app) and Google AdSense (website). Google and its partners may use cookies or your device advertising ID to show and measure ads, including personalised ads where you have agreed to them. Where required, we ask for your consent first, and you can change it at any time. Learn more at https://policies.google.com/technologies/ads.',
+            'The free version shows ads from Google AdMob (app) and Google AdSense (website). Google and its partners may use cookies or your device advertising ID to show and measure ads, including personalised ads where you have agreed to them. Where required by law (for example in the EEA and UK), Google’s consent message asks you first, and you can change your choice at any time. On iPhone, the app asks for permission before using the advertising identifier. Learn more at https://policies.google.com/technologies/ads. Pro subscribers see no ads.',
           ],
         },
         {
@@ -44,7 +44,19 @@ export default function Privacy() {
         {
           heading: 'Purchases',
           paragraphs: [
-            'If you buy a Pro subscription, payment is handled by Google Play, the App Store or Razorpay. We receive confirmation of your subscription status, not your card or bank details.',
+            'If you buy a Pro subscription, payment is handled by Google Play or the App Store (through our subscription provider RevenueCat, which receives an anonymous app user ID and your purchase status) or, on the website, by Razorpay. We receive confirmation of your subscription status, not your card, UPI or bank details. Your Pro status is stored on your device.',
+          ],
+        },
+        {
+          heading: 'Eligibility details',
+          paragraphs: [
+            'If you enter your date of birth and reservation category for the "Eligible for me" filter, they are stored only on your device and never sent to us.',
+          ],
+        },
+        {
+          heading: 'Links to other websites',
+          paragraphs: [
+            'Some links are affiliate links (for example to books on Amazon or Flipkart) or sponsored content; they are always labelled. Those websites have their own privacy policies.',
           ],
         },
         {

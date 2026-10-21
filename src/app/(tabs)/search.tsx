@@ -2,8 +2,12 @@ import { useLocalSearchParams } from 'expo-router';
 import type { GenerateMetadataFunction } from 'expo-router/server';
 import { useMemo, useState } from 'react';
 import { TextInput, View } from 'react-native';
+import { router } from 'expo-router';
+import { BannerSlot } from '@/components/ads';
 import { FilterBar, JobList } from '@/components/jobs';
-import { Button, Icon, Loading, Message, OfflineNotice, Screen, Txt } from '@/components/ui';
+import { Button, Chip, Icon, Loading, Message, OfflineNotice, Screen, Txt } from '@/components/ui';
+import { eligibilityFor } from '@/core/eligibility';
+import { usePro } from '@/lib/pro';
 import { apiPaths } from '@/core/api';
 import { filterJobs, type JobFilters } from '@/core/jobs';
 import type { JobListPayload } from '@/core/types';
@@ -19,7 +23,9 @@ export const generateMetadata: GenerateMetadataFunction = () => ({
 });
 
 export default function SearchPage() {
-  const { t } = useSettings();
+  const { t, profile, prefs } = useSettings();
+  const { hasProTools } = usePro();
+  const [eligibleOnly, setEligibleOnly] = useState(false);
   const params = useLocalSearchParams<{ q?: string; closing?: string }>();
   const [filters, setFilters] = useState<JobFilters>(() => ({
     query: params.q ?? '',
@@ -27,7 +33,16 @@ export default function SearchPage() {
   }));
   const res = useApi<JobListPayload>(apiPaths.latest);
   const today = useToday(res.data?.generatedAt);
-  const results = useMemo(() => (res.data ? filterJobs(res.data.jobs, filters, today) : []), [res.data, filters, today]);
+  const results = useMemo(() => {
+    const list = res.data ? filterJobs(res.data.jobs, filters, today) : [];
+    if (!eligibleOnly) return list;
+    const me = { ...profile, qualifications: prefs.qualifications };
+    return list.filter((j) => eligibilityFor(j, me, today) !== 'no');
+  }, [res.data, filters, today, eligibleOnly, profile, prefs.qualifications]);
+  const toggleEligible = () => {
+    if (!hasProTools) return router.push('/pro');
+    setEligibleOnly((v) => !v);
+  };
 
   return (
     <Screen>
@@ -46,11 +61,19 @@ export default function SearchPage() {
         />
       </View>
       <FilterBar filters={filters} onChange={setFilters} />
+      <View className="flex-row flex-wrap items-center gap-2">
+        <Chip label={`Eligible for me${hasProTools ? '' : ' ★'}`} selected={eligibleOnly} onPress={toggleEligible} />
+        {eligibleOnly && !profile.dob ? (
+          <Button kind="ghost" label="Add your date of birth (More → My details)" onPress={() => router.push('/more')} />
+        ) : null}
+      </View>
+      {eligibleOnly ? <Txt variant="small">Based on your age, category and qualification. Jobs we can't check are kept — always confirm in the notification.</Txt> : null}
       {res.offline ? <OfflineNotice /> : null}
       {res.data ? (
         <>
           <Txt variant="muted">{t('filter.results', { n: results.length })}</Txt>
           <JobList jobs={results} today={today} splitExpired={false} />
+          <BannerSlot placement="belowList" />
         </>
       ) : res.loading ? (
         <Loading />

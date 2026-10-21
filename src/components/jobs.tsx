@@ -5,6 +5,8 @@ import { CATEGORIES, QUALIFICATIONS, STAGES, STATES, type Category, type Qualifi
 import { byUrgency, daysLeft, formatDate, isExpired, placeName, type JobFilters } from '@/core/jobs';
 import type { JobSummary, TimelineEntry } from '@/core/types';
 import { useT } from '@/lib/settings';
+import { adPositions } from '@/lib/ad-rules';
+import { ListAd } from './ads';
 import { Badge, Button, Card, Chip, ChipRow, Icon, Message, Txt } from './ui';
 
 /** "5 days left", "Last day today", "Expired", or nothing if the date is unknown. */
@@ -68,10 +70,14 @@ export function JobList({ jobs, today, splitExpired = true, limit }: { jobs: Job
   const open = splitExpired ? jobs.filter((j) => !isExpired(j, today)) : jobs;
   const expired = splitExpired ? jobs.filter((j) => isExpired(j, today)).sort(byUrgency(today)) : [];
   const shown = limit ? open.slice(0, limit) : open;
+  const ads = new Set(adPositions(shown.length));
   return (
     <View className="gap-3">
-      {shown.map((j) => (
-        <JobCard key={j.slug} job={j} today={today} />
+      {shown.map((j, i) => (
+        <View key={j.slug} className="gap-3">
+          <JobCard job={j} today={today} />
+          {ads.has(i) ? <ListAd /> : null}
+        </View>
       ))}
       {!open.length ? <Message icon="briefcase-outline" text={t('list.empty')} /> : null}
       {expired.length ? (

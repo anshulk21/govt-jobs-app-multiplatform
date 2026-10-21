@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { APP } from '../src/config/app';
+import { MONETIZATION } from '../src/config/monetization';
 import { CATEGORIES, QUALIFICATIONS, STATES, categorySlug } from '../src/core/constants';
 import { publishedJobs } from '../src/server/data';
 import { ROOT } from './lib/paths';
@@ -55,13 +56,25 @@ const groups: Record<string, SitemapUrl[]> = {
   ],
   'sitemap-pages': [
     { path: '/', lastmod: latestFor(() => true) },
-    ...['/tools', '/tools/age-calculator', '/tools/age-eligibility', '/tools/photo-resizer', '/tools/images-to-pdf', '/tools/cgpa-to-percentage', '/about', '/contact', '/privacy', '/terms', '/disclaimer'].map((p) => ({ path: p })),
+    ...['/quiz', '/tools', '/tools/age-calculator', '/tools/age-eligibility', '/tools/photo-resizer', '/tools/images-to-pdf', '/tools/cgpa-to-percentage', '/about', '/contact', '/privacy', '/terms', '/disclaimer'].map((p) => ({ path: p })),
   ],
 };
 const files = Object.entries(groups).flatMap(([name, urls]) => chunkSitemap(name, urls));
 for (const f of files) fs.writeFileSync(path.join(DIST, f.name), urlset(APP.siteUrl, f.urls));
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemapIndex(APP.siteUrl, files.map((f) => ({ name: f.name, lastmod: today }))));
 fs.writeFileSync(path.join(DIST, 'robots.txt'), robotsTxt(APP.siteUrl));
+
+// AdMob requires app-ads.txt on your developer website (the site you list in Play Console / App Store).
+const admobPub = /^ca-app-pub-(\d+)~/.exec(MONETIZATION.ads.admob.androidAppId || MONETIZATION.ads.admob.iosAppId)?.[1];
+if (MONETIZATION.ads.enabled && admobPub) {
+  fs.writeFileSync(path.join(DIST, 'app-ads.txt'), `google.com, pub-${admobPub}, DIRECT, f08c47fec0942fa0\n`);
+}
+
+// AdSense requires ads.txt naming your publisher ID.
+const adsenseClient = MONETIZATION.ads.adsense.client;
+if (MONETIZATION.ads.enabled && adsenseClient) {
+  fs.writeFileSync(path.join(DIST, 'ads.txt'), `google.com, ${adsenseClient.replace(/^ca-/, '')}, DIRECT, f08c47fec0942fa0\n`);
+}
 
 // 4. Cloudflare Pages headers: hashed assets cached forever, API briefly, pages revalidated.
 fs.writeFileSync(

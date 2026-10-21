@@ -85,6 +85,6 @@ jobs:
 
       - name: Send push notifications
         if: ${{ !inputs.dry_run && inputs.notify }}
-        run: npm run push:published -- --before "$BEFORE" --after HEAD
+        run: npm run push:published -- --before "$BEFORE" --after HEAD --phase=all
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}

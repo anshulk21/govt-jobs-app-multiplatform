@@ -1,6 +1,7 @@
 // User settings kept on the device (no login): language, theme, and job preferences.
 import { colorScheme } from 'nativewind';
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
+import type { ReservationId } from '@/core/eligibility';
 import type { Preferences } from '@/core/jobs';
 import { translate, type Language, type MessageKey } from './i18n';
 import { readJson, writeJson } from './storage';
@@ -15,6 +16,8 @@ export interface Settings {
   onboarded: boolean;
   /** User turned on job alerts (and allowed notifications). */
   notifications: boolean;
+  /** For "Eligible for me" (stored on this device only). */
+  profile: { dob: string | null; reservation: ReservationId };
 }
 
 /** Storage key; +html.tsx reads the theme from it before the page paints (no dark-mode flash). */
@@ -26,6 +29,7 @@ export const DEFAULT_SETTINGS: Settings = {
   prefs: { states: [], central: true, categories: [], qualifications: [] },
   onboarded: false,
   notifications: false,
+  profile: { dob: null, reservation: 'gen' },
 };
 
 interface SettingsContextValue extends Settings {
@@ -43,7 +47,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     void readJson<Partial<Settings>>(SETTINGS_KEY).then((saved) => {
-      if (saved) setSettings((s) => ({ ...s, ...saved, prefs: { ...s.prefs, ...saved.prefs } }));
+      if (saved) setSettings((s) => ({ ...s, ...saved, prefs: { ...s.prefs, ...saved.prefs }, profile: { ...s.profile, ...saved.profile } }));
       setReady(true);
     });
   }, []);

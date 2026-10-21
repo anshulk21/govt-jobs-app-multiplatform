@@ -7,6 +7,8 @@ import { router } from 'expo-router';
 import { useEffect } from 'react';
 import { Platform } from 'react-native';
 import { topicsForPreferences } from '@/core/push';
+import { track } from './analytics';
+import { usePro } from './pro';
 import { useSaved } from './saved';
 import { useSettings } from './settings';
 import { readJson, writeJson } from './storage';
@@ -94,13 +96,14 @@ function openFromNotification(data: Record<string, unknown> | undefined) {
 export function usePushNotifications(): void {
   const { ready, notifications, prefs } = useSettings();
   const { saved } = useSaved();
+  const { isPro } = usePro();
   const savedIds = saved.map((s) => s.job.id).join(',');
 
   useEffect(() => {
     if (!ready) return;
-    const topics = notifications ? topicsForPreferences(prefs, savedIds ? savedIds.split(',') : []) : [];
+    const topics = notifications ? topicsForPreferences(prefs, savedIds ? savedIds.split(',') : [], isPro) : [];
     void syncTopics(topics);
-  }, [ready, notifications, prefs, savedIds]);
+  }, [ready, notifications, prefs, savedIds, isPro]);
 
   useEffect(() => {
     const fb = messagingModule();
@@ -114,8 +117,12 @@ export function usePushNotifications(): void {
         trigger: null,
       });
     });
-    const offOpened = fb.onNotificationOpenedApp(messaging, (m) => openFromNotification(m.data));
-    void fb.getInitialNotification(messaging).then((m) => m && openFromNotification(m.data));
+    const opened = (data: Record<string, unknown> | undefined) => {
+      track('push_open', { url: String(data?.url ?? '') });
+      openFromNotification(data);
+    };
+    const offOpened = fb.onNotificationOpenedApp(messaging, (m) => opened(m.data));
+    void fb.getInitialNotification(messaging).then((m) => m && opened(m.data));
     return () => {
       offMessage();
       offOpened();

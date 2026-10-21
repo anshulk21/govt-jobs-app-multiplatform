@@ -4,11 +4,13 @@
 //   GET  /oauth/callback   admin panel login (step 2)
 //   POST /push/subscribe   website push topic subscriptions (only if web push is on)
 //   GET  /oauth/status     setup check: says which login settings the Worker can see (never their values)
+//   POST /pro/razorpay/*   website Pro payments (Razorpay)
 import { onRequestGet as oauthAuth } from '../functions/oauth/auth';
 import { onRequestGet as oauthCallback } from '../functions/oauth/callback';
+import { handleRazorpay, type RazorpayEnv } from '../functions/pro/razorpay';
 import { onRequestPost as pushSubscribe } from '../functions/push/subscribe';
 
-interface Env {
+interface Env extends RazorpayEnv {
   ASSETS: { fetch(request: Request): Promise<Response> };
   GITHUB_OAUTH_CLIENT_ID?: string;
   GITHUB_OAUTH_CLIENT_SECRET?: string;
@@ -35,6 +37,8 @@ export default {
     if (pathname === '/oauth/auth' && method === 'GET') return oauthAuth({ request, env });
     if (pathname === '/oauth/callback' && method === 'GET') return oauthCallback({ request, env });
     if (pathname === '/push/subscribe' && method === 'POST') return pushSubscribe({ request, env });
+    const pro = pathname.match(/^\/pro\/razorpay\/(subscribe|verify|status|restore)$/);
+    if (pro && method === 'POST') return handleRazorpay(request, env, pro[1]!);
     return env.ASSETS.fetch(request);
   },
 };

@@ -2,7 +2,7 @@
 
 One codebase for an **Android app, iOS app and SEO website** that lists Indian government job openings from official central, state and UT recruitment sites. A monitor checks those sites every few hours and turns new notices into draft jobs for you to review.
 
-> **Status:** built step by step. ✅ Part 1 (sources + verify script), ✅ Part 2 (monitor), ✅ Part 3 (app & website screens) and ✅ Part 4 (SEO + website deploy) ✅ Part 5 (push notifications) and ✅ Part 6 (admin panel) are done. Monetization comes next, and this README grows with each part.
+> **Status:** built step by step. ✅ Part 1 (sources + verify script), ✅ Part 2 (monitor), ✅ Part 3 (app & website screens) and ✅ Part 4 (SEO + website deploy) ✅ Part 5 (push notifications), ✅ Part 6 (admin panel) and ✅ Part 7 (monetization) are done.
 
 ---
 
@@ -17,7 +17,7 @@ You need:
 git clone <your-repo-url> govt-jobs-finder
 cd govt-jobs-finder
 npm install
-npm test            # should print "Tests  127 passed"
+npm test            # should print "Tests  147 passed"
 ```
 
 ## 2. Project layout (so far)
@@ -505,7 +505,123 @@ npm run web             # terminal 2
 
 Then open <http://localhost:8081/admin/index.html> and click **Login**. Changes are saved straight into your local files (commit and push them yourself). Press Ctrl+C in both terminals to stop.
 
-## 9. Tests
+## 9. Monetization
+
+Every money feature has a switch in **`src/config/monetization.ts`**, and **all are off** until you turn them on and add your IDs. Nothing costs money to set up. Google, the app stores and Razorpay take a share of what you earn instead.
+
+| Feature | Where | Switch |
+|---|---|---|
+| Ads in the apps (AdMob): banner below lists, native ad every ~7 jobs, full-screen ad at most every 4 minutes (never on app open), rewarded ads | Android/iOS | `ads.enabled` + `ads.admob` |
+| Ads on the website (AdSense): in-list, below lists, desktop sidebar | Web | `ads.enabled` + `ads.adsense` |
+| Pro subscription (₹49/month, ₹299/year) | Apps: RevenueCat. Web: Razorpay | `pro.enabled` |
+| Recommended books (affiliate) and Sponsored coaching cards | Job, state, category pages | `affiliate` / `sponsored` (content comes from the admin panel) |
+| Telegram / WhatsApp channel buttons | Home, job page, More | `community` |
+| Analytics | Firebase Analytics (apps), GA4 (web) | `analytics` |
+| Daily quiz and mock tests | `/quiz` | `quiz` |
+
+**Pro benefits:** no ads; new-job alerts **first** (free users get them `freeAlertDelayMinutes` later); unlimited saved jobs and reminders (free: 10 and 5); a **PDF summary** of any job; the **"Eligible for me"** filter (date of birth + category relaxation + qualification, entered under More → My details and kept on the device); the **exam calendar** (`/calendar`); and full mock tests. Free users can **watch a rewarded ad** to use the Pro tools for 24 hours (apps). While `pro.enabled` is off, all of these tools are free for everyone with no limits.
+
+Ads, Pro (in the apps) and analytics use native code, so after turning them on, **make a new app build** (`eas build`, §10). Website changes go live with the next deploy.
+
+### AdMob (app ads)
+
+1. Sign up at <https://admob.google.com>. Go to **Apps → Add app** (Android; add iOS later), copy the **App ID** (`ca-app-pub-…~…`), and put it in `ads.admob.androidAppId`.
+2. Under that app, create 4 **ad units** and copy their IDs into `ads.admob.android`: **Banner**, **Native advanced**, **Interstitial** and **Rewarded**.
+3. **Privacy & messaging**: create a **European regulations (GDPR)** message, and for iOS an **IDFA explainer**. The app shows Google's consent form automatically where it's required, before any ad.
+4. Set `ads.enabled: true` and rebuild the app. In development builds Google's **test ads** are always used. Never tap your own real ads, or Google may suspend your account.
+5. The website build creates **`/app-ads.txt`** for you. Use your website address as the "developer website" in Play Console so AdMob can find it.
+
+### AdSense (website ads)
+
+1. Apply at <https://adsense.google.com> with your site address. Approval needs real content, so publish some jobs first.
+2. Copy your publisher ID (`ca-pub-…`) into `ads.adsense.client`. Then create 3 **display ad units** (in-list, below-list, sidebar) and put their IDs in `ads.adsense.slots`.
+3. In AdSense, go to **Privacy & messaging** and set up the consent message for EEA/UK visitors.
+4. Set `ads.enabled: true` and push. The build creates **`/ads.txt`** automatically. The AdSense script loads only after the page has appeared, so it doesn't hurt your speed score much. Expect Lighthouse performance to drop a little once real ads load; that's normal.
+
+### Pro in the apps (Google Play + RevenueCat)
+
+1. **Play Console** (needs your $25 developer account and the app uploaded at least to internal testing, see §10): go to **Monetise → Products → Subscriptions** and create `pro_monthly` (₹49, 1 month) and `pro_yearly` (₹299, 1 year), then activate them.
+2. **RevenueCat** (free until you earn $2,500/month): <https://app.revenuecat.com> → create a project → add the **Play Store app** (package `in.govtjobsfinder.app`) and upload the Google service-account credentials it asks for (RevenueCat's guide walks you through it).
+3. In RevenueCat:
+   - Create the **entitlement** `pro`, and attach both products to it.
+   - Create the **offering** `default` with packages *Monthly* and *Annual*.
+4. Copy the **public Android API key** into `pro.revenueCat.androidApiKey`, set `pro.enabled: true`, and rebuild.
+5. Test with a **license tester** account (Play Console → Settings → License testing), so test purchases are free.
+
+For iOS later: create the same two subscriptions in App Store Connect, add the iOS app in RevenueCat, and put the iOS key in `iosApiKey`.
+
+### Pro on the website (Razorpay)
+
+1. Sign up at <https://razorpay.com> and complete KYC. Start in **Test mode**.
+2. Go to **Subscriptions → Plans** and create a monthly plan (₹49) and a yearly plan (₹299). Copy their `plan_…` IDs.
+3. Go to **Settings → API keys → Generate key**.
+4. In Cloudflare → Worker `govt-jobs-finder` → **Settings → Variables and secrets**, add these as **Secret**: `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET`, `RAZORPAY_MONTHLY_PLAN_ID`, `RAZORPAY_YEARLY_PLAN_ID`. They never go into the code.
+5. Keep `pro.razorpay.enabled: true` and `pro.enabled: true`, then push. Visitors buy on `/pro`. Because there are no accounts, Pro is remembered in that browser; on another device they restore it with the subscription ID from Razorpay's email.
+6. When everything works in Test mode, switch the four values to your **Live** keys and plans.
+
+### Sponsored cards and books
+
+Add them in the admin panel under **Sponsored & books**:
+- **Sponsored cards** can target categories and states and have start and end dates. They're always shown with a "Sponsored" label, and on the website their links are marked `rel="sponsored"`, as Google requires.
+- **Books** match a job by words in its title (e.g. "SSC GD") or by category. Use your Amazon Associates or Flipkart affiliate links.
+
+### Community channels
+
+Create a public **Telegram channel** and a **WhatsApp channel** (separate from your private admin bot), and put their invite links in `community.telegramUrl` and `community.whatsappUrl`.
+
+### Analytics
+
+- **Apps:** in Firebase → **Analytics**, enable Google Analytics for the project. Then set `analytics.enabled: true` and rebuild.
+- **Website:** add the GA4 measurement ID (`G-…`) from Firebase → Project settings → your web app to `analytics.webMeasurementId`.
+
+It records the installs (automatic), `job_view`, `job_save`, `job_share`, `reminder_set`, `push_open`, `ad_impression`, `paywall_view`, `purchase`, `rewarded_unlock` and `quiz_complete` events. See them in Firebase → Analytics → Events.
+
+### Mock tests
+
+`/quiz` shows a **free daily quiz** (the same questions for everyone that day) and full practice sets (Pro). Add question banks in the admin panel under **Quizzes**. The included set is a small sample; it's hidden automatically once you add a real one.
+
+## 10. Releasing the apps
+
+### Over-the-air updates (EAS Update)
+
+Small fixes to screens and text can reach users without a store review:
+
+```bash
+eas init                 # once: links the project to your Expo account
+eas update:configure     # once: adds the update settings to app.json
+eas update --branch production --message "Fix job page typo"
+```
+
+Updates only apply to builds made **after** `eas update:configure`. Changes to native code (adding a library, AdMob IDs, Firebase files) still need a new store build.
+
+### Android: build and publish on Google Play
+
+1. Pay the one-time **$25** at <https://play.google.com/console> and create the app.
+2. Build the release bundle: `eas build --profile production --platform android` (about 15–20 minutes). It produces an `.aab` file.
+3. In Play Console, complete:
+   - **Store listing:** name, short and full description, screenshots, icon.
+   - **App content:** privacy policy URL `https://<your-site>/privacy`; **Ads: Yes** if ads are on; target audience **18+**; content rating questionnaire; **Data safety** (see below).
+4. Go to **Testing → Internal testing → Create release**, upload the `.aab`, and test on your phone. Then **Production → Create release**.
+5. Next time: `eas submit --platform android` uploads the build for you (it needs a Play service-account key the first time; EAS explains each step).
+
+### Data safety (Play Console) / App Privacy (App Store)
+
+Answer according to which features you've switched on. With everything on:
+
+| Data type | Collected? | Why | Shared with |
+|---|---|---|---|
+| Device or other IDs (advertising ID) | Yes | Advertising, analytics | Google (AdMob, Firebase) |
+| App interactions (pages opened, buttons used) | Yes | Analytics | Google (Firebase) |
+| Approximate location (from IP, by the ad SDK) | Yes | Advertising | Google (AdMob) |
+| Diagnostics (ad SDK crash/performance data) | Yes | Advertising | Google (AdMob) |
+| Purchase history (subscription status) | Yes | App functionality | RevenueCat, Google Play / Apple |
+| Name, email, phone, precise location, contacts | **No** | | |
+| Photos and files (photo resizer, images to PDF) | **No**: processed only on the device, never uploaded | | |
+| Date of birth / category ("Eligible for me") | **No**: stays on the device | | |
+
+Also: data is **encrypted in transit** (HTTPS); users **can't request deletion** because nothing is stored against them (uninstalling removes local data, and the advertising ID can be reset in phone settings). Google's own AdMob and Firebase "data disclosure" pages list the exact items, so check them when filling in the form, as SDKs change.
+
+## 11. Tests
 
 ```bash
 npm test            # unit tests

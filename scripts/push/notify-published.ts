@@ -1,4 +1,9 @@
-// Usage: npm run push:published -- --before <sha> --after <sha> [--dry-run] [--no-wait]
+// Usage: npm run push:published -- --before <sha> --after <sha> [--phase=first|later|all] [--dry-run] [--no-wait]
+//
+// Phases (when Pro is on, Pro members get new-job alerts first):
+//   first  new jobs → Pro members (or everyone if Pro is off); stage updates → followers
+//   later  waits MONETIZATION.pro.freeAlertDelayMinutes, then new jobs → everyone else
+//   all    new jobs → everyone at once (used by bulk publishing)
 //
 // Run by .github/workflows/publish.yml after jobs are published or updated.
 //   - a job newly added to published/  → "New: …" to users whose choices match it
@@ -7,8 +12,9 @@
 // Waits until the website serves the new data first, so tapping the notification works.
 import { execFileSync } from 'node:child_process';
 import { APP } from '../../src/config/app';
+import { MONETIZATION } from '../../src/config/monetization';
 import { daysLeft, todayIST } from '../../src/core/jobs';
-import { conditionsForJob, jobTopic, newJobPush, newStages, stageUpdatePush } from '../../src/core/push';
+import { conditionsForJob, jobTopic, newJobPush, newStages, stageUpdatePush, type Audience } from '../../src/core/push';
 import type { Job } from '../../src/core/types';
 import { ROOT } from '../lib/paths';
 import { createSender, sendAll } from './fcm';
@@ -85,12 +91,26 @@ async function main() {
     console.log('No new or updated published jobs.');
     return;
   }
+  const phase = arg('phase') ?? 'first';
+  const proFirst = MONETIZATION.pro.enabled;
+  if (phase === 'later' && !proFirst) {
+    console.log('Pro is off: everyone was already notified in the first phase.');
+    return;
+  }
+  const audience: Audience = phase === 'all' || !proFirst ? 'everyone' : phase === 'later' ? 'free' : 'pro';
+  if (phase === 'later') {
+    const minutes = MONETIZATION.pro.freeAlertDelayMinutes;
+    console.log(`Waiting ${minutes} minutes before notifying non-Pro users…`);
+    if (!flag('dry-run')) await new Promise((r) => setTimeout(r, minutes * 60_000));
+  }
+
   const sender = createSender({ dryRun: flag('dry-run') });
   const today = todayIST();
   let failures = 0;
 
   for (const e of events) {
-    if (sender.live && !flag('no-wait')) {
+    if (phase === 'later' && e.kind !== 'new') continue; // stage updates went out in the first phase
+    if (sender.live && !flag('no-wait') && phase !== 'later') {
       console.log(`Waiting for ${APP.siteUrl} to serve ${e.job.slug}…`);
       if (!(await waitForSite(e.job))) console.warn('⚠ Website not updated after 20 minutes — sending anyway.');
     }
@@ -100,7 +120,7 @@ async function main() {
         console.log(`Skipping ${e.job.slug}: last date already passed.`);
         continue;
       }
-      failures += await sendAll(sender, conditionsForJob(e.job), newJobPush(e.job));
+      failures += await sendAll(sender, conditionsForJob(e.job, audience), newJobPush(e.job));
     } else {
       for (const stage of e.stages) {
         failures += await sendAll(sender, [`'${jobTopic(e.job.id)}' in topics`], stageUpdatePush(e.job, stage as never));

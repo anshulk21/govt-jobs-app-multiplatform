@@ -1,7 +1,11 @@
 import type { GenerateMetadataFunction } from 'expo-router/server';
 import { useState } from 'react';
 import { Linking, Platform, View } from 'react-native';
-import { Button, Card, Chip, ChipRow, LinkRow, Screen, Txt } from '@/components/ui';
+import { CommunityButtons } from '@/components/monetization';
+import { Badge, Button, Card, Chip, ChipRow, Field, LinkRow, Screen, Txt } from '@/components/ui';
+import { formatDate } from '@/core/jobs';
+import { usePro } from '@/lib/pro';
+import { RELAXATION_PRESETS, parseIndianDate } from '@/lib/tools/age';
 import { APP } from '@/config/app';
 import { QUALIFICATIONS, STATES } from '@/core/constants';
 import { LANGUAGES } from '@/lib/i18n';
@@ -43,6 +47,48 @@ function AlertsCard() {
   );
 }
 
+function ProCard() {
+  const { enabled, isPro, unlockedUntil } = usePro();
+  if (!enabled) return null;
+  return (
+    <Card className="gap-2">
+      <Badge tone="brand">★ Pro</Badge>
+      <Txt variant="label">{isPro ? 'You are Pro' : 'No ads, alerts first, Pro tools'}</Txt>
+      {unlockedUntil && !isPro ? <Txt variant="muted">Pro tools unlocked until {formatDate(unlockedUntil)}.</Txt> : null}
+      <Button kind={isPro ? 'secondary' : 'primary'} label={isPro ? 'Manage Pro' : 'See Pro plans'} href="/pro" className="self-start" />
+    </Card>
+  );
+}
+
+function MyDetails() {
+  const { profile, update } = useSettings();
+  const [dob, setDob] = useState(profile.dob ? profile.dob.split('-').reverse().join('/') : '');
+  const parsed = parseIndianDate(dob);
+  return (
+    <Card className="gap-3">
+      <Txt variant="label">My details (for "Eligible for me")</Txt>
+      <Field
+        label="Date of birth"
+        placeholder="DD/MM/YYYY"
+        value={dob}
+        keyboardType="numbers-and-punctuation"
+        onChangeText={(v) => {
+          setDob(v);
+          const iso = parseIndianDate(v);
+          if (iso || !v) update({ profile: { ...profile, dob: iso } });
+        }}
+        hint={dob && !parsed ? 'Enter a real date as DD/MM/YYYY.' : 'Stored only on this device.'}
+      />
+      <Txt variant="label">Category (for age relaxation)</Txt>
+      <ChipRow>
+        {RELAXATION_PRESETS.map((r) => (
+          <Chip key={r.id} label={r.label} selected={profile.reservation === r.id} onPress={() => update({ profile: { ...profile, reservation: r.id } })} />
+        ))}
+      </ChipRow>
+    </Card>
+  );
+}
+
 export default function MorePage() {
   const { t, language, theme, prefs, update } = useSettings();
   const mounted = useMounted();
@@ -76,13 +122,17 @@ export default function MorePage() {
               ))}
             </ChipRow>
           </Card>
+          <ProCard />
           <AlertsCard />
+          <MyDetails />
           <View>
             <LinkRow href="/onboarding" icon="options-outline" label={t('more.preferences')} description={summary.join(', ') || undefined} />
           </View>
         </>
       ) : null}
       <View>
+        <LinkRow href="/calendar" icon="calendar-number-outline" label="Exam calendar" />
+        <LinkRow href="/quiz" icon="school-outline" label="Daily quiz & mock tests" />
         <LinkRow href="/states" icon="map-outline" label={t('more.states')} />
         <LinkRow href="/categories" icon="grid-outline" label={t('more.categories')} />
         <LinkRow href="/about" icon="information-circle-outline" label={t('more.about')} />
@@ -91,6 +141,7 @@ export default function MorePage() {
         <LinkRow href="/terms" icon="document-outline" label={t('more.terms')} />
         <LinkRow href="/disclaimer" icon="alert-circle-outline" label={t('more.disclaimer')} />
       </View>
+      <CommunityButtons />
       <Txt variant="small">
         {APP.name} · {t('common.notGovt')}
       </Txt>

@@ -9,7 +9,9 @@ import { useSettings } from '@/lib/settings';
 import { useToday } from '@/lib/use-today';
 import { APP } from '@/config/app';
 import { breadcrumbJsonLd } from '@/core/structured-data';
+import { BannerSlot } from './ads';
 import { FilterBar, JobList } from './jobs';
+import { SponsoredCards } from './monetization';
 import { JsonLd } from './json-ld';
 import { Button, Loading, Message, OfflineNotice, Screen, Txt } from './ui';
 
@@ -47,6 +49,7 @@ export function ListPage({
       <Txt variant="h1">{title}</Txt>
       {intro ? <Txt variant="muted">{intro}</Txt> : null}
       {res.offline ? <OfflineNotice /> : null}
+      <SponsoredCards cards={res.data?.sponsored} />
       {showFilters && res.data?.jobs.length ? <FilterBar filters={filters} onChange={setFilters} states={showStateFilter} /> : null}
       {res.data ? (
         <JobList jobs={jobs} today={today} splitExpired={splitExpired} />
@@ -55,6 +58,7 @@ export function ListPage({
       ) : (
         <Message icon="cloud-offline-outline" text={t('common.error')} action={<Button kind="secondary" label={t('common.retry')} onPress={res.refresh} />} />
       )}
+      <BannerSlot placement="belowList" />
     </Screen>
   );
 }

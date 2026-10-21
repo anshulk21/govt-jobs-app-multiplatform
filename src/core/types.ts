@@ -69,6 +69,11 @@ export interface Job {
   vacancies: number | null;
   qualifications: QualificationId[];
   ageLimit: string | null;
+  /** Exact age limits, if the admin entered them (otherwise read from ageLimit text). */
+  ageMin?: number | null;
+  ageMax?: number | null;
+  /** "Age as on" date from the notification (yyyy-mm-dd). */
+  ageAsOn?: string | null;
   fee: string | null;
   dates: JobDates;
   howToApply: string | null;
@@ -113,6 +118,10 @@ export interface JobSummary {
   qualifications: QualificationId[];
   vacancies: number | null;
   lastDate: string | null;
+  applyStart: string | null;
+  examDate: string | null;
+  /** Age limits for "Eligible for me" (null = unknown). */
+  age: { min: number | null; max: number | null; asOn: string | null };
   /** Latest stage reached, e.g. "admit-card". */
   stage: StageId;
   publishedAt: string;
@@ -123,9 +132,61 @@ export interface JobSummary {
 export interface JobListPayload {
   generatedAt: string;
   jobs: JobSummary[];
+  /** Sponsored card for this list (category/state pages), if any. */
+  sponsored?: SponsoredCard[];
 }
 
 export interface JobPayload {
   generatedAt: string;
   job: Job;
+  /** Matching affiliate books and sponsored cards (empty when switched off). */
+  books?: Book[];
+  sponsored?: SponsoredCard[];
+}
+
+export interface SponsoredCard {
+  id: string;
+  title: string;
+  text: string;
+  url: string;
+  cta?: string;
+  image?: string;
+  /** Empty = all categories / states. */
+  categories?: Category[];
+  states?: string[];
+  startDate?: string | null;
+  endDate?: string | null;
+  active: boolean;
+}
+
+export interface Book {
+  id: string;
+  title: string;
+  author?: string;
+  url: string;
+  store: 'Amazon' | 'Flipkart' | 'Other';
+  image?: string;
+  categories?: Category[];
+  /** Shown on jobs whose title contains any of these (case-insensitive). */
+  keywords?: string[];
+  active: boolean;
+}
+
+export interface QuizQuestion {
+  id: string;
+  q: string;
+  options: string[];
+  /** Index of the correct option. */
+  answer: number;
+  explanation?: string;
+}
+
+export interface Quiz {
+  id: string;
+  title: string;
+  /** Exam(s) this practice set is for, e.g. "SSC GD, Railway Group D". */
+  exams: string;
+  description?: string;
+  sample?: boolean;
+  questions: QuizQuestion[];
 }

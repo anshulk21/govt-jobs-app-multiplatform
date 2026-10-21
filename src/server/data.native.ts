@@ -7,6 +7,7 @@ export const publishedJobs = notOnNative;
 export const getJob = notOnNative;
 export const apiFiles = notOnNative;
 export const pageTitleFor = notOnNative;
+export const quizzes = notOnNative;
 export const payloads = {
   latest: notOnNative,
   job: notOnNative,

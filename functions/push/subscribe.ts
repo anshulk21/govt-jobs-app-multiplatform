@@ -7,8 +7,8 @@ interface Env {
   FIREBASE_SERVICE_ACCOUNT?: string;
 }
 
-const TOPIC = /^(all|central|cat_all|qual_any|state_[A-Z]{2}|cat_[a-z-]+|qual_[a-z0-9]+|job_[0-9a-f]{6,20})$/;
-const MAX_TOPICS = 80;
+const TOPIC = /^(all|central|state_[A-Z]{2}|cat_[a-z-]+|qual_[a-z0-9]+|job_[0-9a-f]{6,20})$/; // never 'pro': that is set only after a verified purchase
+const MAX_TOPICS = 120;
 
 const b64url = (data: ArrayBuffer | string) =>
   btoa(typeof data === 'string' ? data : String.fromCharCode(...new Uint8Array(data)))

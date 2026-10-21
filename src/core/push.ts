@@ -4,20 +4,21 @@
 //   all                         every device (announcements)
 //   central                     wants central government jobs
 //   state_UP, state_TN, …       chosen states/UTs
-//   cat_police, cat_ssc, …      chosen categories   (or cat_all if none chosen)
-//   qual_12th, qual_graduate, … chosen qualifications (or qual_any if none chosen)
+//   cat_police, cat_ssc, …      chosen categories (every category if none chosen)
+//   qual_12th, qual_graduate, … chosen qualifications (every qualification if none chosen)
+//   pro                         Pro subscribers (they get new-job alerts first)
 //   job_<id>                    one per saved job (admit card / result updates)
 //
-// A job is sent to an FCM *condition* that is true exactly when matchesPreferences()
-// (the app's "For you" rule) would be true. FCM allows at most 5 topics per condition.
-import { categorySlug, STAGES, type Category, type QualificationId, type StageId } from './constants';
+// A job is sent to FCM *conditions* that are true exactly when matchesPreferences()
+// (the app's "For you" rule) would be true. FCM allows at most 5 topics per condition;
+// ours use at most 4 (place, category, qualification, pro).
+import { CATEGORIES, QUALIFICATIONS, STAGES, categorySlug, type Category, type QualificationId, type StageId } from './constants';
 import { formatDate, type Preferences } from './jobs';
 import type { Job, JobSummary } from './types';
 
 export const ALL_TOPIC = 'all';
 export const CENTRAL_TOPIC = 'central';
-export const ANY_CATEGORY_TOPIC = 'cat_all';
-export const ANY_QUALIFICATION_TOPIC = 'qual_any';
+export const PRO_TOPIC = 'pro';
 
 export const stateTopic = (code: string) => `state_${code}`;
 export const categoryTopic = (c: Category) => `cat_${categorySlug(c)}`;
@@ -25,31 +26,34 @@ export const qualificationTopic = (q: QualificationId) => `qual_${q}`;
 export const jobTopic = (jobId: string) => `job_${jobId}`;
 
 /** Topics this device should be subscribed to. */
-export function topicsForPreferences(prefs: Preferences, savedJobIds: string[] = []): string[] {
+export function topicsForPreferences(prefs: Preferences, savedJobIds: string[] = [], isPro = false): string[] {
   const topics = new Set<string>([ALL_TOPIC]);
   if (prefs.central) topics.add(CENTRAL_TOPIC);
   for (const s of prefs.states) topics.add(stateTopic(s));
-  if (prefs.categories.length) prefs.categories.forEach((c) => topics.add(categoryTopic(c)));
-  else topics.add(ANY_CATEGORY_TOPIC);
-  if (prefs.qualifications.length) prefs.qualifications.forEach((q) => topics.add(qualificationTopic(q)));
-  else topics.add(ANY_QUALIFICATION_TOPIC);
+  for (const c of prefs.categories.length ? prefs.categories : CATEGORIES) topics.add(categoryTopic(c));
+  for (const q of prefs.qualifications.length ? prefs.qualifications : QUALIFICATIONS.map((x) => x.id)) topics.add(qualificationTopic(q));
+  if (isPro) topics.add(PRO_TOPIC);
   for (const id of savedJobIds) topics.add(jobTopic(id));
   return [...topics].sort();
 }
 
 const inTopics = (t: string) => `'${t}' in topics`;
 
+/** Who a send is for: everyone, only Pro subscribers, or everyone except Pro subscribers. */
+export type Audience = 'everyone' | 'pro' | 'free';
+
 /**
  * FCM conditions that together reach exactly the users this job is "for".
- * One condition per qualification (to stay within FCM's 5-topic limit); a user who
- * matches several gets one notification because they share a collapse key (the job id).
+ * One condition per qualification; a user who matches several gets one notification
+ * because they share a collapse key (the job id).
  */
-export function conditionsForJob(job: Pick<JobSummary, 'level' | 'state' | 'category' | 'qualifications'>): string[] {
+export function conditionsForJob(job: Pick<JobSummary, 'level' | 'state' | 'category' | 'qualifications'>, audience: Audience = 'everyone'): string[] {
   const place = job.level === 'central' ? CENTRAL_TOPIC : job.state ? stateTopic(job.state) : null;
   if (!place) return [];
-  const base = `${inTopics(place)} && (${inTopics(categoryTopic(job.category))} || ${inTopics(ANY_CATEGORY_TOPIC)})`;
-  if (!job.qualifications.length) return [base];
-  return [...new Set(job.qualifications)].map((q) => `${base} && (${inTopics(qualificationTopic(q))} || ${inTopics(ANY_QUALIFICATION_TOPIC)})`);
+  const who = audience === 'pro' ? ` && ${inTopics(PRO_TOPIC)}` : audience === 'free' ? ` && !(${inTopics(PRO_TOPIC)})` : '';
+  const base = `${inTopics(place)} && ${inTopics(categoryTopic(job.category))}`;
+  if (!job.qualifications.length) return [`${base}${who}`];
+  return [...new Set(job.qualifications)].map((q) => `${base} && ${inTopics(qualificationTopic(q))}${who}`);
 }
 
 /**

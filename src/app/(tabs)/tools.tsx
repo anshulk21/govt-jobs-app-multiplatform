@@ -23,6 +23,8 @@ export default function ToolsPage() {
         <LinkRow href="/tools/photo-resizer" icon="image-outline" label={t('tools.photo')} description={t('tools.photoDesc')} />
         <LinkRow href="/tools/images-to-pdf" icon="document-attach-outline" label={t('tools.pdf')} description={t('tools.pdfDesc')} />
         <LinkRow href="/tools/cgpa-to-percentage" icon="calculator-outline" label={t('tools.cgpa')} description={t('tools.cgpaDesc')} />
+        <LinkRow href="/calendar" icon="calendar-number-outline" label="Exam calendar" description="Every upcoming last date and exam date" />
+        <LinkRow href="/quiz" icon="school-outline" label="Daily quiz & mock tests" description="A free quiz every day" />
       </View>
     </Screen>
   );

@@ -1,0 +1,21 @@
+{
+  "id": "general-awareness-sample",
+  "title": "General Awareness & Basics (sample)",
+  "exams": "SSC GD, Railway Group D, Police Constable",
+  "description": "SAMPLE questions to show how quizzes work. Add real question banks in the admin panel (Quizzes).",
+  "sample": true,
+  "questions": [
+    { "id": "ga1", "q": "Who is known as the chief architect of the Indian Constitution?", "options": ["Jawaharlal Nehru", "Dr. B. R. Ambedkar", "Sardar Vallabhbhai Patel", "Dr. Rajendra Prasad"], "answer": 1, "explanation": "Dr. B. R. Ambedkar chaired the Drafting Committee of the Constituent Assembly." },
+    { "id": "ga2", "q": "Who was the first President of India?", "options": ["Dr. Rajendra Prasad", "Dr. S. Radhakrishnan", "Zakir Husain", "V. V. Giri"], "answer": 0 },
+    { "id": "ga3", "q": "Which article of the Indian Constitution abolishes untouchability?", "options": ["Article 14", "Article 17", "Article 21", "Article 32"], "answer": 1 },
+    { "id": "ga4", "q": "In which year was the Reserve Bank of India established?", "options": ["1935", "1947", "1950", "1969"], "answer": 0 },
+    { "id": "ga5", "q": "Which planet is known as the Red Planet?", "options": ["Venus", "Jupiter", "Mars", "Mercury"], "answer": 2 },
+    { "id": "ga6", "q": "What is the national animal of India?", "options": ["Lion", "Tiger", "Elephant", "Leopard"], "answer": 1 },
+    { "id": "ga7", "q": "What is 15% of 200?", "options": ["15", "20", "30", "35"], "answer": 2, "explanation": "200 × 15 ÷ 100 = 30." },
+    { "id": "ga8", "q": "A train covers 120 km in 2 hours. What is its average speed?", "options": ["40 km/h", "60 km/h", "80 km/h", "240 km/h"], "answer": 1, "explanation": "Speed = distance ÷ time = 120 ÷ 2 = 60 km/h." },
+    { "id": "ga9", "q": "Choose the word opposite in meaning to “Ancient”.", "options": ["Old", "Modern", "Historic", "Antique"], "answer": 1 },
+    { "id": "ga10", "q": "What is the capital of India?", "options": ["Mumbai", "Kolkata", "New Delhi", "Chennai"], "answer": 2 },
+    { "id": "ga11", "q": "If 5 pens cost ₹40, how much do 8 pens cost?", "options": ["₹56", "₹60", "₹64", "₹72"], "answer": 2, "explanation": "One pen = ₹8, so 8 pens = ₹64." },
+    { "id": "ga12", "q": "Which gas do plants mainly absorb from the air for photosynthesis?", "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"], "answer": 2 }
+  ]
+}

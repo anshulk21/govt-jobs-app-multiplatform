@@ -9,7 +9,7 @@ import type { Job, JobSummary } from '../src/core/types';
 const prefs = (p: Partial<Preferences> = {}): Preferences => ({ states: [], central: false, categories: [], qualifications: [], ...p });
 const summary = (j: Partial<JobSummary> = {}): JobSummary => ({
   slug: 's', title: 'T', organization: 'O', level: 'state', state: 'UP', category: 'Police', qualifications: ['12th'],
-  vacancies: null, lastDate: null, stage: 'notification', publishedAt: '', updatedAt: '', ...j,
+  vacancies: null, lastDate: null, applyStart: null, examDate: null, age: { min: null, max: null, asOn: null }, stage: 'notification', publishedAt: '', updatedAt: '', ...j,
 });
 const receives = (job: JobSummary, p: Preferences) => {
   const topics = new Set(topicsForPreferences(p));
@@ -18,13 +18,16 @@ const receives = (job: JobSummary, p: Preferences) => {
 
 describe('push topic subscriptions', () => {
   it('maps preferences to topics', () => {
-    expect(topicsForPreferences(prefs({ central: true, states: ['UP', 'BR'], categories: ['Police', 'High Court'], qualifications: ['12th'] }), ['abc'])).toEqual(
-      ['all', 'cat_high-court', 'cat_police', 'central', 'job_abc', 'qual_12th', 'state_BR', 'state_UP'],
+    expect(topicsForPreferences(prefs({ central: true, states: ['UP', 'BR'], categories: ['Police', 'High Court'], qualifications: ['12th'] }), ['abc'], true)).toEqual(
+      ['all', 'cat_high-court', 'cat_police', 'central', 'job_abc', 'pro', 'qual_12th', 'state_BR', 'state_UP'],
     );
   });
 
-  it('uses catch-all topics when no category or qualification is chosen', () => {
-    expect(topicsForPreferences(prefs({ states: ['TN'] }))).toEqual(['all', 'cat_all', 'qual_any', 'state_TN']);
+  it('subscribes to every category/qualification when none is chosen', () => {
+    const t = topicsForPreferences(prefs({ states: ['TN'] }));
+    expect(t.filter((x) => x.startsWith('cat_'))).toHaveLength(CATEGORIES.length);
+    expect(t.filter((x) => x.startsWith('qual_'))).toHaveLength(QUALIFICATIONS.length);
+    expect(t).not.toContain('pro');
   });
 
   it('produces valid FCM topic names', () => {
@@ -52,9 +55,22 @@ describe('push topic matching', () => {
 
   it('never exceeds FCM’s 5-topic limit per condition', () => {
     const job = summary({ qualifications: QUALIFICATIONS.map((q) => q.id) });
-    const conditions = conditionsForJob(job);
-    expect(conditions).toHaveLength(QUALIFICATIONS.length);
-    for (const c of conditions) expect(topicCount(c)).toBeLessThanOrEqual(5);
+    for (const audience of ['everyone', 'pro', 'free'] as const) {
+      const conditions = conditionsForJob(job, audience);
+      expect(conditions).toHaveLength(QUALIFICATIONS.length);
+      for (const c of conditions) expect(topicCount(c)).toBeLessThanOrEqual(5);
+    }
+  });
+
+  it('splits Pro (instant) and free (delayed) audiences without overlap', () => {
+    const job = summary();
+    const p = prefs({ states: ['UP'] });
+    const reach = (audience: 'pro' | 'free', isPro: boolean) =>
+      conditionsForJob(job, audience).some((c) => evaluateCondition(c, new Set(topicsForPreferences(p, [], isPro))));
+    expect(reach('pro', true)).toBe(true);
+    expect(reach('free', true)).toBe(false);
+    expect(reach('pro', false)).toBe(false);
+    expect(reach('free', false)).toBe(true);
   });
 
   it('agrees with the in-app "For you" rule for every combination tried', () => {

@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import type { ConfigContext, ExpoConfig } from 'expo/config';
+import { MONETIZATION } from './src/config/monetization.ts';
 
 const ANDROID_FILE = './google-services.json';
 const IOS_FILE = './GoogleService-Info.plist';
@@ -23,10 +24,26 @@ export default ({ config }: ConfigContext): ExpoConfig => {
           ['expo-build-properties', { ios: { useFrameworks: 'dynamic' } }],
         ]
       : [];
+  // Ads (AdMob) are built in once you add your AdMob app IDs in src/config/monetization.ts.
+  const { androidAppId, iosAppId } = MONETIZATION.ads.admob;
+  const ads: ExpoConfig['plugins'] =
+    MONETIZATION.ads.enabled && (androidAppId || iosAppId)
+      ? [
+          [
+            'react-native-google-mobile-ads',
+            {
+              androidAppId,
+              iosAppId,
+              delayAppMeasurementInit: true,
+              userTrackingUsageDescription: 'This lets us show ads that are more relevant to you. The app works the same either way.',
+            },
+          ],
+        ]
+      : [];
   return {
     ...(config as ExpoConfig),
     android: { ...config.android, ...(android ? { googleServicesFile: ANDROID_FILE } : {}) },
     ios: { ...config.ios, ...(ios ? { googleServicesFile: IOS_FILE } : {}) },
-    plugins: [...(config.plugins ?? []), ...firebase],
+    plugins: [...(config.plugins ?? []), ...firebase, ...ads],
   };
 };

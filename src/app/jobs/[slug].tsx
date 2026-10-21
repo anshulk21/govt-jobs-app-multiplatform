@@ -1,17 +1,23 @@
-import { Link, Stack, useLocalSearchParams } from 'expo-router';
+import { Link, Stack, router, useLocalSearchParams } from 'expo-router';
 import type { GenerateMetadataFunction, LoaderFunction } from 'expo-router/server';
 import { useEffect, useState } from 'react';
 import { Alert, Platform, View } from 'react-native';
 import { DeadlineBadge, StatusTimeline } from '@/components/jobs';
 import { JsonLd } from '@/components/json-ld';
+import { BooksBlock, CommunityButtons, SponsoredCards } from '@/components/monetization';
 import { Badge, Button, Card, InfoRow, Loading, Message, OfflineNotice, Screen, Txt } from '@/components/ui';
 import { APP } from '@/config/app';
 import { apiPaths } from '@/core/api';
 import { QUALIFICATIONS, STAGES, STATE_BY_CODE, categorySlug } from '@/core/constants';
 import { daysLeft, formatDate, latestStage, placeName } from '@/core/jobs';
+import { jobSummaryHtml } from '@/core/job-summary';
 import { breadcrumbJsonLd, jobPostingJsonLd } from '@/core/structured-data';
 import type { Job, JobPayload } from '@/core/types';
+import { maybeShowInterstitial } from '@/lib/ads';
+import { track } from '@/lib/analytics';
 import { openExternal, shareOnWhatsApp } from '@/lib/links';
+import { sharePdf } from '@/lib/print';
+import { useLimit, usePro } from '@/lib/pro';
 import { cancelReminder, remindedSlugs, setReminder } from '@/lib/reminders';
 import { useRouteData } from '@/lib/route-data';
 import { useSaved } from '@/lib/saved';
@@ -52,7 +58,10 @@ const qualLabel = (id: string) => QUALIFICATIONS.find((q) => q.id === id)?.label
 function ActionBar({ job, today }: { job: Job; today: string }) {
   const { t } = useSettings();
   const { isSaved, toggle } = useSaved();
+  const { hasProTools } = usePro();
+  const reminderLimit = useLimit('reminders');
   const [reminded, setReminded] = useState(false);
+  const [pdfBusy, setPdfBusy] = useState(false);
   const saved = isSaved(job.slug);
   const left = daysLeft(job.dates.lastDate, today);
 
@@ -68,6 +77,21 @@ function ActionBar({ job, today }: { job: Job; today: string }) {
       `${APP.siteUrl}/jobs/${job.slug}`,
     ];
     void shareOnWhatsApp(lines.filter(Boolean).join('\n'));
+    track('job_share', { method: 'whatsapp' });
+  };
+
+  const save = () => {
+    if (toggle(job) === 'limit') router.push('/pro');
+  };
+
+  const pdf = async () => {
+    if (!hasProTools) return router.push('/pro');
+    setPdfBusy(true);
+    try {
+      await sharePdf(jobSummaryHtml(job, APP.siteUrl, APP.name), job.title);
+    } finally {
+      setPdfBusy(false);
+    }
   };
 
   const remind = async () => {
@@ -76,14 +100,18 @@ function ActionBar({ job, today }: { job: Job; today: string }) {
       setReminded(false);
       return;
     }
+    if ((await remindedSlugs()).length >= reminderLimit) return router.push('/pro');
     const result = await setReminder(job);
-    if (result === 'set') setReminded(true);
+    if (result === 'set') {
+      setReminded(true);
+      track('reminder_set');
+    }
     else if (result === 'denied') Alert.alert('Notifications are off', 'Allow notifications for this app in your phone settings to get reminders.');
   };
 
   return (
     <View className="flex-row flex-wrap gap-2">
-      <Button kind={saved ? 'primary' : 'secondary'} icon={saved ? 'bookmark' : 'bookmark-outline'} label={saved ? t('job.saved') : t('job.save')} onPress={() => toggle(job)} />
+      <Button kind={saved ? 'primary' : 'secondary'} icon={saved ? 'bookmark' : 'bookmark-outline'} label={saved ? t('job.saved') : t('job.save')} onPress={save} />
       <Button kind="secondary" icon="logo-whatsapp" label={t('job.share')} onPress={share} />
       {left !== null && left >= 0 ? (
         <Button
@@ -93,6 +121,7 @@ function ActionBar({ job, today }: { job: Job; today: string }) {
           onPress={() => void remind()}
         />
       ) : null}
+      <Button kind="secondary" icon="document-text-outline" label={pdfBusy ? 'Making PDF…' : `PDF summary${hasProTools ? '' : ' ★'}`} disabled={pdfBusy} onPress={() => void pdf()} />
     </View>
   );
 }
@@ -105,6 +134,14 @@ export default function JobPage() {
   const offlineCopy = saved.find((s) => s.job.slug === slug)?.job;
   const job = res.data?.job ?? offlineCopy;
   const today = useToday(res.data?.generatedAt);
+
+  useEffect(() => {
+    if (!res.data?.job) return;
+    track('job_view', { slug: res.data.job.slug, category: res.data.job.category, state: res.data.job.state ?? 'central' });
+    // A full-screen ad at most every few minutes, never right after the app opens.
+    const timer = setTimeout(() => void maybeShowInterstitial(), 1200);
+    return () => clearTimeout(timer);
+  }, [res.data?.job.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Keep the offline copy of a saved job up to date, and clear its "Updated" badge.
   useEffect(() => {
@@ -202,6 +239,9 @@ export default function JobPage() {
         </Card>
       </View>
 
+      <SponsoredCards cards={res.data?.sponsored} />
+      <BooksBlock books={res.data?.books} />
+      <CommunityButtons />
       <Txt variant="small">{t('job.verifyNote')}</Txt>
     </Screen>
   );

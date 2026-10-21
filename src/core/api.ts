@@ -8,4 +8,6 @@ export const apiPaths = {
   category: (slug: string) => `/api/jobs/category/${slug}.json`,
   qualification: (id: string) => `/api/jobs/qualification/${id}.json`,
   updates: (stage: StageId) => `/api/jobs/updates/${stage}.json`,
+  quizzes: '/api/quizzes/index.json',
+  quiz: (id: string) => `/api/quizzes/${id}.json`,
 };

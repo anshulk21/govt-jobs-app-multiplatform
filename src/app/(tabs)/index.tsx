@@ -2,7 +2,9 @@ import { router } from 'expo-router';
 import type { GenerateMetadataFunction, LoaderFunction } from 'expo-router/server';
 import { useMemo, useState } from 'react';
 import { Platform, TextInput, View } from 'react-native';
+import { BannerSlot } from '@/components/ads';
 import { JobCard, JobList } from '@/components/jobs';
+import { CommunityButtons } from '@/components/monetization';
 import { JsonLd } from '@/components/json-ld';
 import { Button, Card, ChipLink, ChipRow, Icon, Loading, Message, OfflineNotice, Screen, Section, Txt } from '@/components/ui';
 import { APP } from '@/config/app';
@@ -130,6 +132,16 @@ export default function Home() {
         </View>
       </Section>
 
+      <Section title="Prepare">
+        <View className="flex-row flex-wrap gap-2">
+          <Button kind="secondary" icon="calendar-number-outline" label="Exam calendar" href="/calendar" />
+          <Button kind="secondary" icon="school-outline" label="Daily quiz & mock tests" href="/quiz" />
+          <Button kind="secondary" icon="construct-outline" label="Free tools" href="/tools" />
+        </View>
+      </Section>
+
+      <CommunityButtons />
+
       <Section title={t('home.browseStates')} href="/states">
         <ChipRow>
           {POPULAR_STATES.map((code) => {
@@ -157,6 +169,7 @@ export default function Home() {
         </ChipRow>
       </Section>
 
+      <BannerSlot placement="belowList" />
       <Txt variant="small">{t('common.notGovt')}</Txt>
     </Screen>
   );
