@@ -1,0 +1,50 @@
+{
+  "id": "05880b12b3",
+  "slug": "hc-delhi-notice-regarding-re-scheduling-the-date-of-delhi-05880b",
+  "status": "published",
+  "title": "Notice regarding re-scheduling the date of Delhi Higher Judicial Service Mains Examination (Written)-2026.",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-31",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/files/2026-09/dhjs2026.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-08-31",
+      "url": "https://delhihighcourt.nic.in/files/2026-09/dhjs2026.pdf"
+    }
+  ],
+  "foundAt": "2026-10-21T14:32:19.133Z",
+  "updatedAt": "2026-10-21T14:51:02.138Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 31.08.2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 31.08.2026”",
+  "publishedAt": "2026-10-21T14:51:02.138Z"
+}

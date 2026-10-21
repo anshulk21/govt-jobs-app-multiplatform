@@ -1,0 +1,37 @@
+{
+  "id": "91f7ace016",
+  "slug": "hc-chhattisgarh-video-conferencing-co-ordinator-91f7ac",
+  "status": "draft",
+  "title": "Video Conferencing Co-ordinator",
+  "organization": "High Court of Chhattisgarh",
+  "sourceId": "hc-chhattisgarh",
+  "level": "state",
+  "state": "CG",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://highcourt.cg.gov.in/download/VCCoordinatorsCG.pdf",
+    "official": "https://highcourt.cg.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T14:32:19.133Z",
+  "updatedAt": "2026-10-21T14:32:19.133Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

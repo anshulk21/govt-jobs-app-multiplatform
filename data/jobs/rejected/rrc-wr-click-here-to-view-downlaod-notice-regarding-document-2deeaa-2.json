@@ -1,0 +1,42 @@
+{
+  "id": "2deeaaea1b",
+  "slug": "rrc-wr-click-here-to-view-downlaod-notice-regarding-document-2deeaa-2",
+  "status": "rejected",
+  "title": "/downlaod Notice regarding Document Verification and Medical Examination",
+  "organization": "RRC Western Railway (Mumbai)",
+  "sourceId": "rrc-wr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-01-22",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrc-wr.com/rrwc/Files/2e490889-184c-4a7d-becf-b71a373c160c.pdf",
+    "official": "https://www.rrc-wr.com/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-21T14:32:19.133Z",
+  "updatedAt": "2026-10-21T14:32:19.133Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "DATED 22.01.2025"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2025-01-22).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “DATED 22.01.2025”"
+}
