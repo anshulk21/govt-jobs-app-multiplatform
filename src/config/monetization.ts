@@ -14,8 +14,8 @@ export const MONETIZATION = {
       ios: { banner: '', native: '', interstitial: '', rewarded: '' },
     },
     adsense: {
-      /** Publisher ID, e.g. "ca-pub-1234567890123456". */
-      client: '',
+      /** Publisher ID. Also verifies the site with AdSense (meta tag + ads.txt), even while ads are off. */
+      client: 'ca-pub-7800926982608293',
       /** Ad unit (slot) IDs from AdSense → Ads → By ad unit. */
       slots: { inList: '', belowList: '', sidebar: '' },
     },

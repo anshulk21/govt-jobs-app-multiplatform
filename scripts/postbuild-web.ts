@@ -80,9 +80,10 @@ if (MONETIZATION.ads.enabled && admobPub) {
   fs.writeFileSync(path.join(DIST, 'app-ads.txt'), `google.com, pub-${admobPub}, DIRECT, f08c47fec0942fa0\n`);
 }
 
-// AdSense requires ads.txt naming your publisher ID.
+// AdSense requires ads.txt naming your publisher ID. Written as soon as the ID is set (even with
+// ads off) so AdSense can verify and review the site; the meta tag is added to every page below.
 const adsenseClient = MONETIZATION.ads.adsense.client;
-if (MONETIZATION.ads.enabled && adsenseClient) {
+if (adsenseClient) {
   fs.writeFileSync(path.join(DIST, 'ads.txt'), `google.com, ${adsenseClient.replace(/^ca-/, '')}, DIRECT, f08c47fec0942fa0\n`);
 }
 
@@ -117,6 +118,7 @@ for (const file of htmlFiles) {
     return css.length < 30_000 ? `<style>${css.replace(/<\/style/gi, '<\\/style')}</style>` : tag;
   });
   html = deferAppScripts(html);
+  if (adsenseClient) html = html.replace('</head>', `<meta name="google-adsense-account" content="${adsenseClient}"/></head>`);
   fs.writeFileSync(file, html);
 }
 
