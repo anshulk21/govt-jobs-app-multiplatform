@@ -1,6 +1,7 @@
 import { Tabs } from 'expo-router';
 import { useColorScheme } from 'nativewind';
-import type { ColorValue } from 'react-native';
+import { View, type ColorValue } from 'react-native';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { Icon, type IconName } from '@/components/ui';
 import { useT } from '@/lib/settings';
 
@@ -15,7 +16,18 @@ export default function TabsLayout() {
   const active = colorScheme === 'dark' ? '#ffc9b5' : '#c2340e';
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: active }}>
-      <Tabs.Screen name="index" options={{ title: t('tab.home'), tabBarIcon: tabIcon('home') }} />
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: t('tab.home'),
+          tabBarIcon: tabIcon('home'),
+          headerRight: () => (
+            <View className="mr-3">
+              <ThemeToggle />
+            </View>
+          ),
+        }}
+      />
       <Tabs.Screen name="search" options={{ title: t('tab.search'), tabBarIcon: tabIcon('search') }} />
       <Tabs.Screen name="saved" options={{ title: t('tab.saved'), tabBarIcon: tabIcon('bookmark') }} />
       <Tabs.Screen name="tools" options={{ title: t('tab.tools'), tabBarIcon: tabIcon('construct') }} />

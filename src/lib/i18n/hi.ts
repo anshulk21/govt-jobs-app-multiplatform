@@ -17,6 +17,7 @@ export const hi: Partial<Record<MessageKey, string>> = {
   'home.statStates': 'राज्य और केंद्रशासित प्रदेश',
   'home.forYou': 'आपके लिए',
   'home.newToday': 'आज की नई',
+  'home.justAdded': 'अभी जोड़ी गईं',
   'home.closingSoon': 'जल्द बंद होने वाली',
   'home.latest': 'नवीनतम नौकरियाँ',
   'job.vacancies': 'पद',

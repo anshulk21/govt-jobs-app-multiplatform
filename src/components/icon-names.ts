@@ -11,6 +11,7 @@ export const ICON_NAMES = [
   'notifications', 'notifications-outline', 'open-outline', 'options-outline', 'people-outline',
   'resize-outline', 'school-outline', 'search', 'search-outline', 'shield-checkmark-outline',
   'trash-outline', 'trophy-outline',
+  'arrow-forward', 'moon-outline', 'sunny-outline',
   // Category tiles on the home page.
   'bank-outline', 'building-outline', 'factory-outline', 'flash-outline', 'medkit-outline', 'scale-outline', 'shield-outline', 'siren-outline', 'sparkles-outline', 'train-outline',
 ] as const;

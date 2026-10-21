@@ -1,7 +1,7 @@
 // Pure helpers for job data, shared by the build scripts and the app.
 import { STAGES, STATE_BY_CODE, type Category, type QualificationId, type StageId } from './constants';
 import { ageLimits } from './eligibility';
-import type { Job, JobSummary } from './types';
+import type { CountsPayload, Job, JobSummary } from './types';
 
 /** Today's date in India (yyyy-mm-dd), regardless of the device or server timezone. */
 export function todayIST(now: Date = new Date()): string {
@@ -86,6 +86,20 @@ export function closingSoon(jobs: JobSummary[], today: string, withinDays = 7): 
 
 export function newToday(jobs: JobSummary[], today: string): JobSummary[] {
   return jobs.filter((j) => dateIST(j.publishedAt) === today).sort(byPublished);
+}
+
+/** How many open jobs there are per state, category and qualification. */
+export function openCounts(jobs: JobSummary[], today: string): Omit<CountsPayload, 'generatedAt'> {
+  const out: Omit<CountsPayload, 'generatedAt'> = { central: 0, byState: {}, byCategory: {}, byQualification: {} };
+  const add = (m: Record<string, number>, k: string) => (m[k] = (m[k] ?? 0) + 1);
+  for (const j of jobs) {
+    if (isExpired(j, today)) continue;
+    if (j.level === 'central') out.central++;
+    if (j.state) add(out.byState, j.state);
+    add(out.byCategory, j.category);
+    for (const q of j.qualifications) add(out.byQualification, q);
+  }
+  return out;
 }
 
 export function openJobs(jobs: JobSummary[], today: string): JobSummary[] {

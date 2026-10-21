@@ -6,6 +6,7 @@ import { APP } from '@/config/app';
 import { readJson, writeJson } from '@/lib/storage';
 import { useSettings } from '@/lib/settings';
 import { BannerSlot } from './ads';
+import { ThemeToggle } from './theme-toggle';
 import { Icon } from './ui';
 
 const NAV: { href: Href; label: string }[] = [
@@ -41,7 +42,12 @@ function AppBanner() {
     <View className="fixed bottom-0 left-0 right-0 z-20 flex-row items-center gap-3 bg-brand-700 px-4 py-3 shadow-lg">
       <Icon name="notifications" className="text-white" />
       <Text className="flex-1 text-sm font-medium text-white">{t('common.getApp')}</Text>
-      <Link href={APP.playStoreUrl as never} target="_blank" rel="noopener" className="rounded-lg bg-white px-3 py-1.5 text-sm font-bold text-brand-700">
+      <Link
+        href={APP.playStoreUrl as never}
+        target="_blank"
+        rel="noopener"
+        className="rounded-lg bg-white px-3 py-1.5 text-sm font-bold text-brand-700"
+      >
         {t('common.install')}
       </Link>
       <Pressable aria-label="Close" onPress={() => (setShow(false), void writeJson('banner-dismissed', true))}>
@@ -56,15 +62,21 @@ export function WebShell({ children }: { children: ReactNode }) {
   const isActive = (href: Href) => (href === '/' ? pathname === '/' : pathname.startsWith(String(href)));
   return (
     <View className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      <View role="banner" className="sticky top-0 z-10 border-b border-slate-200 bg-slate-50/90 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90">
+      <View
+        role="banner"
+        className="sticky top-0 z-10 border-b border-slate-200 bg-slate-50/90 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90"
+      >
         <View className="mx-auto w-full max-w-5xl gap-1 px-4 pt-3">
-          <Link href="/" asChild>
-            <Pressable className="gj-logo flex-row items-center gap-2 self-start">
-              {/* Plain <img> (this file is web-only) so the logo is in the static HTML before JS loads. */}
-              <img src="/logo.svg" alt="" width={32} height={32} />
-              <Text className="text-xl font-black tracking-tight text-brand-700 dark:text-brand-200">{APP.name}</Text>
-            </Pressable>
-          </Link>
+          <View className="flex-row items-center justify-between gap-3">
+            <Link href="/" asChild>
+              <Pressable className="gj-logo flex-row items-center gap-2 self-start">
+                {/* Plain <img> (this file is web-only) so the logo is in the static HTML before JS loads. */}
+                <img src="/logo.svg" alt="" width={32} height={32} />
+                <Text className="text-xl font-black tracking-tight text-brand-700 dark:text-brand-200">{APP.name}</Text>
+              </Pressable>
+            </Link>
+            <ThemeToggle />
+          </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} role="navigation" className="gj-nav" contentContainerClassName="gap-1 pb-2">
             {NAV.map((n) => (
               <Link
@@ -91,7 +103,7 @@ export function WebShell({ children }: { children: ReactNode }) {
           </View>
         </View>
       </View>
-      <View role="contentinfo" className="mt-8 rounded-t-[32px] bg-ink">
+      <View role="contentinfo" className="mt-8 rounded-t-[32px] bg-ink dark:border-t dark:border-slate-800">
         <View className="mx-auto w-full max-w-5xl gap-5 px-4 pb-8 pt-10">
           <View>
             <Text className="text-4xl font-black uppercase leading-none tracking-tighter text-brand-400 sm:text-6xl">Every sarkari job.</Text>

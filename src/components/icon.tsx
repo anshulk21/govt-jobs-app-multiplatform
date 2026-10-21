@@ -55,6 +55,9 @@ import Shield from 'lucide-react-native/icons/shield';
 import Siren from 'lucide-react-native/icons/siren';
 import Sparkles from 'lucide-react-native/icons/sparkles';
 import TrainFront from 'lucide-react-native/icons/train-front';
+import ArrowRight from 'lucide-react-native/icons/arrow-right';
+import Moon from 'lucide-react-native/icons/moon';
+import Sun from 'lucide-react-native/icons/sun';
 import { FILLED, type IconName, type IconProps } from './icon-names';
 
 const MAP: Record<IconName, LucideIcon> = {
@@ -107,6 +110,9 @@ const MAP: Record<IconName, LucideIcon> = {
   'shield-checkmark-outline': ShieldCheck,
   'trash-outline': Trash2,
   'trophy-outline': Trophy,
+  'arrow-forward': ArrowRight,
+  'moon-outline': Moon,
+  'sunny-outline': Sun,
   'bank-outline': Landmark,
   'building-outline': Building,
   'factory-outline': Factory,

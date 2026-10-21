@@ -194,3 +194,59 @@ input:focus-visible {
     transform: none !important;
   }
 }
+
+/* Theme toggle: the icon that appears spins in; the button wobbles on hover. */
+@keyframes gj-spin-in {
+  from {
+    transform: rotate(-120deg) scale(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.gj-spin-in {
+  animation: gj-spin-in 0.45s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+}
+.gj-toggle {
+  transition: transform 0.2s ease;
+}
+@media (hover: hover) {
+  .gj-toggle:hover {
+    transform: rotate(15deg);
+  }
+}
+
+/* Featured job cards scroll sideways and snap. */
+.gj-snap {
+  scroll-snap-type: x mandatory;
+}
+.gj-snap > div > * {
+  scroll-snap-align: start;
+}
+
+/* Job card arrow slides on hover. */
+.gj-arrow {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+@media (hover: hover) {
+  .gj-card:hover .gj-arrow {
+    transform: translateX(4px);
+    background-color: #c2340e;
+  }
+  .gj-card:hover .gj-arrow svg {
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gj-spin-in {
+    animation: none !important;
+  }
+  .gj-toggle,
+  .gj-arrow {
+    transition: none !important;
+    transform: none !important;
+  }
+}

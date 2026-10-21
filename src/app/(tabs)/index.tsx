@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import { Platform, Pressable, TextInput, View } from 'react-native';
 import { BannerSlot } from '@/components/ads';
 import { CategoryTiles, Hero, Ticker, homeStats, type HomeStats } from '@/components/home';
-import { JobCard, JobList } from '@/components/jobs';
+import { FeaturedJobs, JobCard, JobList } from '@/components/jobs';
 import { CommunityButtons } from '@/components/monetization';
 import { JsonLd } from '@/components/json-ld';
 import { Button, Card, ChipLink, ChipRow, Icon, Loading, Message, OfflineNotice, Screen, Section, Txt } from '@/components/ui';
@@ -122,17 +122,19 @@ export default function Home() {
       ) : (
         <>
           <ForYou jobs={data.jobs} today={today} />
-          {sections.today.length ? (
-            <Section title={t('home.newToday')}>
-              {sections.today.slice(0, 5).map((j) => <JobCard key={j.slug} job={j} today={today} />)}
-            </Section>
-          ) : null}
+          {/* New today, or the newest few when nothing came in today. */}
+          <Section
+            title={sections.today.length ? t('home.newToday') : t('home.justAdded')}
+            count={sections.today.length || undefined}
+          >
+            <FeaturedJobs jobs={(sections.today.length ? sections.today : sections.latest).slice(0, 8)} today={today} />
+          </Section>
           {sections.closing.length ? (
-            <Section title={t('home.closingSoon')} href={{ pathname: '/search', params: { closing: '7' } }}>
+            <Section title={t('home.closingSoon')} count={sections.closing.length} href={{ pathname: '/search', params: { closing: '7' } }}>
               {sections.closing.slice(0, 5).map((j) => <JobCard key={j.slug} job={j} today={today} />)}
             </Section>
           ) : null}
-          <Section title={t('home.latest')} href="/search">
+          <Section title={t('home.latest')} count={stats.open} href="/search">
             <JobList jobs={sections.latest} today={today} splitExpired={false} limit={10} />
           </Section>
         </>

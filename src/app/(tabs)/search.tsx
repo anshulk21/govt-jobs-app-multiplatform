@@ -26,9 +26,10 @@ export default function SearchPage() {
   const { t, profile, prefs } = useSettings();
   const { hasProTools } = usePro();
   const [eligibleOnly, setEligibleOnly] = useState(false);
-  const params = useLocalSearchParams<{ q?: string; closing?: string }>();
+  const params = useLocalSearchParams<{ q?: string; closing?: string; level?: string }>();
   const [filters, setFilters] = useState<JobFilters>(() => ({
     query: params.q ?? '',
+    level: params.level === 'central' ? 'central' : undefined,
     closingWithinDays: params.closing ? Number(params.closing) : undefined,
   }));
   const res = useApi<JobListPayload>(apiPaths.latest);

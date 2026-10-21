@@ -15,6 +15,7 @@ export const en = {
   'home.statStates': 'states & UTs covered',
   'home.forYou': 'For you',
   'home.newToday': 'New today',
+  'home.justAdded': 'Just added',
   'home.closingSoon': 'Closing soon',
   'home.latest': 'Latest jobs',
   'home.updates': 'Admit cards, answer keys & results',

@@ -10,9 +10,9 @@ import path from 'node:path';
 import { MONETIZATION } from '../config/monetization';
 import { apiPaths } from '../core/api';
 import { categoryFromSlug, categorySlug, QUALIFICATIONS, STAGES, STATES, type StageId } from '../core/constants';
-import { byPublished, formatDate, todayIST, toSummary } from '../core/jobs';
+import { byPublished, formatDate, openCounts, todayIST, toSummary } from '../core/jobs';
 import { booksFor, sponsoredFor } from '../core/monetization';
-import type { Book, Job, JobListPayload, JobPayload, JobSummary, Quiz, SponsoredCard } from '../core/types';
+import type { Book, CountsPayload, Job, JobListPayload, JobPayload, JobSummary, Quiz, SponsoredCard } from '../core/types';
 
 let cache: Job[] | undefined;
 let generatedAt = '';
@@ -86,6 +86,10 @@ const withSponsored = (payload: JobListPayload, where: Parameters<typeof sponsor
 export const payloads = {
   /** Every published job, newest first (used for home, search and "For you"). */
   latest: (): JobListPayload => list(() => true),
+  counts: (): CountsPayload => {
+    const { jobs } = list(() => true);
+    return { generatedAt, ...openCounts(jobs, todayIST()) };
+  },
   job: (slug: string): JobPayload | null => {
     const job = getJob(slug); // loads jobs (and sets generatedAt) first
     if (!job) return null;
@@ -106,7 +110,7 @@ export const payloads = {
 
 /** Every file of the public JSON API, as [path, data]. */
 export function apiFiles(): [string, unknown][] {
-  const files: [string, unknown][] = [[apiPaths.latest, payloads.latest()]];
+  const files: [string, unknown][] = [[apiPaths.latest, payloads.latest()], [apiPaths.counts, payloads.counts()]];
   for (const job of publishedJobs()) files.push([apiPaths.job(job.slug), payloads.job(job.slug)]);
   for (const s of STATES) files.push([apiPaths.state(s.code), payloads.state(s.code)]);
   for (const c of new Set(publishedJobs().map((j) => categorySlug(j.category)))) files.push([apiPaths.category(c), payloads.category(c)]);

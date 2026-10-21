@@ -8,7 +8,8 @@ import { closingSoon, openJobs } from '@/core/jobs';
 import type { JobSummary } from '@/core/types';
 import { useT } from '@/lib/settings';
 import { Reveal } from './motion';
-import { Icon, type IconName } from './ui';
+import { CATEGORY_ICON, TONES } from './category-style';
+import { Icon } from './ui';
 
 export interface HomeStats {
   open: number;
@@ -111,7 +112,7 @@ export function Ticker({ jobs }: { jobs: JobSummary[] }) {
     </View>
   );
   return (
-    <View className="flex-row items-center gap-3 overflow-hidden rounded-full bg-ink py-3 pl-4">
+    <View className="flex-row items-center gap-3 overflow-hidden rounded-full bg-ink py-3 pl-4 dark:border dark:border-slate-700">
       <View className="shrink-0 flex-row items-center gap-2 rounded-full bg-brand-700 px-3 py-1">
         <View className="gj-ping h-2 w-2 rounded-full bg-sun" />
         <Text className="text-xs font-black uppercase tracking-wider text-white">{t('home.live')}</Text>
@@ -127,37 +128,11 @@ export function Ticker({ jobs }: { jobs: JobSummary[] }) {
   );
 }
 
-const CATEGORY_ICON: Record<Category, IconName> = {
-  SSC: 'document-text-outline',
-  UPSC: 'trophy-outline',
-  Railway: 'train-outline',
-  Bank: 'bank-outline',
-  Defence: 'shield-outline',
-  Police: 'siren-outline',
-  Teaching: 'school-outline',
-  PSU: 'factory-outline',
-  PSC: 'building-outline',
-  'Subordinate Services': 'briefcase-outline',
-  Health: 'medkit-outline',
-  'High Court': 'scale-outline',
-  Electricity: 'flash-outline',
-  Other: 'sparkles-outline',
-};
-
-// Tile colours cycle through the palette; each pairs with a text colour that passes contrast.
-const TILE = [
-  { box: 'bg-brand-600', text: 'text-white' },
-  { box: 'bg-pink', text: 'text-ink' },
-  { box: 'bg-sun', text: 'text-ink' },
-  { box: 'bg-rose-dark', text: 'text-white' },
-  { box: 'bg-ink', text: 'text-cream' },
-];
-
 export function CategoryTiles({ counts }: { counts: HomeStats['byCategory'] }) {
   return (
     <View className="flex-row flex-wrap gap-3">
       {CATEGORIES.map((c, i) => {
-        const s = TILE[i % TILE.length]!;
+        const s = TONES[i % TONES.length]!;
         const n = counts[c] ?? 0;
         return (
           <View key={c} className="grow basis-[46%] sm:basis-[30%]">

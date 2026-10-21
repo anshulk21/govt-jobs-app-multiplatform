@@ -55,6 +55,9 @@ import Shield from 'lucide-react/dist/esm/icons/shield.mjs';
 import Siren from 'lucide-react/dist/esm/icons/siren.mjs';
 import Sparkles from 'lucide-react/dist/esm/icons/sparkles.mjs';
 import TrainFront from 'lucide-react/dist/esm/icons/train-front.mjs';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right.mjs';
+import Moon from 'lucide-react/dist/esm/icons/moon.mjs';
+import Sun from 'lucide-react/dist/esm/icons/sun.mjs';
 import { FILLED, type IconName, type IconProps } from './icon-names';
 
 const MAP: Record<IconName, LucideIcon> = {
@@ -107,6 +110,9 @@ const MAP: Record<IconName, LucideIcon> = {
   'shield-checkmark-outline': ShieldCheck,
   'trash-outline': Trash2,
   'trophy-outline': Trophy,
+  'arrow-forward': ArrowRight,
+  'moon-outline': Moon,
+  'sunny-outline': Sun,
   'bank-outline': Landmark,
   'building-outline': Building,
   'factory-outline': Factory,

@@ -1,12 +1,13 @@
 import { Link } from 'expo-router';
 import { useState } from 'react';
-import { Pressable, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 import { CATEGORIES, QUALIFICATIONS, STAGES, STATES, type Category, type QualificationId } from '@/core/constants';
 import { byUrgency, daysLeft, formatDate, isExpired, placeName, type JobFilters } from '@/core/jobs';
 import type { JobSummary, TimelineEntry } from '@/core/types';
 import { useT } from '@/lib/settings';
 import { adPositions } from '@/lib/ad-rules';
 import { ListAd } from './ads';
+import { monogram, toneFor } from './category-style';
 import { Reveal } from './motion';
 import { Badge, Button, Card, Chip, ChipRow, Icon, Message, Txt } from './ui';
 
@@ -22,53 +23,130 @@ export function DeadlineBadge({ lastDate, today }: { lastDate: string | null; to
 
 const STAGE_LABEL = Object.fromEntries(STAGES.map((s) => [s.id, s.label]));
 
-/** Colour of the stripe on a job card: vermilion = closing within 3 days, sun = within a week, pink = open. */
-function stripeClass(lastDate: string | null, today: string): string {
+/** Days-left box on job cards: vermilion = 3 days or less, sun = a week or less, pink = later. */
+function Countdown({ lastDate, today }: { lastDate: string | null; today: string }) {
+  const t = useT();
   const d = daysLeft(lastDate, today);
-  if (d === null) return 'bg-rose';
-  if (d < 0) return 'bg-slate-200 dark:bg-slate-700';
-  return d <= 3 ? 'bg-brand-500' : d <= 7 ? 'bg-sun' : 'bg-pink';
+  if (d === null) return null;
+  if (d < 0) {
+    return (
+      <View className="items-center justify-center rounded-2xl bg-slate-100 px-2.5 py-2 dark:bg-slate-800">
+        <Text className="text-xs font-bold uppercase text-slate-500 dark:text-slate-400">{t('job.expired')}</Text>
+      </View>
+    );
+  }
+  const { box, text } = d <= 3 ? { box: 'bg-brand-600', text: 'text-white' } : d <= 7 ? { box: 'bg-sun', text: 'text-ink' } : { box: 'bg-pink-light dark:bg-pink', text: 'text-ink' };
+  return (
+    <View className={`min-w-[56px] items-center justify-center rounded-2xl px-2 py-1.5 ${box}`} aria-label={d === 0 ? t('job.closesToday') : t('job.daysLeft', { n: d })}>
+      <Text className={`text-xl font-black leading-6 ${text}`}>{d === 0 ? '!' : d}</Text>
+      <Text className={`text-[10px] font-extrabold uppercase tracking-wide ${text}`}>{d === 0 ? 'today' : d === 1 ? 'day left' : 'days left'}</Text>
+    </View>
+  );
 }
+
+/** "BPSC"-style badge in the job's category colour. */
+function OrgBadge({ job, size = 'md' }: { job: JobSummary; size?: 'md' | 'lg' }) {
+  const tone = toneFor(job.category);
+  const code = monogram(job.organization);
+  return (
+    <View className={`items-center justify-center rounded-2xl ${tone.box} ${size === 'lg' ? 'h-14 w-14' : 'h-12 w-12'}`} aria-hidden>
+      <Text className={`font-black tracking-tight ${tone.text} ${code.length > 4 ? 'text-[11px]' : 'text-sm'}`}>{code}</Text>
+    </View>
+  );
+}
+
+const isNew = (job: JobSummary, today: string) => {
+  const days = (Date.parse(today) - Date.parse(job.publishedAt.slice(0, 10))) / 86_400_000;
+  return days >= 0 && days <= 1;
+};
 
 export function JobCard({ job, today, updated }: { job: JobSummary; today: string; updated?: boolean }) {
   const t = useT();
   return (
     <Link href={`/jobs/${job.slug}`} asChild>
-      <Pressable className="gj-card flex-row gap-3 rounded-3xl border border-slate-200 bg-white p-4 active:scale-[0.98] dark:border-slate-800 dark:bg-slate-900">
-        <View className={`w-1.5 self-stretch rounded-full ${stripeClass(job.lastDate, today)}`} />
-        <View className="flex-1 gap-2">
-          <Txt variant="label" numberOfLines={3}>
-            {job.title}
-          </Txt>
-          <Txt variant="muted" numberOfLines={1}>
-            {job.organization}
-          </Txt>
-          <View className="flex-row flex-wrap items-center gap-2">
-            <DeadlineBadge lastDate={job.lastDate} today={today} />
+      <Pressable className="gj-card gap-3 rounded-3xl border border-slate-200 bg-white p-4 active:scale-[0.98] dark:border-slate-800 dark:bg-slate-900">
+        <View className="flex-row items-start gap-3">
+          <OrgBadge job={job} />
+          <View className="flex-1 gap-1">
+            <Text numberOfLines={1} className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+              {job.organization}
+            </Text>
+            <Txt variant="label" numberOfLines={3} className="font-extrabold leading-snug">
+              {job.title}
+            </Txt>
+          </View>
+          <Countdown lastDate={job.lastDate} today={today} />
+        </View>
+        <View className="flex-row items-center gap-2">
+          <View className="flex-1 flex-row flex-wrap items-center gap-2">
+            {isNew(job, today) ? <Badge tone="sun">NEW</Badge> : null}
             {job.stage !== 'notification' && job.stage !== 'apply' ? <Badge tone="brand">{STAGE_LABEL[job.stage]}</Badge> : null}
             {updated ? <Badge tone="amber">{t('job.updated')}</Badge> : null}
             <Badge>{placeName(job)}</Badge>
             <Badge>{job.category}</Badge>
+            {job.vacancies ? <Badge>{t('job.posts', { n: job.vacancies.toLocaleString('en-IN') })}</Badge> : null}
           </View>
-          <View className="flex-row flex-wrap gap-x-4 gap-y-1">
-            {job.vacancies ? (
-              <View className="flex-row items-center gap-1">
-                <Icon name="people-outline" size={14} />
-                <Txt variant="small">{t('job.posts', { n: job.vacancies.toLocaleString('en-IN') })}</Txt>
-              </View>
-            ) : null}
-            {job.lastDate ? (
-              <View className="flex-row items-center gap-1">
-                <Icon name="calendar-outline" size={14} />
-                <Txt variant="small">
-                  {t('job.lastDate')}: {formatDate(job.lastDate)}
-                </Txt>
-              </View>
-            ) : null}
+          <View className="gj-arrow h-9 w-9 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800">
+            <Icon name="arrow-forward" size={16} className="text-brand-700 dark:text-brand-200" />
           </View>
         </View>
+        {job.lastDate ? (
+          <View className="flex-row items-center gap-1.5">
+            <Icon name="calendar-outline" size={14} />
+            <Txt variant="small">
+              {t('job.lastDate')}: {formatDate(job.lastDate)}
+            </Txt>
+          </View>
+        ) : null}
       </Pressable>
     </Link>
+  );
+}
+
+/** Big colourful cards in a sideways row (home page "New today"). */
+export function FeaturedJobs({ jobs, today }: { jobs: JobSummary[]; today: string }) {
+  const t = useT();
+  return (
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} className="gj-snap" contentContainerClassName="gap-3 pb-2">
+      {jobs.map((job, i) => {
+        const tone = toneFor(job.category);
+        const d = daysLeft(job.lastDate, today);
+        return (
+          <Reveal key={job.slug} index={i}>
+            <Link href={`/jobs/${job.slug}`} asChild>
+              <Pressable className={`gj-tile h-full w-72 justify-between gap-4 rounded-[28px] p-5 active:scale-95 ${tone.box}`}>
+                <View className="flex-row items-start justify-between">
+                  <View className="rounded-2xl bg-white/90 px-3 py-2">
+                    <Text className="text-sm font-black text-ink">{monogram(job.organization)}</Text>
+                  </View>
+                  {isNew(job, today) ? (
+                    <View className="-rotate-6 rounded-full bg-white px-3 py-1">
+                      <Text className="text-xs font-black text-brand-700">NEW</Text>
+                    </View>
+                  ) : null}
+                </View>
+                <View className="gap-1.5">
+                  <Text numberOfLines={3} className={`text-xl font-black leading-6 tracking-tight ${tone.text}`}>
+                    {job.title}
+                  </Text>
+                  <Text numberOfLines={1} className={`text-sm font-semibold ${tone.text}`}>
+                    {job.organization}
+                  </Text>
+                </View>
+                <View className="flex-row items-center justify-between">
+                  <Text className={`text-sm font-extrabold ${tone.text}`}>
+                    {d === null ? placeName(job) : d < 0 ? t('job.expired') : d === 0 ? t('job.closesToday') : d === 1 ? t('job.oneDayLeft') : t('job.daysLeft', { n: d })}
+                  </Text>
+                  <View className="h-9 w-9 items-center justify-center rounded-full bg-white">
+                    <Icon name="arrow-forward" size={16} className="text-ink" />
+                  </View>
+                </View>
+              </Pressable>
+            </Link>
+          </Reveal>
+        );
+      })}
+    </ScrollView>
   );
 }
 

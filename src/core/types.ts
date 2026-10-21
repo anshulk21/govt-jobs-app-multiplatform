@@ -140,6 +140,16 @@ export interface JobListPayload {
   sponsored?: SponsoredCard[];
 }
 
+/** Open (not expired) job counts, for the States and Categories pages (/api/jobs/counts.json). */
+export interface CountsPayload {
+  generatedAt: string;
+  central: number;
+  /** By state/UT code. */
+  byState: Record<string, number>;
+  byCategory: Record<string, number>;
+  byQualification: Record<string, number>;
+}
+
 export interface JobPayload {
   generatedAt: string;
   job: Job;

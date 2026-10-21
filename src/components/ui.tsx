@@ -47,13 +47,14 @@ export function Card({ children, className = '' }: { children: ReactNode; classN
   return <View className={`rounded-3xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 ${className}`}>{children}</View>;
 }
 
-type BadgeTone = 'neutral' | 'brand' | 'green' | 'amber' | 'red';
+type BadgeTone = 'neutral' | 'brand' | 'green' | 'amber' | 'red' | 'sun';
 const BADGE: Record<BadgeTone, { box: string; text: string }> = {
   neutral: { box: 'bg-slate-100 dark:bg-slate-800', text: 'text-slate-700 dark:text-slate-300' },
   brand: { box: 'bg-brand-50 dark:bg-brand-900', text: 'text-brand-800 dark:text-brand-100' },
   green: { box: 'bg-green-50 dark:bg-green-950', text: 'text-green-700 dark:text-green-300' },
   amber: { box: 'bg-sun-light/60 dark:bg-amber-950', text: 'text-amber-900 dark:text-amber-300' },
   red: { box: 'bg-red-50 dark:bg-red-950', text: 'text-red-700 dark:text-red-300' },
+  sun: { box: 'bg-sun', text: 'font-black text-ink' },
 };
 
 export function Badge({ children, tone = 'neutral' }: { children: ReactNode; tone?: BadgeTone }) {
@@ -166,16 +167,21 @@ export function ChipRow({ children, scroll }: { children: ReactNode; scroll?: bo
   return <View className="flex-row flex-wrap gap-2">{children}</View>;
 }
 
-export function Section({ title, href, children }: { title: string; href?: Href; children: ReactNode }) {
+export function Section({ title, href, count, children }: { title: string; href?: Href; count?: number; children: ReactNode }) {
   const t = useT();
   return (
     <View className="gap-3">
       <View className="flex-row items-center justify-between">
         <View className="flex-1 flex-row items-center gap-2.5">
           <View className="h-2.5 w-2.5 rounded-full bg-brand-500" />
-          <Txt variant="h2" className="flex-1">
+          <Txt variant="h2" className="shrink">
             {title}
           </Txt>
+          {count ? (
+            <View className="rounded-full bg-ink px-2.5 py-0.5 dark:bg-cream">
+              <Text className="text-xs font-black text-cream dark:text-ink">{count}</Text>
+            </View>
+          ) : null}
         </View>
         {href ? (
           <Link href={href} className="rounded-full px-2 py-1 text-sm font-bold text-brand-700 dark:text-brand-200">

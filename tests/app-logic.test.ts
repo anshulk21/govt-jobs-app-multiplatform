@@ -1,7 +1,7 @@
 // Pure logic used by the app and website (no React Native needed).
 import { describe, expect, it } from 'vitest';
 import { categoryFromSlug, categorySlug } from '../src/core/constants';
-import { byUrgency, closingSoon, daysLeft, filterJobs, formatDate, isExpired, matchesPreferences, matchesQuery, newToday, todayIST } from '../src/core/jobs';
+import { byUrgency, closingSoon, daysLeft, filterJobs, formatDate, isExpired, matchesPreferences, matchesQuery, newToday, openCounts, todayIST } from '../src/core/jobs';
 import type { JobSummary } from '../src/core/types';
 import { translate } from '../src/lib/i18n';
 import { buildIcs, reminderTimes } from '../src/lib/reminder-times';
@@ -41,6 +41,9 @@ describe('job lists', () => {
     job({ slug: 'c', lastDate: '2026-10-01' }),
     job({ slug: 'd', lastDate: null, level: 'central', state: null, category: 'SSC', qualifications: ['10th'] }),
   ];
+  it('counts open jobs per state, category and qualification (expired left out)', () => {
+    expect(openCounts(jobs, TODAY)).toEqual({ central: 1, byState: { UP: 2 }, byCategory: { Police: 2, SSC: 1 }, byQualification: { '12th': 2, '10th': 1 } });
+  });
   it('closing soon = open and within 7 days, soonest first', () => {
     expect(closingSoon(jobs, TODAY).map((j) => j.slug)).toEqual(['a']);
   });
@@ -167,5 +170,15 @@ describe('images to PDF', () => {
     expect(text.slice(xrefAt, xrefAt + 4)).toBe('xref');
     const firstObj = Number(text.match(/xref\n0 \d+\n0000000000 65535 f \n(\d{10})/)![1]);
     expect(text.slice(firstObj, firstObj + 7)).toBe('1 0 obj');
+  });
+});
+
+describe('organisation badge', () => {
+  it('builds a short monogram', async () => {
+    const { monogram } = await import('../src/components/category-style');
+    expect(monogram('Bihar Public Service Commission')).toBe('BPSC');
+    expect(monogram('Staff Selection Commission')).toBe('SSC');
+    expect(monogram('UP Police Recruitment & Promotion Board')).toBe('UPPRP');
+    expect(monogram('Haryana Staff Selection Commission (HSSC)')).toBe('HSSC');
   });
 });
