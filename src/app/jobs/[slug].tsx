@@ -18,7 +18,7 @@ import { useSaved } from '@/lib/saved';
 import { pageMeta } from '@/lib/seo';
 import { useSettings } from '@/lib/settings';
 import { useToday } from '@/lib/use-today';
-import { getJob, payloads, publishedJobs } from '@/server/data';
+import { getJob, pageTitleFor, payloads, publishedJobs } from '@/server/data';
 
 export async function generateStaticParams() {
   return publishedJobs().map((j) => ({ slug: j.slug }));
@@ -34,7 +34,8 @@ export const generateMetadata: GenerateMetadataFunction = (_req, params) => {
     job.dates.lastDate ? `last date ${formatDate(job.dates.lastDate)}` : null,
     placeName(job),
   ].filter(Boolean);
-  return pageMeta(job.title, `${job.title} by ${job.organization}: ${bits.join(', ')}. Eligibility, fees, dates and official links.`, `/jobs/${job.slug}`);
+  const title = pageTitleFor(job);
+  return pageMeta(title, `${title} by ${job.organization}: ${bits.join(', ')}. Eligibility, fees, dates and official links.`, `/jobs/${job.slug}`);
 };
 
 /** Home › Uttar Pradesh (or category for central jobs) › Job */

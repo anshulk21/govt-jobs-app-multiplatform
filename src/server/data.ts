@@ -9,7 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { apiPaths } from '../core/api';
 import { categorySlug, QUALIFICATIONS, STAGES, STATES, type StageId } from '../core/constants';
-import { byPublished, toSummary } from '../core/jobs';
+import { byPublished, formatDate, toSummary } from '../core/jobs';
 import type { Job, JobListPayload, JobPayload, JobSummary } from '../core/types';
 
 let cache: Job[] | undefined;
@@ -78,4 +78,17 @@ export function apiFiles(): [string, unknown][] {
   for (const q of QUALIFICATIONS) files.push([apiPaths.qualification(q.id), payloads.qualification(q.id)]);
   for (const st of STAGES) if (st.id !== 'notification' && st.id !== 'apply') files.push([apiPaths.updates(st.id), payloads.updates(st.id)]);
   return files;
+}
+
+/**
+ * Title for the job's page <title>/description. When several published jobs have the same
+ * title (common for auto-imported notices), the date or a short reference is added so every
+ * page is distinct for search engines.
+ */
+export function pageTitleFor(job: Job): string {
+  const same = publishedJobs().filter((j) => j.title === job.title);
+  if (same.length < 2) return job.title;
+  const day = (j: Job) => (j.dates.notification ?? (j.publishedAt ?? j.foundAt)).slice(0, 10);
+  const dayUnique = same.filter((j) => day(j) === day(job)).length === 1;
+  return dayUnique ? `${job.title} (${formatDate(day(job))})` : `${job.title} (ref. ${job.id.slice(0, 6)})`;
 }

@@ -90,19 +90,15 @@ describe('SEO audit', () => {
     expect(page('a.html', 'A', 'Desc A')).toEqual({ file: 'a.html', title: 'A', description: 'Desc A', canonical: `${SITE}/a.html`, noindex: false, h1Count: 1 });
   });
 
-  it('flags duplicates and missing tags but ignores noindex pages', () => {
-    const problems = auditPages([
+  it('blocks on missing tags, only warns on duplicates, ignores noindex pages', () => {
+    const { errors, warnings } = auditPages([
       page('a.html', 'Same', 'Desc A'),
       page('b.html', 'Same', 'Desc B'),
       readPageSeo('c.html', '<title>C</title>'),
       page('d.html', 'Same', 'Desc A', '<meta name="robots" content="noindex"/>'),
     ]);
-    expect(problems).toEqual([
-      'c.html: missing meta description',
-      'c.html: missing canonical link',
-      'c.html: has 0 main headings (should be 1)',
-      'b.html: same title as a.html',
-    ]);
+    expect(errors).toEqual(['c.html: missing meta description', 'c.html: missing canonical link', 'c.html: has 0 main headings (should be 1)']);
+    expect(warnings).toEqual(['b.html: same title as a.html']);
   });
 });
 

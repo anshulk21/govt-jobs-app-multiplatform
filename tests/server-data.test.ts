@@ -46,6 +46,18 @@ describe('src/server/data', () => {
     expect(publishedJobs().map((j) => j.slug)).toEqual(['real-job']);
   });
 
+  it('makes page titles unique when published jobs share a title', async () => {
+    const base = { ...samples['sample-ssc-gd-constable-2026.json'], sample: undefined, title: 'Important Notice' };
+    const a = { ...base, slug: 'a', id: 'aaaaaa1111', dates: { ...base.dates, notification: '2026-10-01' } };
+    const b = { ...base, slug: 'b', id: 'bbbbbb2222', dates: { ...base.dates, notification: '2026-10-05' } };
+    const c = { ...base, slug: 'c', id: 'cccccc3333', dates: { ...base.dates, notification: '2026-10-05' } };
+    useJobs({ 'a.json': a, 'b.json': b, 'c.json': c });
+    const { pageTitleFor, getJob } = await import('../src/server/data');
+    expect(pageTitleFor(getJob('a')!)).toBe('Important Notice (1 Oct 2026)');
+    expect(pageTitleFor(getJob('b')!)).toBe('Important Notice (ref. bbbbbb)');
+    expect(pageTitleFor(getJob('c')!)).toBe('Important Notice (ref. cccccc)');
+  });
+
   it('builds API payloads from the sample jobs', async () => {
     useJobs(samples);
     process.env.SAMPLE_JOBS = '1';

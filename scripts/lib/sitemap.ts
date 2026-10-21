@@ -57,26 +57,31 @@ export function readPageSeo(file: string, html: string): PageSeo {
   };
 }
 
-/** Problems that would hurt search ranking: missing tags, duplicate titles/descriptions. */
-export function auditPages(pages: PageSeo[]): string[] {
-  const problems: string[] = [];
+/**
+ * SEO check of the built pages. `errors` are bugs that must block the deploy (missing tags);
+ * `warnings` are content issues (duplicate titles/descriptions) that should be fixed but
+ * must never stop new jobs from going live.
+ */
+export function auditPages(pages: PageSeo[]): { errors: string[]; warnings: string[] } {
+  const errors: string[] = [];
+  const warnings: string[] = [];
   const indexable = pages.filter((p) => !p.noindex);
   for (const p of indexable) {
-    if (!p.title) problems.push(`${p.file}: missing <title>`);
-    if (!p.description) problems.push(`${p.file}: missing meta description`);
-    if (!p.canonical) problems.push(`${p.file}: missing canonical link`);
-    if (p.h1Count !== 1) problems.push(`${p.file}: has ${p.h1Count} main headings (should be 1)`);
+    if (!p.title) errors.push(`${p.file}: missing <title>`);
+    if (!p.description) errors.push(`${p.file}: missing meta description`);
+    if (!p.canonical) errors.push(`${p.file}: missing canonical link`);
+    if (p.h1Count !== 1) errors.push(`${p.file}: has ${p.h1Count} main headings (should be 1)`);
   }
   for (const key of ['title', 'description'] as const) {
     const seen = new Map<string, string>();
     for (const p of indexable) {
       const v = p[key];
       if (!v) continue;
-      if (seen.has(v)) problems.push(`${p.file}: same ${key} as ${seen.get(v)}`);
+      if (seen.has(v)) warnings.push(`${p.file}: same ${key} as ${seen.get(v)}`);
       else seen.set(v, p.file);
     }
   }
-  return problems;
+  return { errors, warnings };
 }
 
 /**

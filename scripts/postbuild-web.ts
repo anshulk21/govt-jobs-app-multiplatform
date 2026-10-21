@@ -101,12 +101,16 @@ for (const file of htmlFiles) {
 const pages = walk(DIST)
   .filter((f) => f.endsWith('.html') && !f.endsWith('404.html'))
   .map((f) => readPageSeo(path.relative(DIST, f), fs.readFileSync(f, 'utf8')));
-const problems = auditPages(pages);
+const { errors, warnings } = auditPages(pages);
 const urlCount = files.reduce((n, f) => n + f.urls.length, 0);
 console.log(`✓ ${pages.length} pages, ${urlCount} URLs in ${files.length} sitemaps, robots.txt, 404.html, _headers`);
-if (problems.length) {
-  console.error(`✗ SEO audit found ${problems.length} problem(s):`);
-  for (const p of problems) console.error(`  - ${p}`);
+if (warnings.length) {
+  console.warn(`⚠ SEO: ${warnings.length} content warning(s) — the site still deploys; improve these job titles in the admin panel:`);
+  for (const w of warnings) console.warn(`  - ${w}`);
+}
+if (errors.length) {
+  console.error(`✗ SEO audit found ${errors.length} problem(s) that block the deploy:`);
+  for (const e of errors) console.error(`  - ${e}`);
   process.exit(1);
 }
-console.log('✓ SEO audit: every indexable page has a unique title and description, a canonical link and one main heading');
+console.log('✓ SEO audit: every indexable page has a title, description, canonical link and one main heading');
