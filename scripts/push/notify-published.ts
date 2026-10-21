@@ -45,6 +45,15 @@ export interface PublishEvent {
 }
 
 /** Works out what to announce from the git changes between two commits. */
+export function hasCommit(sha: string, root = ROOT): boolean {
+  try {
+    gitIn(root, 'cat-file', '-e', `${sha}^{commit}`);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export function findEvents(before: string, after: string, root = ROOT): PublishEvent[] {
   const lines = gitIn(root, 'diff', '--name-status', '--no-renames', before, after, '--', DIR).trim().split('\n').filter(Boolean);
   const events: PublishEvent[] = [];
@@ -84,6 +93,11 @@ async function main() {
   const after = arg('after') ?? 'HEAD';
   if (!before || /^0+$/.test(before)) {
     console.log('No previous commit to compare with — nothing to announce.');
+    return;
+  }
+  if (!hasCommit(before)) {
+    // e.g. after history was rewritten and force-pushed: the old commit no longer exists.
+    console.log(`Commit ${before} is not in the history (force-push?) — nothing to announce.`);
     return;
   }
   const events = findEvents(before, after);

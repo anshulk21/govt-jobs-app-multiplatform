@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { findEvents } from '../scripts/push/notify-published';
+import { findEvents, hasCommit } from '../scripts/push/notify-published';
 
 const sample = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/jobs/published/sample-ssc-gd-constable-2026.json'), 'utf8'));
 
@@ -38,6 +38,11 @@ describe('finding what to announce after a push', () => {
   // A typo fix: no new stage.
   write('data/jobs/published/ssc-gd-2026.json', { ...job, title: `${job.title} (fixed)`, timeline: [...job.timeline, { stage: 'admit-card', date: '2027-02-01', url: null }] });
   const c3 = commit('typo');
+
+  it('knows when the previous commit is gone (history rewritten)', () => {
+    expect(hasCommit(c1, repo)).toBe(true);
+    expect(hasCommit('ce008e530926d2df918ba6679f61711dae262892', repo)).toBe(false);
+  });
 
   it('announces a newly published job', () => {
     const events = findEvents(c0, c1, repo);
