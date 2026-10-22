@@ -63,8 +63,9 @@ function commitAndPush(): void {
   git('commit', '-F', COMMIT_MSG_FILE);
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      git('pull', '--rebase');
-      git('push');
+      // Always main, so it also works from a checkout whose local branch has another name.
+      git('pull', '--rebase', 'origin', 'main');
+      git('push', 'origin', 'HEAD:main');
       console.log('Pushed.');
       return;
     } catch (err) {
