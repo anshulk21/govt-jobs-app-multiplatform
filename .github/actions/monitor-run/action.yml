@@ -1,0 +1,79 @@
+# The monitor steps shared by both monitor jobs (GitHub's servers and the optional server in India).
+# Run after actions/checkout.
+name: Run the monitor
+description: Check sources, auto-publish new drafts, commit and push, start notifications.
+
+inputs:
+  args:
+    description: Extra options for npm run monitor
+    default: ''
+  telegram-bot-token:
+    default: ''
+  telegram-chat-id:
+    default: ''
+  github-token:
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v5
+      with:
+        node-version-file: .nvmrc
+        cache: npm
+
+    - shell: bash
+      run: npm ci
+
+    - name: Run monitor
+      shell: bash
+      run: npm run monitor -- ${{ inputs.args }}
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ inputs.telegram-bot-token }}
+        TELEGRAM_CHAT_ID: ${{ inputs.telegram-chat-id }}
+
+    - name: Auto-publish new drafts
+      # Rules in scripts/admin/auto.ts; switch with "autoPublish.mode" in config/monitor.json.
+      shell: bash
+      run: |
+        echo "BEFORE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+        npm run admin:auto
+        npm run admin:apply
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ inputs.telegram-bot-token }}
+        TELEGRAM_CHAT_ID: ${{ inputs.telegram-chat-id }}
+
+    - name: Commit and push changes
+      shell: bash
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add data
+        if git diff --cached --quiet; then
+          echo "No changes."
+          exit 0
+        fi
+        MSG="$(cat .monitor-commit-msg)"
+        PUBLISHED=$(node -p "require('./.auto-publish.json').published" 2>/dev/null || echo 0)
+        REJECTED=$(node -p "require('./.auto-publish.json').rejected" 2>/dev/null || echo 0)
+        if [ "$PUBLISHED" -gt 0 ]; then
+          # Something went live: let Cloudflare rebuild the site.
+          MSG="${MSG#\[CF-Pages-Skip\] }; auto-published $PUBLISHED, rejected $REJECTED"
+          echo "PUBLISHED=$PUBLISHED" >> "$GITHUB_ENV"
+        elif [ "$REJECTED" -gt 0 ]; then
+          MSG="$MSG; auto-rejected $REJECTED"
+        fi
+        git commit -m "$MSG"
+        for i in 1 2 3; do
+          git pull --rebase origin main && git push origin HEAD:main && exit 0
+          sleep 10
+        done
+        exit 1
+
+    - name: Send notifications for auto-published jobs
+      # Commits pushed by a workflow don't start other workflows, so start "Publish jobs" directly.
+      if: env.PUBLISHED != ''
+      shell: bash
+      run: gh workflow run publish.yml -f before="$BEFORE"
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}

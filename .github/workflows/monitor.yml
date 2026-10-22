@@ -25,61 +25,31 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v5
-
-      - uses: actions/setup-node@v5
+      - uses: ./.github/actions/monitor-run
         with:
-          node-version-file: .nvmrc
-          cache: npm
+          # --seed=3: the first time a source is checked, its 3 newest notices become drafts
+          # (so you have real jobs to review straight away); after that only new notices do.
+          args: --seed=3 ${{ inputs.all && '--all' || '' }}
+          telegram-bot-token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          telegram-chat-id: ${{ secrets.TELEGRAM_CHAT_ID }}
+          github-token: ${{ github.token }}
 
-      - run: npm ci
-
-      - name: Run monitor
-        # --seed=3: the first time a source is checked, its 3 newest notices become drafts
-        # (so you have real jobs to review straight away); after that only new notices do.
-        run: npm run monitor -- --seed=3 ${{ inputs.all && '--all' || '' }}
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-
-      - name: Auto-publish new drafts
-        # Rules in scripts/admin/auto.ts; switch with "autoPublish.mode" in config/monitor.json.
-        run: |
-          echo "BEFORE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-          npm run admin:auto
-          npm run admin:apply
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-
-      - name: Commit and push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
-          if git diff --cached --quiet; then
-            echo "No changes."
-            exit 0
-          fi
-          MSG="$(cat .monitor-commit-msg)"
-          PUBLISHED=$(node -p "require('./.auto-publish.json').published" 2>/dev/null || echo 0)
-          REJECTED=$(node -p "require('./.auto-publish.json').rejected" 2>/dev/null || echo 0)
-          if [ "$PUBLISHED" -gt 0 ]; then
-            # Something went live: let Cloudflare rebuild the site.
-            MSG="${MSG#\[CF-Pages-Skip\] }; auto-published $PUBLISHED, rejected $REJECTED"
-            echo "PUBLISHED=$PUBLISHED" >> "$GITHUB_ENV"
-          elif [ "$REJECTED" -gt 0 ]; then
-            MSG="$MSG; auto-rejected $REJECTED"
-          fi
-          git commit -m "$MSG"
-          for i in 1 2 3; do
-            git pull --rebase && git push && exit 0
-            sleep 10
-          done
-          exit 1
-
-      - name: Send notifications for auto-published jobs
-        # Commits pushed by this workflow don't start other workflows, so start "Publish jobs" directly.
-        if: env.PUBLISHED != ''
-        run: gh workflow run publish.yml -f before="$BEFORE"
-        env:
-          GH_TOKEN: ${{ github.token }}
+  # Second pass from a server in India (README → "Server in India"), for the sources that just failed
+  # on GitHub: many Indian government sites block foreign servers. Skipped until the repository
+  # variable INDIA_RUNNER is "true", so nothing waits for a server that isn't set up.
+  monitor-india:
+    needs: monitor
+    if: ${{ !cancelled() && vars.INDIA_RUNNER == 'true' }}
+    runs-on: [self-hosted, india]
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main # includes the first job's results, so --only-failing sees today's failures
+      - uses: ./.github/actions/monitor-run
+        with:
+          # Same health file as `npm run monitor:local` on your own PC.
+          args: --only-failing --runner=local --seed=3
+          telegram-bot-token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          telegram-chat-id: ${{ secrets.TELEGRAM_CHAT_ID }}
+          github-token: ${{ github.token }}

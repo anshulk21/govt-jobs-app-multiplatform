@@ -229,7 +229,45 @@ git pull
 npm run monitor:local
 ```
 
-This runs **only the sources currently failing on GitHub**, then commits and pushes the results. Your PC keeps its own health file (`data/monitor/local.json`), so it never conflicts with GitHub's. If a source works from your PC, GitHub's failures for it are not reported as "needing attention" for 3 days. Running `npm run monitor:local` once a day is plenty. You can schedule it with Task Scheduler on Windows or `cron` on Mac/Linux.
+This runs **only the sources currently failing on GitHub**, then commits and pushes the results. Your PC keeps its own health file (`data/monitor/local.json`), so it never conflicts with GitHub's. If a source works from your PC, GitHub's failures for it are not reported as "needing attention" for 3 days. Running `npm run monitor:local` once a day is plenty. To make it automatic without your PC, see Step 4.
+
+### Step 4 (optional): a free server in India, so it happens automatically
+
+Running `npm run monitor:local` by hand works, but it only catches up when you remember to. A free server in India can do it every 3 hours instead. The monitor workflow has a second job, **monitor-india**, which runs right after the GitHub one, on your server, for the sources that just failed. It's skipped until you switch it on (step 5), and it uses the same health file as your PC (`data/monitor/local.json`).
+
+**1. Create the server (Oracle Cloud Always Free, ₹0):**
+
+1. Sign up at <https://signup.cloud.oracle.com>. Choose **India West (Mumbai)** or **India South (Hyderabad)** as the **home region**; it can't be changed later. A card is needed to verify you, but Always Free resources are never charged.
+2. **Compute → Instances → Create instance**. Name `govt-jobs-monitor`. Image: **Ubuntu 24.04**. Shape: **Ampere VM.Standard.A1.Flex** with 1 OCPU and 6 GB memory (Always Free). If it says "out of capacity", pick **VM.Standard.E2.1.Micro** (also Always Free, 1 GB; the script adds swap).
+3. Under **Add SSH keys** choose **Generate a key pair for me** and **Save private key**. Keep the `.key` file safe.
+4. **Create**. When it's running, copy the **Public IP address**.
+
+**2. Connect to it** (from Terminal on Mac; on Windows use PowerShell):
+
+```bash
+chmod 600 ~/Downloads/ssh-key-*.key
+ssh -i ~/Downloads/ssh-key-*.key ubuntu@<PUBLIC_IP>
+```
+
+No ports need opening: the runner only makes outgoing connections to GitHub.
+
+**3. Get a runner token:** GitHub → this repository → **Settings → Actions → Runners → New self-hosted runner**. Copy the value after `--token` in the "Configure" box (valid for 1 hour). You don't need the other commands on that page.
+
+**4. Install the runner** (on the server):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/anshulk21/govt-jobs-app-multiplatform/main/scripts/server/setup-india-runner.sh | bash -s -- <RUNNER_TOKEN>
+```
+
+It adds swap, installs git and the GitHub CLI, registers the runner with the label `india`, and starts it as a service that survives reboots. **Settings → Actions → Runners** should now show it as **Idle**.
+
+**5. Switch it on:** GitHub → **Settings → Secrets and variables → Actions → Variables → New repository variable**: name `INDIA_RUNNER`, value `true`.
+
+**6. Keep it safe:** this repository is public, so stop strangers' pull requests from running code on your server: **Settings → Actions → General → Fork pull request workflows from outside collaborators → Require approval for all outside collaborators → Save**. Only approve pull requests from people you trust.
+
+**Check it:** **Actions → Monitor official sources → Run workflow**. The run shows two jobs, **monitor** and then **monitor-india**. To pause the server job, set `INDIA_RUNNER` to `false`.
+
+Oracle may reclaim Always Free servers on free-trial accounts that stay mostly idle for a week, and a monitor run every 3 hours may still count as idle. To prevent that, upgrade the account to **Pay As You Go** (Billing → Upgrade); Always Free resources stay free, but set a budget alert of ₹1 (Billing → Budgets) so you'd hear about any charge. If the server is ever reclaimed, create a new one and repeat steps 1–4.
 
 ### Monitor options
 
