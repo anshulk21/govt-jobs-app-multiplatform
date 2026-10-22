@@ -1,0 +1,43 @@
+{
+  "id": "c6460d1137",
+  "slug": "icmr-call-for-research-proposals-only-for-the-northeastern-c6460d",
+  "status": "draft",
+  "title": "Call for Research Proposals (Only for the Northeastern Region of India) under the \"Human Resource Development (HRD- Sub Scheme for Health Research\" of the Department of Health…",
+  "organization": "ICMR",
+  "sourceId": "icmr",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-28",
+    "applyStart": null,
+    "lastDate": "2026-11-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.icmr.gov.in/icmrobject/uploads/Call/1790596857_calln_rdhr.pdf",
+    "official": "https://www.icmr.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date of receipt of full-length research proposals on e-PMS Portal:30.11.2026",
+      "dates.notification": "Dated: 28.09.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last date of receipt of full-length research proposals on e-PMS Portal:30.11.2026”\n• Notification date: from “Dated: 28.09.2026”"
+}

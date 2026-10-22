@@ -1,0 +1,38 @@
+{
+  "id": "963360d1e9",
+  "slug": "bis-organization-chart-963360-2",
+  "status": "rejected",
+  "title": "Organization Chart",
+  "organization": "Bureau of Indian Standards — Recruitment",
+  "sourceId": "bis",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.bis.gov.in/wp-content/uploads/2024/12/Organisation-Chart-Dec24-Eng-Corrected.pdf",
+    "official": "https://www.bis.gov.in/whats_new/recruitment-advertisements-results-recruitment-of-scientist-b/?lang=hi",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2024).",
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

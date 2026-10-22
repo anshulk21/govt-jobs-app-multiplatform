@@ -1,0 +1,37 @@
+{
+  "id": "312ce1495f",
+  "slug": "sidbi-fixed-deposit-rates-312ce1",
+  "status": "draft",
+  "title": "Fixed Deposit Rates",
+  "organization": "SIDBI — Careers",
+  "sourceId": "sidbi",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.sidbi.in/uploads/FD-Interest-Rate-20-05-2026.pdf",
+    "official": "https://www.sidbi.in/en/careers",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

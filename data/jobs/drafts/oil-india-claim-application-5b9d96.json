@@ -1,0 +1,37 @@
+{
+  "id": "5b9d962764",
+  "slug": "oil-india-claim-application-5b9d96",
+  "status": "draft",
+  "title": "Claim Application",
+  "organization": "Oil India — Current Openings",
+  "sourceId": "oil-india",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.oil-india.com/files/2025-07/OIPF_application.pdf",
+    "official": "https://www.oil-india.com/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

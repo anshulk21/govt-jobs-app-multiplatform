@@ -1,0 +1,41 @@
+{
+  "id": "0bd025d913",
+  "slug": "gic-re-gift-iio-complaint-handling-policy-0bd025",
+  "status": "draft",
+  "title": "GIC Re – GIFT (IIO) -Complaint Handling Policy",
+  "organization": "GIC Re — Careers",
+  "sourceId": "gic-re",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-03-25",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.gicre.in/images/2026/Final_to_upload_V11.pdf",
+    "official": "https://www.gicre.in/en/?option=com_content&view=article&id=304",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 25.03.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 25.03.2026”"
+}

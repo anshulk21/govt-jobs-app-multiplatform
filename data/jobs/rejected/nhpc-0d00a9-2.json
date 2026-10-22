@@ -1,0 +1,42 @@
+{
+  "id": "0d00a9f620",
+  "slug": "nhpc-0d00a9-2",
+  "status": "rejected",
+  "title": "सामान्य सूचना",
+  "organization": "NHPC Ltd",
+  "sourceId": "nhpc",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-10-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.nhpcindia.com/assests/pzi_public/pdf_link/6900a2e1b7819.pdf",
+    "official": "https://www.nhpcindia.com/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 23.10.2025"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2025-10-23).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 23.10.2025”"
+}

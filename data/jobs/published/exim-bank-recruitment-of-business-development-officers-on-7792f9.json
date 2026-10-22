@@ -1,0 +1,53 @@
+{
+  "id": "7792f9c00e",
+  "slug": "exim-bank-recruitment-of-business-development-officers-on-7792f9",
+  "status": "published",
+  "title": "Recruitment of Business Development Officers on Contract",
+  "organization": "Exim Bank — Careers",
+  "sourceId": "exim-bank",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "postgraduate"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-10-15",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.eximbankindia.in/sites/default/files/2026-09/Recruitment%20of%20Business%20Development%20Officer%20on%20Contract.pdf",
+    "official": "https://www.eximbankindia.in/careers",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-09/Recruitment%20of%20Business%20Development%20Officer%20on%20Contract.pdf"
+    }
+  ],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:19:14.612Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last Date to Apply October 15, 2026",
+      "qualifications": "Essential Qualification Postgraduate in Marketing/Finance, preferably MBA with specialization in Finance or Marketing Postgraduation should be of a minimum 2-year full time duration from a recognised University / Institution. Minimum 55% ag"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last Date to Apply October 15, 2026”\n• Qualification: from “Essential Qualification Postgraduate in Marketing/Finance, preferably MBA with specialization in Finance or Marketing Postgraduation should be of a minimum 2-year full time duration from a recognised University / Institution. Minimum 55% ag”",
+  "publishedAt": "2026-10-22T11:19:14.612Z"
+}

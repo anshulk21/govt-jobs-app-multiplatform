@@ -1,0 +1,41 @@
+{
+  "id": "5686a87824",
+  "slug": "central-bank-click-here-for-details-5686a8",
+  "status": "draft",
+  "title": "details",
+  "organization": "Central Bank of India — Recruitments",
+  "sourceId": "central-bank",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-07-17",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://centralbank.bank.in/sites/default/files/NOTIFICATION%20FOR%20ENGAGEMENT%20OF%20RETIRED%20PSB%E2%80%99S%20OFFICERS%20.pdf",
+    "official": "https://centralbank.bank.in/en/recruitments",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 17.07.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 17.07.2026”"
+}

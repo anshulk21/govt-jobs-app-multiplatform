@@ -1,0 +1,45 @@
+{
+  "id": "6de66cb247",
+  "slug": "icmr-admission-notice-academy-of-scientific-and-innovative-6de66c",
+  "status": "published",
+  "title": "Admission notice:Academy of Scientific and Innovative Research (AcSIR) (January- 2027 session) (Last Date: October 31, 2026)",
+  "organization": "ICMR",
+  "sourceId": "icmr",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.icmr.gov.in/icmrobject/uploads/WhatsNew/1790314198_acsiradmission-jan2027advertisement.pdf",
+    "official": "https://www.icmr.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/WhatsNew/1790314198_acsiradmission-jan2027advertisement.pdf"
+    }
+  ],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:19:14.612Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-10-22T11:19:14.612Z"
+}

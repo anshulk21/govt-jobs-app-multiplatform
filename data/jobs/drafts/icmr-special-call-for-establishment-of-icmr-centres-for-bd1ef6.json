@@ -1,0 +1,41 @@
+{
+  "id": "bd1ef6f370",
+  "slug": "icmr-special-call-for-establishment-of-icmr-centres-for-bd1ef6",
+  "status": "draft",
+  "title": "Special Call for Establishment of ICMR Centres for Advanced Research (CAR) under the National Initiative for Reliable Medical Device Development and Assessment Network -…",
+  "organization": "ICMR",
+  "sourceId": "icmr",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-11-13",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.icmr.gov.in/icmrobject/uploads/Call/1791972387_carassistivetechcall_v2.pdf",
+    "official": "https://www.icmr.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last Date for Proposal Submission 13th November 2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last Date for Proposal Submission 13th November 2026”"
+}
