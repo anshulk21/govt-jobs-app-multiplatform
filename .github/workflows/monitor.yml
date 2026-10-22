@@ -34,22 +34,3 @@ jobs:
           telegram-chat-id: ${{ secrets.TELEGRAM_CHAT_ID }}
           github-token: ${{ github.token }}
 
-  # Second pass from a server in India (README → "Server in India"), for the sources that just failed
-  # on GitHub: many Indian government sites block foreign servers. Skipped until the repository
-  # variable INDIA_RUNNER is "true", so nothing waits for a server that isn't set up.
-  monitor-india:
-    needs: monitor
-    if: ${{ !cancelled() && vars.INDIA_RUNNER == 'true' }}
-    runs-on: [self-hosted, india]
-    timeout-minutes: 25
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          ref: main # includes the first job's results, so --only-failing sees today's failures
-      - uses: ./.github/actions/monitor-run
-        with:
-          # Same health file as `npm run monitor:local` on your own PC.
-          args: --only-failing --runner=local --seed=3
-          telegram-bot-token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          telegram-chat-id: ${{ secrets.TELEGRAM_CHAT_ID }}
-          github-token: ${{ github.token }}

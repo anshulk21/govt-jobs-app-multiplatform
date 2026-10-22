@@ -233,7 +233,7 @@ This runs **only the sources currently failing on GitHub**, then commits and pus
 
 ### Step 4 (optional): a free server in India, so it happens automatically
 
-Running `npm run monitor:local` by hand works, but it only catches up when you remember to. A free server in India can do it every 3 hours instead. The monitor workflow has a second job, **monitor-india**, which runs right after the GitHub one, on your server, for the sources that just failed. It's skipped until you switch it on (step 5), and it uses the same health file as your PC (`data/monitor/local.json`).
+Running `npm run monitor:local` by hand works, but it only catches up when you remember to. A free server in India can do it every 3 hours instead. A second workflow, **Monitor from India**, starts after every GitHub monitor run and checks the sources that just failed, from your server. It's skipped until you switch it on (step 5), and it uses the same health file as your PC (`data/monitor/local.json`).
 
 **1. Create the server (Oracle Cloud Always Free, ₹0):**
 
@@ -265,9 +265,9 @@ It adds swap, installs git and the GitHub CLI, registers the runner with the lab
 
 **6. Keep it safe:** this repository is public, so stop strangers' pull requests from running code on your server: **Settings → Actions → General → Fork pull request workflows from outside collaborators → Require approval for all outside collaborators → Save**. Only approve pull requests from people you trust.
 
-**Check it:** **Actions → Monitor official sources → Run workflow**. The run shows two jobs, **monitor** and then **monitor-india**. To pause the server job, set `INDIA_RUNNER` to `false`.
+**Check it:** **Actions → Monitor from India → Run workflow**, and it should finish green. To pause it, set `INDIA_RUNNER` to `false`.
 
-Oracle may reclaim Always Free servers on free accounts that stay mostly idle for a week, and a monitor run every 3 hours may still count as idle. Nothing is lost if that happens: the monitor just falls back to GitHub only (the India job waits in the queue). Create a new server and repeat steps 1–4. (Upgrading the account to Pay As You Go avoids reclaiming, but is optional.)
+Oracle may reclaim Always Free servers on free accounts that stay mostly idle for a week, and a monitor run every 3 hours may still count as idle. Nothing breaks if that happens: the main monitor keeps running on GitHub, and "Monitor from India" runs just wait for the server. Create a new server and repeat steps 1–4. (Upgrading the account to Pay As You Go avoids reclaiming, but is optional.)
 
 ### Monitor options
 

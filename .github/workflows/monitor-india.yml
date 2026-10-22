@@ -1,0 +1,38 @@
+name: Monitor from India
+
+# Second pass from your own server in India (README → "a free server in India"), for the sources that
+# just failed on GitHub: many Indian government sites block foreign servers. Starts after every
+# "Monitor official sources" run. Skipped until the repository variable INDIA_RUNNER is "true".
+#
+# A separate workflow on purpose: if the server is down, this run waits for it (up to a day) without
+# holding up the main monitor.
+on:
+  workflow_run:
+    workflows: [Monitor official sources]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write # to start the "Publish jobs" workflow for notifications
+
+concurrency:
+  group: monitor-india
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    if: ${{ vars.INDIA_RUNNER == 'true' }}
+    runs-on: [self-hosted, india]
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main # includes the GitHub run's results, so --only-failing sees its failures
+      - uses: ./.github/actions/monitor-run
+        with:
+          # Same health file as `npm run monitor:local` on your own PC.
+          args: --only-failing --runner=local --seed=3
+          telegram-bot-token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          telegram-chat-id: ${{ secrets.TELEGRAM_CHAT_ID }}
+          github-token: ${{ github.token }}
