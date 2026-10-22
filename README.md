@@ -267,7 +267,7 @@ It adds swap, installs git and the GitHub CLI, registers the runner with the lab
 
 **Check it:** **Actions → Monitor official sources → Run workflow**. The run shows two jobs, **monitor** and then **monitor-india**. To pause the server job, set `INDIA_RUNNER` to `false`.
 
-Oracle may reclaim Always Free servers on free-trial accounts that stay mostly idle for a week, and a monitor run every 3 hours may still count as idle. To prevent that, upgrade the account to **Pay As You Go** (Billing → Upgrade); Always Free resources stay free, but set a budget alert of ₹1 (Billing → Budgets) so you'd hear about any charge. If the server is ever reclaimed, create a new one and repeat steps 1–4.
+Oracle may reclaim Always Free servers on free accounts that stay mostly idle for a week, and a monitor run every 3 hours may still count as idle. Nothing is lost if that happens: the monitor just falls back to GitHub only (the India job waits in the queue). Create a new server and repeat steps 1–4. (Upgrading the account to Pay As You Go avoids reclaiming, but is optional.)
 
 ### Monitor options
 
