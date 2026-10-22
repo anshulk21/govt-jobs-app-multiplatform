@@ -25,6 +25,10 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v5
+        with:
+          # Latest main, not the commit this run was queued at: when two runs queue up (Worker trigger
+          # + GitHub schedule), the second must see the first one's results or it finds the same links again.
+          ref: main
       - uses: ./.github/actions/monitor-run
         with:
           # --seed=3: the first time a source is checked, its 3 newest notices become drafts

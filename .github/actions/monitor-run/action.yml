@@ -66,6 +66,7 @@ runs:
         git commit -m "$MSG"
         for i in 1 2 3; do
           git pull --rebase origin main && git push origin HEAD:main && exit 0
+          git rebase --abort 2>/dev/null || true
           sleep 10
         done
         exit 1
