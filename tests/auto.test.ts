@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cleanTitle, decide, duplicateKey, jobTitle, type AutoConfig } from '../scripts/admin/auto';
+import { cleanTitle, decide, duplicateKey, fileNameTitle, jobTitle, type AutoConfig } from '../scripts/admin/auto';
 
 describe('cleanTitle', () => {
   it('turns ALL-CAPS into normal case but keeps acronyms and codes', () => {
@@ -58,6 +58,24 @@ describe('jobTitle', () => {
       const twice = decide({ title: once.title, organization: org, sourceId: 'x', category: 'Railway', links: { notification: '', official: '', apply: null }, foundAt: '2026-10-20T00:00:00Z' }, { mode: 'smart', staleDraftDays: 21, lowSignalSources: [] }, new Date('2026-10-21T00:00:00Z'));
       expect(twice).toEqual(once);
     }
+  });
+
+  it('uses a descriptive file name when the link text is vague', () => {
+    const d = decide(
+      { title: 'more info', organization: 'Central Bank of India Recruitments', sourceId: 'central-bank', category: 'Bank', links: { notification: 'https://x.bank.in/files/Notification%20of%20Date%20Extension%20for%20Recruitment%20of%20Company%20Secretary.zip', official: '', apply: null }, foundAt: '2026-10-20T00:00:00Z' },
+      { mode: 'smart', staleDraftDays: 21, lowSignalSources: [] },
+      new Date('2026-10-21T00:00:00Z'),
+    );
+    expect(d.title).toBe('Notification of Date Extension for Recruitment of Company Secretary');
+    expect(d.quiet).toBe(true); // an extension is an update, not a new job
+    expect(fileNameTitle('https://x.gov.in/uploads/img20260521_17560115.pdf')).toBeNull();
+    // Short but meaningful link text is kept.
+    const kept = decide(
+      { title: 'List of Qualified candidates', sourceId: 'rrc-swr', category: 'Railway', links: { notification: 'https://x.in/Batch-ALL_NoticeBoard_Qualified%2023-09-2026.pdf', official: '', apply: null }, foundAt: '2026-10-20T00:00:00Z' },
+      { mode: 'smart', staleDraftDays: 21, lowSignalSources: [] },
+      new Date('2026-10-21T00:00:00Z'),
+    );
+    expect(kept.title).toBe('List of Qualified candidates');
   });
 
   it('treats a notice with a new query-string token as the same notice', () => {

@@ -1,8 +1,8 @@
 {
   "id": "5686a87824",
   "slug": "central-bank-click-here-for-details-5686a8",
-  "status": "draft",
-  "title": "details",
+  "status": "published",
+  "title": "Notification for Engagement of Retired PSB’S Officers",
   "organization": "Central Bank of India — Recruitments",
   "sourceId": "central-bank",
   "level": "central",
@@ -25,9 +25,15 @@
     "official": "https://centralbank.bank.in/en/recruitments",
     "apply": null
   },
-  "timeline": [],
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-07-17",
+      "url": "https://centralbank.bank.in/sites/default/files/NOTIFICATION%20FOR%20ENGAGEMENT%20OF%20RETIRED%20PSB%E2%80%99S%20OFFICERS%20.pdf"
+    }
+  ],
   "foundAt": "2026-10-22T11:01:17.859Z",
-  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T15:59:36.847Z",
   "extraction": {
     "method": "pdf-regex",
     "fields": [
@@ -37,5 +43,7 @@
       "dates.notification": "dated 17.07.2026"
     }
   },
-  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 17.07.2026”"
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 17.07.2026”",
+  "publishedAt": "2026-10-22T15:59:36.847Z"
 }

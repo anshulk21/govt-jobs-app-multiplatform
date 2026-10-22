@@ -141,6 +141,20 @@ export function jobTitle(raw: string, organization?: string): string {
   return vague && !title.toLowerCase().includes(org.toLowerCase()) ? `${title} — ${org}` : title;
 }
 
+const CONTENTLESS = /^(?:(?:for\s+)?(?:more\s+)?(?:info(?:rmation)?|details?)|know more|more|continue reading|view|link|here|open)?$/i;
+
+/** "…/Notification%20of%20Date%20Extension%20for%20Recruitment.zip" → "Notification of Date Extension for Recruitment"; null if not descriptive. */
+export function fileNameTitle(url: string): string | null {
+  let name = url.split(/[?#]/)[0]!.split('/').pop() ?? '';
+  try {
+    name = decodeURIComponent(name);
+  } catch {
+    return null;
+  }
+  name = name.replace(/\.[a-z0-9]{2,4}$/i, '').replace(/[-_+]+/g, ' ').replace(/\s+/g, ' ').trim();
+  return (name.match(/\p{L}{2,}/gu) ?? []).length >= 4 ? name : null;
+}
+
 export function decide(
   job: Pick<Job, 'title' | 'sourceId' | 'category' | 'links' | 'foundAt'> & { organization?: string; dates?: Partial<Job['dates']> },
   cfg: AutoConfig,
@@ -148,7 +162,9 @@ export function decide(
 ): AutoDecision {
   // Rules read the notice's own words (a title fixed on an earlier run ends with " — <organisation>").
   const suffix = job.organization ? ` — ${organizationName(job.organization)}` : null;
-  const own = suffix && job.title.endsWith(suffix) ? job.title.slice(0, -suffix.length) : job.title;
+  let own = suffix && job.title.endsWith(suffix) ? job.title.slice(0, -suffix.length) : job.title;
+  // Link text that says nothing ("Click here for more info"): the file name often says what the notice is.
+  if (CONTENTLESS.test(cleanTitle(own))) own = fileNameTitle(job.links.notification) ?? own;
   const cleaned = cleanTitle(own);
   const title = jobTitle(own, job.organization);
   const text = `${cleaned} ${job.links.notification}`;
