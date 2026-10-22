@@ -21,9 +21,6 @@ const NAV: { href: Href; label: string }[] = [
   { href: '/saved', label: 'Saved' },
 ];
 
-/** Pages that render <Screen wide>: no sidebar, so their grids get the whole width. */
-const WIDE_PAGES = ['/states'];
-
 const FOOTER: { href: Href; label: string }[] = [
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
@@ -56,6 +53,16 @@ function AppBanner() {
       <Pressable aria-label="Close" onPress={() => (setShow(false), void writeJson('banner-dismissed', true))}>
         <Icon name="close" className="text-white" />
       </Pressable>
+    </View>
+  );
+}
+
+function AdRail() {
+  return (
+    <View role="complementary" className="hidden w-44 shrink-0 px-2 pt-4 xl:flex">
+      <View className="sticky top-28">
+        <BannerSlot placement="sidebar" />
+      </View>
     </View>
   );
 }
@@ -95,18 +102,14 @@ export function WebShell({ children }: { children: ReactNode }) {
           </ScrollView>
         </View>
       </View>
-      <View className="mx-auto w-full max-w-6xl flex-1 flex-row">
+      {/* Every page: content in the middle, the same width as the header. On wide screens (≥1280px)
+          an ad rail on each side; hidden by CSS below that, so nothing shifts. */}
+      <View className="mx-auto w-full max-w-screen-2xl flex-1 flex-row">
+        <AdRail />
         <View role="main" className="min-w-0 flex-1">
           {children}
         </View>
-        {/* Desktop only (≥1024px): sidebar ad. Hidden by CSS on phones, so nothing shifts. */}
-        {WIDE_PAGES.includes(pathname) ? null : (
-          <View role="complementary" className="hidden w-80 shrink-0 px-4 pt-4 lg:flex">
-            <View className="sticky top-28">
-              <BannerSlot placement="sidebar" />
-            </View>
-          </View>
-        )}
+        <AdRail />
       </View>
       <View role="contentinfo" className="mt-8 rounded-t-[32px] bg-ink dark:border-t dark:border-slate-800">
         <View className="mx-auto w-full max-w-5xl gap-5 px-4 pb-8 pt-10">

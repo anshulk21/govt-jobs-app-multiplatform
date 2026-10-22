@@ -25,28 +25,28 @@ const CODE_COLOURS = [
   'text-amber-700 dark:text-sun',
 ];
 
-/** `width` sets how many boxes share a row: states use 3 on desktop, the union territories 1 (their own column on the right). */
+/** `width` sets how many boxes share a row: states use 4 on desktop, the union territories 1 (their own column on the right). */
 function StateTile({ state, count, index, width }: { state: StateInfo; count: number; index: number; width: string }) {
   return (
     <View className={`p-1.5 ${width}`}>
       <Reveal index={index}>
         <Link href={`/state/${state.slug}`} asChild>
-          <Pressable className="gj-card h-28 justify-between rounded-3xl border border-slate-200 bg-white p-3.5 active:scale-95 dark:border-slate-800 dark:bg-slate-900">
+          <Pressable className="gj-card h-36 justify-between rounded-3xl border border-slate-200 bg-white p-4 active:scale-95 dark:border-slate-800 dark:bg-slate-900">
             <View className="flex-row items-start justify-between">
-              <Text className={`text-3xl font-black tracking-tighter ${CODE_COLOURS[index % CODE_COLOURS.length]}`}>{state.code}</Text>
-              {count ? (
-                <Text className="rounded-full bg-brand-50 px-2 py-0.5 text-xs font-black text-brand-800 dark:bg-brand-900 dark:text-brand-100">
-                  {count}
-                </Text>
-              ) : null}
+              <Text className={`text-4xl font-black tracking-tighter ${CODE_COLOURS[index % CODE_COLOURS.length]}`}>{state.code}</Text>
+              {count ? <View className="gj-ping mt-2 h-2.5 w-2.5 rounded-full bg-brand-500" /> : null}
             </View>
-            <View>
-              <Text numberOfLines={1} className="text-sm font-extrabold text-ink dark:text-slate-50">
+            <View className="gap-1">
+              <Text numberOfLines={1} className="text-base font-extrabold text-ink dark:text-slate-50">
                 {state.name}
               </Text>
-              <Text className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-                {count ? `${count} open ${count === 1 ? 'job' : 'jobs'}` : 'No openings now'}
-              </Text>
+              {count ? (
+                <Text className="self-start rounded-full bg-brand-50 px-2 py-0.5 text-xs font-bold text-brand-800 dark:bg-brand-900 dark:text-brand-100">
+                  {count} open {count === 1 ? 'job' : 'jobs'}
+                </Text>
+              ) : (
+                <Text className="text-xs font-semibold text-slate-500 dark:text-slate-400">No openings now</Text>
+              )}
             </View>
           </Pressable>
         </Link>
@@ -63,7 +63,7 @@ export default function StatesPage() {
   const uts = STATES.filter((s) => s.level === 'ut' && match(s));
   const withJobs = Object.keys(counts?.byState ?? {}).length;
   return (
-    <Screen wide>
+    <Screen>
       {Platform.OS !== 'web' ? <Stack.Screen options={{ title: 'States & UTs' }} /> : null}
       <PageHero
         title="Jobs by"
@@ -88,20 +88,21 @@ export default function StatesPage() {
         </Pressable>
       </Link>
 
-      <View className="gap-5 lg:flex-row lg:items-start">
+      {/* Desktop: 5 equal columns (4 for states, 1 for UTs) so every box is the same size. */}
+      <View className="gap-5 lg:-mx-1.5 lg:flex-row lg:items-start lg:gap-0">
         {states.length ? (
-          <View className="lg:flex-1">
+          <View className="lg:w-4/5 lg:px-1.5">
             <Section title="States" count={states.length}>
               <View className="-m-1.5 flex-row flex-wrap">
                 {states.map((s, i) => (
-                  <StateTile key={s.code} state={s} count={counts?.byState[s.code] ?? 0} index={i} width="w-1/2 sm:w-1/3" />
+                  <StateTile key={s.code} state={s} count={counts?.byState[s.code] ?? 0} index={i} width="w-1/2 sm:w-1/3 lg:w-1/4" />
                 ))}
               </View>
             </Section>
           </View>
         ) : null}
         {uts.length ? (
-          <View className="lg:w-72">
+          <View className="lg:w-1/5 lg:px-1.5">
             <Section title="Union Territories" count={uts.length}>
               <View className="-m-1.5 flex-row flex-wrap">
                 {uts.map((s, i) => (

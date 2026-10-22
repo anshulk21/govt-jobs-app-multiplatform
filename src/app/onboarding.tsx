@@ -50,7 +50,7 @@ export default function Onboarding() {
 
   return (
     <View className="flex-1 bg-slate-50 dark:bg-slate-950" style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <ScrollView className="flex-1" contentContainerClassName="mx-auto w-full max-w-3xl gap-5 px-4 py-6">
+      <ScrollView className="flex-1" contentContainerClassName="mx-auto w-full max-w-5xl gap-5 px-4 py-6">
         <View className="flex-row gap-1.5">
           {STEPS.map((s, i) => (
             <View key={s} className={`h-1.5 flex-1 rounded-full ${i <= step ? 'bg-brand-700' : 'bg-slate-200 dark:bg-slate-800'}`} />
@@ -114,7 +114,7 @@ export default function Onboarding() {
         ) : null}
       </ScrollView>
 
-      <View className="mx-auto w-full max-w-3xl flex-row gap-2 border-t border-slate-200 px-4 py-3 dark:border-slate-800">
+      <View className="mx-auto w-full max-w-5xl flex-row gap-2 border-t border-slate-200 px-4 py-3 dark:border-slate-800">
         {step > 0 ? <Button kind="secondary" label={t('onboarding.back')} onPress={() => setStep(step - 1)} /> : <Button kind="ghost" label={t('onboarding.skip')} onPress={skip} />}
         <Button className="flex-1" label={last ? t('onboarding.done') : t('onboarding.next')} onPress={() => (last ? void finish() : setStep(step + 1))} />
       </View>
