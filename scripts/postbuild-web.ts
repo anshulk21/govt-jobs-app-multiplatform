@@ -99,6 +99,13 @@ fs.writeFileSync(
     '/*',
     '  X-Content-Type-Options: nosniff',
     '  Referrer-Policy: strict-origin-when-cross-origin',
+    // Browsers remember to use https only (1 year).
+    '  Strict-Transport-Security: max-age=31536000; includeSubDomains',
+    // No other site may show these pages in a frame (stops click-jacking, e.g. of /admin).
+    '  X-Frame-Options: SAMEORIGIN',
+    "  Content-Security-Policy: frame-ancestors 'self'",
+    // The site never needs these; the photo tools use a normal file picker.
+    '  Permissions-Policy: camera=(), microphone=(), geolocation=(), usb=()',
     '',
   ].join('\n'),
 );

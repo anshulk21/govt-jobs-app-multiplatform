@@ -20,17 +20,13 @@ interface Env extends RazorpayEnv, ScheduleEnv {
   FIREBASE_SERVICE_ACCOUNT?: string;
 }
 
-/** Which admin-login settings this Worker can see. Shows names only, never values. */
+/** Whether each setting is set (true/false). Never shows values or other setting names. */
 function setupStatus(env: Env): Response {
-  const names = Object.keys(env).filter((k) => k !== 'ASSETS');
   return Response.json({
     GITHUB_OAUTH_CLIENT_ID: Boolean(env.GITHUB_OAUTH_CLIENT_ID),
     GITHUB_OAUTH_CLIENT_SECRET: Boolean(env.GITHUB_OAUTH_CLIENT_SECRET),
     // Starts the monitor on time (Cron Triggers); without it GitHub's late schedule is used.
     GITHUB_ACTIONS_TOKEN: Boolean(env.GITHUB_ACTIONS_TOKEN),
-    // Similar-looking names help spot typos such as a trailing space or wrong case.
-    similarNamesFound: names.filter((k) => /git|oauth|client/i.test(k)),
-    otherSettingsCount: names.length,
   });
 }
 

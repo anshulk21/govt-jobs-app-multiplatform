@@ -4,6 +4,7 @@ import { Pressable, ScrollView, Text, View } from 'react-native';
 import { CATEGORIES, QUALIFICATIONS, STAGES, STATES, type Category, type QualificationId } from '@/core/constants';
 import { byUrgency, daysLeft, formatDate, isExpired, placeName, type JobFilters } from '@/core/jobs';
 import type { JobSummary, TimelineEntry } from '@/core/types';
+import { isWebUrl } from '@/lib/links';
 import { useT } from '@/lib/settings';
 import { adPositions } from '@/lib/ad-rules';
 import { ListAd } from './ads';
@@ -201,8 +202,8 @@ export function StatusTimeline({ timeline }: { timeline: TimelineEntry[] }) {
               <Txt variant={done ? 'label' : 'muted'}>{stage.label}</Txt>
               {entry?.date ? <Txt variant="small">{formatDate(entry.date)}</Txt> : null}
               {entry?.note ? <Txt variant="small">{entry.note}</Txt> : null}
-              {entry?.url ? (
-                <Link href={entry.url as never} target="_blank" rel="noopener" className="text-sm font-semibold text-brand-700 dark:text-brand-200">
+              {isWebUrl(entry?.url) ? (
+                <Link href={entry!.url as never} target="_blank" rel="noopener" className="text-sm font-semibold text-brand-700 dark:text-brand-200">
                   Official link
                 </Link>
               ) : null}

@@ -123,3 +123,12 @@ describe('bulk selection', () => {
     expect(slugs({ limit: 2 })).toEqual(['a', 'b']);
   });
 });
+
+describe('admin links', () => {
+  it('drops links that are not http(s)', async () => {
+    const { normalizeJob } = await import('../scripts/admin/jobs');
+    const job = normalizeJob({ title: 'X', links: { notification: 'javascript:alert(1)', official: 'https://ssc.gov.in', apply: 'data:text/html,hi' }, timeline: [{ stage: 'result', url: 'JavaScript:alert(1)' }] } as never);
+    expect(job.links).toEqual({ notification: '', official: 'https://ssc.gov.in', apply: null });
+    expect(job.timeline.find((t) => t.stage === 'result')?.url ?? null).toBeNull();
+  });
+});

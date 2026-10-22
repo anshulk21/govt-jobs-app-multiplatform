@@ -11,6 +11,11 @@ type Raw = Record<string, any>;
 
 /** "" / undefined → null; trims strings. */
 const str = (v: unknown): string | null => (typeof v === 'string' && v.trim() ? v.trim() : null);
+/** Only http(s) links are kept (a javascript: or data: link typed into the admin panel is dropped). */
+const url = (v: unknown): string | null => {
+  const s = str(v);
+  return s && /^https?:\/\//i.test(s) ? s : null;
+};
 /** Accepts "2026-11-15", "2026-11-15T00:00:00Z"; anything else → null. */
 const date = (v: unknown): string | null => (typeof v === 'string' && /^\d{4}-\d{2}-\d{2}/.test(v) ? v.slice(0, 10) : null);
 const int = (v: unknown): number | null => {
@@ -30,7 +35,7 @@ export function normalizeJob(raw: Raw, now: string): Job {
   const quals = Array.isArray(raw.qualifications) ? raw.qualifications : raw.qualifications ? [raw.qualifications] : [];
   const timeline: TimelineEntry[] = (Array.isArray(raw.timeline) ? raw.timeline : [])
     .filter((t: Raw) => STAGES.some((s) => s.id === t?.stage))
-    .map((t: Raw) => ({ stage: t.stage, date: date(t.date), url: str(t.url), ...(str(t.note) ? { note: str(t.note)! } : {}) }));
+    .map((t: Raw) => ({ stage: t.stage, date: date(t.date), url: url(t.url), ...(str(t.note) ? { note: str(t.note)! } : {}) }));
   const extraction = raw.extraction && typeof raw.extraction === 'object' ? raw.extraction : { method: 'link-only', fields: [], evidence: {} };
 
   const job: Job = {
@@ -58,7 +63,7 @@ export function normalizeJob(raw: Raw, now: string): Job {
       exam: date(raw.dates?.exam),
     },
     howToApply: str(raw.howToApply),
-    links: { notification: str(raw.links?.notification) ?? '', official: str(raw.links?.official) ?? '', apply: str(raw.links?.apply) },
+    links: { notification: url(raw.links?.notification) ?? '', official: url(raw.links?.official) ?? '', apply: url(raw.links?.apply) },
     timeline,
     foundAt: str(raw.foundAt) ?? now,
     updatedAt: str(raw.updatedAt) ?? now,
