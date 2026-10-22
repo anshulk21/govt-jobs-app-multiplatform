@@ -103,7 +103,7 @@ export default function StatesPage() {
         ) : null}
         {uts.length ? (
           <View className="lg:w-1/5 lg:px-1.5">
-            <Section title="Union Territories" count={uts.length}>
+            <Section title="UTs" count={uts.length}>
               <View className="-m-1.5 flex-row flex-wrap">
                 {uts.map((s, i) => (
                   <StateTile key={s.code} state={s} count={counts?.byState[s.code] ?? 0} index={i} width="w-1/2 sm:w-1/3 lg:w-full" />
