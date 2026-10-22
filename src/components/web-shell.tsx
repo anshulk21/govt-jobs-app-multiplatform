@@ -21,6 +21,9 @@ const NAV: { href: Href; label: string }[] = [
   { href: '/saved', label: 'Saved' },
 ];
 
+/** Pages that render <Screen wide>: no sidebar, so their grids get the whole width. */
+const WIDE_PAGES = ['/states'];
+
 const FOOTER: { href: Href; label: string }[] = [
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
@@ -97,11 +100,13 @@ export function WebShell({ children }: { children: ReactNode }) {
           {children}
         </View>
         {/* Desktop only (≥1024px): sidebar ad. Hidden by CSS on phones, so nothing shifts. */}
-        <View role="complementary" className="hidden w-80 shrink-0 px-4 pt-4 lg:flex">
-          <View className="sticky top-28">
-            <BannerSlot placement="sidebar" />
+        {WIDE_PAGES.includes(pathname) ? null : (
+          <View role="complementary" className="hidden w-80 shrink-0 px-4 pt-4 lg:flex">
+            <View className="sticky top-28">
+              <BannerSlot placement="sidebar" />
+            </View>
           </View>
-        </View>
+        )}
       </View>
       <View role="contentinfo" className="mt-8 rounded-t-[32px] bg-ink dark:border-t dark:border-slate-800">
         <View className="mx-auto w-full max-w-5xl gap-5 px-4 pb-8 pt-10">

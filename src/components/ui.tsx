@@ -10,9 +10,10 @@ export { Icon };
 export type { IconName };
 
 
-/** Scrollable page with comfortable padding; centred and width-limited on large web screens. */
-export function Screen({ children, scroll = true }: { children: ReactNode; scroll?: boolean }) {
-  const inner = <View className="mx-auto w-full max-w-3xl gap-5 px-4 pb-10 pt-4">{children}</View>;
+/** Scrollable page with comfortable padding; centred and width-limited on large web screens.
+ *  `wide` pages use the full width (the web shell drops its sidebar for them, see WIDE_PAGES). */
+export function Screen({ children, scroll = true, wide = false }: { children: ReactNode; scroll?: boolean; wide?: boolean }) {
+  const inner = <View className={`mx-auto w-full ${wide ? 'max-w-6xl' : 'max-w-3xl'} gap-5 px-4 pb-10 pt-4`}>{children}</View>;
   // On the website the page itself scrolls (better for mobile browsers and SEO).
   if (!scroll || Platform.OS === 'web') return <View className="flex-1 bg-slate-50 dark:bg-slate-950">{inner}</View>;
   return (

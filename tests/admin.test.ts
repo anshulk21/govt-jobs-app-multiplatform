@@ -127,7 +127,7 @@ describe('bulk selection', () => {
 describe('admin links', () => {
   it('drops links that are not http(s)', async () => {
     const { normalizeJob } = await import('../scripts/admin/jobs');
-    const job = normalizeJob({ title: 'X', links: { notification: 'javascript:alert(1)', official: 'https://ssc.gov.in', apply: 'data:text/html,hi' }, timeline: [{ stage: 'result', url: 'JavaScript:alert(1)' }] } as never);
+    const job = normalizeJob({ title: 'X', links: { notification: 'javascript:alert(1)', official: 'https://ssc.gov.in', apply: 'data:text/html,hi' }, timeline: [{ stage: 'result', url: 'JavaScript:alert(1)' }] } as never, '2026-10-21T00:00:00Z');
     expect(job.links).toEqual({ notification: '', official: 'https://ssc.gov.in', apply: null });
     expect(job.timeline.find((t) => t.stage === 'result')?.url ?? null).toBeNull();
   });
