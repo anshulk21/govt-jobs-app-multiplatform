@@ -106,7 +106,7 @@
     {
       "id": "ml-health",
       "name": "Meghalaya — Health / Medical Recruitment Board",
-      "url": "",
+      "url": "https://nhmmeghalaya.nic.in/",
       "level": "state",
       "state": "ML",
       "category": "Health",
@@ -122,14 +122,15 @@
         ".pdf"
       ],
       "priority": "normal",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://nhmmeghalaya.nic.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     },
     {
       "id": "ml-power",
       "name": "Meghalaya — State power utility",
-      "url": "",
+      "url": "https://meecl.nic.in/",
       "level": "state",
       "state": "ML",
       "category": "Electricity",
@@ -145,9 +146,10 @@
         ".pdf"
       ],
       "priority": "normal",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://meecl.nic.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     }
   ]
 }

@@ -55,7 +55,7 @@
     {
       "id": "mn-police",
       "name": "Manipur — Police Recruitment Board",
-      "url": "",
+      "url": "https://manipurpolice.gov.in/",
       "level": "state",
       "state": "MN",
       "category": "Police",
@@ -73,9 +73,10 @@
         ".pdf"
       ],
       "priority": "high",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://manipurpolice.gov.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     },
     {
       "id": "mn-teacher",
@@ -105,7 +106,7 @@
     {
       "id": "mn-health",
       "name": "Manipur — Health / Medical Recruitment Board",
-      "url": "",
+      "url": "https://nrhmmanipur.org/",
       "level": "state",
       "state": "MN",
       "category": "Health",
@@ -121,14 +122,15 @@
         ".pdf"
       ],
       "priority": "normal",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "lastVerifiedAt": "2026-10-22T10:59:09.168Z",
+      "finalUrl": "https://nrhmmanipur.org/"
     },
     {
       "id": "mn-power",
       "name": "Manipur — State power utility",
-      "url": "",
+      "url": "https://mspdcl.info/",
       "level": "state",
       "state": "MN",
       "category": "Electricity",
@@ -146,7 +148,8 @@
       "priority": "normal",
       "enabled": false,
       "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z",
+      "notes": "Didn't load when added on 2026-10-22 (ERR_SSL_TLSV1_UNRECOGNIZED_NAME). Check the address in a browser, then set \"enabled\": true."
     }
   ]
 }

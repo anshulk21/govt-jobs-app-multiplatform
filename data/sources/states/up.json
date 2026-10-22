@@ -84,7 +84,7 @@
     {
       "id": "up-essc",
       "name": "UP Education Service Selection Commission",
-      "url": "",
+      "url": "https://upessc.up.gov.in/",
       "level": "state",
       "state": "UP",
       "category": "Teaching",
@@ -102,9 +102,10 @@
         ".pdf"
       ],
       "priority": "normal",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://upessc.up.gov.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     },
     {
       "id": "up-nhm",

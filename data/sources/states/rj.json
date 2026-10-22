@@ -177,7 +177,7 @@
     {
       "id": "rj-teacher",
       "name": "Rajasthan — Teacher / Education Recruitment Board",
-      "url": "",
+      "url": "https://education.rajasthan.gov.in/",
       "level": "state",
       "state": "RJ",
       "category": "Teaching",
@@ -195,9 +195,10 @@
         ".pdf"
       ],
       "priority": "normal",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://education.rajasthan.gov.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     }
   ]
 }

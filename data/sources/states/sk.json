@@ -54,7 +54,7 @@
     {
       "id": "sk-police",
       "name": "Sikkim — Police Recruitment Board",
-      "url": "",
+      "url": "https://police.sikkim.gov.in/",
       "level": "state",
       "state": "SK",
       "category": "Police",
@@ -74,7 +74,8 @@
       "priority": "high",
       "enabled": false,
       "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z",
+      "notes": "Didn't load when added on 2026-10-22 (timeout). Check the address in a browser, then set \"enabled\": true."
     },
     {
       "id": "sk-teacher",
@@ -104,7 +105,7 @@
     {
       "id": "sk-health",
       "name": "Sikkim — Health / Medical Recruitment Board",
-      "url": "",
+      "url": "https://health.sikkim.gov.in/",
       "level": "state",
       "state": "SK",
       "category": "Health",
@@ -122,12 +123,13 @@
       "priority": "normal",
       "enabled": false,
       "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z",
+      "notes": "Didn't load when added on 2026-10-22 (timeout). Check the address in a browser, then set \"enabled\": true."
     },
     {
       "id": "sk-power",
       "name": "Sikkim — State power utility",
-      "url": "",
+      "url": "https://power.sikkim.gov.in/",
       "level": "state",
       "state": "SK",
       "category": "Electricity",
@@ -145,7 +147,8 @@
       "priority": "normal",
       "enabled": false,
       "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z",
+      "notes": "Didn't load when added on 2026-10-22 (timeout). Check the address in a browser, then set \"enabled\": true."
     }
   ]
 }

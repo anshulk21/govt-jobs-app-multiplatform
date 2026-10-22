@@ -6,7 +6,7 @@
     {
       "id": "an-admin",
       "name": "Andaman & Nicobar Administration",
-      "url": "",
+      "url": "https://andaman.gov.in/",
       "level": "ut",
       "state": "AN",
       "category": "Other",
@@ -23,7 +23,8 @@
       "priority": "high",
       "enabled": false,
       "verified": false,
-      "notes": "TODO: www.andaman.gov.in does not resolve; find the current official URL, then enable."
+      "lastVerifiedAt": "2026-10-22T10:59:09.168Z",
+      "notes": "Didn't load when added on 2026-10-22 (getaddrinfo ENOTFOUND andaman.gov.in). Check the address in a browser, then set \"enabled\": true."
     }
   ]
 }

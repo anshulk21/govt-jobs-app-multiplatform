@@ -105,7 +105,7 @@
     {
       "id": "hp-police",
       "name": "Himachal Pradesh — Police Recruitment Board",
-      "url": "",
+      "url": "https://hppolice.gov.in/",
       "level": "state",
       "state": "HP",
       "category": "Police",
@@ -125,7 +125,8 @@
       "priority": "high",
       "enabled": false,
       "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "lastVerifiedAt": "2026-10-22T10:59:09.168Z",
+      "notes": "Didn't load when added on 2026-10-22 (HTTP 404). Check the address in a browser, then set \"enabled\": true."
     },
     {
       "id": "hp-teacher",
@@ -155,7 +156,7 @@
     {
       "id": "hp-health",
       "name": "Himachal Pradesh — Health / Medical Recruitment Board",
-      "url": "",
+      "url": "https://nhm.hp.gov.in/",
       "level": "state",
       "state": "HP",
       "category": "Health",
@@ -171,9 +172,10 @@
         ".pdf"
       ],
       "priority": "normal",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://nhm.hp.gov.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     }
   ]
 }

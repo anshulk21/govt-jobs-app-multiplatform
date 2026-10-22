@@ -6,7 +6,7 @@
     {
       "id": "npsc",
       "name": "Nagaland Public Service Commission",
-      "url": "",
+      "url": "https://npsc.nagaland.gov.in/",
       "level": "state",
       "state": "NL",
       "category": "PSC",
@@ -24,14 +24,15 @@
         ".pdf"
       ],
       "priority": "high",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://npsc.nagaland.gov.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     },
     {
       "id": "nl-nssb",
       "name": "Nagaland Staff Selection Board",
-      "url": "",
+      "url": "https://nssb.nagaland.gov.in/",
       "level": "state",
       "state": "NL",
       "category": "Subordinate Services",
@@ -49,14 +50,15 @@
         ".pdf"
       ],
       "priority": "high",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://nssb.nagaland.gov.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     },
     {
       "id": "nl-police",
       "name": "Nagaland — Police Recruitment Board",
-      "url": "",
+      "url": "https://police.nagaland.gov.in/",
       "level": "state",
       "state": "NL",
       "category": "Police",
@@ -74,14 +76,15 @@
         ".pdf"
       ],
       "priority": "high",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://police.nagaland.gov.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     },
     {
       "id": "nl-teacher",
       "name": "Nagaland — Teacher / Education Recruitment Board",
-      "url": "",
+      "url": "https://dse.nagaland.gov.in/",
       "level": "state",
       "state": "NL",
       "category": "Teaching",
@@ -101,12 +104,13 @@
       "priority": "normal",
       "enabled": false,
       "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "lastVerifiedAt": "2026-10-22T10:59:09.168Z",
+      "notes": "Didn't load when added on 2026-10-22 (getaddrinfo ENOTFOUND dse.nagaland.gov.in). Check the address in a browser, then set \"enabled\": true."
     },
     {
       "id": "nl-health",
       "name": "Nagaland — Health / Medical Recruitment Board",
-      "url": "",
+      "url": "https://nhmnagaland.in/",
       "level": "state",
       "state": "NL",
       "category": "Health",
@@ -122,14 +126,15 @@
         ".pdf"
       ],
       "priority": "normal",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://nhmnagaland.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     },
     {
       "id": "nl-power",
       "name": "Nagaland — State power utility",
-      "url": "",
+      "url": "https://power.nagaland.gov.in/",
       "level": "state",
       "state": "NL",
       "category": "Electricity",
@@ -147,7 +152,8 @@
       "priority": "normal",
       "enabled": false,
       "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "lastVerifiedAt": "2026-10-22T10:59:09.168Z",
+      "notes": "Didn't load when added on 2026-10-22 (getaddrinfo ENOTFOUND power.nagaland.gov.in). Check the address in a browser, then set \"enabled\": true."
     }
   ]
 }

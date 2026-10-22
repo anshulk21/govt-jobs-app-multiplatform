@@ -156,7 +156,7 @@
     {
       "id": "od-teacher",
       "name": "Odisha — Teacher / Education Recruitment Board",
-      "url": "",
+      "url": "https://sme.odisha.gov.in/",
       "level": "state",
       "state": "OD",
       "category": "Teaching",
@@ -174,14 +174,15 @@
         ".pdf"
       ],
       "priority": "normal",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://sme.odisha.gov.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     },
     {
       "id": "od-health",
       "name": "Odisha — Health / Medical Recruitment Board",
-      "url": "",
+      "url": "https://health.odisha.gov.in/",
       "level": "state",
       "state": "OD",
       "category": "Health",
@@ -197,9 +198,10 @@
         ".pdf"
       ],
       "priority": "normal",
-      "enabled": false,
-      "verified": false,
-      "notes": "TODO: find the official URL (.gov.in / .nic.in or known official domain), then enable."
+      "enabled": true,
+      "verified": true,
+      "finalUrl": "https://health.odisha.gov.in/",
+      "lastVerifiedAt": "2026-10-22T10:57:15.764Z"
     }
   ]
 }
