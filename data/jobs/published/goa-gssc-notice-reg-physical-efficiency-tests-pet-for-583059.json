@@ -1,0 +1,50 @@
+{
+  "id": "5830595c61",
+  "slug": "goa-gssc-notice-reg-physical-efficiency-tests-pet-for-583059",
+  "status": "published",
+  "title": "Notice reg. Physical Efficiency Tests (PET) for various posts - Advertisement No. 2 of Year 2026 - from 02.11.2026",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-20",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/whats_new/notice-reg-physical-efficiency-tests-pet-for-various-posts-advertisement-no-2-of-year-2026-from-02-11-2026.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-02-20",
+      "url": "https://gssc.goa.gov.in/docs/whats_new/notice-reg-physical-efficiency-tests-pet-for-various-posts-advertisement-no-2-of-year-2026-from-02-11-2026.pdf"
+    }
+  ],
+  "foundAt": "2026-10-22T15:18:54.189Z",
+  "updatedAt": "2026-10-22T15:27:06.985Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 20/02/2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 20/02/2026”",
+  "publishedAt": "2026-10-22T15:27:06.985Z"
+}
