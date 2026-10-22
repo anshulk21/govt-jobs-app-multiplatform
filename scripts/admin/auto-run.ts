@@ -11,7 +11,7 @@ import type { Job } from '../../src/core/types';
 import { loadMonitorConfig } from '../lib/config';
 import { ROOT } from '../lib/paths';
 import { sendTelegram } from '../monitor/telegram';
-import { decide } from './auto';
+import { decide, duplicateKey } from './auto';
 
 const dryRun = process.argv.includes('--dry-run');
 const includePublished = process.argv.includes('--include-published');
@@ -20,7 +20,16 @@ const now = new Date();
 const counts = { published: 0, notified: 0, rejected: 0, kept: 0 };
 const lines: string[] = [];
 
-const folders = includePublished ? ['drafts', 'published'] : ['drafts'];
+// The first-seen copy of each published notice; later copies of it are duplicates.
+const firstCopy = new Map<string, string>();
+const publishedDir = path.join(ROOT, 'data/jobs/published');
+const live = fs.readdirSync(publishedDir).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(fs.readFileSync(path.join(publishedDir, f), 'utf8')) as Job);
+for (const j of live.filter((x) => !x.sample).sort((a, b) => a.foundAt.localeCompare(b.foundAt))) {
+  const key = duplicateKey(j, decide(j, cfg, now).title);
+  if (!firstCopy.has(key)) firstCopy.set(key, j.slug);
+}
+
+const folders = includePublished ? ['published', 'drafts'] : ['drafts'];
 for (const folder of folders) {
   const dir = path.join(ROOT, 'data/jobs', folder);
   for (const name of fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
@@ -30,6 +39,10 @@ for (const folder of folders) {
     // A draft the admin already looked at and held back (notes say why) stays for the admin.
     if (folder === 'drafts' && job.notes?.startsWith('Not published yet:') && cfg.mode !== 'all') continue;
     const d = decide(job, cfg, now);
+    const key = duplicateKey(job, d.title);
+    const original = firstCopy.get(key);
+    if (d.action !== 'reject' && original && original !== job.slug) Object.assign(d, { action: 'reject', quiet: true, reason: `duplicate of ${original}` });
+    else if (d.action === 'publish' && folder === 'drafts') firstCopy.set(key, job.slug);
     const next: Job = { ...job, title: d.title };
     const withStage = () => {
       if (d.stage && !next.timeline.some((t) => t.stage === d.stage)) {

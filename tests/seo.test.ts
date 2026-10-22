@@ -40,6 +40,28 @@ describe('JobPosting structured data', () => {
     expect(central.jobLocation).toEqual({ '@type': 'Place', address: { '@type': 'PostalAddress', addressCountry: 'IN' } });
   });
 
+  it('marks up only job openings: not admit cards, results, corrigenda or other notices', () => {
+    const notice = (title: string, over: Partial<Job> = {}) =>
+      jobPostingJsonLd({ ...job, title, postName: null, vacancies: null, dates: { ...job.dates, lastDate: null }, ...over }, SITE, '2026-08-10T00:00:00Z');
+    expect(notice('Advertisement for Combined Secondary Level Examination- 2026')).not.toBeNull();
+    expect(notice('Admit Card for Phase-II Written Test for Recruitment to the Post of Translator')).toBeNull();
+    expect(notice('Corrigendum: Recruitment of Business Development Officers')).toBeNull();
+    expect(notice('Recruitment Archive')).toBeNull();
+    expect(notice('Annexures-II')).toBeNull();
+    expect(notice('Recruitment of Clerks', { timeline: [{ stage: 'result', date: '2026-08-05', url: 'https://x.gov.in/r.pdf' }] })).toBeNull();
+  });
+
+  it('drops the markup 30 days after posting when the last date is unknown', () => {
+    const open = { ...job, dates: { ...job.dates, lastDate: null } };
+    expect(jobPostingJsonLd(open, SITE, '2026-09-01T00:00:00Z')).not.toBeNull();
+    expect(jobPostingJsonLd(open, SITE, '2026-09-02T00:00:00Z')).toBeNull();
+  });
+
+  it('names the organisation without the source page suffix', () => {
+    const ld2 = jobPostingJsonLd({ ...job, organization: 'Canara Bank — Recruitment' }, SITE, '2026-10-20T00:00:00Z')!;
+    expect((ld2.hiringOrganization as { name: string }).name).toBe('Canara Bank');
+  });
+
   it('writes an escaped HTML description from the fields', () => {
     const html = jobDescriptionHtml(job);
     expect(html).toContain('<li>Post: Constable &lt;Civil&gt;</li>');

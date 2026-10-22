@@ -172,8 +172,8 @@ export default function JobPage() {
       {res.data ? (
         <JsonLd
           data={[
-            // Google job markup only for jobs a person has checked (auto-published details may be incomplete).
-            job.autoPublished ? null : jobPostingJsonLd(job, APP.siteUrl, res.data.generatedAt),
+            // Google job markup only on real, open job openings (see isJobOpening), checked or not.
+            jobPostingJsonLd(job, APP.siteUrl, res.data.generatedAt),
             breadcrumbJsonLd(APP.siteUrl, crumbs(job)),
           ]}
         />

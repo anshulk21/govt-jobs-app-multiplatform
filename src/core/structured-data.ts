@@ -1,6 +1,7 @@
 // schema.org structured data (JSON-LD) for search engines. Pure functions, tested.
 import { QUALIFICATIONS, STATE_BY_CODE, type QualificationId } from './constants';
 import { formatDate, isExpired, placeName, todayIST } from './jobs';
+import { isJobOpening, OPENING_DAYS_WITHOUT_LAST_DATE, organizationName } from './notice';
 import type { Job } from './types';
 
 type JsonLd = Record<string, unknown>;
@@ -43,12 +44,17 @@ export function jobDescriptionHtml(job: Job): string {
 }
 
 /**
- * Google JobPosting. Returns null once the last date has passed (Google asks for
- * expired postings to drop the markup; the page itself stays online).
- * `asOf` is the build time, so the static HTML and the browser render agree.
+ * Google JobPosting. Returns null for pages that are not one job opening (admit cards, results,
+ * corrigenda…; markup on those breaks Google's rules) and once the posting has closed: after the
+ * last date, or OPENING_DAYS_WITHOUT_LAST_DATE after posting when the last date is unknown.
+ * The page itself stays online. `asOf` is the build time, so the static HTML and the browser render agree.
  */
 export function jobPostingJsonLd(job: Job, siteUrl: string, asOf: string): JsonLd | null {
-  if (isExpired({ lastDate: job.dates.lastDate }, todayIST(new Date(asOf)))) return null;
+  if (!isJobOpening(job)) return null;
+  const today = todayIST(new Date(asOf));
+  if (isExpired({ lastDate: job.dates.lastDate }, today)) return null;
+  const datePosted = (job.publishedAt ?? job.foundAt).slice(0, 10);
+  if (!job.dates.lastDate && (Date.parse(today) - Date.parse(datePosted)) / 86_400_000 > OPENING_DAYS_WITHOUT_LAST_DATE) return null;
   const officialOrigin = (() => {
     try {
       return new URL(job.links.official).origin;
@@ -63,9 +69,9 @@ export function jobPostingJsonLd(job: Job, siteUrl: string, asOf: string): JsonL
     '@type': 'JobPosting',
     title: job.postName ?? job.title,
     description: jobDescriptionHtml(job),
-    datePosted: (job.publishedAt ?? job.foundAt).slice(0, 10),
+    datePosted,
     ...(job.dates.lastDate ? { validThrough: `${job.dates.lastDate}T23:59:59+05:30` } : {}),
-    hiringOrganization: { '@type': 'Organization', name: job.organization, ...(officialOrigin ? { sameAs: officialOrigin } : {}) },
+    hiringOrganization: { '@type': 'Organization', name: organizationName(job.organization), ...(officialOrigin ? { sameAs: officialOrigin } : {}) },
     jobLocation: {
       '@type': 'Place',
       address: { '@type': 'PostalAddress', addressCountry: 'IN', ...(state ? { addressRegion: state.name } : {}) },

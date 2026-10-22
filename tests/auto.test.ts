@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cleanTitle, decide, type AutoConfig } from '../scripts/admin/auto';
+import { cleanTitle, decide, duplicateKey, jobTitle, type AutoConfig } from '../scripts/admin/auto';
 
 describe('cleanTitle', () => {
   it('turns ALL-CAPS into normal case but keeps acronyms and codes', () => {
@@ -19,9 +19,51 @@ describe('cleanTitle', () => {
     expect(cleanTitle('Final Answer Key For The Post Of Primary Teacher (PRT) | 2026-09-10')).toBe('Final Answer Key For The Post Of Primary Teacher (PRT)');
   });
 
+  it('removes list numbers, leading dates, "Read more" and "Updated on" stamps', () => {
+    expect(cleanTitle('4. Advertisement For the Post of Legal Assistant')).toBe('Advertisement For the Post of Legal Assistant');
+    expect(cleanTitle('1 Notification for Engagement of Interns Read more')).toBe('Notification for Engagement of Interns');
+    expect(cleanTitle('16 October 2026: Advertisement for the posts of Associate Consultants')).toBe('Advertisement for the posts of Associate Consultants');
+    expect(cleanTitle('07-10-2026 Important information Regarding Engagement of Apprentices')).toBe('Important information Regarding Engagement of Apprentices');
+    expect(cleanTitle('Engagement of Graduate Apprentices [NEW]')).toBe('Engagement of Graduate Apprentices');
+    expect(cleanTitle('Updated On 21-10-2026')).toBe('');
+    // A number that is part of the title stays.
+    expect(cleanTitle('12 Posts of Junior Engineer')).toBe('12 Posts of Junior Engineer');
+    expect(cleanTitle('72nd CCE Corrigendum')).toBe('72nd CCE Corrigendum');
+  });
+
   it('leaves normal and Hindi titles alone', () => {
     expect(cleanTitle('Advertisement for Combined Secondary Level Examination- 2026')).toBe('Advertisement for Combined Secondary Level Examination- 2026');
     expect(cleanTitle('उत्तर प्रदेश पुलिस में आरक्षी भर्ती-2025')).toBe('उत्तर प्रदेश पुलिस में आरक्षी भर्ती-2025');
+  });
+});
+
+describe('jobTitle', () => {
+  it('adds the organisation to vague titles', () => {
+    expect(jobTitle('Detailed result', 'RRC East Coast Railway (Bhubaneswar)')).toBe('Detailed result — RRC East Coast Railway (Bhubaneswar)');
+    expect(jobTitle('Recruitment Results', 'State Bank of India — Careers')).toBe('Recruitment Results — State Bank of India');
+    expect(jobTitle('Annexures-II', 'India Post — GDS Online Engagement')).toBe('Annexures-II — India Post GDS Online Engagement');
+    expect(jobTitle('Exam Schedule', 'Kerala Public Service Commission (also police & teacher posts)')).toBe('Exam Schedule — Kerala Public Service Commission');
+  });
+
+  it('turns a bare date stamp into a dated notice, and leaves clear titles alone', () => {
+    expect(jobTitle('Updated On 21-10-2026', 'Airports Authority of India — Recruitment')).toBe('Notice dated 21 Oct 2026 — Airports Authority of India');
+    expect(jobTitle('Recruitment of Business Development Officers on Contract', 'Exim Bank — Careers')).toBe('Recruitment of Business Development Officers on Contract');
+    expect(jobTitle('Notice dated 12.10.2026 regarding Publication of Revised List', 'WBSSC')).toBe('Notice dated 12.10.2026 regarding Publication of Revised List');
+    expect(jobTitle('Notification for SSC CGL', 'Staff Selection Commission')).toBe('Notification for SSC CGL — Staff Selection Commission');
+  });
+
+  it('is stable when run again on its own output', () => {
+    for (const [raw, org] of [['Detailed result', 'RRC East Coast Railway (Bhubaneswar)'], ['Updated On 21-10-2026', 'Airports Authority of India — Recruitment']] as const) {
+      const once = decide({ title: raw, organization: org, sourceId: 'x', category: 'Railway', links: { notification: '', official: '', apply: null }, foundAt: '2026-10-20T00:00:00Z' }, { mode: 'smart', staleDraftDays: 21, lowSignalSources: [] }, new Date('2026-10-21T00:00:00Z'));
+      const twice = decide({ title: once.title, organization: org, sourceId: 'x', category: 'Railway', links: { notification: '', official: '', apply: null }, foundAt: '2026-10-20T00:00:00Z' }, { mode: 'smart', staleDraftDays: 21, lowSignalSources: [] }, new Date('2026-10-21T00:00:00Z'));
+      expect(twice).toEqual(once);
+    }
+  });
+
+  it('treats a notice with a new query-string token as the same notice', () => {
+    const at = (url: string) => duplicateKey({ sourceId: 'hc-chhattisgarh', links: { notification: url, official: '', apply: null } }, 'Advertisement for Legal Assistant');
+    expect(at('https://highcourt.cg.gov.in/noti/view_file_noti.php?token=MzgxMjl8MTc5Mj.b2f2')).toBe(at('https://highcourt.cg.gov.in/noti/view_file_noti.php?token=MzgxMjl8MTc5Mk.0f3c'));
+    expect(at('https://x.gov.in/a.pdf')).not.toBe(at('https://x.gov.in/b.pdf'));
   });
 });
 
