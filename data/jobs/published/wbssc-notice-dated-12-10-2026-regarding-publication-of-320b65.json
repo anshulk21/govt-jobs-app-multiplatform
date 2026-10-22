@@ -1,0 +1,50 @@
+{
+  "id": "320b65a844",
+  "slug": "wbssc-notice-dated-12-10-2026-regarding-publication-of-320b65",
+  "status": "published",
+  "title": "Notice dated 12.10.2026 regarding Publication of Revised Priliminary List of candidates for Interview for selection to the posts of Assitant Teachers icw 2nd SLST(AT), 2025 for…",
+  "organization": "West Bengal School Service Commission",
+  "sourceId": "wbssc",
+  "level": "state",
+  "state": "WB",
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-03",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.westbengalssc.com/otr/downloads/notice/Notice_RevisedPriliminaryList_IX-X_2ndSLSTAT2025_12_Oct_2026_merged.pdf",
+    "official": "https://www.westbengalssc.com/otr/recruitment/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-09-03",
+      "url": "https://www.westbengalssc.com/otr/downloads/notice/Notice_RevisedPriliminaryList_IX-X_2ndSLSTAT2025_12_Oct_2026_merged.pdf"
+    }
+  ],
+  "foundAt": "2026-10-22T09:18:52.219Z",
+  "updatedAt": "2026-10-22T09:37:23.551Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 03.09.2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 03.09.2026”",
+  "publishedAt": "2026-10-22T09:37:23.551Z"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "3721f808ea",
+  "slug": "sail-notification-for-left-out-candidates-due-to-portal-3721f8",
+  "status": "published",
+  "title": "Notification for left out candidates due to portal malfunctioning in engagement of Apprentices for FY 2026–27",
+  "organization": "SAIL — Careers",
+  "sourceId": "sail",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "iti",
+    "diploma"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BHILAI_News%20&%20Jobs_22102026_120743.pdf",
+    "official": "https://sailcareers.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BHILAI_News%20&%20Jobs_22102026_120743.pdf"
+    }
+  ],
+  "foundAt": "2026-10-22T09:18:52.219Z",
+  "updatedAt": "2026-10-22T09:37:23.551Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "Eligibility: Candidates must have passed the qualifying examination as regular candidates during 2022–2026. Candidates who have already undergone or are currently undergoing apprenticeship training, or possess one year of job experience, sh"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “Eligibility: Candidates must have passed the qualifying examination as regular candidates during 2022–2026. Candidates who have already undergone or are currently undergoing apprenticeship training, or possess one year of job experience, sh”",
+  "publishedAt": "2026-10-22T09:37:23.551Z"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "72e46ec8dc",
+  "slug": "up-nhm-recruitment-process-of-m-b-b-s-doctors-72e46e",
+  "status": "published",
+  "title": "Recruitment process of M.B.B.S. Doctors",
+  "organization": "National Health Mission, Uttar Pradesh",
+  "sourceId": "up-nhm",
+  "level": "state",
+  "state": "UP",
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nhm.up.gov.in/NHM-Doc/District%20Walk%20in%20Process%20(MBBS)%20Notice.pdf",
+    "official": "https://nhm.up.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://nhm.up.gov.in/NHM-Doc/District%20Walk%20in%20Process%20(MBBS)%20Notice.pdf"
+    }
+  ],
+  "foundAt": "2026-10-22T09:18:52.219Z",
+  "updatedAt": "2026-10-22T09:37:23.551Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-10-22T09:37:23.551Z"
+}

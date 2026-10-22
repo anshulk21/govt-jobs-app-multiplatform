@@ -1,0 +1,50 @@
+{
+  "id": "bcb266ba5f",
+  "slug": "uk-mssb-2025-bcb266",
+  "status": "published",
+  "title": "स्वास्थ्य कार्यकर्ता (महिला) परीक्षा-2025 (आंशिक संशोधन द्वितीय)",
+  "organization": "Uttarakhand Medical Service Selection Board",
+  "sourceId": "uk-mssb",
+  "level": "state",
+  "state": "UK",
+  "category": "Health",
+  "postName": null,
+  "vacancies": 37,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ukmssb.org/wp-content/uploads/2026/10/13-Oct-2026.pdf",
+    "official": "https://ukmssb.org/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://ukmssb.org/wp-content/uploads/2026/10/13-Oct-2026.pdf"
+    }
+  ],
+  "foundAt": "2026-10-22T09:18:52.219Z",
+  "updatedAt": "2026-10-22T09:37:23.551Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "vacancies"
+    ],
+    "evidence": {
+      "vacancies": "Number of Post- 37"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Vacancies: from “Number of Post- 37”",
+  "publishedAt": "2026-10-22T09:37:23.551Z"
+}
