@@ -1,0 +1,41 @@
+{
+  "id": "2f975373b1",
+  "slug": "hc-gujarat-notice-regarding-special-courts-on-23-10-2026-2f9753",
+  "status": "draft",
+  "title": "Notice regarding Special Courts on 23.10.2026.",
+  "organization": "High Court of Gujarat",
+  "sourceId": "hc-gujarat",
+  "level": "state",
+  "state": "GJ",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-22",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notice%20regarding%20Special%20Courts%20on%2023.10.2026_0.pdf",
+    "official": "https://gujarathighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T12:01:10.557Z",
+  "updatedAt": "2026-10-22T12:01:10.557Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 22.09.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 22.09.2026”"
+}
