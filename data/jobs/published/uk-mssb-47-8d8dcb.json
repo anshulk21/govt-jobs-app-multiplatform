@@ -37,7 +37,9 @@
   "extraction": {
     "method": "pdf-regex",
     "fields": [],
-    "evidence": {}
+    "evidence": {},
+    "tries": 1,
+    "error": "PDF not read (timeout)"
   },
   "autoPublished": true,
   "quiet": true,

@@ -17,7 +17,7 @@
     "notification": null,
     "applyStart": null,
     "lastDate": null,
-    "exam": null
+    "exam": "2026-05-16"
   },
   "howToApply": null,
   "links": {
@@ -33,12 +33,16 @@
     }
   ],
   "foundAt": "2026-10-21T19:21:15.999Z",
-  "updatedAt": "2026-10-22T16:00:31.763Z",
+  "updatedAt": "2026-10-23T06:30:03.243Z",
   "publishedAt": "2026-10-21T19:28:54.451Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {}
+    "method": "page-regex",
+    "fields": [
+      "dates.exam"
+    ],
+    "evidence": {
+      "dates.exam": "Date of Exam:16.05.26"
+    }
   },
   "autoPublished": true,
   "quiet": true,
