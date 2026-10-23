@@ -1,0 +1,57 @@
+{
+  "id": "612a2889fa",
+  "slug": "ongc-23-october-2026-opportunity-for-a-12-18-months-ca-cma-612a28",
+  "status": "published",
+  "title": "Opportunity for a 12 / 18 months CA/CMA Industrial Training in ONGC",
+  "organization": "ONGC",
+  "sourceId": "ongc",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": 25,
+  "qualifications": [
+    "12th"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-23",
+    "applyStart": null,
+    "lastDate": "2026-11-15",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ongcindia.com/documents/77751/2660534/Advertisement26-CACMA_IndustrialTrainee.pdf/43144617-01e6-d2ff-d5ce-6c88deffb436",
+    "official": "https://ongcindia.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-23",
+      "url": "https://ongcindia.com/documents/77751/2660534/Advertisement26-CACMA_IndustrialTrainee.pdf/43144617-01e6-d2ff-d5ce-6c88deffb436"
+    }
+  ],
+  "foundAt": "2026-10-23T06:00:15.607Z",
+  "updatedAt": "2026-10-23T06:21:09.186Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification",
+      "vacancies",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last Date of receipt of applications: 15.11.2026",
+      "dates.notification": "Date of Notification: 23.10.2026",
+      "vacancies": "25 vacancies",
+      "qualifications": "Eligibility (Essential Qualification): - Candidates must have passed the CA/CMA Intermediate examination. - Overall Minimum Percentage in 12th - 60%. - Born on or after 01.01.2000 D. Selection criteria: The selection will be made based on E"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last Date of receipt of applications: 15.11.2026”\n• Notification date: from “Date of Notification: 23.10.2026”\n• Vacancies: from “25 vacancies”\n• Qualification: from “Eligibility (Essential Qualification): - Candidates must have passed the CA/CMA Intermediate examination. - Overall Minimum Percentage in 12th - 60%. - Born on or after 01.01.2000 D. Selection criteria: The selection will be made based on E”",
+  "publishedAt": "2026-10-23T06:21:09.186Z"
+}

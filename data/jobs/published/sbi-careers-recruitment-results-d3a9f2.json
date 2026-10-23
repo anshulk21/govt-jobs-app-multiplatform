@@ -43,7 +43,9 @@
   "extraction": {
     "method": "link-only",
     "fields": [],
-    "evidence": {}
+    "evidence": {},
+    "tries": 1,
+    "error": "Page not read (ETIMEDOUT: )"
   },
   "autoPublished": true,
   "quiet": true,

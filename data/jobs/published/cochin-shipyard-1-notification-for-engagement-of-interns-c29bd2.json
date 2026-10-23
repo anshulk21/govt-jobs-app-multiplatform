@@ -10,9 +10,14 @@
   "category": "PSU",
   "postName": null,
   "vacancies": null,
-  "qualifications": [],
-  "ageLimit": null,
-  "fee": null,
+  "qualifications": [
+    "iti",
+    "diploma",
+    "engineering",
+    "medical"
+  ],
+  "ageLimit": "18–25 years",
+  "fee": "nil for some categories",
   "dates": {
     "notification": null,
     "applyStart": null,
@@ -33,12 +38,20 @@
     }
   ],
   "foundAt": "2026-10-22T11:01:17.859Z",
-  "updatedAt": "2026-10-22T16:00:31.763Z",
+  "updatedAt": "2026-10-23T06:18:25.746Z",
   "publishedAt": "2026-10-22T11:19:14.612Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {}
+    "method": "pdf-regex",
+    "fields": [
+      "ageLimit",
+      "fee",
+      "qualifications"
+    ],
+    "evidence": {
+      "ageLimit": "Age 18-25 years",
+      "fee": "APPLICATION FEE: Nil X. General (i) Applicants must ensure that they meet the eligibility requirements by checking the scheme details at https://pminternship.mca.gov.in. (ii) CSL reserves the right to",
+      "qualifications": "ELIGIBILITY CRITERIA: Criteria Education I(A) a. Pass in Xth standard. b. Pass in ITI (National Trade Certificate - NTC). I (B) a. Pass in Xth standard. I (C) a. Pass in XIIth standard / ITI (National Trade Certificate - NTC). I (D) a. A Di"
+    }
   },
   "autoPublished": true,
   "review": "Only the link was read. Fill in the details from the official notification."

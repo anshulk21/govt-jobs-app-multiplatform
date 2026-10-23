@@ -16,7 +16,7 @@
   "dates": {
     "notification": null,
     "applyStart": null,
-    "lastDate": null,
+    "lastDate": "2026-10-31",
     "exam": null
   },
   "howToApply": null,
@@ -33,11 +33,15 @@
     }
   ],
   "foundAt": "2026-10-22T11:01:17.859Z",
-  "updatedAt": "2026-10-22T11:19:14.612Z",
+  "updatedAt": "2026-10-23T06:18:25.746Z",
   "extraction": {
     "method": "pdf-regex",
-    "fields": [],
-    "evidence": {}
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date to apply OCTOBER 31, 2026"
+    }
   },
   "autoPublished": true,
   "review": "Read from the PDF automatically. Check each value against the notification:",

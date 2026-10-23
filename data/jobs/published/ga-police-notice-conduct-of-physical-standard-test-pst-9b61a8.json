@@ -37,7 +37,9 @@
   "extraction": {
     "method": "link-only",
     "fields": [],
-    "evidence": {}
+    "evidence": {},
+    "tries": 1,
+    "error": "PDF has no text layer (probably scanned)"
   },
   "autoPublished": true,
   "quiet": true,
