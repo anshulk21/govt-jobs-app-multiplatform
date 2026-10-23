@@ -14,7 +14,7 @@
   "ageLimit": null,
   "fee": null,
   "dates": {
-    "notification": null,
+    "notification": "2026-10-08",
     "applyStart": null,
     "lastDate": null,
     "exam": null
@@ -33,11 +33,15 @@
     }
   ],
   "foundAt": "2026-10-21T10:28:04.535Z",
-  "updatedAt": "2026-10-21T10:45:49.377Z",
+  "updatedAt": "2026-10-23T09:26:34.233Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {}
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 08-10-2026"
+    }
   },
   "autoPublished": true,
   "quiet": true,

@@ -10,13 +10,15 @@
   "category": "PSU",
   "postName": null,
   "vacancies": null,
-  "qualifications": [],
+  "qualifications": [
+    "engineering"
+  ],
   "ageLimit": null,
   "fee": null,
   "dates": {
-    "notification": null,
+    "notification": "2026-07-03",
     "applyStart": null,
-    "lastDate": null,
+    "lastDate": "2026-07-31",
     "exam": null
   },
   "howToApply": null,
@@ -33,11 +35,19 @@
     }
   ],
   "foundAt": "2026-10-21T10:28:04.535Z",
-  "updatedAt": "2026-10-21T10:45:49.377Z",
+  "updatedAt": "2026-10-23T09:26:34.233Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {}
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "qualifications",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "closing date of receipt of application i.e. 31-07-2026",
+      "qualifications": "ELIGIBILITY CRITERIA: All Indian Nationals, who have completed 23-years of age and possess requisite educational/professional qualifications and work- experience as hereunder, would be eligible to apply for engagement as young professional",
+      "dates.notification": "Dated 03/07/2026"
+    }
   },
   "autoPublished": true,
   "review": "Only the link was read. Fill in the details from the official notification.",

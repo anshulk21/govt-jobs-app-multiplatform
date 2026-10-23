@@ -16,7 +16,7 @@
   "dates": {
     "notification": null,
     "applyStart": null,
-    "lastDate": null,
+    "lastDate": "2026-11-16",
     "exam": null
   },
   "howToApply": null,
@@ -33,11 +33,15 @@
     }
   ],
   "foundAt": "2026-10-21T10:28:04.535Z",
-  "updatedAt": "2026-10-21T10:45:49.377Z",
+  "updatedAt": "2026-10-23T09:26:34.233Z",
   "extraction": {
     "method": "pdf-regex",
-    "fields": [],
-    "evidence": {}
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for submission of online application as per the applicable fee 16th November, 2026"
+    }
   },
   "autoPublished": true,
   "review": "Read from the PDF automatically. Check each value against the notification:",
