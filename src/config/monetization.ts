@@ -60,7 +60,7 @@ export const MONETIZATION = {
 
   /** Your public channels (empty = button hidden). */
   community: {
-    telegramUrl: '',
+    telegramUrl: 'https://t.me/govtjobsfinders',
     whatsappUrl: '',
   },
 
