@@ -97,6 +97,7 @@ export function breadcrumbJsonLd(siteUrl: string, items: { name: string; path: s
 export function websiteJsonLd(siteUrl: string, name: string, description: string): JsonLd[] {
   return [
     { '@context': 'https://schema.org', '@type': 'WebSite', name, url: `${siteUrl}/`, description },
-    { '@context': 'https://schema.org', '@type': 'Organization', name, url: `${siteUrl}/` },
+    // logo: what Google may show next to the site name in search results (public/icon-512.png).
+    { '@context': 'https://schema.org', '@type': 'Organization', name, url: `${siteUrl}/`, logo: `${siteUrl}/icon-512.png` },
   ];
 }
