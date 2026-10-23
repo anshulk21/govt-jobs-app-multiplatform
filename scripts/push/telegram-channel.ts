@@ -1,4 +1,5 @@
 // Usage: npm run telegram:channel -- --before <sha> [--after <sha>] [--dry-run]
+//        npm run telegram:channel -- --latest=10 [--dry-run]   (post the 10 newest open jobs now)
 //
 // Posts newly published jobs, and admit card / answer key / result updates, to your public
 // Telegram channel, each with a link to the job's page on the website. Same events as the app's
@@ -10,6 +11,7 @@ import { APP } from '../../src/config/app';
 import { QUALIFICATIONS, STAGES } from '../../src/core/constants';
 import { daysLeft, formatDate, placeName, todayIST } from '../../src/core/jobs';
 import type { Job } from '../../src/core/types';
+import { publishedJobs } from '../../src/server/data';
 import { escapeHtml, sendTelegram } from '../monitor/telegram';
 import { findEvents, hasCommit, waitForSite, type PublishEvent } from './notify-published';
 
@@ -74,13 +76,22 @@ async function main() {
     console.log('TELEGRAM_BOT_TOKEN or TELEGRAM_CHANNEL_ID not set — not posting to a channel.');
     return;
   }
-  const before = arg('before');
-  const after = arg('after') ?? 'HEAD';
-  if (!before || /^0+$/.test(before) || !hasCommit(before)) {
-    console.log('No previous commit to compare with — nothing to post.');
-    return;
+  const latest = Number(arg('latest') ?? 0);
+  let events: PublishEvent[];
+  if (latest > 0) {
+    // By hand (Actions → "Post to Telegram channel"): the newest open jobs, oldest of them first so
+    // the newest ends up at the bottom of the channel. They are live already, so no waiting.
+    const newest = [...publishedJobs()].sort((a, b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? '')).map((job): PublishEvent => ({ kind: 'new', job, stages: [] }));
+    events = postableEvents(newest, todayIST()).slice(0, Math.min(latest, MAX_POSTS)).reverse();
+  } else {
+    const before = arg('before');
+    const after = arg('after') ?? 'HEAD';
+    if (!before || /^0+$/.test(before) || !hasCommit(before)) {
+      console.log('No previous commit to compare with — nothing to post.');
+      return;
+    }
+    events = postableEvents(findEvents(before, after), todayIST());
   }
-  const events = postableEvents(findEvents(before, after), todayIST());
   if (!events.length) {
     console.log('Nothing new to post.');
     return;
@@ -95,7 +106,7 @@ async function main() {
     return;
   }
   // The links must work when people tap them.
-  if (!(await waitForSite(events[0]!.job))) console.warn('⚠ Website not updated after 20 minutes — posting anyway.');
+  if (!latest && !(await waitForSite(events[0]!.job))) console.warn('⚠ Website not updated after 20 minutes — posting anyway.');
   for (const [i, text] of posts.entries()) {
     if (i) await new Promise((r) => setTimeout(r, GAP_MS));
     await sendTelegram(token!, channel!, [text]);

@@ -1,0 +1,31 @@
+name: Post to Telegram channel
+
+# By hand: Actions → "Post to Telegram channel" → Run workflow. Posts the newest open jobs to the
+# channel (e.g. to fill a new channel). App notifications are not sent again. New jobs are posted
+# automatically by "Publish jobs"; this is only for extra posts.
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: How many of the newest open jobs to post (max 15)
+        type: number
+        default: 10
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run telegram:channel -- --latest=${{ inputs.count }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ vars.TELEGRAM_CHANNEL_ID }}
