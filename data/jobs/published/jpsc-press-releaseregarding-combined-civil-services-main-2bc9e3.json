@@ -38,7 +38,8 @@
   "extraction": {
     "method": "pdf-regex",
     "fields": [],
-    "evidence": {}
+    "evidence": {},
+    "tries": 1
   },
   "review": "Read from the PDF automatically. Check each value against the notification:"
 }

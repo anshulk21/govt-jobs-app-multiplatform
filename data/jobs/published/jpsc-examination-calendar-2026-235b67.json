@@ -17,7 +17,7 @@
     "notification": null,
     "applyStart": null,
     "lastDate": null,
-    "exam": null
+    "exam": "2026-07-25"
   },
   "howToApply": null,
   "links": {
@@ -33,12 +33,16 @@
     }
   ],
   "foundAt": "2026-10-21T03:34:35.861Z",
-  "updatedAt": "2026-10-22T16:00:31.763Z",
+  "updatedAt": "2026-10-23T18:36:27.612Z",
   "publishedAt": "2026-10-21T05:44:23.916Z",
   "extraction": {
     "method": "pdf-regex",
-    "fields": [],
-    "evidence": {}
+    "fields": [
+      "dates.exam"
+    ],
+    "evidence": {
+      "dates.exam": "Examination Date 1 Combined Civil Services Mains Examination (Regular) 2025 (Written) (Advt. No.-01/2026) 25.07.2026"
+    }
   },
   "review": "Read from the PDF automatically. Check each value against the notification:"
 }
