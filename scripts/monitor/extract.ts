@@ -61,32 +61,45 @@ function snippetAt(text: string, index: number, len = 160): string {
   return squash(text.slice(index, index + len));
 }
 
-/** Text from `start` to the end of its line; if nothing but punctuation follows the label, the next line too. */
+/**
+ * Text from `start` to the end of its line. When the label has no answer on its line (nothing but
+ * punctuation after it, or a table cell split over lines like "Closing date for on-line /
+ * registration / 23.09.2026 to 12.10.2026"), up to two more lines. A line that already answers
+ * ("Exam date: to be announced") never borrows a date from the next one.
+ */
 function labelScope(text: string, start: number, labelEnd: number, window: number): string {
   const lineEnd = (from: number) => {
     const i = text.indexOf('\n', from);
     return i === -1 ? text.length : i;
   };
   let end = lineEnd(labelEnd);
-  if (/^[\s:\-–.)]*$/.test(text.slice(labelEnd, end))) end = lineEnd(end + 1);
+  const rest = text.slice(labelEnd, end);
+  const unanswered = /^[\s:\-–.)]*$/.test(rest) || (!/:\s*\S/.test(rest) && !/\d/.test(rest));
+  for (let extra = 0; unanswered && extra < 2 && !findDates(text.slice(labelEnd, end)).length && end < text.length; extra++) end = lineEnd(end + 1);
   return text.slice(start, Math.min(end, labelEnd + window));
 }
+
+// "23.09.2026 to 12.10.2026", "from 1-10-2026 till 31-10-2026", "01/10/2026 – 31/10/2026"
+const RANGE_JOIN = /^\s*(?:to|till|until|up\s*to|-|–|—)\s*$/i;
 
 /**
  * Finds the first date after one of the labels on the same line,
  * e.g. "Last date for online application: 15.11.2026".
  */
-function dateAfterLabel(text: string, labels: RegExp, window = 120): { iso: string; evidence: string } | null {
+function dateAfterLabel(text: string, labels: RegExp, window = 120, rangeEnd = false): { iso: string; evidence: string } | null {
   for (const m of text.matchAll(new RegExp(labels.source, 'gi'))) {
     const after = labelScope(text, m.index!, m.index! + m[0].length, window);
-    const d = findDates(after)[0];
+    const found = findDates(after);
+    let d = found[0];
+    // For the last date, "D1 to D2" means D2.
+    if (d && rangeEnd && found[1] && RANGE_JOIN.test(after.slice(d.index + d.raw.length, found[1].index))) d = found[1];
     if (d) return { iso: d.iso, evidence: squash(after.slice(0, d.index + d.raw.length)) };
   }
   return null;
 }
 
 const LABELS = {
-  lastDate: /last\s+date|closing\s+date|end\s+date|last\s+day|apply\s+(?:on\s*line\s+)?(?:up\s*to|till|by|before)|(?:on\s*line\s+)?registration\s+(?:closes|ends)/,
+  lastDate: /last\s+date|closing\s+date|opening\s+(?:date\s+)?and\s+closing|end\s+date|last\s+day|apply\s+(?:on\s*line\s+)?(?:up\s*to|till|by|before)|(?:on\s*line\s+)?registration\s+(?:closes|ends)/,
   applyStart: /(?:starting|start|opening|commencement)\s+(?:date\s+)?(?:of|for)?\s*(?:on\s*line\s+)?(?:application|registration|submission)|application\s+(?:starts|start\s+date|opens)|on\s*line\s+(?:application|registration)\s+(?:starts|begins|from)/,
   exam: /(?:date\s+of\s+(?:the\s+)?(?:written\s+|online\s+|computer\s+based\s+|preliminary\s+)?(?:exam(?:ination)?|test|cbt))|(?:exam(?:ination)?|cbt|written\s+test)\s+date/,
   notification: /(?:date\s+of\s+(?:notification|advertisement|publication))|(?:dated|dt\.?)(?=\s*[:\-]?\s*\d)/,
@@ -94,8 +107,8 @@ const LABELS = {
 
 // "Total No. of Posts: 1,234", "Total Vacancies - 12000", "No. of vacancies: 45", "12,000 posts"
 const VACANCY_PATTERNS = [
-  /(?:total\s+(?:no\.?\s*(?:of\s+)?)?(?:posts?|vacanc(?:y|ies))|no\.?\s*of\s+(?:posts?|vacanc(?:y|ies))|number\s+of\s+(?:posts?|vacanc(?:y|ies)))\s*[:\-–=]?\s*(\d{1,3}(?:,\d{2,3})*|\d+)/i,
-  /\b(\d{1,3}(?:,\d{2,3})+|\d{2,6})\s+(?:posts|vacancies)\b/i,
+  /(?:total\s+(?:no\.?\s*(?:of\s+)?)?(?:posts?|vacanc(?:y|ies))|no\.?\s*of\s+(?:posts?|vacanc(?:y|ies))|number\s+of\s+(?:(?:training\s+)?seats|posts?|vacanc(?:y|ies)))\s*[:\-–=]?\s*(\d{1,3}(?:,\d{2,3})+|\d+)/i,
+  /\b(\d{1,3}(?:,\d{2,3})+|\d{2,6})\s+(?:posts|vacancies|seats)\b/i,
 ];
 
 function findVacancies(text: string): { value: number; evidence: string } | null {
@@ -174,7 +187,7 @@ export function extractDetails(text: string, foundOn: string = new Date().toISOS
   const dates: JobDates = { notification: null, applyStart: null, lastDate: null, exam: null };
   const ref = Date.parse(foundOn);
   for (const key of Object.keys(LABELS) as (keyof typeof LABELS)[]) {
-    const found = dateAfterLabel(text, LABELS[key]);
+    const found = dateAfterLabel(text, LABELS[key], 120, key === 'lastDate');
     const offset = found ? (Date.parse(found.iso) - ref) / 86_400_000 : 0;
     if (found && offset >= DATE_WINDOW[key][0] && offset <= DATE_WINDOW[key][1]) {
       dates[key] = found.iso;

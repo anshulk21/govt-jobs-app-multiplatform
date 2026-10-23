@@ -62,6 +62,7 @@ export function reviewNotes(job: Pick<Job, 'extraction'>): string {
   const lines = Object.entries(evidence).map(([field, text]) => `• ${FIELD_LABELS[field] ?? field}: from “${text}”`);
   const head =
     method === 'pdf-regex' ? 'Read from the PDF automatically. Check each value against the notification:'
+    : method === 'page-regex' ? 'Read from the notice page automatically. Check each value against the notification:'
     : method === 'ai' ? 'AI-extracted, needs review:'
     : 'Only the link was read. Fill in the details from the official notification.';
   return [head, ...lines, ...(error ? [`(${error})`] : [])].join('\n');

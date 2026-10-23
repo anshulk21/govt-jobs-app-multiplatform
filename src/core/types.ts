@@ -102,12 +102,14 @@ export interface Job {
   publishedAt?: string;
   /** How the fields were filled in, so you know what to double-check. */
   extraction: {
-    method: 'link-only' | 'pdf-regex' | 'ai';
+    method: 'link-only' | 'pdf-regex' | 'page-regex' | 'ai';
     /** Fields filled automatically (they need review before publishing). */
     fields: string[];
     /** The exact text each automatic value came from. */
     evidence: Record<string, string>;
     error?: string;
+    /** Times `npm run enrich` read the notice again without finding anything (it stops at 3). */
+    tries?: number;
   };
 }
 

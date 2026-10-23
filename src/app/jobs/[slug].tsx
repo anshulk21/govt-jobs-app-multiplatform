@@ -195,7 +195,9 @@ export default function JobPage() {
       {job.sample ? <Badge tone="red">{t('job.sample')}</Badge> : null}
       {job.autoPublished ? (
         <Txt variant="small" className="rounded-lg bg-amber-50 px-3 py-2 text-amber-900 dark:bg-amber-950 dark:text-amber-200">
-          Added automatically from the official website. Some details may be missing — open the official notification below for complete information.
+          {job.extraction?.fields.length
+            ? 'Added automatically from the official website, and the details below were read from the official notice by software. Confirm dates and eligibility in the official notification before applying.'
+            : 'Added automatically from the official website. Some details may be missing — open the official notification below for complete information.'}
         </Txt>
       ) : null}
       {res.offline || (!res.data && offlineCopy) ? <OfflineNotice /> : null}

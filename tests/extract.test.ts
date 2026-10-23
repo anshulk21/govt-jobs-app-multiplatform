@@ -80,3 +80,26 @@ describe('extractDetails safety checks', () => {
     expect(extractDetails('Last date: 15.11.2031', '2026-10-20').dates.lastDate).toBeNull();
   });
 });
+
+describe('extractDetails: tables and ranges', () => {
+  const TABLE = `Important Dates
+Opening date and closing date for on-line
+registration in Website
+23.09.2026 to 12.10.2026
+[both days inclusive]
+Number of Training seats 3500`;
+
+  it('takes the end of a date range as the last date, even when the cell is split over lines', () => {
+    const d = extractDetails(TABLE, '2026-09-25');
+    expect(d.dates.lastDate).toBe('2026-10-12');
+    expect(d.evidence['dates.lastDate']).toContain('23.09.2026 to 12.10.2026');
+  });
+
+  it('counts training seats as vacancies', () => {
+    expect(extractDetails(TABLE, '2026-09-25').vacancies).toBe(3500);
+  });
+
+  it('never borrows a date when the label line already answers', () => {
+    expect(extractDetails('Last date: will be notified later\nAge as on 01.01.2027').dates.lastDate).toBeNull();
+  });
+});

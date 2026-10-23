@@ -4,6 +4,7 @@ name: Publish jobs
 #   1. moves jobs set to Published / Rejected into the right folder and checks them
 #   2. commits that (Cloudflare then rebuilds the website and JSON API)
 #   3. sends push notifications for newly published jobs and timeline updates
+#   4. posts them to the public Telegram channel (if set up)
 # Commits made by the monitor (GITHUB_TOKEN) don't trigger this, by GitHub's design.
 on:
   push:
@@ -64,6 +65,15 @@ jobs:
         run: npm run push:published -- --before "${{ github.event.before || inputs.before }}" --after HEAD --phase=first
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+
+      - name: Post to the Telegram channel
+        # README → "Telegram channel". Does nothing until the TELEGRAM_CHANNEL_ID variable is set.
+        if: github.event_name == 'push' || inputs.before != ''
+        continue-on-error: true # a Telegram problem must not fail publishing
+        run: npm run telegram:channel -- --before "${{ github.event.before || inputs.before }}" --after HEAD
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ vars.TELEGRAM_CHANNEL_ID }}
 
   # When Pro is on: everyone else gets the same new-job alerts a little later.
   free-alerts:

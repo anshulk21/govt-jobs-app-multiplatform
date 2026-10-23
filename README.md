@@ -144,8 +144,9 @@ npm run verify-sources -- --dry-run           # don't change any files
 2. It downloads each page (5 at a time, 30 s timeout, 2 retries, a 1–2 s gap between requests to the same site) and obeys each site's `robots.txt`.
 3. It keeps links that contain one of the source's `linkFilter` words or that point to a PDF, and drops anything on the `exclude` list in `config/monitor.json` (tenders, RTI, holiday lists, circulars, site menus…).
 4. A link is **new** if it isn't in `data/seen-links/<source-id>.json` yet.
-5. Each new link becomes a **draft job** in `data/jobs/drafts/`. For PDFs under 10 MB, it reads the text and looks for the number of posts, the dates, the age limit, the fee and the qualification. It only fills a field when the PDF says it, and stores the exact sentence each value came from in `extraction.evidence`, so you can check it. Anything not found stays empty and shows as "See official notification".
-6. It sends **one Telegram message** for the whole run: Central first, then by state, then any **sources needing attention** (failing 3 runs in a row, or loading but showing no job links).
+5. Each new link becomes a **draft job** in `data/jobs/drafts/`. It reads the notice (up to 100 PDFs per run, each under 10 MB): a PDF's text, or a web page's text plus the notification PDF that page links to (English version preferred). It looks for the number of posts, the dates (in a range like "23.09.2026 to 12.10.2026" the second is the last date), the age limit, the fee and the qualification. Scanned (image-only) PDFs can't be read. It only fills a field when the PDF says it, and stores the exact sentence each value came from in `extraction.evidence`, so you can check it. Anything not found stays empty and shows as "See official notification".
+6. **Backfill:** `npm run enrich` then re-reads the notices of up to 30 recent jobs that still have no details (live jobs first, at most 3 tries each) and fills in **empty fields only**, never anything typed in the admin. When a live job gains details, the website is rebuilt.
+7. It sends **one Telegram message** for the whole run: Central first, then by state, then any **sources needing attention** (failing 3 runs in a row, or loading but showing no job links).
 
 Safety rules built in:
 
@@ -454,6 +455,17 @@ When it finishes (about 15 minutes on the free tier), open the link on your Andr
   SAMPLE_JOBS=1 npm run push:reminders -- --dry-run      # what today's reminders would be
   npm run push:published -- --before HEAD~1 --after HEAD --dry-run   # what the last commit would announce
   ```
+
+### Telegram channel (free, recommended)
+
+Every newly published job, and every admit card / answer key / result update, is posted to a public Telegram channel with its posts, qualification, last date and a link to its page on your website. Same rules as push notifications: quiet notices and expired jobs aren't posted, and at most 15 posts per publish (the rest are summed up in one post).
+
+1. In Telegram: **New Channel** → name `Govt Jobs Finder` → **Public** → link e.g. `t.me/govtjobsfinder`.
+2. Channel → **Administrators → Add Admin** → search your monitor bot's username (the one from Step 1 of the monitor) → allow **Post Messages** only.
+3. GitHub → **Settings → Secrets and variables → Actions → Variables → New repository variable**: name `TELEGRAM_CHANNEL_ID`, value `@govtjobsfinder` (your channel's @name).
+4. Put the channel link in `src/config/monetization.ts` → `community.telegramUrl` (e.g. `https://t.me/govtjobsfinder`). The website and app then show **Join Telegram channel** buttons.
+
+Preview without posting: `npm run telegram:channel -- --before <commit> --dry-run`.
 
 ### Web push (experimental, off by default)
 

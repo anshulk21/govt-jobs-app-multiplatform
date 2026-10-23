@@ -3,10 +3,10 @@ import type { Source } from '../../src/core/types';
 import type { MonitorConfig } from '../lib/config';
 import { createHostThrottle, fetchWithRetry, mapLimit, USER_AGENT } from '../lib/http';
 import { allSources, loadSourceFiles, validateSourceFiles } from '../lib/sources';
-import { makeDraft, writeDraft } from './drafts';
-import { extractDetails, type Extracted } from './extract';
-import { extractLinks, filterJobLinks, isPdfUrl, pickSeedLinks, type PageLink } from './links';
-import { pdfToText } from './pdf';
+import { jobExists, jobId, makeDraft, writeDraft } from './drafts';
+import { extractDetails } from './extract';
+import { extractLinks, filterJobLinks, pickSeedLinks, type PageLink } from './links';
+import { readNotice, type NoticeDeps } from './notice';
 import { RobotsCache } from './robots';
 import { findNewLinks, loadSeen, markSeen, saveSeen } from './seen';
 import { selectSources } from './select';
@@ -88,31 +88,24 @@ export async function runMonitor(opts: MonitorOptions, ctx: MonitorContext): Pro
   const robots = new RobotsCache(USER_AGENT.split('/')[0]!);
   const throttle = createHostThrottle(config.hostGapMs.min, config.hostGapMs.max);
   let pdfBudget = opts.pdf === false || !config.pdf.enabled ? 0 : config.pdf.maxPerRun;
-
-  async function readPdf(url: string): Promise<{ extracted: Extracted | null; error?: string }> {
-    if (pdfBudget <= 0) return { extracted: null, error: 'PDF not read (per-run PDF limit reached)' };
-    if (!(await robots.isAllowed(url))) return { extracted: null, error: 'PDF not read (robots.txt disallows)' };
-    pdfBudget--;
-    await throttle(url);
-    const r = await fetchWithRetry(url, { read: 'bytes', maxBytes: config.pdf.maxBytes, timeoutMs: config.timeoutMs, retries: 1 });
-    if (!r.ok || !r.bytes) return { extracted: null, error: `PDF not read (${r.error ?? `HTTP ${r.status}`})` };
-    try {
-      const { text } = await pdfToText(r.bytes, config.pdf.maxPages);
-      if (text.replace(/\s/g, '').length < 50) return { extracted: null, error: 'PDF has no text layer (probably scanned)' };
-      return { extracted: extractDetails(text, startedIso.slice(0, 10)) };
-    } catch (err) {
-      return { extracted: null, error: `PDF could not be parsed (${(err as Error).message})` };
-    }
-  }
+  const noticeDeps: NoticeDeps = {
+    timeoutMs: config.timeoutMs,
+    pdfMaxBytes: config.pdf.maxBytes,
+    pdfMaxPages: config.pdf.maxPages,
+    foundOn: startedIso.slice(0, 10),
+    isAllowed: (url) => robots.isAllowed(url),
+    throttle,
+    takePdf: () => pdfBudget-- > 0,
+  };
 
   async function draftFor(source: Source, link: PageLink, pageUrl: string): Promise<{ found: FoundLink; written: boolean }> {
-    let extracted: Extracted | null = null;
-    let method: 'link-only' | 'pdf-regex' = 'link-only';
-    let error: string | undefined;
-    if (isPdfUrl(link.url)) {
-      ({ extracted, error } = await readPdf(link.url));
-      if (extracted) method = 'pdf-regex';
-    }
+    // Already a job (e.g. seen-links was reset): don't download its notice again.
+    if (jobExists(dirs.jobs, jobId(link.url))) return { found: { title: link.text, url: link.url }, written: false };
+    // Not for a link back to the source page itself (its dates belong to other notices).
+    const notice = link.url === pageUrl ? null : await readNotice(link.url, link.text, noticeDeps);
+    let extracted = notice?.extracted ?? null;
+    const method = notice?.method ?? 'link-only';
+    const error = notice?.error;
     if (!extracted) {
       // Dates written in the link text itself, e.g. "… last date 15.11.2026".
       const fromTitle = extractDetails(link.text, startedIso.slice(0, 10));

@@ -32,6 +32,11 @@ runs:
         TELEGRAM_BOT_TOKEN: ${{ inputs.telegram-bot-token }}
         TELEGRAM_CHAT_ID: ${{ inputs.telegram-chat-id }}
 
+    - name: Fill in missing job details
+      # Re-reads notices of recent jobs that have no details yet (only empty fields are filled).
+      shell: bash
+      run: npm run enrich -- --max=30
+
     - name: Auto-publish new drafts
       # Rules in scripts/admin/auto.ts; switch with "autoPublish.mode" in config/monitor.json.
       shell: bash
@@ -56,12 +61,17 @@ runs:
         MSG="$(cat .monitor-commit-msg)"
         PUBLISHED=$(node -p "require('./.auto-publish.json').published" 2>/dev/null || echo 0)
         REJECTED=$(node -p "require('./.auto-publish.json').rejected" 2>/dev/null || echo 0)
+        ENRICHED=$(node -p "require('./.enrich.json').updatedPublished" 2>/dev/null || echo 0)
         if [ "$PUBLISHED" -gt 0 ]; then
           # Something went live: let Cloudflare rebuild the site.
           MSG="${MSG#\[CF-Pages-Skip\] }; auto-published $PUBLISHED, rejected $REJECTED"
           echo "PUBLISHED=$PUBLISHED" >> "$GITHUB_ENV"
         elif [ "$REJECTED" -gt 0 ]; then
           MSG="$MSG; auto-rejected $REJECTED"
+        fi
+        if [ "$ENRICHED" -gt 0 ]; then
+          # Live jobs gained details: rebuild the site too.
+          MSG="${MSG#\[CF-Pages-Skip\] }; details filled in for $ENRICHED live job(s)"
         fi
         git commit -m "$MSG"
         for i in 1 2 3; do

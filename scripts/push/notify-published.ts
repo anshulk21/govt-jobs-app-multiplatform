@@ -73,7 +73,7 @@ export function findEvents(before: string, after: string, root = ROOT): PublishE
 }
 
 /** Polls the website until it serves this version of the job (Cloudflare usually takes 2–5 minutes). */
-async function waitForSite(job: Job, timeoutMs = 20 * 60_000): Promise<boolean> {
+export async function waitForSite(job: Job, timeoutMs = 20 * 60_000): Promise<boolean> {
   const url = `${APP.siteUrl}/api/jobs/${job.slug}.json`;
   const until = Date.now() + timeoutMs;
   while (Date.now() < until) {
