@@ -1,0 +1,55 @@
+{
+  "id": "dc76878dce",
+  "slug": "goa-gssc-selection-list-junior-engineer-mechanical-dc7687",
+  "status": "published",
+  "title": "Selection list - Junior Engineer -Mechanical/Electrical - 23.10.2026",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/selection_list/selection-list-junior-engineer-mechanical-electrical-23-10-2026.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-23",
+      "url": "https://gssc.goa.gov.in/docs/selection_list/selection-list-junior-engineer-mechanical-electrical-23-10-2026.pdf"
+    },
+    {
+      "stage": "result",
+      "date": "2026-10-23",
+      "url": "https://gssc.goa.gov.in/docs/selection_list/selection-list-junior-engineer-mechanical-electrical-23-10-2026.pdf"
+    }
+  ],
+  "foundAt": "2026-10-23T11:47:11.419Z",
+  "updatedAt": "2026-10-23T12:07:16.736Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 23/10/2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 23/10/2026”",
+  "publishedAt": "2026-10-23T12:07:16.736Z"
+}

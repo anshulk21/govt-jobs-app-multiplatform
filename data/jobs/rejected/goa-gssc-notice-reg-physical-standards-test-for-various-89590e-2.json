@@ -1,0 +1,42 @@
+{
+  "id": "89590ea369",
+  "slug": "goa-gssc-notice-reg-physical-standards-test-for-various-89590e-2",
+  "status": "rejected",
+  "title": "Notice reg. Physical Standards Test for various posts – for candidates who could not attend the first phase",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-20",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/whats_new/notice-reg-physical-standards-test-for-various-posts-for-candidates-who-could-not-attend-the-first-phase.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-23T11:47:11.419Z",
+  "updatedAt": "2026-10-23T11:47:11.419Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 20/02/2026"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2026-02-20).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 20/02/2026”"
+}

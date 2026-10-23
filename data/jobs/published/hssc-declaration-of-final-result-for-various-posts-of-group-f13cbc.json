@@ -1,0 +1,55 @@
+{
+  "id": "f13cbca41f",
+  "slug": "hssc-declaration-of-final-result-for-various-posts-of-group-f13cbc",
+  "status": "published",
+  "title": "Declaration of final result for various posts of Group-25 against Advt. No. 08/2024 of various Departments, Haryana",
+  "organization": "Haryana Staff Selection Commission (also Haryana Police)",
+  "sourceId": "hssc",
+  "level": "state",
+  "state": "HR",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a1-6827b6770011/result",
+    "official": "https://hssc.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-23",
+      "url": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a1-6827b6770011/result"
+    },
+    {
+      "stage": "result",
+      "date": "2026-10-23",
+      "url": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a1-6827b6770011/result"
+    }
+  ],
+  "foundAt": "2026-10-23T11:47:11.419Z",
+  "updatedAt": "2026-10-23T12:07:16.736Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated 23.10.2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated 23.10.2026”",
+  "publishedAt": "2026-10-23T12:07:16.736Z"
+}
