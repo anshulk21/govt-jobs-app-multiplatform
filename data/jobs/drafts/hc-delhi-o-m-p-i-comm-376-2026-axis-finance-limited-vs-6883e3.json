@@ -1,0 +1,41 @@
+{
+  "id": "6883e32d05",
+  "slug": "hc-delhi-o-m-p-i-comm-376-2026-axis-finance-limited-vs-6883e3",
+  "status": "draft",
+  "title": "O.M.P.(I) (COMM.) - 376/2026, AXIS Finance Limited Vs Mohammed Jahangir and ORS, Judgment Date 16.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-01-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/75216102026OMPICOMM3762026_173603.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-23T15:18:44.877Z",
+  "updatedAt": "2026-10-23T15:18:44.877Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 23.01.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 23.01.2026”"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "42ed5dd906",
+  "slug": "hc-delhi-bail-appln-2714-2026-shyam-lal-yadav-vs-state-nct-42ed5d",
+  "status": "draft",
+  "title": "BAIL Appln. - 2714/2026, Shyam LAL Yadav Vs State NCT of Delhi and ANR, Judgment Date 16.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-11-30",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/59216102026BA27142026_212632.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-23T15:18:44.877Z",
+  "updatedAt": "2026-10-23T15:18:44.877Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 30th November, 2025"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 30th November, 2025”"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "fc040ad903",
+  "slug": "hc-delhi-arb-p-1674-2026-m-s-r-b-freight-carrier-vs-m-s-sam-fc040a",
+  "status": "draft",
+  "title": "ARB.P. - 1674/2026, M/S R B Freight Carrier Vs M/S SAM Surveyors and Adjusters, Judgment Date 16.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-06",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/75216102026AA16742026_173956.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-23T15:18:44.877Z",
+  "updatedAt": "2026-10-23T15:18:44.877Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 06.10.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 06.10.2026”"
+}

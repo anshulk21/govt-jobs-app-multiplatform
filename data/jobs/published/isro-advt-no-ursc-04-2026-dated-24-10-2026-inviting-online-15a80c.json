@@ -1,0 +1,53 @@
+{
+  "id": "15a80c1ddd",
+  "slug": "isro-advt-no-ursc-04-2026-dated-24-10-2026-inviting-online-15a80c",
+  "status": "published",
+  "title": "Advt No. URSC:04:2026 dated 24.10.2026 - Inviting online applications for the posts of Technician - B/ Heavy Vehicle Driver - A/ Light Vehicle Driver - A/ Staff Car Driver- A.",
+  "organization": "ISRO — Careers",
+  "sourceId": "isro",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": 24,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-10-24",
+    "lastDate": "2026-11-13",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.isro.gov.in/URSCRecruitment13.html",
+    "official": "https://www.isro.gov.in/Careers.html",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.isro.gov.in/URSCRecruitment13.html"
+    }
+  ],
+  "foundAt": "2026-10-23T15:18:44.877Z",
+  "updatedAt": "2026-10-23T15:37:56.778Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.lastDate": "CLOSING DATE FOR SUBMISSION OF ONLINE APPLICATION 13.11.2026",
+      "dates.applyStart": "OPENING DATE FOR ONLINE APPLICATION 24.10.2026",
+      "vacancies": "24 vacancies"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “CLOSING DATE FOR SUBMISSION OF ONLINE APPLICATION 13.11.2026”\n• Apply from: from “OPENING DATE FOR ONLINE APPLICATION 24.10.2026”\n• Vacancies: from “24 vacancies”",
+  "publishedAt": "2026-10-23T15:37:56.778Z"
+}
