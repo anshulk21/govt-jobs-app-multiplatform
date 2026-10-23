@@ -1,0 +1,50 @@
+{
+  "id": "8006f425bc",
+  "slug": "kvs-8006f4",
+  "status": "published",
+  "title": "आंतरिक लेखा – परीक्षा प्रतिवेदनों को हार्ड कॉपी के अतिरिक्त ई-ऑफिस के माध्यम से अनिवार्य रूप से अग्रेषित किए जाने के संबंध में । नई",
+  "organization": "Kendriya Vidyalaya Sangathan",
+  "sourceId": "kvs",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-03-13",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/10/2026102328.pdf",
+    "official": "https://kvs.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-03-13",
+      "url": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/10/2026102328.pdf"
+    }
+  ],
+  "foundAt": "2026-10-23T17:14:36.336Z",
+  "updatedAt": "2026-10-23T17:25:02.861Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 13.03.2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 13.03.2026”",
+  "publishedAt": "2026-10-23T17:25:02.861Z"
+}

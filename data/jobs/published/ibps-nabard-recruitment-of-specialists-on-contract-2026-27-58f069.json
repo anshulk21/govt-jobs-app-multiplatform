@@ -15,8 +15,8 @@
   "fee": null,
   "dates": {
     "notification": null,
-    "applyStart": null,
-    "lastDate": null,
+    "applyStart": "2026-10-09",
+    "lastDate": "2026-11-10",
     "exam": null
   },
   "howToApply": null,
@@ -33,12 +33,18 @@
     }
   ],
   "foundAt": "2026-10-21T03:34:35.861Z",
-  "updatedAt": "2026-10-21T05:45:09.082Z",
+  "updatedAt": "2026-10-23T17:22:59.173Z",
   "publishedAt": "2026-10-21T05:44:23.916Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {}
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for printing your application 10/11/2026",
+      "dates.applyStart": "Commencement of online registration of application 09/10/2026"
+    }
   },
   "review": "Only the link was read. Fill in the details from the official notification."
 }
