@@ -1,0 +1,53 @@
+{
+  "id": "2319b779dc",
+  "slug": "nta-inviting-online-application-form-for-the-joint-entrance-2319b7",
+  "status": "published",
+  "title": "Inviting Online Application form for the Joint Entrance Examination (JEE)-2027 (Session 1) – Reg.",
+  "organization": "National Testing Agency",
+  "sourceId": "nta",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "engineering"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-24",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nta.ac.in/Download/Notice/Notice_20261024220013.pdf",
+    "official": "https://nta.ac.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-24",
+      "url": "https://nta.ac.in/Download/Notice/Notice_20261024220013.pdf"
+    }
+  ],
+  "foundAt": "2026-10-24T18:18:35.910Z",
+  "updatedAt": "2026-10-24T18:37:57.237Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 24.10.2026",
+      "qualifications": "eligibility test for JEE (Advanced), which is conducted for admission to IITs. Paper 2 of JEE (Main) is conducted for admission to B. Arch and B. Planning courses in the country. For Academic Session 2027-28, it has been decided that the JE"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 24.10.2026”\n• Qualification: from “eligibility test for JEE (Advanced), which is conducted for admission to IITs. Paper 2 of JEE (Main) is conducted for admission to B. Arch and B. Planning courses in the country. For Academic Session 2027-28, it has been decided that the JE”",
+  "publishedAt": "2026-10-24T18:37:57.237Z"
+}
