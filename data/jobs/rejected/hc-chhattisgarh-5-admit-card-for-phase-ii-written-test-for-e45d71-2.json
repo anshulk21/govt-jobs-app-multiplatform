@@ -1,0 +1,42 @@
+{
+  "id": "e45d71a14f",
+  "slug": "hc-chhattisgarh-5-admit-card-for-phase-ii-written-test-for-e45d71-2",
+  "status": "rejected",
+  "title": "Admit CARD for Phase-Ii Written Test for Recruitment to the Post of Translator",
+  "organization": "High Court of Chhattisgarh",
+  "sourceId": "hc-chhattisgarh",
+  "level": "state",
+  "state": "CG",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": "2026-10-27"
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://highcourt.cg.gov.in/noti/view_file_noti.php?token=MzgxMjV8MTc5Mjg0NDQ1Mg%3D%3D.f87e041e3fe71de725e99e58483158d757155be21154ed70f867c0dff02d0e33",
+    "official": "https://highcourt.cg.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-24T11:12:00.246Z",
+  "updatedAt": "2026-10-24T11:12:00.246Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.exam"
+    ],
+    "evidence": {
+      "dates.exam": "Date of Written Test: 27 October, 2026"
+    }
+  },
+  "notes": "Rejected automatically: duplicate of hc-chhattisgarh-5-admit-card-for-phase-ii-written-test-for-f1f9fb.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Exam date: from “Date of Written Test: 27 October, 2026”"
+}
