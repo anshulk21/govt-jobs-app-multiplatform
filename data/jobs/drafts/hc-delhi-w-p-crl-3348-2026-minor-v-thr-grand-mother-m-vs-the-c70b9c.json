@@ -1,0 +1,41 @@
+{
+  "id": "c70b9c2a72",
+  "slug": "hc-delhi-w-p-crl-3348-2026-minor-v-thr-grand-mother-m-vs-the-c70b9c",
+  "status": "draft",
+  "title": "W.p.(Crl) - 3348/2026, Minor V THR Grand Mother M Vs the State of NCT of Delhi and ANR, Judgment Date 24.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-08",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/68024102026CRLW33482026_181439.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-24T15:18:42.793Z",
+  "updatedAt": "2026-10-24T15:18:42.793Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 08th September, 2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 08th September, 2026”"
+}

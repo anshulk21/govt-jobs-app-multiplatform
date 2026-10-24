@@ -1,0 +1,41 @@
+{
+  "id": "d2cf6db3fd",
+  "slug": "hc-delhi-rc-rev-397-2024-ajay-kumar-gupta-vs-prakash-chand-d2cf6d",
+  "status": "draft",
+  "title": "Rc.rev. - 397/2024, AJAY Kumar Gupta Vs Prakash Chand Gupta & ORS., Judgment Date 16.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-12-02",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/59116102026RCR3972024_164236.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-24T15:18:42.793Z",
+  "updatedAt": "2026-10-24T15:18:42.793Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 02.12.2025"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 02.12.2025”"
+}
