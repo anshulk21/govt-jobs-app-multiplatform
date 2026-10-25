@@ -11,12 +11,12 @@
   "postName": null,
   "vacancies": null,
   "qualifications": [],
-  "ageLimit": null,
-  "fee": null,
+  "ageLimit": "Up to 35 years",
+  "fee": "₹750, nil for some categories",
   "dates": {
     "notification": null,
     "applyStart": null,
-    "lastDate": null,
+    "lastDate": "2026-08-31",
     "exam": null
   },
   "howToApply": null,
@@ -27,11 +27,19 @@
   },
   "timeline": [],
   "foundAt": "2026-10-22T11:01:17.859Z",
-  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-25T09:36:30.515Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {}
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "ageLimit",
+      "fee"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date of registration i.e., 31.08.2026",
+      "ageLimit": "maximum age limit of 35 years",
+      "fee": "APPLICATION FEE AND INTIMATION CHARGE: (Non-Refundable) Sl. Category Fee/ intimation Charges 1. SC/ ST/ PwBD/ XS/DXS Nil 2. General/ OBC/ EWS Rs 750/- Fee/ Intimation charges once paid will NOT be ref"
+    }
   },
-  "review": "Only the link was read. Fill in the details from the official notification."
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date of registration i.e., 31.08.2026”\n• Age limit: from “maximum age limit of 35 years”\n• Fee: from “APPLICATION FEE AND INTIMATION CHARGE: (Non-Refundable) Sl. Category Fee/ intimation Charges 1. SC/ ST/ PwBD/ XS/DXS Nil 2. General/ OBC/ EWS Rs 750/- Fee/ Intimation charges once paid will NOT be ref”"
 }
