@@ -14,7 +14,7 @@
   "ageLimit": null,
   "fee": null,
   "dates": {
-    "notification": null,
+    "notification": "2026-10-15",
     "applyStart": null,
     "lastDate": null,
     "exam": null
@@ -27,11 +27,15 @@
   },
   "timeline": [],
   "foundAt": "2026-10-21T21:18:48.250Z",
-  "updatedAt": "2026-10-21T21:18:48.250Z",
+  "updatedAt": "2026-10-25T18:27:16.223Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {}
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 15.10.2026"
+    }
   },
-  "review": "Only the link was read. Fill in the details from the official notification."
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated 15.10.2026”"
 }
