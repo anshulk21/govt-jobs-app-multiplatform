@@ -1,0 +1,49 @@
+{
+  "id": "c442c5ba01",
+  "slug": "icmr-notice-for-interview-for-the-post-of-scientist-b-c442c5",
+  "status": "published",
+  "title": "Notice for interview for the post of Scientist-B (Medical) under CRMCH, New Chandrapur (Ref Advt no ICMR Adv. No. ICMR/Rectt/CRMCH/01/2026-RPCell)",
+  "organization": "ICMR",
+  "sourceId": "icmr",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-10-31",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.icmr.gov.in/post/notice-for-interview-for-the-post-of-scientist-b-medical-under-crmch-new-chandrapur-ref-advt-no-icmr-adv-no-icmr-rectt-crmch-01-2026-rpcell",
+    "official": "https://www.icmr.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.icmr.gov.in/post/notice-for-interview-for-the-post-of-scientist-b-medical-under-crmch-new-chandrapur-ref-advt-no-icmr-adv-no-icmr-rectt-crmch-01-2026-rpcell"
+    }
+  ],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:38:42.782Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date to apply OCTOBER 31, 2026"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last date to apply OCTOBER 31, 2026”",
+  "publishedAt": "2026-10-26T12:38:42.782Z"
+}

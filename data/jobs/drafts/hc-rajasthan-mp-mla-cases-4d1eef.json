@@ -1,0 +1,38 @@
+{
+  "id": "4d1eef6b5a",
+  "slug": "hc-rajasthan-mp-mla-cases-4d1eef",
+  "status": "draft",
+  "title": "MP/MLA Cases — Rajasthan High Court",
+  "organization": "Rajasthan High Court",
+  "sourceId": "hc-rajasthan",
+  "level": "state",
+  "state": "RJ",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcraj.nic.in/hcraj/Allfiles/MPMLA_Cases_30092026.pdf",
+    "official": "https://hcraj.nic.in/hcraj/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:18:31.094Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

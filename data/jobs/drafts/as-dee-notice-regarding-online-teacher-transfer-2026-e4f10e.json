@@ -1,0 +1,41 @@
+{
+  "id": "e4f10eb1ad",
+  "slug": "as-dee-notice-regarding-online-teacher-transfer-2026-e4f10e",
+  "status": "draft",
+  "title": "Notice regarding Online Teacher Transfer 2026",
+  "organization": "Directorate of Elementary Education, Assam",
+  "sourceId": "as-dee",
+  "level": "state",
+  "state": "AS",
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-19",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://dee.assam.gov.in/document-details/notice-regarding-online-teacher-transfer-2026",
+    "official": "https://dee.assam.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:18:31.094Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 19/08/2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 19/08/2026”"
+}

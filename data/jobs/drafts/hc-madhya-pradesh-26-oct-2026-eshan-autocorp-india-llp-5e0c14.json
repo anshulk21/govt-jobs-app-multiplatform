@@ -1,0 +1,41 @@
+{
+  "id": "5e0c1497cf",
+  "slug": "hc-madhya-pradesh-26-oct-2026-eshan-autocorp-india-llp-5e0c14",
+  "status": "draft",
+  "title": "Eshan Autocorp India LLP Through Its Partner Ramesh Nenwani Vs Shrimati Indarjeet KAUR - FA/01118/2025 Bench Indore",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-05-15",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/indore/MPHCIND/2025/FA/1118/FA_1118_2025_Order_26-10-2026_digi.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:18:31.094Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 15.5.2025"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 15.5.2025”"
+}

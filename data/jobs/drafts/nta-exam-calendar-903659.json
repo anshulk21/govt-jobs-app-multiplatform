@@ -1,0 +1,38 @@
+{
+  "id": "9036599cd9",
+  "slug": "nta-exam-calendar-903659",
+  "status": "draft",
+  "title": "Exam Calendar — National Testing Agency",
+  "organization": "National Testing Agency",
+  "sourceId": "nta",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nta.ac.in/Download/Notice/ExamcalendarRevised.pdf",
+    "official": "https://nta.ac.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:18:31.094Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

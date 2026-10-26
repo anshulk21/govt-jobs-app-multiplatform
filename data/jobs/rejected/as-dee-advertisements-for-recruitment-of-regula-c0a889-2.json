@@ -1,0 +1,44 @@
+{
+  "id": "c0a8897745",
+  "slug": "as-dee-advertisements-for-recruitment-of-regula-c0a889-2",
+  "status": "rejected",
+  "title": "Advertisements for Recruitment of Regula...",
+  "organization": "Directorate of Elementary Education, Assam",
+  "sourceId": "as-dee",
+  "level": "state",
+  "state": "AS",
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "bed"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://dee.assam.gov.in/information-and-services/advertisements-recruitment-regular-teachers-lp-and-schools-dec-2023",
+    "official": "https://dee.assam.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:18:31.094Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "Eligibility Test (ATET)/ Central Teacher Eligibility Test (CTET), for filling up of 3800 (Three Thousand and Eight Hundred) vacancies of Assistant Teacher of LP Schools under the Directorate of Elementary Education, Assam in the Pay Band –"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2023).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “Eligibility Test (ATET)/ Central Teacher Eligibility Test (CTET), for filling up of 3800 (Three Thousand and Eight Hundred) vacancies of Assistant Teacher of LP Schools under the Directorate of Elementary Education, Assam in the Pay Band –”"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "650e846d2b",
+  "slug": "as-dee-notice-regarding-medical-board-dated-06-05-2026-650e84",
+  "status": "draft",
+  "title": "Notice regarding Medical Board dated 06/05/2026",
+  "organization": "Directorate of Elementary Education, Assam",
+  "sourceId": "as-dee",
+  "level": "state",
+  "state": "AS",
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-05-06",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://dee.assam.gov.in/document-details/notice-regarding-medical-board-dated-06052026",
+    "official": "https://dee.assam.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:18:31.094Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 06/05/2026"
+    }
+  },
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated 06/05/2026”"
+}

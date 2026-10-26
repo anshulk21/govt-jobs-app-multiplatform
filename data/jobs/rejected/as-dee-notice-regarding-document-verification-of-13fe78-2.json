@@ -1,0 +1,46 @@
+{
+  "id": "13fe78c89d",
+  "slug": "as-dee-notice-regarding-document-verification-of-13fe78-2",
+  "status": "rejected",
+  "title": "Notice Regarding Document Verification of Provincialised Tutors under DEE, Assam",
+  "organization": "Directorate of Elementary Education, Assam",
+  "sourceId": "as-dee",
+  "level": "state",
+  "state": "AS",
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "bed"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-09",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://dee.assam.gov.in/document-details/notice-regarding-document-verification-provincialised-tutors-under-dee-assam",
+    "official": "https://dee.assam.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:18:31.094Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 09-02-2026",
+      "qualifications": "qualification as per NCTE guidelines for upgradation the post of Teacher and who have qualified D.El.Ed. are hereby requested to attend the O/o the DEE, Assam from 11am to 4pm for verification of the following documents as per Scheduled dat"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2026-02-09).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 09-02-2026”\n• Qualification: from “qualification as per NCTE guidelines for upgradation the post of Teacher and who have qualified D.El.Ed. are hereby requested to attend the O/o the DEE, Assam from 11am to 4pm for verification of the following documents as per Scheduled dat”"
+}

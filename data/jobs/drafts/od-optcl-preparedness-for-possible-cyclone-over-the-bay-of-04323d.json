@@ -1,0 +1,38 @@
+{
+  "id": "04323da244",
+  "slug": "od-optcl-preparedness-for-possible-cyclone-over-the-bay-of-04323d",
+  "status": "draft",
+  "title": "Preparedness for possible Cyclone over the Bay of Bengal.",
+  "organization": "Odisha Power Transmission Corporation Ltd",
+  "sourceId": "od-optcl",
+  "level": "state",
+  "state": "OD",
+  "category": "Electricity",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.optcl.co.in/Writereaddata/NewsArea/CycloneOctober2026.pdf",
+    "official": "https://www.optcl.co.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:18:31.094Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

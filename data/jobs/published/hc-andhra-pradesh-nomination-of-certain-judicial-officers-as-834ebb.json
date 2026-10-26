@@ -1,0 +1,50 @@
+{
+  "id": "834ebbc0cf",
+  "slug": "hc-andhra-pradesh-nomination-of-certain-judicial-officers-as-834ebb",
+  "status": "published",
+  "title": "Nomination of Certain Judicial Officers as Master Trainers for conducting the P23 ECT 16 2026 “Ecourts Programme at All District Headquarters which is scheduled to be held on…",
+  "organization": "High Court of Andhra Pradesh",
+  "sourceId": "hc-andhra-pradesh",
+  "level": "state",
+  "state": "AP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-26",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aphc.gov.in/docs/notification_1793015812_0.pdf",
+    "official": "https://aphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-26",
+      "url": "https://aphc.gov.in/docs/notification_1793015812_0.pdf"
+    }
+  ],
+  "foundAt": "2026-10-26T12:18:31.094Z",
+  "updatedAt": "2026-10-26T12:38:42.782Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "DATED:26.10.2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “DATED:26.10.2026”",
+  "publishedAt": "2026-10-26T12:38:42.782Z"
+}
