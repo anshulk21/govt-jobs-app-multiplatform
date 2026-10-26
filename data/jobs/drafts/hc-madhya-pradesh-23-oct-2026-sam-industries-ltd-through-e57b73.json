@@ -1,0 +1,41 @@
+{
+  "id": "e57b73b754",
+  "slug": "hc-madhya-pradesh-23-oct-2026-sam-industries-ltd-through-e57b73",
+  "status": "draft",
+  "title": "SAM Industries LTD Through Authorized Representative MR. Rajendra Kumar Pasari Vs Mahesh - AC/00006/2026 Bench Indore",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-02-04",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/indore/MPHCIND/2026/AC/6/AC_6_2026_FinalOrder_23-10-2026_digi.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T06:18:34.954Z",
+  "updatedAt": "2026-10-26T06:18:34.954Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 4.2.2025"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 4.2.2025”"
+}

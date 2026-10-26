@@ -1,0 +1,38 @@
+{
+  "id": "1d6c20d81b",
+  "slug": "nta-revised-examination-calender-reg-read-more-1d6c20",
+  "status": "draft",
+  "title": "Revised Examination Calender-Reg — National Testing Agency",
+  "organization": "National Testing Agency",
+  "sourceId": "nta",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nta.ac.in/Download/Notice/Notice_20261026114247.pdf",
+    "official": "https://nta.ac.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T06:18:34.954Z",
+  "updatedAt": "2026-10-26T06:18:34.954Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

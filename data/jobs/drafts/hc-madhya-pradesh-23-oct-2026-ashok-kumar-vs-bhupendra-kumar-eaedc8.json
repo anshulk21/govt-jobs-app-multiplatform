@@ -1,0 +1,41 @@
+{
+  "id": "eaedc8a378",
+  "slug": "hc-madhya-pradesh-23-oct-2026-ashok-kumar-vs-bhupendra-kumar-eaedc8",
+  "status": "draft",
+  "title": "Ashok Kumar Vs Bhupendra Kumar Lunkad - CR/01152/2026 Bench Indore",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-21",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/indore/MPHCIND/2026/CR/1152/CR_1152_2026_FinalOrder_23-10-2026_digi.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T06:18:34.954Z",
+  "updatedAt": "2026-10-26T06:18:34.954Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 21.9.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 21.9.2026”"
+}

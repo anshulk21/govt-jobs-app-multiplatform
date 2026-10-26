@@ -1,0 +1,42 @@
+{
+  "id": "f548c672f5",
+  "slug": "dd-admin-official-gazette-series-ii-no-37-f548c6-2",
+  "status": "rejected",
+  "title": "Official Gazette: Series II No. 37",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-07-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s371e09b16e21f7b6919bbfc43f6a5b2f0/uploads/2026/10/202610261389216821.pdf",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T06:18:34.954Z",
+  "updatedAt": "2026-10-26T06:18:34.954Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 23.07.2025"
+    }
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 23.07.2025”"
+}

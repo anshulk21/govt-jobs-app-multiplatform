@@ -1,0 +1,41 @@
+{
+  "id": "e67a35904f",
+  "slug": "hc-madhya-pradesh-22-oct-2026-indo-education-and-services-e67a35",
+  "status": "draft",
+  "title": "INDO Education and Services Foundation Through Its Director SHRI Achal Choudhary Vs Central Circle 2 Bhopal - WP/41712/2026 Bench Indore",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-04-03",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/indore/MPHCIND/2026/WP/41712/WP_41712_2026_FinalOrder_22-10-2026.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-26T06:18:34.954Z",
+  "updatedAt": "2026-10-26T06:36:20.065Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 03/04/2025"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 03/04/2025”"
+}
