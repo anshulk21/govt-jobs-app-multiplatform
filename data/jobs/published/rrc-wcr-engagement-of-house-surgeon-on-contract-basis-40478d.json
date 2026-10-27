@@ -38,7 +38,8 @@
     "method": "pdf-regex",
     "fields": [],
     "evidence": {},
-    "tries": 1
+    "tries": 2,
+    "error": "Page not read (HTTP 502)"
   },
   "autoPublished": true,
   "review": "Read from the PDF automatically. Check each value against the notification:",

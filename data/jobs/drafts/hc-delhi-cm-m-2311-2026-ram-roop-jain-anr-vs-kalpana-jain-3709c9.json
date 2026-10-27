@@ -1,0 +1,41 @@
+{
+  "id": "3709c96ba3",
+  "slug": "hc-delhi-cm-m-2311-2026-ram-roop-jain-anr-vs-kalpana-jain-3709c9",
+  "status": "draft",
+  "title": "CM(M) - 2311/2026, RAM ROOP JAIN & ANR. Vs Kalpana JAIN & ANR., Judgment Date 27.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-06",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/67927102026CMM23112026_185256.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-27T15:34:15.487Z",
+  "updatedAt": "2026-10-27T15:34:15.487Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 06.10.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 06.10.2026”"
+}
