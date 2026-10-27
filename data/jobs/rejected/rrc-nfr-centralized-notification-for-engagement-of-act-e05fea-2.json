@@ -1,0 +1,42 @@
+{
+  "id": "e05feac821",
+  "slug": "rrc-nfr-centralized-notification-for-engagement-of-act-e05fea-2",
+  "status": "rejected",
+  "title": "Centralized Notification for Engagement of Act Apprentices for 01 year Training over N. F. Railway",
+  "organization": "Northeast Frontier Railway (RRC Guwahati)",
+  "sourceId": "rrc-nfr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-09-25",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nfr.indianrailways.gov.in/ministry/our-department/preview/118",
+    "official": "https://nfr.indianrailways.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-27T21:18:26.965Z",
+  "updatedAt": "2026-10-27T21:18:26.965Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated 25-09-2025"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2025-09-25).",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “Dated 25-09-2025”"
+}

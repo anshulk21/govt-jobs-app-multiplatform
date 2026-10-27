@@ -1,0 +1,50 @@
+{
+  "id": "01564f2bf8",
+  "slug": "nta-extension-of-last-date-for-submission-of-online-01564f",
+  "status": "published",
+  "title": "Extension of Last Date for Submission of Online Application Form for UGC-NET December 2026 Examination – Reg.",
+  "organization": "National Testing Agency",
+  "sourceId": "nta",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-10-31",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nta.ac.in/Download/Notice/Notice_20261027235155.pdf",
+    "official": "https://nta.ac.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://nta.ac.in/Download/Notice/Notice_20261027235155.pdf"
+    }
+  ],
+  "foundAt": "2026-10-27T21:18:26.965Z",
+  "updatedAt": "2026-10-27T21:37:53.789Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date for submission of the Online Application Form for UGC-NET December 2026 Examination up to 31 October 2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date for submission of the Online Application Form for UGC-NET December 2026 Examination up to 31 October 2026”",
+  "publishedAt": "2026-10-27T21:37:53.789Z"
+}
