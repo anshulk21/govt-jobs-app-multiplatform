@@ -1,0 +1,46 @@
+{
+  "id": "cace97f3a9",
+  "slug": "rrc-wcr-notice-for-empanelment-of-advertising-agencies-cace97-2",
+  "status": "rejected",
+  "title": "Notice for Empanelment of Advertising Agencies.",
+  "organization": "West Central Railway (RRC Jabalpur)",
+  "sourceId": "rrc-wcr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": "₹5,900, ₹1,00,000",
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-02-12",
+    "lastDate": "2026-02-12",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://wcr.indianrailways.gov.in/admin/cms/downloadCmsDoc?path=/opt/mount/zonal/wcr/Features/17801397167401768814278421-Notice_for_Website.pdf",
+    "official": "https://wcr.indianrailways.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-27T12:18:53.913Z",
+  "updatedAt": "2026-10-27T12:18:53.913Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart",
+      "fee"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date of download of Application Form 12.02.2026",
+      "dates.applyStart": "Opening of Application Form 12.30 hrs on 12.02.2026",
+      "fee": "Application Fees: Rs.5900/- DD No __________ date______ Bank______________ 4. Earnest money attached Yes / No 5. Details of EMD: Rs.1,00,000/- DD/FDR No._______________ date ________ Bank_____________"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2026-02-12).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last date of download of Application Form 12.02.2026”\n• Apply from: from “Opening of Application Form 12.30 hrs on 12.02.2026”\n• Fee: from “Application Fees: Rs.5900/- DD No __________ date______ Bank______________ 4. Earnest money attached Yes / No 5. Details of EMD: Rs.1,00,000/- DD/FDR No._______________ date ________ Bank_____________”"
+}

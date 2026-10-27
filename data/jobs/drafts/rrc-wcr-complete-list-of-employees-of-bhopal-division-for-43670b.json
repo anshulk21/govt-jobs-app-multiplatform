@@ -1,0 +1,37 @@
+{
+  "id": "43670b2e5b",
+  "slug": "rrc-wcr-complete-list-of-employees-of-bhopal-division-for-43670b",
+  "status": "draft",
+  "title": "Complete List of employees of Bhopal Division for Notional Increment (6th CPC).",
+  "organization": "West Central Railway (RRC Jabalpur)",
+  "sourceId": "rrc-wcr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://wcr.indianrailways.gov.in/admin/cms/downloadCmsDoc?path=/opt/mount/zonal/wcr/Features/17801368216961778584953855-NOTIONAL_INCREMENT_LIST_6TH_PC.pdf",
+    "official": "https://wcr.indianrailways.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-27T12:18:53.913Z",
+  "updatedAt": "2026-10-27T12:18:53.913Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {}
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

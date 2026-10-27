@@ -1,0 +1,41 @@
+{
+  "id": "74393fb01e",
+  "slug": "hc-patna-notice-regarding-newly-inaugurated-judges-guest-74393f",
+  "status": "draft",
+  "title": "Notice regarding newly inaugurated Judges' Guest House, Gaya Ji, Bihar.",
+  "organization": "Patna High Court",
+  "sourceId": "hc-patna",
+  "level": "state",
+  "state": "BR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-27",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://patnahighcourt.gov.in/getfile/MTExOTY=-7q7Zypob92Q=",
+    "official": "https://patnahighcourt.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-27T12:18:53.913Z",
+  "updatedAt": "2026-10-27T12:18:53.913Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated - 27th October, 2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated - 27th October, 2026”"
+}
