@@ -1,0 +1,41 @@
+{
+  "id": "44bfe8bed6",
+  "slug": "kvs-44bfe8",
+  "status": "draft",
+  "title": "नाचने, रत्नागिरी, महाराष्ट्र में नव स्वीकृत केन्द्रीय विद्यालय खोलने के संबंध में संशोधित कार्यालय आदेश नई",
+  "organization": "Kendriya Vidyalaya Sangathan",
+  "sourceId": "kvs",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-07-17",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/10/2026102830.pdf",
+    "official": "https://kvs.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-28T09:18:29.126Z",
+  "updatedAt": "2026-10-28T09:18:29.126Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 17.07.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 17.07.2026”"
+}

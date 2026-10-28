@@ -1,0 +1,50 @@
+{
+  "id": "6331683601",
+  "slug": "hssc-corrigendum-for-various-posts-of-group-25-against-advt-633168",
+  "status": "published",
+  "title": "Corrigendum for various posts of Group-25 against Advt. No. 08/2024 of various Departments, Haryana",
+  "organization": "Haryana Staff Selection Commission (also Haryana Police)",
+  "sourceId": "hssc",
+  "level": "state",
+  "state": "HR",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a1-81a619850014/result",
+    "official": "https://hssc.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-23",
+      "url": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a1-81a619850014/result"
+    }
+  ],
+  "foundAt": "2026-10-28T09:18:29.126Z",
+  "updatedAt": "2026-10-28T09:38:37.900Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 23.10.2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 23.10.2026”",
+  "publishedAt": "2026-10-28T09:38:37.900Z"
+}
