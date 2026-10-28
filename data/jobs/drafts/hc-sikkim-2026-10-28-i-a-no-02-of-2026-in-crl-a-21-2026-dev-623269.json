@@ -1,0 +1,41 @@
+{
+  "id": "623269fe1b",
+  "slug": "hc-sikkim-2026-10-28-i-a-no-02-of-2026-in-crl-a-21-2026-dev-623269",
+  "status": "draft",
+  "title": "2026-10-28 - I.A No. 02 of 2026 in Crl. A./21/2026 - Dev Limboo v/s State of Sikkim",
+  "organization": "High Court of Sikkim",
+  "sourceId": "hc-sikkim",
+  "level": "state",
+  "state": "SK",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-05-25",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcs.gov.in/hcs/hg_orders/202100000212026_4.pdf",
+    "official": "https://hcs.gov.in/hcs/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-28T18:18:50.186Z",
+  "updatedAt": "2026-10-28T18:18:50.186Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 25.5.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 25.5.2026”"
+}

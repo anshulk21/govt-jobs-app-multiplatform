@@ -1,0 +1,41 @@
+{
+  "id": "3879874c51",
+  "slug": "hc-delhi-notification-to-all-concerned-that-high-court-of-387987",
+  "status": "draft",
+  "title": "Notification to all concerned that High Court of Delhi shall remain closed for Summer Vacation from Monday, 31st May 2027 to Tuesday, 29th June 2027 (both days inclusive) and…",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-27",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/files/2026-10/announcements/102g4.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-28T18:18:50.186Z",
+  "updatedAt": "2026-10-28T18:18:50.186Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated : 27.10.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated : 27.10.2026”"
+}

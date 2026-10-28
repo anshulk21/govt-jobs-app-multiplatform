@@ -1,0 +1,41 @@
+{
+  "id": "82d1f9542d",
+  "slug": "nta-advisory-and-instructions-regarding-registration-process-82d1f9",
+  "status": "draft",
+  "title": "Advisory and Instructions regarding registration process for Joint Entrance Examination (Main) – 2027 (Session 1)",
+  "organization": "National Testing Agency",
+  "sourceId": "nta",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-28",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nta.ac.in/Download/Notice/Notice_20261028220547.pdf",
+    "official": "https://nta.ac.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-28T18:18:50.186Z",
+  "updatedAt": "2026-10-28T18:18:50.186Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 28.10.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 28.10.2026”"
+}
