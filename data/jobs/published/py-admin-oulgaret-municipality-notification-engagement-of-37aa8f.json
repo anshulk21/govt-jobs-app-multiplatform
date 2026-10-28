@@ -1,0 +1,56 @@
+{
+  "id": "37aa8ff660",
+  "slug": "py-admin-oulgaret-municipality-notification-engagement-of-37aa8f",
+  "status": "published",
+  "title": "Oulgaret Municipality - Notification - Engagement of retired officials from Government of Puducherry as Consultant on Contract basis",
+  "organization": "Government of Puducherry",
+  "sourceId": "py-admin",
+  "level": "ut",
+  "state": "PY",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "12th",
+    "graduate"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-27",
+    "applyStart": null,
+    "lastDate": "2026-10-31",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://py.gov.in/oulgaret-municipality-notification-engagement-retired-officials-government-puducherry-consultant",
+    "official": "https://py.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-08-27",
+      "url": "https://py.gov.in/oulgaret-municipality-notification-engagement-retired-officials-government-puducherry-consultant"
+    }
+  ],
+  "foundAt": "2026-10-28T12:18:39.092Z",
+  "updatedAt": "2026-10-28T12:30:09.200Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "qualifications",
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.notification": "dated 27-08-2026",
+      "qualifications": "Eligibility 1. Consultant (Office Manager) 1 Retired Government officials in the Cadre of Superintendent not exceeding 65 years should possess: (i) a Graduate Degree from a recognized university (ii) Substantial professional experience in h",
+      "dates.lastDate": "Last Date 31-10-2026"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 27-08-2026”\n• Qualification: from “Eligibility 1. Consultant (Office Manager) 1 Retired Government officials in the Cadre of Superintendent not exceeding 65 years should possess: (i) a Graduate Degree from a recognized university (ii) Substantial professional experience in h”\n• Last date: from “Last Date 31-10-2026”",
+  "publishedAt": "2026-10-28T12:30:09.200Z"
+}
