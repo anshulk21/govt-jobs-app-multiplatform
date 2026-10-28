@@ -1,0 +1,41 @@
+{
+  "id": "d007eca2e2",
+  "slug": "hc-meghalaya-notification-28-10-2026-transfer-and-posting-of-d007ec",
+  "status": "draft",
+  "title": "Notification 28.10.2026: Transfer and posting of Judicial Officers...",
+  "organization": "High Court of Meghalaya",
+  "sourceId": "hc-meghalaya",
+  "level": "state",
+  "state": "ML",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-24",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://meghalayahighcourt.nic.in/notification-28102026-transfer-and-posting-judicial-officers",
+    "official": "https://meghalayahighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-28T13:06:09.103Z",
+  "updatedAt": "2026-10-28T13:06:09.103Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 24.09.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 24.09.2026”"
+}

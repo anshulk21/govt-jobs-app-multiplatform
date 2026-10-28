@@ -1,0 +1,41 @@
+{
+  "id": "e1b7e3e202",
+  "slug": "hc-andhra-pradesh-view-full-judgment-e1b7e3",
+  "status": "draft",
+  "title": "Full Judgment — High Court of Andhra Pradesh",
+  "organization": "High Court of Andhra Pradesh",
+  "sourceId": "hc-andhra-pradesh",
+  "level": "state",
+  "state": "AP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": "21–25 years",
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aphc.gov.in/docs/imp_judgements/Smt%20Sarla%20Verma%20%20Ors%20%20vs%20%20Delhi%20Transport%20Corporation%20%20Anr1701846666.pdf",
+    "official": "https://aphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-28T13:06:09.103Z",
+  "updatedAt": "2026-10-28T13:06:09.103Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "ageLimit"
+    ],
+    "evidence": {
+      "ageLimit": "age groups of 15 to 20 and 21 to 25 years"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Age limit: from “age groups of 15 to 20 and 21 to 25 years”"
+}

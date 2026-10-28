@@ -1,0 +1,38 @@
+{
+  "id": "6acda2704f",
+  "slug": "hc-rajasthan-2-vc-remote-point-coordinators-at-remote-points-6acda2",
+  "status": "draft",
+  "title": "VC Remote Point Coordinators at Remote Points in Rajasthan",
+  "organization": "Rajasthan High Court",
+  "sourceId": "hc-rajasthan",
+  "level": "state",
+  "state": "RJ",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcraj.nic.in/hcraj/hcraj_admin/uploadfile/ticker/List_of_RPCs_at_remote_points_in_rajasthan_27102026179318739512.pdf",
+    "official": "https://hcraj.nic.in/hcraj/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-28T13:06:09.103Z",
+  "updatedAt": "2026-10-28T13:06:09.103Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

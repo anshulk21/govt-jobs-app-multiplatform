@@ -1,0 +1,49 @@
+{
+  "id": "9e3b6372d3",
+  "slug": "ld-admin-publication-of-candidate-checklists-for-contractual-9e3b63",
+  "status": "published",
+  "title": "Publication of Candidate Checklists for Contractual Recruitment under DHS Lakshadweep",
+  "organization": "Lakshadweep Administration",
+  "sourceId": "ld-admin",
+  "level": "ut",
+  "state": "LD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-28",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://lakshadweep.gov.in/notice/publication-of-candidate-checklists-for-contractual-recruitment-under-dhs-lakshadweep/",
+    "official": "https://lakshadweep.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-09-28",
+      "url": "https://lakshadweep.gov.in/notice/publication-of-candidate-checklists-for-contractual-recruitment-under-dhs-lakshadweep/"
+    }
+  ],
+  "foundAt": "2026-10-28T13:06:09.103Z",
+  "updatedAt": "2026-10-28T13:25:30.065Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 28.09.2026"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated 28.09.2026”",
+  "publishedAt": "2026-10-28T13:25:30.065Z"
+}

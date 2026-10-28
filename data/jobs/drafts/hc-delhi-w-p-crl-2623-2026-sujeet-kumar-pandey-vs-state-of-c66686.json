@@ -1,0 +1,41 @@
+{
+  "id": "c666869053",
+  "slug": "hc-delhi-w-p-crl-2623-2026-sujeet-kumar-pandey-vs-state-of-c66686",
+  "status": "draft",
+  "title": "W.p.(Crl) - 2623/2026, Sujeet Kumar Pandey Vs State of NCT Through SHO, Judgment Date 28.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-07-24",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/60828102026CRLW26232026_171838.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-28T13:06:09.103Z",
+  "updatedAt": "2026-10-28T13:06:09.103Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 24.07.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 24.07.2026”"
+}

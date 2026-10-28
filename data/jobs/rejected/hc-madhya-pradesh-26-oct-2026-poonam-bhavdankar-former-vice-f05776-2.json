@@ -1,0 +1,42 @@
+{
+  "id": "f057761bbf",
+  "slug": "hc-madhya-pradesh-26-oct-2026-poonam-bhavdankar-former-vice-f05776-2",
+  "status": "rejected",
+  "title": "Poonam Bhavdankar Former VICE President Times Network Bennett Coleman and Company Limited Vs Sanjay Sinha - CR/01198/2026 Principal Seat Jabalpur",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-11",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/jabalpur/MPHCJB/2026/CR/1198/CR_1198_2026_FinalOrder_26-10-2026_digi.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-28T13:06:09.103Z",
+  "updatedAt": "2026-10-28T13:06:09.103Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 11.09.2026"
+    }
+  },
+  "notes": "Rejected automatically: not a job notice.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 11.09.2026”"
+}
