@@ -1,0 +1,49 @@
+{
+  "id": "ae232185a2",
+  "slug": "sail-bsl-walk-in-interview-for-engagement-of-consultants-ae2321",
+  "status": "published",
+  "title": "BSL: Walk-In-Interview for Engagement of Consultants (Doctors in Medical Discipline) for Bokaro General Hospital",
+  "organization": "SAIL — Careers",
+  "sourceId": "sail",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-27",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News%20&%20Jobs_28102026_095823.pdf",
+    "official": "https://sailcareers.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-27",
+      "url": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News%20&%20Jobs_28102026_095823.pdf"
+    }
+  ],
+  "foundAt": "2026-10-28T05:51:41.801Z",
+  "updatedAt": "2026-10-28T06:12:35.456Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "date of advertisement i.e. 27/10/2026"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “date of advertisement i.e. 27/10/2026”",
+  "publishedAt": "2026-10-28T06:12:35.456Z"
+}
