@@ -1,0 +1,49 @@
+{
+  "id": "31d93bb677",
+  "slug": "ibps-advertisement-for-direct-recruitment-of-server-31d93b",
+  "status": "published",
+  "title": "Advertisement for Direct Recruitment of Server Administrator, Assistant & Programming Assistant on Regular Basis",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-11-12",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.ibps.in/wp-content/uploads/Advertisement-for-Server-Administrator-Programming-Assistant-and-Assistant-Oct._Nov.-2026.pdf",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.ibps.in/wp-content/uploads/Advertisement-for-Server-Administrator-Programming-Assistant-and-Assistant-Oct._Nov.-2026.pdf"
+    }
+  ],
+  "foundAt": "2026-10-29T03:18:52.104Z",
+  "updatedAt": "2026-10-29T03:26:45.040Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date of On-line Submission of Applications through website www.ibps.in. 12.11.2026"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last date of On-line Submission of Applications through website www.ibps.in. 12.11.2026”",
+  "publishedAt": "2026-10-29T03:26:45.040Z"
+}
