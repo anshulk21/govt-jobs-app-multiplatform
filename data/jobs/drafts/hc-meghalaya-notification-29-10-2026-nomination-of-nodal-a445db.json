@@ -1,0 +1,41 @@
+{
+  "id": "a445db2dcb",
+  "slug": "hc-meghalaya-notification-29-10-2026-nomination-of-nodal-a445db",
+  "status": "draft",
+  "title": "Notification 29.10.2026: Nomination of Nodal Officer for the supervision, c...",
+  "organization": "High Court of Meghalaya",
+  "sourceId": "hc-meghalaya",
+  "level": "state",
+  "state": "ML",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-15",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://meghalayahighcourt.nic.in/notification-29102026-nomination-nodal-officer-supervision-coordination-implementation-and",
+    "official": "https://meghalayahighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-29T15:18:52.936Z",
+  "updatedAt": "2026-10-29T15:18:52.936Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 15.10.2026"
+    }
+  },
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated 15.10.2026”"
+}
