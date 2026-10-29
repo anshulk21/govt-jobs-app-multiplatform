@@ -1,0 +1,41 @@
+{
+  "id": "0bc3c60a72",
+  "slug": "hc-madhya-pradesh-28-oct-2026-amrat-lal-meena-amrat-meena-vs-0bc3c6",
+  "status": "draft",
+  "title": "Amrat LAL Meena @ Amrat Meena Vs the State of Madhya Pradesh - WP/50664/2025 Principal Seat Jabalpur",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-12-09",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/jabalpur/MPHCJB/2025/WP/50664/WP_50664_2025_FinalOrder_28-10-2026.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-29T06:18:39.241Z",
+  "updatedAt": "2026-10-29T06:36:23.912Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 09.12.2025"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 09.12.2025”"
+}
