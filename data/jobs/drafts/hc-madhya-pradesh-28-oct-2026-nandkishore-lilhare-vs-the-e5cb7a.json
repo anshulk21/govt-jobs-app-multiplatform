@@ -32,7 +32,8 @@
     "method": "pdf-regex",
     "fields": [],
     "evidence": {},
-    "tries": 2
+    "tries": 3,
+    "error": "PDF not read (getaddrinfo ENOTFOUND mphc.gov.in)"
   },
   "review": "Read from the PDF automatically. Check each value against the notification:"
 }
