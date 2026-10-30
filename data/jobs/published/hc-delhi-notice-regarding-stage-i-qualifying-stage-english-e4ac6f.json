@@ -1,0 +1,50 @@
+{
+  "id": "e4ac6f0e7a",
+  "slug": "hc-delhi-notice-regarding-stage-i-qualifying-stage-english-e4ac6f",
+  "status": "published",
+  "title": "Notice regarding Stage-I (Qualifying Stage): English Typing Test in connection with Personal Assistant (Open) Examination-2026.176.98 KB",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": "2026-11-27"
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/files/2026-10/recuritment/93-exams-nj.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://delhihighcourt.nic.in/files/2026-10/recuritment/93-exams-nj.pdf"
+    }
+  ],
+  "foundAt": "2026-10-30T09:18:45.081Z",
+  "updatedAt": "2026-10-30T09:37:26.306Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.exam"
+    ],
+    "evidence": {
+      "dates.exam": "Date of Examination 27.11.2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Exam date: from “Date of Examination 27.11.2026”",
+  "publishedAt": "2026-10-30T09:37:26.306Z"
+}

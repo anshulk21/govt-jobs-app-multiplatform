@@ -1,0 +1,51 @@
+{
+  "id": "ed52ef3111",
+  "slug": "sail-engagement-of-doctor-in-salem-steel-plant-hospital-on-ed52ef",
+  "status": "published",
+  "title": "Engagement of Doctor in Salem Steel Plant Hospital on Contractual basis",
+  "organization": "SAIL — Careers",
+  "sourceId": "sail",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "medical"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SSP_News%20&%20Jobs_30102026_103920.pdf",
+    "official": "https://sailcareers.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SSP_News%20&%20Jobs_30102026_103920.pdf"
+    }
+  ],
+  "foundAt": "2026-10-30T09:18:45.081Z",
+  "updatedAt": "2026-10-30T09:37:26.306Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "essential qualification and experience, as on the date of advertisement MBBS from a University/institute recognized by MCI, with MCI /NMC/SMC registration or having valid practitioner license and enrolled in the State Register or the Nation"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “essential qualification and experience, as on the date of advertisement MBBS from a University/institute recognized by MCI, with MCI /NMC/SMC registration or having valid practitioner license and enrolled in the State Register or the Nation”",
+  "publishedAt": "2026-10-30T09:37:26.306Z"
+}

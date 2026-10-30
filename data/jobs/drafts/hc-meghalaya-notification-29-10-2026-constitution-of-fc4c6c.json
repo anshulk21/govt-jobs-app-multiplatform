@@ -1,0 +1,41 @@
+{
+  "id": "fc4c6c29c1",
+  "slug": "hc-meghalaya-notification-29-10-2026-constitution-of-fc4c6c",
+  "status": "draft",
+  "title": "Notification 29.10.2026: Constitution of District Execution Cell in all the...",
+  "organization": "High Court of Meghalaya",
+  "sourceId": "hc-meghalaya",
+  "level": "state",
+  "state": "ML",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-10-15",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://meghalayahighcourt.nic.in/notification-29102026-constitution-district-execution-cell-all-districts-state",
+    "official": "https://meghalayahighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-30T09:18:45.081Z",
+  "updatedAt": "2026-10-30T09:18:45.081Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 15.10.2025"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 15.10.2025”"
+}
