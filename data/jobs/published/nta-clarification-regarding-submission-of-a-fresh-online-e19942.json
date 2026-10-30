@@ -1,0 +1,52 @@
+{
+  "id": "e19942c5ca",
+  "slug": "nta-clarification-regarding-submission-of-a-fresh-online-e19942",
+  "status": "published",
+  "title": "Clarification regarding submission of a fresh Online Application Form for JEE (Main) – 2027 (Session 1)",
+  "organization": "National Testing Agency",
+  "sourceId": "nta",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-30",
+    "applyStart": null,
+    "lastDate": "2026-11-22",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nta.ac.in/Download/Notice/Notice_20261030202143.pdf",
+    "official": "https://nta.ac.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-30",
+      "url": "https://nta.ac.in/Download/Notice/Notice_20261030202143.pdf"
+    }
+  ],
+  "foundAt": "2026-10-30T18:04:54.379Z",
+  "updatedAt": "2026-10-30T18:24:59.078Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: Fresh applications must be completed, including fee payment, on or before 22nd November 2026",
+      "dates.notification": "Dated: 30.10.2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last date: Fresh applications must be completed, including fee payment, on or before 22nd November 2026”\n• Notification date: from “Dated: 30.10.2026”",
+  "publishedAt": "2026-10-30T18:24:59.078Z"
+}
