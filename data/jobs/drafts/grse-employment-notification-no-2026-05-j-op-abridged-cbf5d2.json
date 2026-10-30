@@ -1,0 +1,47 @@
+{
+  "id": "cbf5d2a2d4",
+  "slug": "grse-employment-notification-no-2026-05-j-op-abridged-cbf5d2",
+  "status": "draft",
+  "title": "GRSE Employment Notification No. 2026/05(J&OP) (Abridged Notification- English) ( | PDF | 708 KB | English)",
+  "organization": "GRSE — Careers",
+  "sourceId": "grse",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "10th"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-10-30",
+    "lastDate": "2026-11-28",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://grse.in/career/PDFs/2026_05%20(J&OP)_%20Abridged_%20English.pdf",
+    "official": "https://grse.in/career/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-30T21:18:37.696Z",
+  "updatedAt": "2026-10-30T21:18:37.696Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "Closing Date for Online registration: 28 Nov 2026",
+      "dates.applyStart": "Opening Date for Online registration: 30 Oct 2026",
+      "qualifications": "Essential Qualification (As on 01 Oct 2026) UR SC ST OBC EWS (a) Journeyman (Carpenter) 02 01 01 Matriculation (10 std. pass) with NAC / NTC in Carpenter / Wood Work Technician / Shipwright (Wood) trades (b) Journeyman (Crane Operator)"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Closing Date for Online registration: 28 Nov 2026”\n• Apply from: from “Opening Date for Online registration: 30 Oct 2026”\n• Qualification: from “Essential Qualification (As on 01 Oct 2026) UR SC ST OBC EWS (a) Journeyman (Carpenter) 02 01 01 Matriculation (10 std. pass) with NAC / NTC in Carpenter / Wood Work Technician / Shipwright (Wood) trades (b) Journeyman (Crane Operator)”"
+}
