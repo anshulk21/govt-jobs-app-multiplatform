@@ -32,8 +32,8 @@
     "method": "link-only",
     "fields": [],
     "evidence": {},
-    "error": "PDF not read (timeout)",
-    "tries": 1
+    "error": "PDF not read (ETIMEDOUT: )",
+    "tries": 2
   },
   "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (timeout))"
 }
