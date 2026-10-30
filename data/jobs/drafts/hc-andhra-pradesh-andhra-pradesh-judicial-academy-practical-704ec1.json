@@ -1,0 +1,41 @@
+{
+  "id": "704ec1fe74",
+  "slug": "hc-andhra-pradesh-andhra-pradesh-judicial-academy-practical-704ec1",
+  "status": "draft",
+  "title": "ANDHRA PRADESH JUDICIAL ACADEMY- PRACTICAL TRAINING- Nomination of 41 Civil Judges (Junior Division) to undergo Field/Practical training (Phase-1) in 06 Weeks from 08.11.2026…",
+  "organization": "High Court of Andhra Pradesh",
+  "sourceId": "hc-andhra-pradesh",
+  "level": "state",
+  "state": "AP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-27",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aphc.gov.in/docs/notification_1793360156_0.pdf",
+    "official": "https://aphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-30T12:18:50.701Z",
+  "updatedAt": "2026-10-30T12:18:50.701Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 27.08.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 27.08.2026”"
+}

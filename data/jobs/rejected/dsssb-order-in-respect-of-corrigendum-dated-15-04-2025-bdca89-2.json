@@ -1,0 +1,42 @@
+{
+  "id": "bdca8987b4",
+  "slug": "dsssb-order-in-respect-of-corrigendum-dated-15-04-2025-bdca89-2",
+  "status": "rejected",
+  "title": "Order: In respect of corrigendum dated 15.04.2025, advertised vacancies for recruitment to the post of Assistant Teacher (Nursery) in the Municipal Corporation of Delhi (MCD),…",
+  "organization": "Delhi Subordinate Services Selection Board",
+  "sourceId": "dsssb",
+  "level": "ut",
+  "state": "DL",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-04-15",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://dsssb.delhi.gov.in/node/74357",
+    "official": "https://dsssb.delhi.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-30T12:18:50.701Z",
+  "updatedAt": "2026-10-30T12:18:50.701Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 15.04.2025"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2025-04-15).",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated 15.04.2025”"
+}

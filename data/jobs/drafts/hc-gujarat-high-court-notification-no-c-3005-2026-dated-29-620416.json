@@ -1,0 +1,41 @@
+{
+  "id": "620416fc1d",
+  "slug": "hc-gujarat-high-court-notification-no-c-3005-2026-dated-29-620416",
+  "status": "draft",
+  "title": "High Court Notification No.C.3005/2026 dated 29.10.2026, regarding Oath Commissioner for the High Court of Gujarat",
+  "organization": "High Court of Gujarat",
+  "sourceId": "hc-gujarat",
+  "level": "state",
+  "state": "GJ",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-04-21",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gujarathighcourt.nic.in/hccms/sites/default/files/notifications/High_Court_Notification_No._C.3005-2026_dated_29.10.2026.pdf",
+    "official": "https://gujarathighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-30T12:18:50.701Z",
+  "updatedAt": "2026-10-30T12:18:50.701Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 21.04.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 21.04.2026”"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "739d7bdeab",
+  "slug": "hc-orissa-4th-national-lok-adalat-scheduled-to-be-held-on-12-739d7b",
+  "status": "published",
+  "title": "4th National Lok Adalat scheduled to be held on 12-12-2026 (Saturday)... 30/ Oct /2026",
+  "organization": "Orissa High Court",
+  "sourceId": "hc-orissa",
+  "level": "state",
+  "state": "OD",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "10th"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-05-16",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.orissahighcourt.nic.in/important-notices-pdf-view/notification/1270/",
+    "official": "https://www.orissahighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2025-05-16",
+      "url": "https://www.orissahighcourt.nic.in/important-notices-pdf-view/notification/1270/"
+    }
+  ],
+  "foundAt": "2026-10-30T12:18:50.701Z",
+  "updatedAt": "2026-10-30T12:38:35.570Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.notification": "dated 16th May, 2025",
+      "qualifications": "Eligibility Criteria for Direct Recruitment.- (1) Nationality.- A Candidate must be a Citizen of India; (2) Age Limit.-Every candidate applying for direct recruitment to the post of Court Manager must be at least 25 years age and not more"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 16th May, 2025”\n• Qualification: from “Eligibility Criteria for Direct Recruitment.- (1) Nationality.- A Candidate must be a Citizen of India; (2) Age Limit.-Every candidate applying for direct recruitment to the post of Court Manager must be at least 25 years age and not more”",
+  "publishedAt": "2026-10-30T12:38:35.570Z"
+}
