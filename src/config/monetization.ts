@@ -15,7 +15,7 @@ export const MONETIZATION = {
     },
     adsense: {
       /** Publisher ID. Also verifies the site with AdSense (meta tag + ads.txt), even while ads are off. */
-      client: 'ca-pub-7800926982608293',
+      client: 'ca-pub-2357021641338820',
       /** Ad unit (slot) IDs from AdSense → Ads → By ad unit. */
       slots: { inList: '', belowList: '', sidebar: '' },
     },
