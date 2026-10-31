@@ -1,0 +1,55 @@
+{
+  "id": "4aba4d0834",
+  "slug": "ongc-31-october-2026-advertisement-for-engagement-of-4aba4d",
+  "status": "published",
+  "title": "Advertisement for engagement of apprentices under The Apprentices Act, 1961, for FY 2026-27",
+  "organization": "ONGC",
+  "sourceId": "ongc",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "diploma"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-29",
+    "applyStart": null,
+    "lastDate": "2026-11-20",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ongcindia.com/documents/77751/2660534/Advertisement-engagement-Apprentices2026-27.pdf/e926a825-c08b-6403-60f1-ea0232bcaab8",
+    "official": "https://ongcindia.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-29",
+      "url": "https://ongcindia.com/documents/77751/2660534/Advertisement-engagement-Apprentices2026-27.pdf/e926a825-c08b-6403-60f1-ea0232bcaab8"
+    }
+  ],
+  "foundAt": "2026-10-31T09:18:46.828Z",
+  "updatedAt": "2026-10-31T09:36:52.960Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last Date of receipt of applications: 20.11.2026",
+      "dates.notification": "Date of Notification: 29.10.2026",
+      "qualifications": "qualification for engagement as Apprentices under The Apprentices Act 1961 (as amended from time to time) in the trade/disciplines mentioned below: A. Location and Tentative no. of vacancies Candidate to choose trade / location as per his /"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last Date of receipt of applications: 20.11.2026”\n• Notification date: from “Date of Notification: 29.10.2026”\n• Qualification: from “qualification for engagement as Apprentices under The Apprentices Act 1961 (as amended from time to time) in the trade/disciplines mentioned below: A. Location and Tentative no. of vacancies Candidate to choose trade / location as per his /”",
+  "publishedAt": "2026-10-31T09:36:52.960Z"
+}

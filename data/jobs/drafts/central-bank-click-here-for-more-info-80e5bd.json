@@ -1,0 +1,38 @@
+{
+  "id": "80e5bd2343",
+  "slug": "central-bank-click-here-for-more-info-80e5bd",
+  "status": "draft",
+  "title": "more info — Central Bank of India Recruitments",
+  "organization": "Central Bank of India — Recruitments",
+  "sourceId": "central-bank",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://centralbank.bank.in/sites/default/files/Image_010%20(9).pdf",
+    "official": "https://centralbank.bank.in/en/recruitments",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-31T09:18:46.828Z",
+  "updatedAt": "2026-10-31T09:18:46.828Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}
