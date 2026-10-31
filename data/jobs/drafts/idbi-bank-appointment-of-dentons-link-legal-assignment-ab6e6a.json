@@ -1,0 +1,38 @@
+{
+  "id": "ab6e6ae989",
+  "slug": "idbi-bank-appointment-of-dentons-link-legal-assignment-ab6e6a",
+  "status": "draft",
+  "title": "Appointment of Dentons Link Legal - Assignment Awarded on Nomination Basis",
+  "organization": "IDBI Bank — Current Openings",
+  "sourceId": "idbi-bank",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.idbi.bank.in/pdf/Appointment-of-Dentons-Link-Legal.pdf",
+    "official": "https://www.idbi.bank.in/idbi-bank-careers-current-openings.aspx",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-31T12:43:42.375Z",
+  "updatedAt": "2026-10-31T12:43:42.375Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

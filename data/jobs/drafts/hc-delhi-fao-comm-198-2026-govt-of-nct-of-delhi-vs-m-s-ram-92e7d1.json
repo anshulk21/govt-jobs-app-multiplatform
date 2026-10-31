@@ -1,0 +1,41 @@
+{
+  "id": "92e7d1e615",
+  "slug": "hc-delhi-fao-comm-198-2026-govt-of-nct-of-delhi-vs-m-s-ram-92e7d1",
+  "status": "draft",
+  "title": "FAO (COMM) - 198/2026, Govt of NCT of Delhi Vs M/S. RAM Krishan Yudhister Prakash, Judgment Date 31.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-05-08",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/77831102026FAOC1982026_122308.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-31T12:43:42.375Z",
+  "updatedAt": "2026-10-31T12:43:42.375Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 08.05.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 08.05.2026”"
+}

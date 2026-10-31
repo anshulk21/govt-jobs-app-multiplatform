@@ -1,0 +1,42 @@
+{
+  "id": "c84830b83c",
+  "slug": "hc-chhattisgarh-7-in-a-recruitment-process-shortlisting-of-c84830-2",
+  "status": "rejected",
+  "title": "In a recruitment process shortlisting of candidates can be resorted to even if there is no rule to this effect or there is no mention in the advertisement",
+  "organization": "High Court of Chhattisgarh",
+  "sourceId": "hc-chhattisgarh",
+  "level": "state",
+  "state": "CG",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-07-24",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://highcourt.cg.gov.in/Afr/view_file_afr.php?token=MzgxMjZ8MTc5MzQ1NDcxMg%3D%3D.c0d1c7b3eb5306180183dd9c9fbbefc2d836bccaed7e419af0e1a9d4a1355dcc",
+    "official": "https://highcourt.cg.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-31T12:43:42.375Z",
+  "updatedAt": "2026-10-31T12:43:42.375Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 24.07.2026"
+    }
+  },
+  "notes": "Rejected automatically: duplicate of hc-chhattisgarh-4-in-a-recruitment-process-shortlisting-of-acabba.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 24.07.2026”"
+}
