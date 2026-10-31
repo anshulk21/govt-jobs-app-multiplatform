@@ -1,0 +1,41 @@
+{
+  "id": "c2d839f246",
+  "slug": "hc-delhi-w-p-c-16066-2026-sudipa-roy-anr-vs-registrar-of-co-c2d839",
+  "status": "draft",
+  "title": "W.P.(C) - 16066/2026, Sudipa ROY & ANR. Vs Registrar of CO Operative Society & ANR., Judgment Date 30.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-05-15",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/78030102026CW160662026_183902.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-31T18:18:26.630Z",
+  "updatedAt": "2026-10-31T18:18:26.630Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 15.05.2025"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 15.05.2025”"
+}
