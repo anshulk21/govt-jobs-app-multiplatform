@@ -1,0 +1,41 @@
+{
+  "id": "c65134bc53",
+  "slug": "hc-chhattisgarh-3-prior-notice-under-section-80-of-c-p-c-is-c65134",
+  "status": "draft",
+  "title": "Prior notice under Section 80 of C.P.C. is not a condition precedent where no relief whatsoever is claimed against the Government officials impleaded as parties.",
+  "organization": "High Court of Chhattisgarh",
+  "sourceId": "hc-chhattisgarh",
+  "level": "state",
+  "state": "CG",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-28",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://highcourt.cg.gov.in/Afr/view_file_afr.php?token=MzgxMzV8MTc5MzU1MDQxMA%3D%3D.7b7c22f3fb8377706b0800d7ffe359e72fae338e6dfbc90e854ebbc9630167a0",
+    "official": "https://highcourt.cg.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-01T15:18:44.934Z",
+  "updatedAt": "2026-11-01T15:18:44.934Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 28.09.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 28.09.2026”"
+}
