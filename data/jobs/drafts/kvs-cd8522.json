@@ -1,0 +1,41 @@
+{
+  "id": "cd85224e61",
+  "slug": "kvs-cd8522",
+  "status": "draft",
+  "title": "महंगाई भत्ते की दरों में संशोधन के संबंध में। नई",
+  "organization": "Kendriya Vidyalaya Sangathan",
+  "sourceId": "kvs",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-04-22",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/11/2026110273.pdf",
+    "official": "https://kvs.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-02T09:19:27.895Z",
+  "updatedAt": "2026-11-02T09:19:27.895Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 22nd April, 2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 22nd April, 2026”"
+}
