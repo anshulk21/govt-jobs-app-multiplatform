@@ -1,0 +1,41 @@
+{
+  "id": "ed075a9ae5",
+  "slug": "hc-delhi-crl-a-1047-2026-hariom-vs-state-nct-of-delhi-ed075a",
+  "status": "draft",
+  "title": "CRL.A. - 1047/2026, HARIOM Vs STATE (NCT OF DELHI), Judgment date 02.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-05-15",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/SVN02112026CRLA10472026_210155.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-02T18:18:47.802Z",
+  "updatedAt": "2026-11-02T18:18:47.802Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 15th May, 2025"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 15th May, 2025”"
+}

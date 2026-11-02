@@ -1,0 +1,41 @@
+{
+  "id": "4b66a42f6d",
+  "slug": "nfl-4b66a4",
+  "status": "draft",
+  "title": "और पढ़ें...",
+  "organization": "National Fertilizers Ltd",
+  "sourceId": "nfl",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-24",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.nationalfertilizers.com/wp-content/uploads/2026/11/websitePriorintimation.pdf",
+    "official": "https://www.nationalfertilizers.com/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-02T18:18:47.802Z",
+  "updatedAt": "2026-11-02T18:18:47.802Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 24.09.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 24.09.2026”"
+}

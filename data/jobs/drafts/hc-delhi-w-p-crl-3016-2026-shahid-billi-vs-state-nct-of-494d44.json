@@ -1,0 +1,41 @@
+{
+  "id": "494d44aca5",
+  "slug": "hc-delhi-w-p-crl-3016-2026-shahid-billi-vs-state-nct-of-494d44",
+  "status": "draft",
+  "title": "W.p.(Crl) - 3016/2026, Shahid @ Billi Vs State (NCT of Delhi), Judgment Date 02.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-18",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/60802112026CRLW30162026_181630.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-02T18:18:47.802Z",
+  "updatedAt": "2026-11-02T18:18:47.802Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 18.09.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 18.09.2026”"
+}

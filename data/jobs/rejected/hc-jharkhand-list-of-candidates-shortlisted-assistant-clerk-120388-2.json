@@ -1,0 +1,42 @@
+{
+  "id": "1203885d08",
+  "slug": "hc-jharkhand-list-of-candidates-shortlisted-assistant-clerk-120388-2",
+  "status": "rejected",
+  "title": "➤ List of candidates shortlisted - Assistant/ Clerk of the Civil Courts in the State of Jharkhand - Advt. No. 05/Admn. Misc./2024. [13-03-2026] [PDF, 378 KB]",
+  "organization": "Jharkhand High Court",
+  "sourceId": "hc-jharkhand",
+  "level": "state",
+  "state": "JH",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-03-13",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jharkhandhighcourt.nic.in/new/display_pdf/recruitment/candidates_shortlisted_13032026.pdf",
+    "official": "https://jharkhandhighcourt.nic.in/new/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-02T18:18:47.802Z",
+  "updatedAt": "2026-11-02T18:18:47.802Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated : 13.03.2026"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2026-03-13).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated : 13.03.2026”"
+}

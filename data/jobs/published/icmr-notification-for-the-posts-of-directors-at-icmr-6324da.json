@@ -1,0 +1,55 @@
+{
+  "id": "6324dab225",
+  "slug": "icmr-notification-for-the-posts-of-directors-at-icmr-6324da",
+  "status": "published",
+  "title": "Notification for the posts of Directors at ICMR Institutes (Advt. No. ICMR/DIR/02/2026-R&PCell) Last Date: 30.11.2026 till 5:30 PM. The link for online application on the…",
+  "organization": "ICMR",
+  "sourceId": "icmr",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "medical"
+  ],
+  "ageLimit": null,
+  "fee": "₹1,500, nil for some categories",
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-11-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.icmr.gov.in/post/notification-for-the-posts-of-directors-at-icmr-institutes-advt-no-icmr-dir-02-2026-r-pcell-last-date-30-11-2026-till-5-30-pm-the-link-for-online-application-on-the-recruitment-portal-https-recruitment-icmr-org-in-shall-be-live-shortly",
+    "official": "https://www.icmr.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.icmr.gov.in/post/notification-for-the-posts-of-directors-at-icmr-institutes-advt-no-icmr-dir-02-2026-r-pcell-last-date-30-11-2026-till-5-30-pm-the-link-for-online-application-on-the-recruitment-portal-https-recruitment-icmr-org-in-shall-be-live-shortly"
+    }
+  ],
+  "foundAt": "2026-11-02T18:18:47.802Z",
+  "updatedAt": "2026-11-02T18:37:41.719Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "fee",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "LAST DATE FOR RECEIPT OF APPLICATIONS: 30.11.2026",
+      "fee": "Application Fee (non-refundable) of Rs.1500/- (Rupees one thousand five hundred only) is required. SC/ST/Women/PwD/EWS candidates are exempted from application fee. Application Fee is to be paid by ca",
+      "qualifications": "ESSENTIAL QUALIFICATIONS & EXPERIENCE: Name of Post Essential Qualification & Experience Director-National Institute of Malaria Research (NIMR), Dwarka, New Delhi+ By Direct Recruitment: i) Essential Qualification: MD/MS or equivalent degre"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “LAST DATE FOR RECEIPT OF APPLICATIONS: 30.11.2026”\n• Fee: from “Application Fee (non-refundable) of Rs.1500/- (Rupees one thousand five hundred only) is required. SC/ST/Women/PwD/EWS candidates are exempted from application fee. Application Fee is to be paid by ca”\n• Qualification: from “ESSENTIAL QUALIFICATIONS & EXPERIENCE: Name of Post Essential Qualification & Experience Director-National Institute of Malaria Research (NIMR), Dwarka, New Delhi+ By Direct Recruitment: i) Essential Qualification: MD/MS or equivalent degre”",
+  "publishedAt": "2026-11-02T18:37:41.719Z"
+}

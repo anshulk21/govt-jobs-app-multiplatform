@@ -1,0 +1,44 @@
+{
+  "id": "3af65815a1",
+  "slug": "hc-jharkhand-corrigendum-of-advt-05-admn-misc-2024-24-02-3af658-2",
+  "status": "rejected",
+  "title": "➤ Corrigendum of Advt. 05/Admn. Misc. /2024. [24-02-2026] [PDF, 247 KB]",
+  "organization": "Jharkhand High Court",
+  "sourceId": "hc-jharkhand",
+  "level": "state",
+  "state": "JH",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": 265,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-24",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jharkhandhighcourt.nic.in/new/display_pdf/recruitment/corrigendum_adv_05admn_misc_2024_24022026.pdf",
+    "official": "https://jharkhandhighcourt.nic.in/new/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-02T18:18:47.802Z",
+  "updatedAt": "2026-11-02T18:18:47.802Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 24.02.2026",
+      "vacancies": "265 vacancies"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2026-02-24).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 24.02.2026”\n• Vacancies: from “265 vacancies”"
+}

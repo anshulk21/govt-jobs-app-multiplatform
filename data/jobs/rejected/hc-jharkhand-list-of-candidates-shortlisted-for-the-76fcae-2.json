@@ -1,0 +1,42 @@
+{
+  "id": "76fcaed169",
+  "slug": "hc-jharkhand-list-of-candidates-shortlisted-for-the-76fcae-2",
+  "status": "rejected",
+  "title": "➤ List of candidates shortlisted for the Interview for the posts of Deposition Typist, Court Reader-cum-Deposition Writer and Typist/Copyist for Civil Courts of the State of…",
+  "organization": "Jharkhand High Court",
+  "sourceId": "hc-jharkhand",
+  "level": "state",
+  "state": "JH",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-04-18",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jharkhandhighcourt.nic.in/new/display_pdf/recruitment/Deposition_Typist_18042026.pdf",
+    "official": "https://jharkhandhighcourt.nic.in/new/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-02T18:18:47.802Z",
+  "updatedAt": "2026-11-02T18:18:47.802Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated : 18.04.2026"
+    }
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2026-04-18).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated : 18.04.2026”"
+}

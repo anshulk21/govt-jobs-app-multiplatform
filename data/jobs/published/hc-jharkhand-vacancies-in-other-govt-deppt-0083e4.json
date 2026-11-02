@@ -1,0 +1,51 @@
+{
+  "id": "0083e4f60c",
+  "slug": "hc-jharkhand-vacancies-in-other-govt-deppt-0083e4",
+  "status": "published",
+  "title": "Vacancies in other Govt. deppt.",
+  "organization": "Jharkhand High Court",
+  "sourceId": "hc-jharkhand",
+  "level": "state",
+  "state": "JH",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": 27,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-02",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jharkhandhighcourt.nic.in/new/vacancies_other_govt_dept",
+    "official": "https://jharkhandhighcourt.nic.in/new/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-02",
+      "url": "https://jharkhandhighcourt.nic.in/new/vacancies_other_govt_dept"
+    }
+  ],
+  "foundAt": "2026-11-02T18:18:47.802Z",
+  "updatedAt": "2026-11-02T18:37:41.719Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.notification": "dated: 02-11-2026",
+      "vacancies": "27 vacancies"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated: 02-11-2026”\n• Vacancies: from “27 vacancies”",
+  "publishedAt": "2026-11-02T18:37:41.719Z"
+}
