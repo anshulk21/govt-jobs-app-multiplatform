@@ -1,0 +1,51 @@
+{
+  "id": "8e574f5954",
+  "slug": "icmr-notice-for-interview-for-the-post-of-scientist-b-non-8e574f",
+  "status": "published",
+  "title": "Notice for Interview for the post of Scientist-B (Non-Medical) under CRMCH, New Chandrapur (Advt. No. ICMR/Rectt/CRMCH/01/2026-RPCell dated 03.06.2026) (Date: November 4, 2026)",
+  "organization": "ICMR",
+  "sourceId": "icmr",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": 3,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-02",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.icmr.gov.in/post/notice-for-interview-for-the-post-of-scientist-b-non-medical-under-crmch-new-chandrapur-advt-no-icmr-rectt-crmch-01-2026-rpcell-dated-03-06-2026-date-november-4-2026",
+    "official": "https://www.icmr.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-02",
+      "url": "https://www.icmr.gov.in/post/notice-for-interview-for-the-post-of-scientist-b-non-medical-under-crmch-new-chandrapur-advt-no-icmr-rectt-crmch-01-2026-rpcell-dated-03-06-2026-date-november-4-2026"
+    }
+  ],
+  "foundAt": "2026-11-02T12:18:51.619Z",
+  "updatedAt": "2026-11-02T12:37:57.796Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 02.11.2026",
+      "vacancies": "03 posts"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 02.11.2026”\n• Vacancies: from “03 posts”",
+  "publishedAt": "2026-11-02T12:37:57.796Z"
+}

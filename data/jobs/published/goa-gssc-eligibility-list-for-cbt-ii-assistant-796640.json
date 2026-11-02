@@ -1,0 +1,54 @@
+{
+  "id": "7966407cba",
+  "slug": "goa-gssc-eligibility-list-for-cbt-ii-assistant-796640",
+  "status": "published",
+  "title": "Eligibility list for CBT-II - Assistant Superintendent of Fisheries",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "diploma",
+    "postgraduate"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-26",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/recruitment/candidates/results/eligibility-list-for-cbt-ii-assistant-superintendent-of-fisheries.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-08-26",
+      "url": "https://gssc.goa.gov.in/docs/recruitment/candidates/results/eligibility-list-for-cbt-ii-assistant-superintendent-of-fisheries.pdf"
+    }
+  ],
+  "foundAt": "2026-11-02T12:18:51.619Z",
+  "updatedAt": "2026-11-02T12:37:57.796Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.notification": "dated 26/08/2026",
+      "qualifications": "ELIGIBILITY LIST FOR TWO TIER CBT II FOR THE POST OF ASSISTANT SUPERINTENDENT OF FISHERIES Note: 1) In cases where two or more candidates have secured same marks, the order of merit has been determined as per the date of birth of the respec"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 26/08/2026”\n• Qualification: from “ELIGIBILITY LIST FOR TWO TIER CBT II FOR THE POST OF ASSISTANT SUPERINTENDENT OF FISHERIES Note: 1) In cases where two or more candidates have secured same marks, the order of merit has been determined as per the date of birth of the respec”",
+  "publishedAt": "2026-11-02T12:37:57.796Z"
+}

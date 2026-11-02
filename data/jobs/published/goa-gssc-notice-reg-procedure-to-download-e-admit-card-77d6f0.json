@@ -1,0 +1,55 @@
+{
+  "id": "77d6f00248",
+  "slug": "goa-gssc-notice-reg-procedure-to-download-e-admit-card-77d6f0",
+  "status": "published",
+  "title": "Notice reg. procedure to e-Admit Card",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-22",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-procedure-to-download-e-admit-card.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-22",
+      "url": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-procedure-to-download-e-admit-card.pdf"
+    },
+    {
+      "stage": "admit-card",
+      "date": "2026-11-02",
+      "url": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-procedure-to-download-e-admit-card.pdf"
+    }
+  ],
+  "foundAt": "2026-11-02T12:18:51.619Z",
+  "updatedAt": "2026-11-02T12:37:57.796Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 22/10/2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 22/10/2026”",
+  "publishedAt": "2026-11-02T12:37:57.796Z"
+}

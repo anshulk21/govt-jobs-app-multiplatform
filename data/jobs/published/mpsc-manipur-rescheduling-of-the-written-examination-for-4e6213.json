@@ -1,0 +1,51 @@
+{
+  "id": "4e62136439",
+  "slug": "mpsc-manipur-rescheduling-of-the-written-examination-for-4e6213",
+  "status": "published",
+  "title": "Rescheduling of the written examination for recruitment of Assistant Engineer/ Manager (Civil/ Electrical). New",
+  "organization": "Manipur Public Service Commission",
+  "sourceId": "mpsc-manipur",
+  "level": "state",
+  "state": "MN",
+  "category": "PSC",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-02",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mpscmanipur.gov.in/files/Reschedule%20of%20AE_%20Examination.pdf",
+    "official": "https://mpscmanipur.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-02",
+      "url": "https://mpscmanipur.gov.in/files/Reschedule%20of%20AE_%20Examination.pdf"
+    }
+  ],
+  "foundAt": "2026-11-02T12:18:51.619Z",
+  "updatedAt": "2026-11-02T12:37:57.796Z",
+  "extraction": {
+    "method": "link-only",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated: 02/11/2026"
+    },
+    "error": "PDF has no text layer (probably scanned)"
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Only the link was read. Fill in the details from the official notification.\n• Notification date: from “dated: 02/11/2026”\n(PDF has no text layer (probably scanned))",
+  "publishedAt": "2026-11-02T12:37:57.796Z"
+}

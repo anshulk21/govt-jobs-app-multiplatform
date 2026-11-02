@@ -1,0 +1,41 @@
+{
+  "id": "15923599f6",
+  "slug": "hc-delhi-w-p-crl-3288-2026-raj-kumar-vs-state-nct-of-delhi-159235",
+  "status": "draft",
+  "title": "W.p.(Crl) - 3288/2026, RAJ Kumar Vs State (NCT of Delhi), Judgment Date 29.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-04-19",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/NAC29102026CRLW32882026_161832.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-02T12:18:51.619Z",
+  "updatedAt": "2026-11-02T12:18:51.619Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 19.04.2026"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 19.04.2026”"
+}

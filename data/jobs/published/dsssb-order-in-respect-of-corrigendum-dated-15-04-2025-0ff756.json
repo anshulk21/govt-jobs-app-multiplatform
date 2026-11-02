@@ -1,0 +1,50 @@
+{
+  "id": "0ff756a263",
+  "slug": "dsssb-order-in-respect-of-corrigendum-dated-15-04-2025-0ff756",
+  "status": "published",
+  "title": "Order: In respect of corrigendum dated 15.04.2025, advertised vacancies for recruitment to the post of Assistant Teacher (Nursery) in the MCD, DOE and NDMC under Post Code…",
+  "organization": "Delhi Subordinate Services Selection Board",
+  "sourceId": "dsssb",
+  "level": "ut",
+  "state": "DL",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-04-15",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://dsssb.delhi.gov.in/dsssb/order-respect-corrigendum-dated-15042025-advertised-vacancies-recruitment-post-assistant",
+    "official": "https://dsssb.delhi.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2025-04-15",
+      "url": "https://dsssb.delhi.gov.in/dsssb/order-respect-corrigendum-dated-15042025-advertised-vacancies-recruitment-post-assistant"
+    }
+  ],
+  "foundAt": "2026-11-02T12:18:51.619Z",
+  "updatedAt": "2026-11-02T12:37:57.796Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 15.04.2025"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated 15.04.2025”",
+  "publishedAt": "2026-11-02T12:37:57.796Z"
+}

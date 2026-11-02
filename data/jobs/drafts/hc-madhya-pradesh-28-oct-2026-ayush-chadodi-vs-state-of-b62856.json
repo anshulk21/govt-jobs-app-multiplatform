@@ -1,0 +1,45 @@
+{
+  "id": "b628563370",
+  "slug": "hc-madhya-pradesh-28-oct-2026-ayush-chadodi-vs-state-of-b62856",
+  "status": "draft",
+  "title": "Ayush Chadodi Vs State of Madhya Pradesh Through Principal Secretary Department of Medical Education - WP/43534/2026 Bench Indore",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": 2026,
+  "qualifications": [
+    "postgraduate"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/indore/MPHCIND/2026/WP/43534/WP_43534_2026_FinalOrder_28-10-2026.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-02T12:18:51.619Z",
+  "updatedAt": "2026-11-02T12:18:51.619Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "vacancies",
+      "qualifications"
+    ],
+    "evidence": {
+      "vacancies": "2026 seats",
+      "qualifications": "qualifications required by the National Medical Commission to pursue postgraduate medical education. 3. The petitioners appeared for the National Eligibility-cum- Entrance Test for Postgraduate courses (NEET-PG 2026) conducted on August 30,"
+    }
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Vacancies: from “2026 seats”\n• Qualification: from “qualifications required by the National Medical Commission to pursue postgraduate medical education. 3. The petitioners appeared for the National Eligibility-cum- Entrance Test for Postgraduate courses (NEET-PG 2026) conducted on August 30,”"
+}
