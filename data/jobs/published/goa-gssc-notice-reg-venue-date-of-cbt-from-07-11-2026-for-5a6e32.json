@@ -1,0 +1,50 @@
+{
+  "id": "5a6e3237e4",
+  "slug": "goa-gssc-notice-reg-venue-date-of-cbt-from-07-11-2026-for-5a6e32",
+  "status": "published",
+  "title": "Notice reg. Venue & Date of CBT from 07.11.2026 - for the various posts - Advertisement No. 3 of Year 2026",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-03",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-venue-date-of-cbt-from-07-11-2026-for-the-various-posts-advertisement-no-3-of-year-2026.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-03",
+      "url": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-venue-date-of-cbt-from-07-11-2026-for-the-various-posts-advertisement-no-3-of-year-2026.pdf"
+    }
+  ],
+  "foundAt": "2026-11-03T06:18:52.735Z",
+  "updatedAt": "2026-11-03T06:38:44.574Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 03/11/2026"
+    }
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 03/11/2026”",
+  "publishedAt": "2026-11-03T06:38:44.574Z"
+}
