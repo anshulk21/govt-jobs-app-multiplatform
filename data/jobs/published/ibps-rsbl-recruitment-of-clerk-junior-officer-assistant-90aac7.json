@@ -1,0 +1,51 @@
+{
+  "id": "90aac7acb9",
+  "slug": "ibps-rsbl-recruitment-of-clerk-junior-officer-assistant-90aac7",
+  "status": "published",
+  "title": "RSBL Recruitment of Clerk (Junior Officer), Assistant Branch Manager & Assistant Manager-IT Registration From 30-Oct-2026",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-10-30",
+    "lastDate": "2026-11-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ibpsreg.ibps.in/rsblrsep26/",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://ibpsreg.ibps.in/rsblrsep26/"
+    }
+  ],
+  "foundAt": "2026-11-03T09:18:46.020Z",
+  "updatedAt": "2026-11-03T09:27:46.407Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for printing your application 30/11/2026",
+      "dates.applyStart": "Commencement of online registration of application 30/10/2026"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date for printing your application 30/11/2026”\n• Apply from: from “Commencement of online registration of application 30/10/2026”",
+  "publishedAt": "2026-11-03T09:27:46.407Z"
+}

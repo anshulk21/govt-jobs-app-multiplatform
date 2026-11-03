@@ -1,0 +1,51 @@
+{
+  "id": "a7a3a273e4",
+  "slug": "ibps-cwc-recruitment-of-various-posts-registration-from-17-a7a3a2",
+  "status": "published",
+  "title": "CWC Recruitment of Various Posts Registration From 17-Oct-2026",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-10-17",
+    "lastDate": "2026-11-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ibpsreg.ibps.in/cwcaug26/",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://ibpsreg.ibps.in/cwcaug26/"
+    }
+  ],
+  "foundAt": "2026-11-03T09:18:46.020Z",
+  "updatedAt": "2026-11-03T09:27:46.407Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for printing your application 30/11/2026",
+      "dates.applyStart": "Commencement of online registration of application 17/10/2026"
+    }
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date for printing your application 30/11/2026”\n• Apply from: from “Commencement of online registration of application 17/10/2026”",
+  "publishedAt": "2026-11-03T09:27:46.407Z"
+}
