@@ -1,0 +1,38 @@
+{
+  "id": "a43d8c0326",
+  "slug": "oil-india-oil-s-debarred-vendors-list-a43d8c",
+  "status": "draft",
+  "title": "Oil's Debarred Vendors List — Oil India Current Openings",
+  "organization": "Oil India — Current Openings",
+  "sourceId": "oil-india",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.oil-india.com/files/2026-11/BLOCKED_VENDOR_LIST_03_11_2026.pdf",
+    "official": "https://www.oil-india.com/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-03T10:59:30.349Z",
+  "updatedAt": "2026-11-03T10:59:30.349Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}
