@@ -1,0 +1,38 @@
+{
+  "id": "bd8f46063a",
+  "slug": "coal-india-submission-of-life-certificate-by-cprms-ne-cprmse-bd8f46",
+  "status": "draft",
+  "title": "Submission of Life Certificate by CPRMS(NE) & CPRMSE beneficiaries",
+  "organization": "Coal India Ltd",
+  "sourceId": "coal-india",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://d3u7ubx0okog7j.cloudfront.net/documents/Life_Certificate_Submission_CPRMSNE.pdf",
+    "official": "https://www.coalindia.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-03T02:57:22.743Z",
+  "updatedAt": "2026-11-03T02:57:22.743Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}
