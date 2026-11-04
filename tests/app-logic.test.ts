@@ -1,8 +1,8 @@
 // Pure logic used by the app and website (no React Native needed).
 import { describe, expect, it } from 'vitest';
 import { categoryFromSlug, categorySlug } from '../src/core/constants';
-import { byUrgency, closingSoon, daysLeft, filterJobs, formatDate, isExpired, matchesPreferences, matchesQuery, newToday, openCounts, todayIST } from '../src/core/jobs';
-import type { JobSummary } from '../src/core/types';
+import { byUrgency, closingSoon, daysLeft, filterJobs, formatDate, isExpired, isIndexable, knownDetails, matchesPreferences, matchesQuery, newToday, openCounts, todayIST } from '../src/core/jobs';
+import type { Job, JobSummary } from '../src/core/types';
 import { translate } from '../src/lib/i18n';
 import { buildIcs, reminderTimes } from '../src/lib/reminder-times';
 import { ageOn, checkEligibility, parseIndianDate } from '../src/lib/tools/age';
@@ -80,6 +80,18 @@ describe('"For you" matching', () => {
     expect(matchesPreferences(job({}), { ...prefs, categories: ['Teaching'] })).toBe(false);
     expect(matchesPreferences(job({ qualifications: ['graduate'] }), prefs)).toBe(false);
     expect(matchesPreferences(job({ qualifications: [] }), prefs)).toBe(true);
+  });
+});
+
+describe('indexable job pages', () => {
+  const job = (over: Partial<Job>): Job =>
+    ({ vacancies: null, qualifications: [], ageLimit: null, fee: null, howToApply: null, dates: { notification: '2026-10-01', applyStart: null, lastDate: null, exam: null }, ...over }) as Job;
+
+  it('needs at least two real facts; a notification date alone does not count', () => {
+    expect(knownDetails(job({}))).toBe(0);
+    expect(isIndexable(job({ vacancies: 45 }))).toBe(false);
+    expect(isIndexable(job({ vacancies: 45, dates: { notification: null, applyStart: null, lastDate: '2026-11-20', exam: null } }))).toBe(true);
+    expect(isIndexable(job({ qualifications: ['graduate'], fee: '₹100' }))).toBe(true);
   });
 });
 

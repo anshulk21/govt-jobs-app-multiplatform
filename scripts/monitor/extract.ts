@@ -107,7 +107,7 @@ const LABELS = {
 
 // "Total No. of Posts: 1,234", "Total Vacancies - 12000", "No. of vacancies: 45", "12,000 posts"
 const VACANCY_PATTERNS = [
-  /(?:total\s+(?:no\.?\s*(?:of\s+)?)?(?:posts?|vacanc(?:y|ies))|no\.?\s*of\s+(?:posts?|vacanc(?:y|ies))|number\s+of\s+(?:(?:training\s+)?seats|posts?|vacanc(?:y|ies)))\s*[:\-–=]?\s*(\d{1,3}(?:,\d{2,3})+|\d+)/i,
+  /(?:total\s+(?:no\.?\s*(?:of\s+)?)?(?:posts?|vacanc(?:y|ies))|no\.?\s*of\s+(?:posts?|vacanc(?:y|ies))|number\s+of\s+(?:(?:training\s+)?seats|posts?|positions?|vacanc(?:y|ies)))\s*[:\-–=]?\s*(\d{1,3}(?:,\d{2,3})+|\d+)/i,
   /\b(\d{1,3}(?:,\d{2,3})+|\d{2,6})\s+(?:posts|vacancies|seats)\b/i,
 ];
 
@@ -128,7 +128,10 @@ function findAgeLimit(text: string): { value: string; evidence: string } | null 
     const hi = Number(m[2]);
     if (lo >= 14 && hi <= 70 && lo < hi) return { value: `${lo}–${hi} years`, evidence: squash(m[0]) };
   }
-  const max = text.match(/(?:maximum|upper)\s+age(?:\s+limit)?[^.\n]{0,40}?(\d{2})\s*years?/i);
+  const max =
+    text.match(/(?:maximum|upper)\s+age(?:\s+limit)?[^.\n]{0,40}?(\d{2})\s*years?/i) ??
+    // "Age Limit: Candidate should be below 45 years", "age should not exceed 40 years"
+    text.match(/age\s*limit[^.\n]{0,60}?(?:below|not\s+(?:be\s+)?(?:more\s+than|exceed(?:ing)?|above)|up\s*to)\s*(\d{2})\s*years?/i);
   if (max && Number(max[1]) >= 18 && Number(max[1]) <= 70) return { value: `Up to ${Number(max[1])} years`, evidence: squash(max[0]) };
   return null;
 }

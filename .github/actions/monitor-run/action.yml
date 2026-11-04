@@ -25,6 +25,15 @@ runs:
     - shell: bash
       run: npm ci
 
+    - name: Install OCR for scanned PDFs
+      # Free (tesseract + poppler). Without them scanned notices just stay unread, so never fail on this.
+      shell: bash
+      continue-on-error: true
+      run: |
+        if ! command -v tesseract >/dev/null || ! command -v pdftoppm >/dev/null; then
+          sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-hin poppler-utils
+        fi
+
     - name: Run monitor
       shell: bash
       run: npm run monitor -- ${{ inputs.args }}

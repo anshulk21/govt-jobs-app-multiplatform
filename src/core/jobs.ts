@@ -37,6 +37,27 @@ export function latestStage(job: Pick<Job, 'timeline'>): StageId {
   return STAGES[best]!.id;
 }
 
+/** How many of the main facts (posts, qualification, age, fee, dates, how to apply) a job page shows, not "See official notification". */
+export function knownDetails(job: Job): number {
+  const { dates } = job;
+  return [
+    job.vacancies != null,
+    job.qualifications.length > 0,
+    !!job.ageLimit,
+    !!job.fee,
+    !!dates.lastDate,
+    !!(dates.applyStart || dates.exam),
+    !!job.howToApply,
+  ].filter(Boolean).length;
+}
+
+/**
+ * Job pages with fewer facts than this are kept out of search engines (noindex, not in the sitemap):
+ * a page that only links to the notice is "low value content" to Google and AdSense.
+ */
+export const MIN_DETAILS_TO_INDEX = 2;
+export const isIndexable = (job: Job) => knownDetails(job) >= MIN_DETAILS_TO_INDEX;
+
 export function toSummary(job: Job): JobSummary {
   return {
     slug: job.slug,

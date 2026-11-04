@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { extractDetails } from '../scripts/monitor/extract';
-import { htmlToText, looksLikeListing, mergeExtracted, pickNoticePdf } from '../scripts/monitor/notice';
+import { htmlToText, looksLikeListing, mergeExtracted, pickNoticePdf, READER, tableFacts } from '../scripts/monitor/notice';
 import { fillMissing, MAX_TRIES, needsDetails } from '../scripts/monitor/enrich';
 import type { Job } from '../src/core/types';
 
@@ -29,6 +29,25 @@ describe('notice pages', () => {
     ];
     expect(pickNoticePdf(links, 'Engagement of Graduate Apprentices')).toBe('https://x.in/d/notification-en');
     expect(pickNoticePdf([{ url: 'https://x.in/about', text: 'About' }], 'Clerk')).toBeNull();
+  });
+
+  it('picks a PDF with vague link text, and a download link to the advertisement without .pdf', () => {
+    expect(pickNoticePdf([{ url: 'https://x.gov.in/uploads/2026/10/1793.pdf', text: 'View (314 KB)' }], 'Tourism Sector Expert')).toBe(
+      'https://x.gov.in/uploads/2026/10/1793.pdf',
+    );
+    const links = [
+      { url: 'https://bank.in/download-centers', text: 'DOWNLOAD CENTER' },
+      { url: 'https://bank.in/documents/d/guest/apprenticeship-advertisement-2026-27', text: 'Click Here to Download English Version' },
+    ];
+    expect(pickNoticePdf(links, 'Engagement of Graduate Apprentices 2026-27')).toBe(links[1]!.url);
+  });
+
+  it("reads a notice page's one-row details table, but not a listing of several notices", () => {
+    const head = '<tr><th>Title</th><th>Start Date</th><th>End Date</th><th>File</th></tr>';
+    const row = (end: string) => `<tr><td>Advertisement</td><td>29/10/2026</td><td>${end}</td><td>View</td></tr>`;
+    expect(tableFacts(`<table>${head}${row('25/11/2026')}</table>`)).toBe('Date of publication: 29/10/2026\nLast date: 25/11/2026');
+    expect(tableFacts(`<table>${head}${row('25/11/2026')}${row('30/11/2026')}</table>`)).toBe('');
+    expect(extractDetails(tableFacts(`<table>${head}${row('25/11/2026')}</table>`), '2026-10-29').dates.lastDate).toBe('2026-11-25');
   });
 
   it('merges page details into PDF details without overriding the PDF', () => {
@@ -73,10 +92,18 @@ describe('enrich', () => {
 
   it('only retries recent jobs with nothing read yet, a web link, and tries left', () => {
     expect(needsDetails(job(), now)).toBe(true);
-    expect(needsDetails(job({ extraction: { method: 'pdf-regex', fields: ['vacancies'], evidence: {} } }), now)).toBe(false);
-    expect(needsDetails(job({ extraction: { method: 'link-only', fields: [], evidence: {}, tries: MAX_TRIES } }), now)).toBe(false);
+    expect(needsDetails(job({ extraction: { method: 'pdf-regex', fields: ['vacancies'], evidence: {}, reader: READER } }), now)).toBe(false);
+    expect(needsDetails(job({ extraction: { method: 'link-only', fields: [], evidence: {}, tries: MAX_TRIES, reader: READER } }), now)).toBe(false);
     expect(needsDetails(job({ foundAt: '2026-06-01T00:00:00.000Z' }), now)).toBe(false);
     expect(needsDetails(job({ links: { notification: 'javascript:x', official: '', apply: null } }), now)).toBe(false);
+  });
+
+  it('tries every recent job once more when the reader is newer, even partly filled ones', () => {
+    const old = (over: Partial<Job['extraction']>) => job({ extraction: { method: 'link-only', fields: [], evidence: {}, ...over } });
+    expect(needsDetails(old({ tries: MAX_TRIES }), now)).toBe(true);
+    expect(needsDetails(old({ fields: ['vacancies'] }), now)).toBe(true);
+    expect(needsDetails(old({ tries: MAX_TRIES, reader: READER }), now)).toBe(false);
+    expect(needsDetails(old({ fields: ['vacancies'], reader: READER }), now)).toBe(false);
   });
 
   it('fills only empty fields and never overwrites what the admin typed', () => {
@@ -85,7 +112,7 @@ describe('enrich', () => {
     const next = fillMissing(typed, found, 'page-regex', '2026-10-23T00:00:00.000Z')!;
     expect(next.vacancies).toBe(10);
     expect(next.dates.lastDate).toBe('2026-11-15');
-    expect(next.extraction).toMatchObject({ method: 'page-regex', fields: ['dates.lastDate'] });
+    expect(next.extraction).toMatchObject({ method: 'page-regex', fields: ['dates.lastDate'], reader: READER });
     expect(next.updatedAt).toBe('2026-10-23T00:00:00.000Z');
   });
 

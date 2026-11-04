@@ -56,6 +56,14 @@ describe('extractDetails', () => {
   });
 });
 
+describe('extractDetails: positions and "below" age limits', () => {
+  it('reads "Number of positions" and "should be below 45 years"', () => {
+    const d = extractDetails('2. Number of positions 1 (One) 3. Age Limit Candidate should be below 45 years as on 01.11.2026', '2026-10-29');
+    expect(d.vacancies).toBe(1);
+    expect(d.ageLimit).toBe('Up to 45 years');
+  });
+});
+
 describe('extractDetails date labels', () => {
   it('reads a date on the line after a bare label (PDF tables)', () => {
     expect(extractDetails('Last Date:\n30/11/2026\nOther stuff').dates.lastDate).toBe('2026-11-30');

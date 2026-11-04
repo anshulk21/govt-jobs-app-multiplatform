@@ -7,7 +7,7 @@ import type { Job } from '../../src/core/types';
 import { fetchWithRetry } from '../lib/http';
 import { extractDetails, findDates, type Extracted } from './extract';
 import { extractLinks, isPdfUrl, type PageLink } from './links';
-import { pdfToText } from './pdf';
+import { ocrPdf, pdfToText } from './pdf';
 
 export interface NoticeDeps {
   timeoutMs: number;
@@ -27,6 +27,9 @@ export interface NoticeResult {
   error?: string;
 }
 
+/** Version of this reader. Bump when it finds more (new page layouts, OCR…): enrich then reads old jobs again. */
+export const READER = 2;
+
 const MAX_PAGE_BYTES = 3 * 1024 * 1024;
 /** Readable text of a web page: no menus, headers, footers or scripts; one line per block. */
 export function htmlToText(html: string): string {
@@ -42,6 +45,32 @@ export function htmlToText(html: string): string {
     .map((l) => l.replace(/[ \t\u00a0]+/g, ' ').replace(/\s*\|\s*$/, '').trim())
     .filter(Boolean)
     .join('\n');
+}
+
+// Header cells of a notice's details table and the label extract.ts knows them by. gov.in (S3WaaS)
+// notice pages show "Title | Description | Start Date | End Date | File" over one row of values.
+const TABLE_LABELS: [RegExp, string][] = [
+  [/^(?:end|last|closing)\s+date$/i, 'Last date'],
+  [/^(?:start|publish(?:ed)?)\s+date$/i, 'Date of publication'],
+];
+
+/** A notice page's one-row details table as "Label: value" lines, e.g. "Last date: 25/11/2026". */
+export function tableFacts(html: string): string {
+  const $ = cheerio.load(html);
+  const out: string[] = [];
+  $('table').each((_, table) => {
+    const rows = $(table)
+      .find('tr')
+      .toArray()
+      .map((tr) => $(tr).children('th, td').toArray().map((c) => $(c).text().replace(/\s+/g, ' ').trim()));
+    // More rows would be a listing of several notices, whose dates aren't this job's.
+    if (rows.length !== 2 || rows[0]!.length !== rows[1]!.length) return;
+    rows[0]!.forEach((head, i) => {
+      const label = TABLE_LABELS.find(([re]) => re.test(head))?.[1];
+      if (label && rows[1]![i]) out.push(`${label}: ${rows[1]![i]}`);
+    });
+  });
+  return out.join('\n');
 }
 
 const LAST_DATE_LABEL = /last\s+date|closing\s+date/gi;
@@ -60,6 +89,11 @@ export function looksLikeListing(text: string): boolean {
 }
 
 const NOTICE_WORDS = /advt|advertisement|notification|detailed|notice|vacanc|recruitment|download/i;
+// "View (314 KB)", "Download", "Click here": the only text many gov.in notice pages give their PDF.
+const VAGUE_TEXT = /^\s*(?:view|download|open|click\s+here)\b/i;
+// Links to the notice that don't look like PDFs: "Click Here to Download English Version" -> /documents/d/guest/apprenticeship-advertisement-2026-27
+const DOWNLOAD_TEXT = /\b(?:download|view)\b/i;
+const NOTICE_DOC = /advt|advertisement|notification|english/i;
 const words = (s: string) => new Set(s.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 2));
 
 /** The PDF on a notice page most likely to be the notification itself: notice-like, and sharing the most words with the title. */
@@ -73,8 +107,10 @@ export function pickNoticePdf(links: PageLink[], title: string): string | null {
     // The English version reads better than the Hindi one.
     return shared + (/english/i.test(text) ? 2 : 0) - (/hindi/i.test(text) ? 2 : 0);
   };
+  const isNotice = (l: PageLink) =>
+    isPdf(l) ? NOTICE_WORDS.test(`${l.text} ${l.url}`) || VAGUE_TEXT.test(l.text) : DOWNLOAD_TEXT.test(l.text) && NOTICE_DOC.test(`${l.text} ${l.url}`);
   const pdfs = links
-    .filter((l) => isPdf(l) && NOTICE_WORDS.test(`${l.text} ${l.url}`))
+    .filter(isNotice)
     .map((l) => ({ url: l.url, score: score(l) }))
     .sort((a, b) => b.score - a.score);
   return pdfs[0]?.url ?? null;
@@ -107,18 +143,33 @@ export function mergeExtracted(primary: Extracted, extra: Extracted): Extracted 
   return out;
 }
 
-async function pdfDetails(bytes: Uint8Array, deps: NoticeDeps): Promise<{ extracted: Extracted | null; error?: string }> {
+/** Scanned PDFs are read by OCR, which is slow: only their first pages, where the key details are. */
+const OCR_PAGES = 3;
+const hasText = (text: string) => text.replace(/-- \d+ of \d+ --/g, '').replace(/\s/g, '').length >= 50;
+
+interface PdfRead {
+  extracted: Extracted | null;
+  error?: string;
+  ocr?: boolean;
+}
+
+async function pdfDetails(bytes: Uint8Array, deps: NoticeDeps): Promise<PdfRead> {
+  if (new TextDecoder().decode(bytes.slice(0, 1024)).indexOf('%PDF-') === -1) return { extracted: null, error: 'Linked file is not a PDF' };
   try {
     const { text } = await pdfToText(bytes, deps.pdfMaxPages);
     // pdf-parse adds "-- 1 of 10 --" page markers even when the pages are only images.
-    if (text.replace(/-- \d+ of \d+ --/g, '').replace(/\s/g, '').length < 50) return { extracted: null, error: 'PDF has no text layer (probably scanned)' };
-    return { extracted: extractDetails(text, deps.foundOn) };
+    if (hasText(text)) return { extracted: extractDetails(text, deps.foundOn) };
+    const ocr = await ocrPdf(bytes, OCR_PAGES).catch(() => null);
+    if (ocr && hasText(ocr)) return { extracted: extractDetails(ocr, deps.foundOn), ocr: true };
+    return { extracted: null, error: ocr === null ? 'PDF has no text layer (probably scanned)' : 'Scanned PDF, OCR found no text' };
   } catch (err) {
     return { extracted: null, error: `PDF could not be parsed (${(err as Error).message})` };
   }
 }
 
-async function fetchPdf(url: string, deps: NoticeDeps): Promise<{ extracted: Extracted | null; error?: string }> {
+const pdfMethod = (r: PdfRead): Job['extraction']['method'] => (r.extracted ? (r.ocr ? 'pdf-ocr' : 'pdf-regex') : 'link-only');
+
+async function fetchPdf(url: string, deps: NoticeDeps): Promise<PdfRead> {
   if (!(await deps.isAllowed(url))) return { extracted: null, error: 'PDF not read (robots.txt disallows)' };
   if (!deps.takePdf()) return { extracted: null, error: 'PDF not read (per-run PDF limit reached)' };
   await deps.throttle(url);
@@ -129,8 +180,8 @@ async function fetchPdf(url: string, deps: NoticeDeps): Promise<{ extracted: Ext
 
 export async function readNotice(url: string, title: string, deps: NoticeDeps): Promise<NoticeResult> {
   if (isPdfUrl(url)) {
-    const { extracted, error } = await fetchPdf(url, deps);
-    return { extracted, method: extracted ? 'pdf-regex' : 'link-only', error };
+    const read = await fetchPdf(url, deps);
+    return { extracted: read.extracted, method: pdfMethod(read), error: read.error };
   }
   if (!(await deps.isAllowed(url))) return { extracted: null, method: 'link-only', error: 'Page not read (robots.txt disallows)' };
   await deps.throttle(url);
@@ -140,12 +191,12 @@ export async function readNotice(url: string, title: string, deps: NoticeDeps): 
   // Links like ".../release/744118" often serve the PDF itself.
   if (/application\/pdf/i.test(r.contentType ?? '') || new TextDecoder().decode(r.bytes.slice(0, 5)) === '%PDF-') {
     if (!deps.takePdf()) return { extracted: null, method: 'link-only', error: 'PDF not read (per-run PDF limit reached)' };
-    const { extracted, error } = await pdfDetails(r.bytes, deps);
-    return { extracted, method: extracted ? 'pdf-regex' : 'link-only', error };
+    const read = await pdfDetails(r.bytes, deps);
+    return { extracted: read.extracted, method: pdfMethod(read), error: read.error };
   }
 
   const html = new TextDecoder().decode(r.bytes);
-  const text = htmlToText(html);
+  const text = [tableFacts(html), htmlToText(html)].filter(Boolean).join('\n');
   // A listing page's dates belong to other notices; only its linked PDF can be trusted.
   const fromPage = looksLikeListing(text) ? null : extractDetails(text, deps.foundOn);
   const pdfUrl = pickNoticePdf(extractLinks(html, r.finalUrl ?? url), title);
@@ -153,7 +204,7 @@ export async function readNotice(url: string, title: string, deps: NoticeDeps): 
 
   if (hasFacts(fromPdf?.extracted ?? null)) {
     const pdf = fromPdf!.extracted!;
-    return { extracted: hasFacts(fromPage) ? mergeExtracted(pdf, fromPage) : pdf, method: 'pdf-regex' };
+    return { extracted: hasFacts(fromPage) ? mergeExtracted(pdf, fromPage) : pdf, method: pdfMethod(fromPdf!) };
   }
   if (hasFacts(fromPage)) return { extracted: fromPage, method: 'page-regex' };
   return { extracted: null, method: 'link-only', error: fromPdf?.error };

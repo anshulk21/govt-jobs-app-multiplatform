@@ -7,7 +7,7 @@ export const APP = {
   siteUrl: 'https://govtjobsfinder.com',
   /** Google Play link, shown in the website's "Get the app" banner. Leave empty to hide the banner. */
   playStoreUrl: '',
-  contactEmail: 'contact@example.com',
+  contactEmail: 'a69032085@gmail.com',
   /** GitHub repository (owner/name) the admin panel (/admin) saves to. */
   githubRepo: 'anshulk21/govt-jobs-app-multiplatform',
 };

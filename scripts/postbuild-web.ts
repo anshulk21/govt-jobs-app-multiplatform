@@ -8,6 +8,7 @@ import path from 'node:path';
 import { APP } from '../src/config/app';
 import { MONETIZATION } from '../src/config/monetization';
 import { CATEGORIES, QUALIFICATIONS, STATES, categorySlug } from '../src/core/constants';
+import { isIndexable } from '../src/core/jobs';
 import { publishedJobs } from '../src/server/data';
 import { ROOT } from './lib/paths';
 import { auditPages, chunkSitemap, deferAppScripts, readPageSeo, robotsTxt, sitemapIndex, urlset, type SitemapUrl } from './lib/sitemap';
@@ -53,7 +54,8 @@ if (fs.existsSync(notFound)) fs.renameSync(notFound, path.join(DIST, '404.html')
 
 // 3. Sitemaps.
 const groups: Record<string, SitemapUrl[]> = {
-  'sitemap-jobs': jobs.map((j) => ({ path: `/jobs/${j.slug}`, lastmod: j.updatedAt.slice(0, 10) })),
+  // Pages without enough details are noindex (src/core/jobs.ts → isIndexable), so not listed either.
+  'sitemap-jobs': jobs.filter(isIndexable).map((j) => ({ path: `/jobs/${j.slug}`, lastmod: j.updatedAt.slice(0, 10) })),
   'sitemap-states': [
     { path: '/states', lastmod: latestFor((j) => j.level !== 'central') },
     ...STATES.map((s) => ({ path: `/state/${s.slug}`, lastmod: latestFor((j) => j.state === s.code) })),

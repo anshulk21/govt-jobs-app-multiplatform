@@ -4,6 +4,7 @@ import path from 'node:path';
 import type { Job, Source } from '../../src/core/types';
 import type { Extracted } from './extract';
 import { seenKey, type PageLink } from './links';
+import { READER } from './notice';
 
 export const JOB_DIRS = ['drafts', 'published', 'rejected'] as const;
 
@@ -62,6 +63,7 @@ export function reviewNotes(job: Pick<Job, 'extraction'>): string {
   const lines = Object.entries(evidence).map(([field, text]) => `• ${FIELD_LABELS[field] ?? field}: from “${text}”`);
   const head =
     method === 'pdf-regex' ? 'Read from the PDF automatically. Check each value against the notification:'
+    : method === 'pdf-ocr' ? 'Read from a scanned PDF by OCR. Numbers and dates can be misread, so check each value against the notification:'
     : method === 'page-regex' ? 'Read from the notice page automatically. Check each value against the notification:'
     : method === 'ai' ? 'AI-extracted, needs review:'
     : 'Only the link was read. Fill in the details from the official notification.';
@@ -73,7 +75,7 @@ export function makeDraft({ source, link, pageUrl, now, extracted, method, error
   const id = jobId(link.url);
   const title = link.text || link.url.split('/').pop() || source.name;
   const fields = extracted ? Object.keys(extracted.evidence) : [];
-  const extraction: Job['extraction'] = { method, fields, evidence: extracted?.evidence ?? {}, ...(error ? { error } : {}) };
+  const extraction: Job['extraction'] = { method, fields, evidence: extracted?.evidence ?? {}, reader: READER, ...(error ? { error } : {}) };
   return {
     id,
     slug: jobSlug(source, title, id),

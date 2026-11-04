@@ -9,7 +9,7 @@ import { Badge, Button, Card, InfoRow, Loading, Message, OfflineNotice, Screen, 
 import { APP } from '@/config/app';
 import { apiPaths } from '@/core/api';
 import { QUALIFICATIONS, STAGES, STATE_BY_CODE, categorySlug } from '@/core/constants';
-import { daysLeft, formatDate, latestStage, placeName } from '@/core/jobs';
+import { daysLeft, formatDate, isIndexable, latestStage, placeName } from '@/core/jobs';
 import { jobSummaryHtml } from '@/core/job-summary';
 import { breadcrumbJsonLd, jobPostingJsonLd } from '@/core/structured-data';
 import type { Job, JobPayload } from '@/core/types';
@@ -41,7 +41,8 @@ export const generateMetadata: GenerateMetadataFunction = (_req, params) => {
     placeName(job),
   ].filter(Boolean);
   const title = pageTitleFor(job);
-  return pageMeta(title, `${title} by ${job.organization}: ${bits.join(', ')}. Eligibility, fees, dates and official links.`, `/jobs/${job.slug}`);
+  const meta = pageMeta(title, `${title} by ${job.organization}: ${bits.join(', ')}. Eligibility, fees, dates and official links.`, `/jobs/${job.slug}`);
+  return isIndexable(job) ? meta : { ...meta, robots: { index: false, follow: true } };
 };
 
 /** Home › Uttar Pradesh (or category for central jobs) › Job */

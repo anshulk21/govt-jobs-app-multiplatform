@@ -4,7 +4,8 @@
 // published jobs by reading their notice again: a PDF, or a web page and the PDF it links to.
 // For jobs saved before notice pages were read, or when the per-run PDF limit was reached.
 // Only empty fields are filled; nothing you typed in the admin is overwritten. Each job is tried
-// at most 3 times. Published jobs first, newest first.
+// at most 3 times per version of the notice reader (READER): when the reader gets better, every
+// recent job is tried once more, including ones it only partly filled. Published jobs first, newest first.
 //
 // Run by the monitor workflows after the monitor. Writes .enrich.json ({updated, updatedPublished})
 // so the workflow knows whether the website needs rebuilding.
@@ -16,7 +17,7 @@ import { createHostThrottle, USER_AGENT } from '../lib/http';
 import { ROOT } from '../lib/paths';
 import { reviewNotes } from './drafts';
 import type { Extracted } from './extract';
-import { readNotice, type NoticeDeps } from './notice';
+import { READER, readNotice, type NoticeDeps } from './notice';
 import { RobotsCache } from './robots';
 
 export const MAX_TRIES = 3;
@@ -25,10 +26,11 @@ const TIME_BUDGET_MS = 6 * 60_000;
 
 const isWebUrl = (u: string | null | undefined): u is string => !!u && /^https?:\/\//i.test(u);
 
-/** Jobs worth another try: nothing read yet, not tried too often, found recently. */
+/** Jobs worth another try: found recently, and nothing read yet with tries left, or not read by this reader yet. */
 export function needsDetails(job: Job, now: Date): boolean {
-  if (job.sample || job.extraction.fields.length || (job.extraction.tries ?? 0) >= MAX_TRIES) return false;
-  if (!isWebUrl(job.links.notification)) return false;
+  if (job.sample || !isWebUrl(job.links.notification)) return false;
+  const newReader = (job.extraction.reader ?? 1) < READER;
+  if (!newReader && (job.extraction.fields.length || (job.extraction.tries ?? 0) >= MAX_TRIES)) return false;
   return now.getTime() - Date.parse(job.foundAt) <= MAX_AGE_DAYS * 86_400_000;
 }
 
@@ -63,6 +65,7 @@ export function fillMissing(job: Job, extracted: Extracted, method: Job['extract
   if (!filled.length) return null;
   next.extraction.fields = [...new Set([...job.extraction.fields, ...filled])];
   next.extraction.method = method;
+  next.extraction.reader = READER;
   delete next.extraction.error;
   if (job.status === 'draft') next.review = reviewNotes(next);
   next.updatedAt = now;
@@ -124,7 +127,8 @@ async function main() {
       if (job.status === 'published') result.updatedPublished++;
       console.log(`✓ ${job.slug}: ${next.extraction.fields.join(', ')}`);
     } else {
-      next = { ...job, extraction: { ...job.extraction, tries: (job.extraction.tries ?? 0) + 1, ...(error ? { error } : {}) } };
+      const tries = (job.extraction.reader ?? 1) < READER ? 1 : (job.extraction.tries ?? 0) + 1;
+      next = { ...job, extraction: { ...job.extraction, tries, reader: READER, ...(error ? { error } : {}) } };
       console.log(`· ${job.slug}: nothing found${error ? ` (${error})` : ''}`);
     }
     if (!dryRun) fs.writeFileSync(file, JSON.stringify(next, null, 2) + '\n');
