@@ -9,14 +9,16 @@
   "state": "DD",
   "category": "Other",
   "postName": null,
-  "vacancies": null,
-  "qualifications": [],
+  "vacancies": 2,
+  "qualifications": [
+    "diploma"
+  ],
   "ageLimit": null,
   "fee": null,
   "dates": {
-    "notification": null,
+    "notification": "2026-10-28",
     "applyStart": null,
-    "lastDate": null,
+    "lastDate": "2026-11-14",
     "exam": null
   },
   "howToApply": null,
@@ -33,12 +35,23 @@
     }
   ],
   "foundAt": "2026-10-28T09:18:29.126Z",
-  "updatedAt": "2026-10-28T09:38:37.900Z",
+  "updatedAt": "2026-11-04T21:36:31.787Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {},
-    "tries": 3
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "vacancies",
+      "qualifications",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date for submission of application is 14.11.2026",
+      "vacancies": "No. of Vacancy 02",
+      "qualifications": "Qualification (Fresh Appointment) Degree 1,25,000/ 25,000/ 1,50,000 L Candidates with experience may be Rs.1.25.000/- pmpreferred. Diploma 90,000/ 25,000 1,15,000/ The actual number of vacancies may vary as per requirements. Contact No.: 0",
+      "dates.notification": "Date of publication: 28/10/2026"
+    },
+    "tries": 3,
+    "reader": 2
   },
   "autoPublished": true,
   "review": "Only the link was read. Fill in the details from the official notification.",

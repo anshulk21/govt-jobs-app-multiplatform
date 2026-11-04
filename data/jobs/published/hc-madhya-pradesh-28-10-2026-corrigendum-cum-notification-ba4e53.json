@@ -42,7 +42,9 @@
     "evidence": {
       "vacancies": "45 Posts"
     },
-    "error": "PDF has no text layer (probably scanned)"
+    "error": "PDF not read (timeout)",
+    "tries": 1,
+    "reader": 2
   },
   "autoPublished": true,
   "quiet": true,
