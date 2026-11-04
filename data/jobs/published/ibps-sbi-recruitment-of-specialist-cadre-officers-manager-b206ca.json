@@ -1,0 +1,52 @@
+{
+  "id": "b206ca830a",
+  "slug": "ibps-sbi-recruitment-of-specialist-cadre-officers-manager-b206ca",
+  "status": "published",
+  "title": "SBI Recruitment of Specialist Cadre Officers (Manager (Security) / Deputy Manager (Security)) Registration From 04-Nov-2026",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-11-04",
+    "lastDate": "2026-12-10",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ibpsreg.ibps.in/sbirscooct26/",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://ibpsreg.ibps.in/sbirscooct26/"
+    }
+  ],
+  "foundAt": "2026-11-04T11:05:18.400Z",
+  "updatedAt": "2026-11-04T11:14:55.612Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for printing your application 10/12/2026",
+      "dates.applyStart": "Commencement of online registration of application 04/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date for printing your application 10/12/2026”\n• Apply from: from “Commencement of online registration of application 04/11/2026”",
+  "publishedAt": "2026-11-04T11:14:55.612Z"
+}
