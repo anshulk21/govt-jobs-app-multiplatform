@@ -43,8 +43,9 @@
     "method": "pdf-regex",
     "fields": [],
     "evidence": {},
-    "tries": 2,
-    "reader": 2
+    "tries": 3,
+    "reader": 2,
+    "error": "PDF not read (HTTP 404)"
   },
   "autoPublished": true,
   "quiet": true,

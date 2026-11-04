@@ -1,0 +1,42 @@
+{
+  "id": "a4869b0f4f",
+  "slug": "hc-delhi-cusaa-92-2025-the-commissioner-of-customs-export-vs-a4869b",
+  "status": "draft",
+  "title": "Cusaa - 92/2025, the Commissioner of Customs (Export) Vs M/S. G.D. Manglam EXIM PVT. LTD. (NOW Known as M/S. Welldone EXIM PVT. LTD.), Judgment Date 04.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2024-11-25",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/75004112026CUSAA922025_152651.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-04T12:18:46.397Z",
+  "updatedAt": "2026-11-04T12:18:46.397Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 25.11.2024"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 25.11.2024”"
+}

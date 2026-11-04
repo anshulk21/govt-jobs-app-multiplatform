@@ -1,0 +1,42 @@
+{
+  "id": "e9421cbf8c",
+  "slug": "hc-jharkhand-district-judiciary-nomination-for-training-e9421c",
+  "status": "draft",
+  "title": "District Judiciary Nomination for Training Transfer, Posting & Promotions Correspondence To District Court Letter of Judicial Matter Administrative Orders Miscellaneous Orders…",
+  "organization": "Jharkhand High Court",
+  "sourceId": "hc-jharkhand",
+  "level": "state",
+  "state": "JH",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-04",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jharkhandhighcourt.nic.in/notice",
+    "official": "https://jharkhandhighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-04T12:18:46.397Z",
+  "updatedAt": "2026-11-04T12:18:46.397Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated: 04-11-2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated: 04-11-2026”"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "833c13d963",
+  "slug": "kvs-ncrc-833c13",
+  "status": "draft",
+  "title": "राष्ट्रीय अपराध रिकॉर्ड जाँच (NCRC) पोर्टल के माध्यम से शिक्षकों एवं गैर-शिक्षण कर्मचारियों के आपराधिक पूर्ववृत्त का सत्यापन – संबंध में। नई",
+  "organization": "Kendriya Vidyalaya Sangathan",
+  "sourceId": "kvs",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-07-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/11/2026110431.pdf",
+    "official": "https://kvs.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-04T12:18:46.397Z",
+  "updatedAt": "2026-11-04T12:18:46.397Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 23.07.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 23.07.2026”"
+}
