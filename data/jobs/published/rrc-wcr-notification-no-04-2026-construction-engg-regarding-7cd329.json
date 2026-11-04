@@ -1,0 +1,51 @@
+{
+  "id": "7cd3295d55",
+  "slug": "rrc-wcr-notification-no-04-2026-construction-engg-regarding-7cd329",
+  "status": "published",
+  "title": "Notification No. 04-2026 (Construction – Engg.) – Regarding Re-engagement of Retired Non-Gazetted Railway Employees in the Construction Organization of the Engineering Department.",
+  "organization": "West Central Railway (RRC Jabalpur)",
+  "sourceId": "rrc-wcr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-01-24",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://wcr.indianrailways.gov.in/admin/cms/downloadCmsDoc?path=/opt/mount/zonal/wcr/Features/1793772020326Engineering.pdf",
+    "official": "https://wcr.indianrailways.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2025-01-24",
+      "url": "https://wcr.indianrailways.gov.in/admin/cms/downloadCmsDoc?path=/opt/mount/zonal/wcr/Features/1793772020326Engineering.pdf"
+    }
+  ],
+  "foundAt": "2026-11-04T09:18:57.218Z",
+  "updatedAt": "2026-11-04T09:38:13.188Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 24.01.2025"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 24.01.2025”",
+  "publishedAt": "2026-11-04T09:38:13.188Z"
+}

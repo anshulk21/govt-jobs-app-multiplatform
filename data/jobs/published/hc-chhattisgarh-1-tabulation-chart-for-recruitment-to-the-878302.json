@@ -38,8 +38,9 @@
     "method": "pdf-regex",
     "fields": [],
     "evidence": {},
-    "tries": 3,
-    "error": "Page not read (HTTP 403)"
+    "tries": 1,
+    "error": "Page not read (HTTP 403)",
+    "reader": 2
   },
   "autoPublished": true,
   "review": "Read from the PDF automatically. Check each value against the notification:",

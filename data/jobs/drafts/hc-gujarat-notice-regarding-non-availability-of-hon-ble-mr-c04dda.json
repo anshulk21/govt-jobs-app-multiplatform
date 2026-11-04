@@ -1,0 +1,42 @@
+{
+  "id": "c04dda4e6e",
+  "slug": "hc-gujarat-notice-regarding-non-availability-of-hon-ble-mr-c04dda",
+  "status": "draft",
+  "title": "Notice regarding non availability of Hon'ble Mr. Justice P.M.Raval on 04.11.2026 in the Second session and Re-arrangement of taking up the matters of Hon'ble Court (Coram:…",
+  "organization": "High Court of Gujarat",
+  "sourceId": "hc-gujarat",
+  "level": "state",
+  "state": "GJ",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-02",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notice_Re-arrangement_SKV-PMR,JJ__PMR,_J_NA_4.11.26_SECOND_SESSION.pdf",
+    "official": "https://gujarathighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-04T09:18:57.218Z",
+  "updatedAt": "2026-11-04T09:18:57.218Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 02/11/2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 02/11/2026”"
+}

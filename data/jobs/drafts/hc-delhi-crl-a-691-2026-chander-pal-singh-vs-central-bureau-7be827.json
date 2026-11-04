@@ -1,0 +1,42 @@
+{
+  "id": "7be82723a4",
+  "slug": "hc-delhi-crl-a-691-2026-chander-pal-singh-vs-central-bureau-7be827",
+  "status": "draft",
+  "title": "CRL.A. - 691/2026, Chander PAL Singh Vs Central Bureau of Investigation & ORS., Judgment Date 04.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-07-06",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/59204112026CRLA6912026_131023.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-04T09:18:57.218Z",
+  "updatedAt": "2026-11-04T09:18:57.218Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 06th July, 2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 06th July, 2026”"
+}

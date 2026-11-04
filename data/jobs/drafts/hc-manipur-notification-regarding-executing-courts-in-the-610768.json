@@ -1,0 +1,42 @@
+{
+  "id": "6107687281",
+  "slug": "hc-manipur-notification-regarding-executing-courts-in-the-610768",
+  "status": "draft",
+  "title": "Notification regarding Executing courts in the State of Manipur are directed to call for Affidavits of Assets.",
+  "organization": "High Court of Manipur",
+  "sourceId": "hc-manipur",
+  "level": "state",
+  "state": "MN",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-15",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcmimphal.nic.in/Documents/affidavit%20for%20Assets.pdf",
+    "official": "https://hcmimphal.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-04T09:18:57.218Z",
+  "updatedAt": "2026-11-04T09:18:57.218Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 15.10.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 15.10.2026”"
+}

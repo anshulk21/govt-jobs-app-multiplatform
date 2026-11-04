@@ -1,0 +1,51 @@
+{
+  "id": "f08a4dd65c",
+  "slug": "hc-patna-notice-regarding-extension-of-date-for-submission-f08a4d",
+  "status": "published",
+  "title": "Notice regarding extension of date for submission of application for appointment against fifteen (15) tentative vacant post of Court Master (Shorthand) in Supreme Court of…",
+  "organization": "Patna High Court",
+  "sourceId": "hc-patna",
+  "level": "state",
+  "state": "BR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-30",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://patnahighcourt.gov.in/getfile/MTEyMzA=-lndPYIdpSsc=",
+    "official": "https://patnahighcourt.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-30",
+      "url": "https://patnahighcourt.gov.in/getfile/MTEyMzA=-lndPYIdpSsc="
+    }
+  ],
+  "foundAt": "2026-11-04T09:18:57.218Z",
+  "updatedAt": "2026-11-04T09:38:13.188Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 30.10.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 30.10.2026”",
+  "publishedAt": "2026-11-04T09:38:13.188Z"
+}

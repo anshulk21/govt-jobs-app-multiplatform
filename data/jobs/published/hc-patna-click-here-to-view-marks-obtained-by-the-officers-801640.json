@@ -1,0 +1,50 @@
+{
+  "id": "801640b494",
+  "slug": "hc-patna-click-here-to-view-marks-obtained-by-the-officers-801640",
+  "status": "published",
+  "title": "Marks obtained by the officers who were under consideration zone and appeared in the viva voce test (interview) held for filling up of the vacancies in the cadre of District…",
+  "organization": "Patna High Court",
+  "sourceId": "hc-patna",
+  "level": "state",
+  "state": "BR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-03",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://patnahighcourt.gov.in/Exam/loginjo.aspx",
+    "official": "https://patnahighcourt.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-03",
+      "url": "https://patnahighcourt.gov.in/Exam/loginjo.aspx"
+    }
+  ],
+  "foundAt": "2026-11-04T09:18:57.218Z",
+  "updatedAt": "2026-11-04T09:38:13.188Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 03.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 03.11.2026”",
+  "publishedAt": "2026-11-04T09:38:13.188Z"
+}
