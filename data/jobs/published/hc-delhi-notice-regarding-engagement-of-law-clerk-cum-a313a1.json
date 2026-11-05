@@ -1,0 +1,54 @@
+{
+  "id": "a313a1eb60",
+  "slug": "hc-delhi-notice-regarding-engagement-of-law-clerk-cum-a313a1",
+  "status": "published",
+  "title": "Notice regarding Engagement of Law Clerk-cum-Research Assistant(on short-term contractual basis) in Delhi State Legal Services Authority.",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "graduate",
+    "law"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/files/2026-11/announcements/law_clerk.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://delhihighcourt.nic.in/files/2026-11/announcements/law_clerk.pdf"
+    }
+  ],
+  "foundAt": "2026-11-05T18:18:59.583Z",
+  "updatedAt": "2026-11-05T18:41:34.486Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "qualifications and other e li gibility con ditions as on the last date of submi ss ion of app lications, i.e. 16 th November, 2026 fo r engageme nt as Law Cle rk -cum- Research Assistant (LCCRA ) in the Delhi tate Legal Services Autho"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “qualifications and other e li gibility con ditions as on the last date of submi ss ion of app lications, i.e. 16 th November, 2026 fo r engageme nt as Law Cle rk -cum- Research Assistant (LCCRA ) in the Delhi tate Legal Services Autho”",
+  "publishedAt": "2026-11-05T18:41:34.486Z"
+}

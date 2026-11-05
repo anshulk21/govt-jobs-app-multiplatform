@@ -1,0 +1,51 @@
+{
+  "id": "b77ec983ce",
+  "slug": "goa-gssc-addendum-to-eligibility-list-for-physical-endurance-b77ec9",
+  "status": "published",
+  "title": "Addendum to Eligibility List for Physical Endurance Test - Physical Standards- Physical Efficiency Tests for the post of Police Constable - Male - Third Phase",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-05",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/recruitment/candidates/results/addendum-to-eligibility-list-for-physical-endurance-test-physical-standards-physical-efficiency-tests-for-the-post-of-police-constable-male-third-phas.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-05",
+      "url": "https://gssc.goa.gov.in/docs/recruitment/candidates/results/addendum-to-eligibility-list-for-physical-endurance-test-physical-standards-physical-efficiency-tests-for-the-post-of-police-constable-male-third-phas.pdf"
+    }
+  ],
+  "foundAt": "2026-11-05T18:18:59.583Z",
+  "updatedAt": "2026-11-05T18:41:34.486Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 05/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 05/11/2026”",
+  "publishedAt": "2026-11-05T18:41:34.486Z"
+}
