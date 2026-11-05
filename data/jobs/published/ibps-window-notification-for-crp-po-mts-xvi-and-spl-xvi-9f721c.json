@@ -1,0 +1,46 @@
+{
+  "id": "9f721c2e45",
+  "slug": "ibps-window-notification-for-crp-po-mts-xvi-and-spl-xvi-9f721c",
+  "status": "published",
+  "title": "Window Notification for CRP-PO/MTs -XVI and SPL-XVI",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.ibps.in/wp-content/uploads/PO_SPL_Combined_Window_CRP-XVI.pdf",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.ibps.in/wp-content/uploads/PO_SPL_Combined_Window_CRP-XVI.pdf"
+    }
+  ],
+  "foundAt": "2026-11-05T20:08:26.073Z",
+  "updatedAt": "2026-11-05T20:17:08.898Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-11-05T20:17:08.898Z"
+}
