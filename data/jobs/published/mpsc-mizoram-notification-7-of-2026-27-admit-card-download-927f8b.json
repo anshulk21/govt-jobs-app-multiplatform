@@ -43,8 +43,9 @@
     "method": "link-only",
     "fields": [],
     "evidence": {},
-    "error": "PDF has no text layer (probably scanned)",
-    "tries": 3
+    "error": "Page not read (HTTP 403)",
+    "tries": 1,
+    "reader": 2
   },
   "autoPublished": true,
   "quiet": true,

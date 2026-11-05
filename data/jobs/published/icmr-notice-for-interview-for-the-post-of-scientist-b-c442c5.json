@@ -9,12 +9,12 @@
   "state": null,
   "category": "Health",
   "postName": null,
-  "vacancies": null,
+  "vacancies": 2,
   "qualifications": [],
   "ageLimit": null,
   "fee": null,
   "dates": {
-    "notification": null,
+    "notification": "2026-10-26",
     "applyStart": null,
     "lastDate": "2026-10-31",
     "exam": null
@@ -33,15 +33,20 @@
     }
   ],
   "foundAt": "2026-10-26T12:18:31.094Z",
-  "updatedAt": "2026-10-26T12:38:42.782Z",
+  "updatedAt": "2026-11-05T15:26:30.401Z",
   "extraction": {
     "method": "pdf-regex",
     "fields": [
-      "dates.lastDate"
+      "dates.lastDate",
+      "dates.notification",
+      "vacancies"
     ],
     "evidence": {
-      "dates.lastDate": "Last date to apply OCTOBER 31, 2026"
-    }
+      "dates.lastDate": "Last date to apply OCTOBER 31, 2026",
+      "dates.notification": "Dated: 26.10.2026",
+      "vacancies": "02 posts"
+    },
+    "reader": 2
   },
   "autoPublished": true,
   "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last date to apply OCTOBER 31, 2026”",
