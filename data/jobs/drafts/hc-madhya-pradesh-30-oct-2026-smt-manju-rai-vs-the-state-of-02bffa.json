@@ -1,0 +1,42 @@
+{
+  "id": "02bffa54a6",
+  "slug": "hc-madhya-pradesh-30-oct-2026-smt-manju-rai-vs-the-state-of-02bffa",
+  "status": "draft",
+  "title": "SMT. MANJU RAI vs THE STATE OF MADHYA PRADESH - WP/45809/2026 Principal Seat Jabalpur",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-22",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/jabalpur/MPHCJB/2026/WP/45809/WP_45809_2026_FinalOrder_30-10-2026_digi.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-05T12:18:37.767Z",
+  "updatedAt": "2026-11-05T12:18:37.767Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 22.10.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 22.10.2026”"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "df628b6bd7",
+  "slug": "hc-sikkim-2026-11-04-wp-c-88-2026-anirudh-gupta-and-ors-v-s-df628b",
+  "status": "draft",
+  "title": "2026-11-04 - WP(C)/88/2026 - Anirudh Gupta and Ors. v/s The Stat e of Sikkim and Ors.",
+  "organization": "High Court of Sikkim",
+  "sourceId": "hc-sikkim",
+  "level": "state",
+  "state": "SK",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "law"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-10-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcs.gov.in/hcs/hg_orders/201100000882026_1.pdf",
+    "official": "https://hcs.gov.in/hcs/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-05T12:18:37.767Z",
+  "updatedAt": "2026-11-05T12:18:37.767Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date to receive applications was on 30.10.2026",
+      "qualifications": "eligibility conditions as prescribed in the Notification is as follows: (a) Candidate must be a citizen of India, in possession of a Certificate of Identification and a valid Local Employment Card. (b) Should not be more than 35 years of ag"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date to receive applications was on 30.10.2026”\n• Qualification: from “eligibility conditions as prescribed in the Notification is as follows: (a) Candidate must be a citizen of India, in possession of a Certificate of Identification and a valid Local Employment Card. (b) Should not be more than 35 years of ag”"
+}

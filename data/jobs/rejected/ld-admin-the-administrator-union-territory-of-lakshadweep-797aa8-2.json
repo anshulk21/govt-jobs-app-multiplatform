@@ -1,0 +1,45 @@
+{
+  "id": "797aa82055",
+  "slug": "ld-admin-the-administrator-union-territory-of-lakshadweep-797aa8-2",
+  "status": "rejected",
+  "title": "The Administrator, Union Territory of Lakshadweep reconstitute the State Food Commission with new members.",
+  "organization": "Lakshadweep Administration",
+  "sourceId": "ld-admin",
+  "level": "ut",
+  "state": "LD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-05",
+    "applyStart": null,
+    "lastDate": "2026-12-05",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://lakshadweep.gov.in/notice/the-administrator-union-territory-of-lakshadweep-reconstitute-the-state-food-commission-with-new-members/",
+    "official": "https://lakshadweep.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-05T12:18:37.767Z",
+  "updatedAt": "2026-11-05T12:18:37.767Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 05/12/2026",
+      "dates.notification": "Date of publication: 05/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 05/12/2026”\n• Notification date: from “Date of publication: 05/11/2026”"
+}

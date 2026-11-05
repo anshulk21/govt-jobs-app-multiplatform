@@ -1,0 +1,42 @@
+{
+  "id": "05bb37358f",
+  "slug": "hc-gujarat-notice-no-rj-26-2026-dated-05-11-2026-regarding-05bb37",
+  "status": "draft",
+  "title": "NOTICE No.RJ-26-2026 dated 05.11.2026 regarding suspension of practice of publishing separate Wednesday Weekly List (WWL)",
+  "organization": "High Court of Gujarat",
+  "sourceId": "hc-gujarat",
+  "level": "state",
+  "state": "GJ",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-06-21",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/NOTICE_No.RJ-26-2026_dated_05.11.2026_regarding_suspension_of_practice_of_publishing_separate_Wednesday_Weekly_List_WWL_26992.pdf",
+    "official": "https://gujarathighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-05T12:18:37.767Z",
+  "updatedAt": "2026-11-05T12:18:37.767Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 21.06.2025"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 21.06.2025”"
+}

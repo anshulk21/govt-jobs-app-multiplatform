@@ -1,0 +1,52 @@
+{
+  "id": "82c0a18701",
+  "slug": "dd-admin-office-of-the-district-project-officer-samagra-82c0a1",
+  "status": "published",
+  "title": "Office of the District Project Officer, (Samagra Shiksha) Diu: Samagra Shiksha Diu under the Education Department has a schedule and Walk-in-Interview for the various Post.",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-05",
+    "applyStart": null,
+    "lastDate": "2026-11-25",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ddd.gov.in/notice/office-of-the-district-project-officer-samagra-shiksha-diu-samagra-shiksha-diu-under-the-education-department-has-a-schedule-and-walk-in-interview-for-the-various-post/",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-05",
+      "url": "https://ddd.gov.in/notice/office-of-the-district-project-officer-samagra-shiksha-diu-samagra-shiksha-diu-under-the-education-department-has-a-schedule-and-walk-in-interview-for-the-various-post/"
+    }
+  ],
+  "foundAt": "2026-11-05T12:18:37.767Z",
+  "updatedAt": "2026-11-05T12:42:28.161Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 25/11/2026",
+      "dates.notification": "Date of publication: 05/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 25/11/2026”\n• Notification date: from “Date of publication: 05/11/2026”",
+  "publishedAt": "2026-11-05T12:42:28.161Z"
+}

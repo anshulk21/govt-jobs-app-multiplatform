@@ -1,0 +1,45 @@
+{
+  "id": "7494a1b2da",
+  "slug": "dd-admin-pwd-daman-development-of-town-planning-scheme-road-7494a1-2",
+  "status": "rejected",
+  "title": "PWD, Daman: Development of Town Planning Scheme Road works and other infrastructure for TPS 4C, 4H and 4I, Nani Daman. (EPC MODE) (Length = 3.190 km)",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-03",
+    "applyStart": null,
+    "lastDate": "2026-11-28",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ddd.gov.in/notice/pwd-daman-development-of-town-planning-scheme-road-works-and-other-infrastructure-for-tps-4c-4h-and-4i-nani-daman-epc-mode-length-3-190-km/",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-05T12:18:37.767Z",
+  "updatedAt": "2026-11-05T12:18:37.767Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 28/11/2026",
+      "dates.notification": "Date of publication: 03/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 28/11/2026”\n• Notification date: from “Date of publication: 03/11/2026”"
+}

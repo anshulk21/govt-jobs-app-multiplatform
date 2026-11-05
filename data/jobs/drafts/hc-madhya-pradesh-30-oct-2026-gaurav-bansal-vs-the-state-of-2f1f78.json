@@ -1,0 +1,42 @@
+{
+  "id": "2f1f78e60c",
+  "slug": "hc-madhya-pradesh-30-oct-2026-gaurav-bansal-vs-the-state-of-2f1f78",
+  "status": "draft",
+  "title": "Gaurav Bansal Vs the State of Madhya Pradesh - WP/00442/2026 Bench Indore",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-12-18",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/indore/MPHCIND/2026/WP/442/WP_442_2026_FinalOrder_30-10-2026_digi.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-05T12:18:37.767Z",
+  "updatedAt": "2026-11-05T12:18:37.767Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 18/12/2025"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 18/12/2025”"
+}
