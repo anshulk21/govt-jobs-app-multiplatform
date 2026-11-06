@@ -41,7 +41,10 @@
     ],
     "evidence": {
       "dates.notification": "dated 20/02/2026"
-    }
+    },
+    "tries": 1,
+    "reader": 2,
+    "error": "PDF not read (HTTP 404)"
   },
   "autoPublished": true,
   "quiet": true,
