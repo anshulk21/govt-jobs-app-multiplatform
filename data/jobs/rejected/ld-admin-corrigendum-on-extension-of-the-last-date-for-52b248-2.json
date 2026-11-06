@@ -1,0 +1,45 @@
+{
+  "id": "52b248f250",
+  "slug": "ld-admin-corrigendum-on-extension-of-the-last-date-for-52b248-2",
+  "status": "rejected",
+  "title": "Corrigendum on Extension of the Last Date for Submission of Applications for Specialist Doctor Posts on Contract Basis",
+  "organization": "Lakshadweep Administration",
+  "sourceId": "ld-admin",
+  "level": "ut",
+  "state": "LD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-06",
+    "applyStart": null,
+    "lastDate": "2026-11-15",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://lakshadweep.gov.in/notice/corrigendum-on-extension-of-the-last-date-for-submission-of-applications-for-specialist-doctor-posts-on-contract-basis/",
+    "official": "https://lakshadweep.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-06T18:18:54.585Z",
+  "updatedAt": "2026-11-06T18:18:54.585Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 15/11/2026",
+      "dates.notification": "Date of publication: 06/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 15/11/2026”\n• Notification date: from “Date of publication: 06/11/2026”"
+}
