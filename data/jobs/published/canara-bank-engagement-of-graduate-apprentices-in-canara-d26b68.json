@@ -9,14 +9,16 @@
   "state": null,
   "category": "Bank",
   "postName": null,
-  "vacancies": null,
-  "qualifications": [],
+  "vacancies": 3500,
+  "qualifications": [
+    "graduate"
+  ],
   "ageLimit": null,
   "fee": null,
   "dates": {
     "notification": null,
     "applyStart": null,
-    "lastDate": null,
+    "lastDate": "2026-10-01",
     "exam": null
   },
   "howToApply": null,
@@ -33,13 +35,22 @@
     }
   ],
   "foundAt": "2026-10-22T11:01:17.859Z",
-  "updatedAt": "2026-10-22T16:00:31.763Z",
+  "updatedAt": "2026-11-06T06:36:21.104Z",
   "publishedAt": "2026-10-22T11:19:14.612Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {},
-    "tries": 3
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "vacancies",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "Opening date and closing date for on-line registration in Website 01.10.2026",
+      "vacancies": "Number of Training seats 3500",
+      "qualifications": "eligibility criteria for the training seats as on date of eligibility. d) Candidates are advised to check Bank’s website www.canarabank.bank.in → Careers→ Recruitment → Engagement of Graduate Apprentices in Canara Bank under Apprentices Act"
+    },
+    "tries": 3,
+    "reader": 2
   },
   "autoPublished": true,
   "review": "Only the link was read. Fill in the details from the official notification."

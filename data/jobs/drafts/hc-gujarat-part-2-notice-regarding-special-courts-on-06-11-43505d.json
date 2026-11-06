@@ -1,0 +1,42 @@
+{
+  "id": "43505de7da",
+  "slug": "hc-gujarat-part-2-notice-regarding-special-courts-on-06-11-43505d",
+  "status": "draft",
+  "title": "Part-2 Notice regarding Special Courts on 06.11.2026.",
+  "organization": "High Court of Gujarat",
+  "sourceId": "hc-gujarat",
+  "level": "state",
+  "state": "GJ",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-05",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/PART_2_FRIDAY_Notice_06.11.2026_22021.pdf",
+    "official": "https://gujarathighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-06T06:18:46.277Z",
+  "updatedAt": "2026-11-06T06:18:46.277Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 05/11/2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 05/11/2026”"
+}
