@@ -1,0 +1,51 @@
+{
+  "id": "71c8c324a6",
+  "slug": "goa-gssc-notice-and-instructions-for-proficiency-test-in-71c8c3",
+  "status": "published",
+  "title": "Notice and Instructions for Proficiency Test in Swimming on 17.11.2026 - Constable - Greaser, Constable - Electrician, Lascar - Male(PDF, opens in the document viewer)",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-20",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/whats-new/notice-and-instructions-for-proficiency-test-in-swimming-on-17-11-2026-constable-greaser-constable-electrician-lascar-male.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-02-20",
+      "url": "https://gssc.goa.gov.in/docs/whats-new/notice-and-instructions-for-proficiency-test-in-swimming-on-17-11-2026-constable-greaser-constable-electrician-lascar-male.pdf"
+    }
+  ],
+  "foundAt": "2026-11-06T12:19:12.680Z",
+  "updatedAt": "2026-11-06T12:30:24.979Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 20/02/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 20/02/2026”",
+  "publishedAt": "2026-11-06T12:30:24.979Z"
+}
