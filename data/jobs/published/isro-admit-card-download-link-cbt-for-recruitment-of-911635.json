@@ -16,7 +16,7 @@
   "dates": {
     "notification": "2026-07-27",
     "applyStart": null,
-    "lastDate": null,
+    "lastDate": "2026-08-20",
     "exam": null
   },
   "howToApply": null,
@@ -38,15 +38,18 @@
     }
   ],
   "foundAt": "2026-10-21T10:28:04.535Z",
-  "updatedAt": "2026-10-21T10:45:49.377Z",
+  "updatedAt": "2026-11-06T15:36:37.109Z",
   "extraction": {
-    "method": "link-only",
+    "method": "pdf-regex",
     "fields": [
-      "dates.notification"
+      "dates.notification",
+      "dates.lastDate"
     ],
     "evidence": {
-      "dates.notification": "dated 27-07-2026"
-    }
+      "dates.notification": "dated 27-07-2026",
+      "dates.lastDate": "Last Date for Submission of Applications online August 20, 2026"
+    },
+    "reader": 2
   },
   "autoPublished": true,
   "quiet": true,
