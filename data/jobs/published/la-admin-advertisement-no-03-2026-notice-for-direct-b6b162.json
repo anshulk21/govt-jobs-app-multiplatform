@@ -14,9 +14,9 @@
   "ageLimit": null,
   "fee": null,
   "dates": {
-    "notification": null,
+    "notification": "2026-10-16",
     "applyStart": null,
-    "lastDate": null,
+    "lastDate": "2026-11-08",
     "exam": null
   },
   "howToApply": null,
@@ -33,12 +33,19 @@
     }
   ],
   "foundAt": "2026-10-22T06:18:50.138Z",
-  "updatedAt": "2026-10-22T06:26:26.965Z",
+  "updatedAt": "2026-11-06T11:19:57.312Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {},
-    "tries": 3
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 08/11/2026",
+      "dates.notification": "Date of publication: 16/10/2026"
+    },
+    "tries": 3,
+    "reader": 2
   },
   "autoPublished": true,
   "review": "Only the link was read. Fill in the details from the official notification.",

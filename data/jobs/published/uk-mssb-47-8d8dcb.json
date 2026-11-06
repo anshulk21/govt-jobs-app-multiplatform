@@ -38,8 +38,9 @@
     "method": "pdf-regex",
     "fields": [],
     "evidence": {},
-    "tries": 3,
-    "error": "PDF not read (timeout)"
+    "tries": 1,
+    "error": "PDF not read (timeout)",
+    "reader": 2
   },
   "autoPublished": true,
   "quiet": true,

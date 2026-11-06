@@ -19,7 +19,7 @@
   "dates": {
     "notification": null,
     "applyStart": null,
-    "lastDate": null,
+    "lastDate": "2026-10-20",
     "exam": null
   },
   "howToApply": null,
@@ -36,15 +36,18 @@
     }
   ],
   "foundAt": "2026-10-22T09:18:52.219Z",
-  "updatedAt": "2026-10-22T09:37:23.551Z",
+  "updatedAt": "2026-11-06T11:19:57.312Z",
   "extraction": {
     "method": "pdf-regex",
     "fields": [
-      "qualifications"
+      "qualifications",
+      "dates.lastDate"
     ],
     "evidence": {
-      "qualifications": "Eligibility: Candidates must have passed the qualifying examination as regular candidates during 2022–2026. Candidates who have already undergone or are currently undergoing apprenticeship training, or possess one year of job experience, sh"
-    }
+      "qualifications": "Eligibility: Candidates must have passed the qualifying examination as regular candidates during 2022–2026. Candidates who have already undergone or are currently undergoing apprenticeship training, or possess one year of job experience, sh",
+      "dates.lastDate": "last date for online application was 20.10.2026"
+    },
+    "reader": 2
   },
   "autoPublished": true,
   "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “Eligibility: Candidates must have passed the qualifying examination as regular candidates during 2022–2026. Candidates who have already undergone or are currently undergoing apprenticeship training, or possess one year of job experience, sh”",

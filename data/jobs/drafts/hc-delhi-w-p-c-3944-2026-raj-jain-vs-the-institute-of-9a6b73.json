@@ -1,0 +1,42 @@
+{
+  "id": "9a6b730cc9",
+  "slug": "hc-delhi-w-p-c-3944-2026-raj-jain-vs-the-institute-of-9a6b73",
+  "status": "draft",
+  "title": "W.P.(C) - 3944/2026, RAJ JAIN Vs the Institute of Banking Personnel Selection, Judgment Date 04.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-24",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/AJB04112026CW39442026_155906.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-06T11:02:19.671Z",
+  "updatedAt": "2026-11-06T11:02:19.671Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 24.02.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 24.02.2026”"
+}
