@@ -1,0 +1,50 @@
+{
+  "id": "9bdda6222b",
+  "slug": "nta-inviting-online-application-for-empanelment-of-9bdda6",
+  "status": "published",
+  "title": "Inviting Online Application for Empanelment of Examination Centres for Conduct of NTA Examinations in Computer-Based Test (CBT) Mode and Pen and Paper Test (PPT) mode-reg",
+  "organization": "National Testing Agency",
+  "sourceId": "nta",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-12-06",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nta.ac.in/Download/Notice/Notice_20261107190824.pdf",
+    "official": "https://nta.ac.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://nta.ac.in/Download/Notice/Notice_20261107190824.pdf"
+    }
+  ],
+  "foundAt": "2026-11-07T17:46:42.561Z",
+  "updatedAt": "2026-11-07T18:08:56.562Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last Date for Submission 6th December, 2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last Date for Submission 6th December, 2026”",
+  "publishedAt": "2026-11-07T18:08:56.562Z"
+}
