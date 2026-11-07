@@ -1,0 +1,42 @@
+{
+  "id": "97de1ba444",
+  "slug": "hc-delhi-rc-rev-425-2026-suresh-bhargava-ors-vs-laxman-97de1b",
+  "status": "draft",
+  "title": "Rc.rev. - 425/2026, Suresh Bhargava & ORS. Vs Laxman Sharma, Judgment Date 05.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-04-27",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/68005112026RCR4252026_162240.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-07T21:19:02.514Z",
+  "updatedAt": "2026-11-07T21:19:02.514Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 27.04.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 27.04.2026”"
+}
