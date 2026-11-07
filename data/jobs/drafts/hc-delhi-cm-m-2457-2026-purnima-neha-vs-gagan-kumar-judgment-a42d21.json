@@ -1,0 +1,42 @@
+{
+  "id": "a42d217066",
+  "slug": "hc-delhi-cm-m-2457-2026-purnima-neha-vs-gagan-kumar-judgment-a42d21",
+  "status": "draft",
+  "title": "CM(M) - 2457/2026, PURNIMA@ NEHA Vs GAGAN KUMAR, Judgment date 06.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-01",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/68006112026CMM24572026_162334.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-07T12:18:52.522Z",
+  "updatedAt": "2026-11-07T12:18:52.522Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 01.10.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 01.10.2026”"
+}
