@@ -1,0 +1,44 @@
+{
+  "id": "feaccba589",
+  "slug": "nta-acceptance-of-applications-for-empanelment-of-feaccb",
+  "status": "draft",
+  "title": "Acceptance of Applications for Empanelment of Translation Reviewers on a Continuous Basis",
+  "organization": "National Testing Agency",
+  "sourceId": "nta",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": "25–65 years",
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-10",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nta.ac.in/Download/Notice/Notice_20261107140555.pdf",
+    "official": "https://nta.ac.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-07T09:18:55.553Z",
+  "updatedAt": "2026-11-07T09:18:55.553Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "ageLimit"
+    ],
+    "evidence": {
+      "dates.notification": "dated 10 August 2026",
+      "ageLimit": "Age Between 25 and 65 years"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 10 August 2026”\n• Age limit: from “Age Between 25 and 65 years”"
+}
