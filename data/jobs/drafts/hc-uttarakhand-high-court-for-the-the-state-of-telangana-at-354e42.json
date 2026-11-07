@@ -1,0 +1,44 @@
+{
+  "id": "354e42d054",
+  "slug": "hc-uttarakhand-high-court-for-the-the-state-of-telangana-at-354e42",
+  "status": "draft",
+  "title": "High Court for the the state of telangana at hyderabad- Appointment of Research Assistant (Law) on contract basis to assist the Hon’ble Judges of the High Court for the State…",
+  "organization": "High Court of Uttarakhand",
+  "sourceId": "hc-uttarakhand",
+  "level": "state",
+  "state": "UK",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-27",
+    "applyStart": null,
+    "lastDate": "2026-11-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://highcourtofuttarakhand.gov.in/notice/high-court-for-the-the-state-of-telangana-at-hyderabad-appointment-of-research-assistant-law-on-contract-basis-to-assist-the-honble-judges-of-the-high-court-for-the-state-of-telangana/",
+    "official": "https://highcourtofuttarakhand.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-07T03:18:52.833Z",
+  "updatedAt": "2026-11-07T03:18:52.833Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date for submission of application for the post of Research Assistant (Law) is 30.11.2026",
+      "dates.notification": "dt.27.10.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date for submission of application for the post of Research Assistant (Law) is 30.11.2026”\n• Notification date: from “dt.27.10.2026”"
+}
