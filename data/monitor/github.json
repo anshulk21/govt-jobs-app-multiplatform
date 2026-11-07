@@ -1,5 +1,5 @@
 {
-  "runCount": 200,
+  "runCount": 201,
   "sources": {
     "aai": {
       "consecutiveFailures": 62,
@@ -19,8 +19,8 @@
     "aiims-exams": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 1
     },
     "ap-health": {
@@ -30,9 +30,9 @@
       "lastError": "timeout"
     },
     "ap-slprb": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "ap-teacher": {
@@ -50,37 +50,37 @@
       "lastError": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR: 406EB2FE7F720000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:918:SSL alert number 80\n"
     },
     "appsc": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastError": "timeout"
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastError": "getaddrinfo EAI_AGAIN psc.ap.gov.in"
     },
     "appsc-arunachal": {
-      "consecutiveFailures": 177,
+      "consecutiveFailures": 178,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastOkAt": "2026-10-23T00:26:27.709Z",
       "lastLinkCount": 6,
       "lastError": "timeout"
     },
     "apsc": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastError": "UND_ERR_CONNECT_TIMEOUT: Connect Timeout Error (attempted address: apsc.nic.in:443, timeout: 30000ms)"
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastError": "timeout"
     },
     "ar-apssb": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 18
     },
     "ar-police": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 25
     },
     "ar-power": {
@@ -118,14 +118,14 @@
     "as-slprb": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 73
     },
     "assam-rifles": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "bank-of-baroda": {
@@ -173,15 +173,15 @@
     "bpsc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 11
     },
     "br-bpssc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 155
     },
     "br-bsphcl": {
@@ -201,8 +201,8 @@
     "br-csbc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 205
     },
     "br-shsb": {
@@ -212,16 +212,16 @@
       "lastError": "HTTP 404"
     },
     "bsf": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "HTTP 403"
     },
     "bssc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 1
     },
     "canara-bank": {
@@ -245,41 +245,41 @@
       "lastError": "Response does not match the HTTP/1.1 protocol (Unexpected whitespace after header value)"
     },
     "cg-police": {
-      "consecutiveFailures": 199,
+      "consecutiveFailures": 200,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "cg-vyapam": {
-      "consecutiveFailures": 199,
+      "consecutiveFailures": 200,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "cgpsc": {
-      "consecutiveFailures": 199,
+      "consecutiveFailures": 200,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "ch-admin": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 11
     },
     "ch-police": {
       "consecutiveFailures": 0,
-      "emptyRuns": 198,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "emptyRuns": 199,
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 0
     },
     "cisf": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "coal-india": {
@@ -304,9 +304,9 @@
       "lastLinkCount": 24
     },
     "crpf": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "csir": {
@@ -326,8 +326,8 @@
     "dd-admin": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 15
     },
     "dl-police": {
@@ -352,8 +352,8 @@
     "dsssb": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 43
     },
     "ecil": {
@@ -364,9 +364,9 @@
     },
     "employment-news": {
       "consecutiveFailures": 0,
-      "emptyRuns": 168,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "emptyRuns": 169,
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 0
     },
     "epfo": {
@@ -376,9 +376,9 @@
       "lastError": "HTTP 403"
     },
     "esic": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "exim-bank": {
@@ -411,8 +411,8 @@
     "ga-police": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 20
     },
     "ga-teacher": {
@@ -448,9 +448,9 @@
       "lastError": "timeout"
     },
     "gj-ojas": {
-      "consecutiveFailures": 199,
+      "consecutiveFailures": 200,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "ETIMEDOUT: "
     },
     "gj-teacher": {
@@ -471,20 +471,20 @@
     "goa-gssc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 41
     },
     "gpsc-goa": {
-      "consecutiveFailures": 199,
+      "consecutiveFailures": 200,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "HTTP 403"
     },
     "gpsc-gujarat": {
-      "consecutiveFailures": 199,
+      "consecutiveFailures": 200,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "ETIMEDOUT: "
     },
     "grse": {
@@ -495,9 +495,9 @@
       "lastLinkCount": 146
     },
     "gsssb": {
-      "consecutiveFailures": 199,
+      "consecutiveFailures": 200,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "ETIMEDOUT: "
     },
     "hal": {
@@ -689,11 +689,12 @@
       "lastLinkCount": 0
     },
     "hp-rca": {
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "emptyRuns": 55,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastOkAt": "2026-11-07T12:36:27.195Z",
-      "lastLinkCount": 0
+      "lastLinkCount": 0,
+      "lastError": "UND_ERR_CONNECT_TIMEOUT: Connect Timeout Error (attempted address: hprca.hp.gov.in:443, timeout: 30000ms)"
     },
     "hpcl": {
       "consecutiveFailures": 94,
@@ -702,16 +703,17 @@
       "lastError": "HTTP 403"
     },
     "hppsc": {
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastOkAt": "2026-11-07T12:36:27.195Z",
-      "lastLinkCount": 4
+      "lastLinkCount": 4,
+      "lastError": "timeout"
     },
     "hpsc": {
-      "consecutiveFailures": 199,
+      "consecutiveFailures": 200,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "hr-bseh": {
@@ -738,20 +740,20 @@
     "hssc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 16
     },
     "iaf-afcat": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "iaf-agniveer": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "iaf-careers": {
@@ -763,8 +765,8 @@
     "ibps": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 12
     },
     "icmr": {
@@ -782,9 +784,9 @@
       "lastLinkCount": 82
     },
     "indian-army": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "indian-bank": {
@@ -795,9 +797,9 @@
       "lastLinkCount": 0
     },
     "indian-navy": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "indiapost": {
@@ -810,8 +812,8 @@
     "indiapost-gds": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 153
     },
     "iocl": {
@@ -835,9 +837,9 @@
       "lastLinkCount": 17
     },
     "itbp": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "jh-health": {
@@ -854,43 +856,43 @@
       "lastLinkCount": 17
     },
     "jh-police": {
-      "consecutiveFailures": 89,
+      "consecutiveFailures": 90,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastOkAt": "2026-10-30T06:26:25.362Z",
       "lastLinkCount": 4,
       "lastError": "timeout"
     },
     "jk-police": {
-      "consecutiveFailures": 198,
+      "consecutiveFailures": 199,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "jkpsc": {
-      "consecutiveFailures": 198,
+      "consecutiveFailures": 199,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "jkssb": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 4
     },
     "jpsc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 54
     },
     "jssc": {
-      "consecutiveFailures": 198,
+      "consecutiveFailures": 199,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "ka-health": {
@@ -900,9 +902,9 @@
       "lastError": "timeout"
     },
     "ka-kea": {
-      "consecutiveFailures": 198,
+      "consecutiveFailures": 199,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "ka-kptcl": {
@@ -912,9 +914,9 @@
       "lastError": "timeout"
     },
     "ka-police": {
-      "consecutiveFailures": 198,
+      "consecutiveFailures": 199,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "ka-school-education": {
@@ -926,9 +928,9 @@
     "kerala-psc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
-      "lastLinkCount": 14
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
+      "lastLinkCount": 17
     },
     "kl-kseb": {
       "consecutiveFailures": 98,
@@ -944,30 +946,30 @@
       "lastLinkCount": 1
     },
     "kpsc": {
-      "consecutiveFailures": 198,
+      "consecutiveFailures": 199,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "Response does not match the HTTP/1.1 protocol (Invalid header token)"
     },
     "kvs": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 37
     },
     "la-admin": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 8
     },
     "ld-admin": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 11
     },
     "lic": {
@@ -1001,8 +1003,8 @@
     "mh-police": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 56
     },
     "mh-teacher": {
@@ -1021,8 +1023,8 @@
     "ml-police": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 7
     },
     "ml-power": {
@@ -1042,14 +1044,14 @@
     "mn-police": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 3
     },
     "mp-esb": {
-      "consecutiveFailures": 197,
+      "consecutiveFailures": 198,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "mp-mppgcl": {
@@ -1065,36 +1067,36 @@
       "lastError": "timeout"
     },
     "mppsc": {
-      "consecutiveFailures": 197,
+      "consecutiveFailures": 198,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "mpsc": {
       "consecutiveFailures": 0,
-      "emptyRuns": 197,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "emptyRuns": 198,
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 0
     },
     "mpsc-manipur": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 26
     },
     "mpsc-meghalaya": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 594
     },
     "mpsc-mizoram": {
-      "consecutiveFailures": 111,
+      "consecutiveFailures": 112,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastOkAt": "2026-10-28T06:26:22.530Z",
       "lastLinkCount": 62,
       "lastError": "HTTP 403"
@@ -1108,9 +1110,9 @@
       "lastError": "HTTP 403"
     },
     "mz-police": {
-      "consecutiveFailures": 111,
+      "consecutiveFailures": 112,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastOkAt": "2026-10-28T06:26:22.530Z",
       "lastLinkCount": 7,
       "lastError": "HTTP 403"
@@ -1182,15 +1184,15 @@
     "nl-nssb": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 13
     },
     "nl-police": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 8
     },
     "nlc": {
@@ -1215,8 +1217,8 @@
     "npsc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 10
     },
     "nta": {
@@ -1234,9 +1236,9 @@
       "lastLinkCount": 3
     },
     "nvs": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "ETIMEDOUT: "
     },
     "od-health": {
@@ -1253,9 +1255,9 @@
       "lastLinkCount": 9
     },
     "od-police": {
-      "consecutiveFailures": 197,
+      "consecutiveFailures": 198,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "od-teacher": {
@@ -1281,22 +1283,22 @@
     "opsc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 6
     },
     "ossc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 8
     },
     "osssc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 5
     },
     "pb-health": {
@@ -1306,9 +1308,9 @@
       "lastError": "timeout"
     },
     "pb-police": {
-      "consecutiveFailures": 195,
+      "consecutiveFailures": 196,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "pb-pspcl": {
@@ -1338,29 +1340,29 @@
       "lastLinkCount": 6
     },
     "ppsc": {
-      "consecutiveFailures": 197,
+      "consecutiveFailures": 198,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "psssb": {
-      "consecutiveFailures": 197,
+      "consecutiveFailures": 198,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "py-admin": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 8
     },
     "rbi-careers": {
       "consecutiveFailures": 0,
-      "emptyRuns": 199,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "emptyRuns": 200,
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 0
     },
     "rites": {
@@ -1385,16 +1387,16 @@
       "lastError": "timeout"
     },
     "rj-police": {
-      "consecutiveFailures": 189,
+      "consecutiveFailures": 190,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "rj-recruitment": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 5
     },
     "rj-teacher": {
@@ -1406,9 +1408,9 @@
       "lastError": "timeout"
     },
     "rpsc": {
-      "consecutiveFailures": 189,
+      "consecutiveFailures": 190,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "ETIMEDOUT: "
     },
     "rrb-ahmedabad": {
@@ -1424,9 +1426,9 @@
       "lastError": "timeout"
     },
     "rrb-apply": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "HTTP 404"
     },
     "rrb-bengaluru": {
@@ -1657,9 +1659,9 @@
       "lastLinkCount": 523
     },
     "rssb": {
-      "consecutiveFailures": 189,
+      "consecutiveFailures": 190,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "sail": {
@@ -1672,8 +1674,8 @@
     "sbi-careers": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 17
     },
     "sebi": {
@@ -1691,24 +1693,24 @@
       "lastLinkCount": 3
     },
     "spsc-sikkim": {
-      "consecutiveFailures": 186,
+      "consecutiveFailures": 187,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "ssb": {
-      "consecutiveFailures": 113,
+      "consecutiveFailures": 114,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastOkAt": "2026-10-28T03:26:41.422Z",
       "lastLinkCount": 12,
       "lastError": "robots.txt disallows this page"
     },
     "ssc": {
       "consecutiveFailures": 0,
-      "emptyRuns": 200,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "emptyRuns": 201,
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 0
     },
     "tg-mhsrb": {
@@ -1720,9 +1722,9 @@
     },
     "tg-police": {
       "consecutiveFailures": 0,
-      "emptyRuns": 164,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "emptyRuns": 165,
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 0
     },
     "tg-power": {
@@ -1738,9 +1740,9 @@
       "lastError": "read ECONNRESET"
     },
     "tgpsc": {
-      "consecutiveFailures": 42,
+      "consecutiveFailures": 43,
       "emptyRuns": 1,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastOkAt": "2026-11-03T03:14:57.726Z",
       "lastLinkCount": 0,
       "lastError": "HTTP 403"
@@ -1769,20 +1771,20 @@
     "tnpsc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
-      "lastOkAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 2
     },
     "tnusrb": {
-      "consecutiveFailures": 167,
+      "consecutiveFailures": 168,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "tpsc": {
-      "consecutiveFailures": 144,
+      "consecutiveFailures": 145,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "tr-health": {
@@ -1824,9 +1826,9 @@
       "lastLinkCount": 78
     },
     "uk-police": {
-      "consecutiveFailures": 109,
+      "consecutiveFailures": 110,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T10:29:50.804Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "uk-teacher": {
@@ -1843,16 +1845,16 @@
       "lastError": "timeout"
     },
     "ukpsc": {
-      "consecutiveFailures": 119,
+      "consecutiveFailures": 120,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "uksssc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T10:29:50.804Z",
-      "lastOkAt": "2026-11-07T10:29:50.804Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 28
     },
     "union-bank": {
@@ -1885,27 +1887,27 @@
     "uppbpb": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T10:29:50.804Z",
-      "lastOkAt": "2026-11-07T10:29:50.804Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 11
     },
     "uppsc": {
       "consecutiveFailures": 0,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T10:29:50.804Z",
-      "lastOkAt": "2026-11-07T10:29:50.804Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
+      "lastOkAt": "2026-11-07T15:26:09.663Z",
       "lastLinkCount": 51
     },
     "upsc": {
-      "consecutiveFailures": 200,
+      "consecutiveFailures": 201,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T12:36:27.195Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "upsssc": {
-      "consecutiveFailures": 102,
+      "consecutiveFailures": 103,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T10:29:50.804Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "wb-hrb": {
@@ -1915,9 +1917,9 @@
       "lastError": "HTTP 526"
     },
     "wb-prb": {
-      "consecutiveFailures": 100,
+      "consecutiveFailures": 101,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T10:29:50.804Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "wb-wbsedcl": {
@@ -1928,9 +1930,9 @@
       "lastLinkCount": 0
     },
     "wbpsc": {
-      "consecutiveFailures": 100,
+      "consecutiveFailures": 101,
       "emptyRuns": 0,
-      "lastCheckedAt": "2026-11-07T10:29:50.804Z",
+      "lastCheckedAt": "2026-11-07T15:26:09.663Z",
       "lastError": "timeout"
     },
     "wbssc": {
@@ -1941,5 +1943,5 @@
       "lastLinkCount": 31
     }
   },
-  "lastRunAt": "2026-11-07T12:36:27.195Z"
+  "lastRunAt": "2026-11-07T15:26:09.663Z"
 }
