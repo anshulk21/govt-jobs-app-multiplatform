@@ -1,0 +1,51 @@
+{
+  "id": "a3bdf06ff2",
+  "slug": "rrc-wr-click-here-to-view-download-notice-regarding-re-a3bdf0",
+  "status": "published",
+  "title": "/ Notice regarding re-scheduling of CBT to be held on 07/11/2026 for the post of ALP/Tech-III",
+  "organization": "RRC Western Railway (Mumbai)",
+  "sourceId": "rrc-wr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrc-wr.com/rrwc/Files/940cdd7b-be47-431c-9c1d-047807258439.pdf",
+    "official": "https://www.rrc-wr.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-10-23",
+      "url": "https://www.rrc-wr.com/rrwc/Files/940cdd7b-be47-431c-9c1d-047807258439.pdf"
+    }
+  ],
+  "foundAt": "2026-11-08T18:18:41.101Z",
+  "updatedAt": "2026-11-08T18:39:21.823Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 23-10-26"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 23-10-26”",
+  "publishedAt": "2026-11-08T18:39:21.823Z"
+}
