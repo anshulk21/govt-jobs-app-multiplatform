@@ -1,0 +1,50 @@
+{
+  "id": "f011a37be3",
+  "slug": "aiims-delhi-archive-recruitment-f011a3",
+  "status": "published",
+  "title": "Archive Recruitment — AIIMS New Delhi",
+  "organization": "AIIMS New Delhi",
+  "sourceId": "aiims-delhi",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": 1,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://203.115.96.82/index.php/en/notices/recruitment/archive_recruitment",
+    "official": "https://www.aiims.edu/index.php/en",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://203.115.96.82/index.php/en/notices/recruitment/archive_recruitment"
+    }
+  ],
+  "foundAt": "2026-11-08T00:18:55.943Z",
+  "updatedAt": "2026-11-08T00:40:09.778Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "vacancies"
+    ],
+    "evidence": {
+      "vacancies": "No. of Post =1"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Vacancies: from “No. of Post =1”",
+  "publishedAt": "2026-11-08T00:40:09.778Z"
+}

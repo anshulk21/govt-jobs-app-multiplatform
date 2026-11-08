@@ -1,0 +1,39 @@
+{
+  "id": "6f6573e9bc",
+  "slug": "aiims-delhi-medical-no-1-all-india-institute-of-medical-6f6573",
+  "status": "draft",
+  "title": "Medical No.1, All India Institute of Medical Sciences, New Delhi",
+  "organization": "AIIMS New Delhi",
+  "sourceId": "aiims-delhi",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://203.115.96.82/images/pdf/notice/Best%20College-medical.pdf",
+    "official": "https://www.aiims.edu/index.php/en",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-08T00:18:55.943Z",
+  "updatedAt": "2026-11-08T00:18:55.943Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}
