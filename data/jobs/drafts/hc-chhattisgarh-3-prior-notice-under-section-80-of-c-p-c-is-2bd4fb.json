@@ -35,7 +35,10 @@
     ],
     "evidence": {
       "dates.notification": "dated 28.09.2026"
-    }
+    },
+    "tries": 1,
+    "reader": 2,
+    "error": "Page not read (HTTP 403)"
   },
   "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 28.09.2026”"
 }
