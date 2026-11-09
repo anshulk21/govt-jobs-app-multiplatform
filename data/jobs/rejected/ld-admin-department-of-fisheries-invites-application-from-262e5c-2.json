@@ -1,0 +1,45 @@
+{
+  "id": "262e5c46df",
+  "slug": "ld-admin-department-of-fisheries-invites-application-from-262e5c-2",
+  "status": "rejected",
+  "title": "Department of Fisheries invites application from eligible local candidates for the Paid Apprentice Training Programme on ‘Operation and maintenance of Ice Plant’ for a period…",
+  "organization": "Lakshadweep Administration",
+  "sourceId": "ld-admin",
+  "level": "ut",
+  "state": "LD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-06",
+    "applyStart": null,
+    "lastDate": "2026-11-20",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://lakshadweep.gov.in/notice/department-of-fisheries-invites-application-from-eligible-local-candidates-for-the-paid-apprentice-training-programme-on-operation-and-maintenance-of-ice-plant-for-a-period-of-one-year/",
+    "official": "https://lakshadweep.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-09T11:43:44.434Z",
+  "updatedAt": "2026-11-09T11:43:44.434Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 20/11/2026",
+      "dates.notification": "Date of publication: 06/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 20/11/2026”\n• Notification date: from “Date of publication: 06/11/2026”"
+}
