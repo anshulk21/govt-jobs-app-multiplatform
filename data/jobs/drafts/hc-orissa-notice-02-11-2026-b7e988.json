@@ -13,7 +13,7 @@
   "qualifications": [
     "10th"
   ],
-  "ageLimit": null,
+  "ageLimit": "Up to 21 years",
   "fee": null,
   "dates": {
     "notification": "2025-05-16",
@@ -29,17 +29,20 @@
   },
   "timeline": [],
   "foundAt": "2026-11-02T12:18:51.619Z",
-  "updatedAt": "2026-11-02T12:18:51.619Z",
+  "updatedAt": "2026-11-10T15:36:59.353Z",
   "extraction": {
     "method": "pdf-regex",
     "fields": [
       "dates.notification",
-      "qualifications"
+      "qualifications",
+      "ageLimit"
     ],
     "evidence": {
       "dates.notification": "dated 16th May, 2025",
-      "qualifications": "Eligibility Criteria for Direct Recruitment.- (1) Nationality.- A Candidate must be a Citizen of India; (2) Age Limit.-Every candidate applying for direct recruitment to the post of Court Manager must be at least 25 years age and not more"
-    }
+      "qualifications": "Eligibility Criteria for Direct Recruitment.- (1) Nationality.- A Candidate must be a Citizen of India; (2) Age Limit.-Every candidate applying for direct recruitment to the post of Court Manager must be at least 25 years age and not more",
+      "ageLimit": "Age Limit—A candidate must not be below 21 years"
+    },
+    "reader": 2
   },
-  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 16th May, 2025”\n• Qualification: from “Eligibility Criteria for Direct Recruitment.- (1) Nationality.- A Candidate must be a Citizen of India; (2) Age Limit.-Every candidate applying for direct recruitment to the post of Court Manager must be at least 25 years age and not more”"
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 16th May, 2025”\n• Qualification: from “Eligibility Criteria for Direct Recruitment.- (1) Nationality.- A Candidate must be a Citizen of India; (2) Age Limit.-Every candidate applying for direct recruitment to the post of Court Manager must be at least 25 years age and not more”\n• Age limit: from “Age Limit—A candidate must not be below 21 years”"
 }

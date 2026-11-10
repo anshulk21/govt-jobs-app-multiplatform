@@ -1,0 +1,45 @@
+{
+  "id": "89bd3692d6",
+  "slug": "ld-admin-employment-notice-for-football-coach-at-lakshadweep-89bd36-2",
+  "status": "rejected",
+  "title": "Employment Notice for Football Coach at Lakshadweep Football Academy",
+  "organization": "Lakshadweep Administration",
+  "sourceId": "ld-admin",
+  "level": "ut",
+  "state": "LD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-10",
+    "applyStart": null,
+    "lastDate": "2027-01-31",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://lakshadweep.gov.in/notice/employment-notice-for-football-coach-at-lakshadweep-football-academy/",
+    "official": "https://lakshadweep.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-10T15:19:14.402Z",
+  "updatedAt": "2026-11-10T15:19:14.402Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 31/01/2027",
+      "dates.notification": "Date of publication: 10/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 31/01/2027”\n• Notification date: from “Date of publication: 10/11/2026”"
+}
