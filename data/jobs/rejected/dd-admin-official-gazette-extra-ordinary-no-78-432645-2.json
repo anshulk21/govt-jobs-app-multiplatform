@@ -1,0 +1,43 @@
+{
+  "id": "4326455305",
+  "slug": "dd-admin-official-gazette-extra-ordinary-no-78-432645-2",
+  "status": "rejected",
+  "title": "OFFICIAL GAZETTE: Extra Ordinary No. 78",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-30",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s371e09b16e21f7b6919bbfc43f6a5b2f0/uploads/2026/11/202611101673590666.pdf",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-10T06:18:36.083Z",
+  "updatedAt": "2026-11-10T06:18:36.083Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated : 30/10/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated : 30/10/2026”"
+}

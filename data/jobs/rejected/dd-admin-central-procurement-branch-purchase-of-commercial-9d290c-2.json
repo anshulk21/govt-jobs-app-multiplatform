@@ -1,0 +1,45 @@
+{
+  "id": "9d290cf363",
+  "slug": "dd-admin-central-procurement-branch-purchase-of-commercial-9d290c-2",
+  "status": "rejected",
+  "title": "Central Procurement Branch: Purchase of Commercial dehumidifier for NAMO Hospital, Daman",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-06",
+    "applyStart": null,
+    "lastDate": "2026-11-13",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ddd.gov.in/notice/central-procurement-branch-purchase-of-commercial-dehumidifier-for-namo-hospital-daman/",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-10T06:18:36.083Z",
+  "updatedAt": "2026-11-10T06:18:36.083Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "End Date : 13.11.2026",
+      "dates.notification": "Date of publication: 06/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “End Date : 13.11.2026”\n• Notification date: from “Date of publication: 06/11/2026”"
+}
