@@ -1,0 +1,42 @@
+{
+  "id": "f56421c1ae",
+  "slug": "hc-orissa-gazette-notification-no-5000-dated-06-11-2026-f56421",
+  "status": "draft",
+  "title": "Gazette Notification No. 5000 dated 06.11.2026 regarding The High Court of Orissa (Designation of Senior Advocate) Amendment Rules, 2026",
+  "organization": "Orissa High Court",
+  "sourceId": "hc-orissa",
+  "level": "state",
+  "state": "OD",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": "Up to 21 years",
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.orissahighcourt.nic.in/announcement/announcement-pdf-view/1620/",
+    "official": "https://www.orissahighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-10T09:19:00.424Z",
+  "updatedAt": "2026-11-10T09:19:00.424Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "ageLimit"
+    ],
+    "evidence": {
+      "ageLimit": "Age Limit—A candidate must not be below 21 years"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Age limit: from “Age Limit—A candidate must not be below 21 years”"
+}
