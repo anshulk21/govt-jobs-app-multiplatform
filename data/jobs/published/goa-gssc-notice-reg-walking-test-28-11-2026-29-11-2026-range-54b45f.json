@@ -1,0 +1,51 @@
+{
+  "id": "54b45f0d70",
+  "slug": "goa-gssc-notice-reg-walking-test-28-11-2026-29-11-2026-range-54b45f",
+  "status": "published",
+  "title": "Notice reg. Walking Test - 28.11.2026 & 29.11.2026 - Range Forest Officer, Round Forester, and Forest Guard(PDF, opens in the document viewer)",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-20",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-walking-test-on-28-29-nov-2026-range-forest-officer-round-forester-and-forest-guard.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-02-20",
+      "url": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-walking-test-on-28-29-nov-2026-range-forest-officer-round-forester-and-forest-guard.pdf"
+    }
+  ],
+  "foundAt": "2026-11-10T12:19:07.999Z",
+  "updatedAt": "2026-11-10T12:30:53.780Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 20/02/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 20/02/2026”",
+  "publishedAt": "2026-11-10T12:30:53.780Z"
+}
