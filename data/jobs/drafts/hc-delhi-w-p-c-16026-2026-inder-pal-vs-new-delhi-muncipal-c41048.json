@@ -1,0 +1,42 @@
+{
+  "id": "c41048c27d",
+  "slug": "hc-delhi-w-p-c-16026-2026-inder-pal-vs-new-delhi-muncipal-c41048",
+  "status": "draft",
+  "title": "W.P.(C) - 16026/2026, Inder PAL Vs New-Delhi Muncipal Council and ORS, Judgment Date 06.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-30",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/PMS06112026CW160262026_213016.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-10T18:19:02.308Z",
+  "updatedAt": "2026-11-10T18:19:02.308Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 30.10.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 30.10.2026”"
+}
