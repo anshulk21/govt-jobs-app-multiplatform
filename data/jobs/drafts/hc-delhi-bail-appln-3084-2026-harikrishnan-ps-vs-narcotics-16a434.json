@@ -32,7 +32,8 @@
     "method": "pdf-regex",
     "fields": [],
     "evidence": {},
-    "tries": 3
+    "tries": 1,
+    "reader": 2
   },
   "review": "Read from the PDF automatically. Check each value against the notification:"
 }
