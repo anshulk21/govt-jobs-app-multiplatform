@@ -1,0 +1,50 @@
+{
+  "id": "95ecb0e07b",
+  "slug": "hc-tripura-notification-dated-11-11-2026-list-of-candidates-95ecb0",
+  "status": "published",
+  "title": "NOTIFICATION Dated 11.11.2026: List of candidates who have qualified in the Stenography Test (Dictation & Transcription) held on 10.05.2026 for recruitment to the posts of…",
+  "organization": "High Court of Tripura",
+  "sourceId": "hc-tripura",
+  "level": "state",
+  "state": "TR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-05-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26833",
+    "official": "https://thc.nic.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-05-23",
+      "url": "https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26833"
+    }
+  ],
+  "foundAt": "2026-11-11T12:18:55.984Z",
+  "updatedAt": "2026-11-11T12:37:44.864Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 23.05.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 23.05.2026”",
+  "publishedAt": "2026-11-11T12:37:44.864Z"
+}

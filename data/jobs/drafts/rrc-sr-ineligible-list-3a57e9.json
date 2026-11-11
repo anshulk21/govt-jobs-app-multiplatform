@@ -1,0 +1,44 @@
+{
+  "id": "3a57e93e7b",
+  "slug": "rrc-sr-ineligible-list-3a57e9",
+  "status": "draft",
+  "title": "Ineligible List — RRC Southern Railway (Chennai)",
+  "organization": "RRC Southern Railway (Chennai)",
+  "sourceId": "rrc-sr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "diploma"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrcmas.in/downloads/cultural-quota-2026-27-ineligible-applicants.pdf",
+    "official": "https://www.rrcmas.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-11T12:18:55.984Z",
+  "updatedAt": "2026-11-11T12:18:55.984Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "qualification of PSS not considered as from any govt. recogn. institute. 2 261000004 SREEBARNA MANNA Classical Dance 1.As per website of Bangiya Sangeet Parishad, it is affiliated to Rabindra Bharati University for Jr.Vocal section and th"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “qualification of PSS not considered as from any govt. recogn. institute. 2 261000004 SREEBARNA MANNA Classical Dance 1.As per website of Bangiya Sangeet Parishad, it is affiliated to Rabindra Bharati University for Jr.Vocal section and th”"
+}
