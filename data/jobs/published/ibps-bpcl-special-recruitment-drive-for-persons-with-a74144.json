@@ -1,0 +1,52 @@
+{
+  "id": "a74144b35d",
+  "slug": "ibps-bpcl-special-recruitment-drive-for-persons-with-a74144",
+  "status": "published",
+  "title": "BPCL Special Recruitment Drive for Persons with Benchmark Disabilities (PwBDs)/ Divyangjans Registration From 09-Nov-2026",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-11-09",
+    "lastDate": "2026-12-14",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ibpsreg.ibps.in/bpcljul26/",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://ibpsreg.ibps.in/bpcljul26/"
+    }
+  ],
+  "foundAt": "2026-11-11T06:18:45.450Z",
+  "updatedAt": "2026-11-11T06:28:01.270Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for printing your application 14/12/2026",
+      "dates.applyStart": "Commencement of online registration of application 09/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date for printing your application 14/12/2026”\n• Apply from: from “Commencement of online registration of application 09/11/2026”",
+  "publishedAt": "2026-11-11T06:28:01.270Z"
+}
