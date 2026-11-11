@@ -1,8 +1,8 @@
 {
-  "id": "9470b0770e",
-  "slug": "hc-meghalaya-notification-dated-15-10-2026-standard-9470b0",
-  "status": "draft",
-  "title": "Notification dated 15.10.2026: Standard Operating Procedure (SOP) for opera...",
+  "id": "66f1f78038",
+  "slug": "hc-meghalaya-notice-12-010-2026-matters-to-be-taken-up-on-66f1f7-2",
+  "status": "rejected",
+  "title": "Notice 12.010.2026: Matters to be taken up on 12th... |",
   "organization": "High Court of Meghalaya",
   "sourceId": "hc-meghalaya",
   "level": "state",
@@ -21,15 +21,15 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://meghalayahighcourt.nic.in/notification-dated-15102026-standard-operating-procedure-sop-operation-mobile-esewa-kendra",
+    "notification": "https://meghalayahighcourt.nic.in/notice-120102026-matters-be-taken-12th-october-2026",
     "official": "https://meghalayahighcourt.nic.in/",
     "apply": null
   },
   "timeline": [],
   "foundAt": "2026-10-21T21:18:48.250Z",
-  "updatedAt": "2026-10-21T21:18:48.250Z",
+  "updatedAt": "2026-10-25T18:27:16.223Z",
   "extraction": {
-    "method": "link-only",
+    "method": "page-regex",
     "fields": [
       "dates.notification"
     ],
@@ -37,5 +37,6 @@
       "dates.notification": "dated 15.10.2026"
     }
   },
-  "review": "Only the link was read. Fill in the details from the official notification.\n• Notification date: from “dated 15.10.2026”"
+  "notes": "Rejected automatically: unclear for 21+ days.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated 15.10.2026”"
 }
