@@ -1,0 +1,45 @@
+{
+  "id": "4171f693cf",
+  "slug": "ld-admin-virtual-interview-notice-national-health-mission-4171f6-2",
+  "status": "rejected",
+  "title": "Virtual Interview Notice – National Health Mission",
+  "organization": "Lakshadweep Administration",
+  "sourceId": "ld-admin",
+  "level": "ut",
+  "state": "LD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-11",
+    "applyStart": null,
+    "lastDate": "2026-11-20",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://lakshadweep.gov.in/notice/virtual-interview-notice/",
+    "official": "https://lakshadweep.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-11T09:18:36.427Z",
+  "updatedAt": "2026-11-11T09:18:36.427Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 20/11/2026",
+      "dates.notification": "Date of publication: 11/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 20/11/2026”\n• Notification date: from “Date of publication: 11/11/2026”"
+}
