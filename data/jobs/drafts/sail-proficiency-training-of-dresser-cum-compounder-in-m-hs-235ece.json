@@ -1,0 +1,48 @@
+{
+  "id": "235ecebdce",
+  "slug": "sail-proficiency-training-of-dresser-cum-compounder-in-m-hs-235ece",
+  "status": "draft",
+  "title": "Proficiency Training of Dresser Cum Compounder in M&HS, CFP",
+  "organization": "SAIL — Careers",
+  "sourceId": "sail",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "12th",
+    "diploma",
+    "nursing"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-11",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL-CFP_News%20&%20Jobs_12112026_094350.pdf",
+    "official": "https://sailcareers.com/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-12T06:19:00.634Z",
+  "updatedAt": "2026-11-12T06:19:00.634Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.notification": "dated 11 Nov 2026",
+      "qualifications": "QUALIFICATION (VALID AS ON DATE OF WALK-IN INTERVIEW): Sl. No. Streams No. of Posts Required Qualifications 01 Dresser Cum Compounder (Male) 03 Intermediate (10+2) with Science from any university / institution recognized by the Central o"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 11 Nov 2026”\n• Qualification: from “QUALIFICATION (VALID AS ON DATE OF WALK-IN INTERVIEW): Sl. No. Streams No. of Posts Required Qualifications 01 Dresser Cum Compounder (Male) 03 Intermediate (10+2) with Science from any university / institution recognized by the Central o”"
+}
