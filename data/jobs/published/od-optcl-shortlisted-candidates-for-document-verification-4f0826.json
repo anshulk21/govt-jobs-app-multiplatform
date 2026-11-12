@@ -1,0 +1,51 @@
+{
+  "id": "4f08264316",
+  "slug": "od-optcl-shortlisted-candidates-for-document-verification-4f0826",
+  "status": "published",
+  "title": "Shortlisted Candidates for Document Verification-cum-Interview towards Engagement of Apprentice at OPTCL in FY 2026-27.",
+  "organization": "Odisha Power Transmission Corporation Ltd",
+  "sourceId": "od-optcl",
+  "level": "state",
+  "state": "OD",
+  "category": "Electricity",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-29",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.optcl.co.in/Writereaddata/NewsArea/18280-Shortlistedcandidates.pdf",
+    "official": "https://www.optcl.co.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-08-29",
+      "url": "https://www.optcl.co.in/Writereaddata/NewsArea/18280-Shortlistedcandidates.pdf"
+    }
+  ],
+  "foundAt": "2026-11-12T20:02:29.053Z",
+  "updatedAt": "2026-11-12T20:22:18.539Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 29.08.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 29.08.2026”",
+  "publishedAt": "2026-11-12T20:22:18.539Z"
+}
