@@ -1,8 +1,8 @@
 {
-  "id": "d2f5946447",
-  "slug": "hc-andhra-pradesh-judgment-d2f594",
-  "status": "draft",
-  "title": "Judgment — High Court of Andhra Pradesh",
+  "id": "f9efee3d62",
+  "slug": "hc-andhra-pradesh-view-full-judgment-f9efee-2",
+  "status": "rejected",
+  "title": "Full Judgment — High Court of Andhra Pradesh",
   "organization": "High Court of Andhra Pradesh",
   "sourceId": "hc-andhra-pradesh",
   "level": "state",
@@ -21,7 +21,7 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://digi-services.aphc.ap.gov.in/eaphcr/docs/sci/tel/250203165908_tel.pdf",
+    "notification": "https://aphc.gov.in/docs/imp_judgements/Pradeep%20Kumar%20Biswas%20Case.pdf",
     "official": "https://aphc.gov.in/",
     "apply": null
   },
@@ -32,8 +32,9 @@
     "method": "link-only",
     "fields": [],
     "evidence": {},
-    "error": "PDF not read (ETIMEDOUT: )",
+    "error": "PDF not read (HTTP 404)",
     "tries": 3
   },
-  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (ETIMEDOUT: ))"
+  "notes": "Rejected automatically: unclear for 21+ days.",
+  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (HTTP 404))"
 }

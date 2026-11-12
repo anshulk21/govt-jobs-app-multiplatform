@@ -1,8 +1,8 @@
 {
-  "id": "f9efee3d62",
-  "slug": "hc-andhra-pradesh-view-full-judgment-f9efee",
+  "id": "299d784135",
+  "slug": "hc-andhra-pradesh-judgment-299d78",
   "status": "draft",
-  "title": "Full Judgment — High Court of Andhra Pradesh",
+  "title": "Judgment — High Court of Andhra Pradesh",
   "organization": "High Court of Andhra Pradesh",
   "sourceId": "hc-andhra-pradesh",
   "level": "state",
@@ -21,19 +21,20 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://aphc.gov.in/docs/imp_judgements/Pradeep%20Kumar%20Biswas%20Case.pdf",
+    "notification": "https://digi-services.aphc.ap.gov.in/eaphcr/docs/sci/eng/231122140011_eng.pdf",
     "official": "https://aphc.gov.in/",
     "apply": null
   },
   "timeline": [],
-  "foundAt": "2026-10-22T15:39:10.220Z",
-  "updatedAt": "2026-10-22T15:39:10.220Z",
+  "foundAt": "2026-11-12T15:19:02.958Z",
+  "updatedAt": "2026-11-12T15:19:02.958Z",
   "extraction": {
     "method": "link-only",
     "fields": [],
     "evidence": {},
-    "error": "PDF not read (HTTP 404)",
-    "tries": 3
+    "reader": 2,
+    "error": "PDF not read (getaddrinfo EAI_AGAIN digi-services.aphc.ap.gov.in)",
+    "tries": 1
   },
-  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (HTTP 404))"
+  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (getaddrinfo EAI_AGAIN digi-services.aphc.ap.gov.in))"
 }
