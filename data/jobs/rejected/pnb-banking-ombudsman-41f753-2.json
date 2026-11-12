@@ -1,0 +1,39 @@
+{
+  "id": "41f75334d4",
+  "slug": "pnb-banking-ombudsman-41f753-2",
+  "status": "rejected",
+  "title": "Banking Ombudsman — Punjab National Bank",
+  "organization": "Punjab National Bank — Recruitment",
+  "sourceId": "pnb",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://pnb.bank.in/document/Banking_ombudsman.pdf",
+    "official": "https://pnb.bank.in/Recruitments.aspx",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-22T11:01:17.859Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "tries": 3
+  },
+  "notes": "Rejected automatically: unclear for 21+ days.",
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

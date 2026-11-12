@@ -1,0 +1,46 @@
+{
+  "id": "c441a9dc2f",
+  "slug": "hc-orissa-transfer-and-posting-of-officers-in-the-cadre-of-c441a9",
+  "status": "draft",
+  "title": "Transfer and Posting of Officers in the Cadre of Civil Judge (Jr. Divn.)... 12/ Nov /2026",
+  "organization": "Orissa High Court",
+  "sourceId": "hc-orissa",
+  "level": "state",
+  "state": "OD",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "10th"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-05-16",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.orissahighcourt.nic.in/important-notices-pdf-view/notification/1278/",
+    "official": "https://www.orissahighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-12T11:26:35.965Z",
+  "updatedAt": "2026-11-12T11:26:35.965Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.notification": "dated 16th May, 2025",
+      "qualifications": "Eligibility Criteria for Direct Recruitment.- (1) Nationality.- A Candidate must be a Citizen of India; (2) Age Limit.-Every candidate applying for direct recruitment to the post of Court Manager must be at least 25 years age and not more"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 16th May, 2025”\n• Qualification: from “Eligibility Criteria for Direct Recruitment.- (1) Nationality.- A Candidate must be a Citizen of India; (2) Age Limit.-Every candidate applying for direct recruitment to the post of Court Manager must be at least 25 years age and not more”"
+}

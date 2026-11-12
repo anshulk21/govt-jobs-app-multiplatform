@@ -1,0 +1,46 @@
+{
+  "id": "e56d98e856",
+  "slug": "sbi-careers-current-openings-e56d98-2",
+  "status": "rejected",
+  "title": "Current Openings — State Bank of India",
+  "organization": "State Bank of India — Careers",
+  "sourceId": "sbi-careers",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": "Up to 35 years",
+  "fee": "₹750, nil for some categories",
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-08-31",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://sbi.bank.in/en/web/careers/current-openings",
+    "official": "https://sbi.bank.in/web/careers",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-10-22T11:01:17.859Z",
+  "updatedAt": "2026-10-25T09:36:30.515Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "ageLimit",
+      "fee"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date of registration i.e., 31.08.2026",
+      "ageLimit": "maximum age limit of 35 years",
+      "fee": "APPLICATION FEE AND INTIMATION CHARGE: (Non-Refundable) Sl. Category Fee/ intimation Charges 1. SC/ ST/ PwBD/ XS/DXS Nil 2. General/ OBC/ EWS Rs 750/- Fee/ Intimation charges once paid will NOT be ref"
+    }
+  },
+  "notes": "Rejected automatically: unclear for 21+ days.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date of registration i.e., 31.08.2026”\n• Age limit: from “maximum age limit of 35 years”\n• Fee: from “APPLICATION FEE AND INTIMATION CHARGE: (Non-Refundable) Sl. Category Fee/ intimation Charges 1. SC/ ST/ PwBD/ XS/DXS Nil 2. General/ OBC/ EWS Rs 750/- Fee/ Intimation charges once paid will NOT be ref”"
+}
