@@ -1,8 +1,8 @@
 {
-  "id": "a2e9214495",
-  "slug": "hc-chhattisgarh-3-notification-no-277-mis-bilaspur-dated-15-a2e921",
-  "status": "draft",
-  "title": "Notification No. 277(Mis.)/ Bilaspur dated, 15/10/2026",
+  "id": "092cb0239e",
+  "slug": "hc-chhattisgarh-3-select-list-for-recruitment-to-the-post-of-092cb0-2",
+  "status": "rejected",
+  "title": "Select List for Recruitment to the Post of Translator.",
   "organization": "High Court of Chhattisgarh",
   "sourceId": "hc-chhattisgarh",
   "level": "state",
@@ -21,19 +21,21 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://highcourt.cg.gov.in/noti/view_file_noti.php?token=MzgxMzF8MTc5Mjc0MTUyOQ%3D%3D.52022f06a52fbfd94b95cb378dc975844f74e25a78b7510cf267e6e9a158109d",
+    "notification": "https://highcourt.cg.gov.in/noti/view_file_noti.php?token=MzgxNjl8MTc5NDU2NTcxNQ%3D%3D.ef9eb4c4e0a6075b7331c3d629a5bccf5ba5f259df306c1097b83a9ea18815c5",
     "official": "https://highcourt.cg.gov.in/",
     "apply": null
   },
   "timeline": [],
-  "foundAt": "2026-10-23T06:35:59.139Z",
-  "updatedAt": "2026-10-23T06:35:59.139Z",
+  "foundAt": "2026-11-13T09:19:22.564Z",
+  "updatedAt": "2026-11-13T09:19:22.564Z",
   "extraction": {
     "method": "link-only",
     "fields": [],
     "evidence": {},
-    "error": "Page not read (HTTP 403)",
-    "tries": 3
+    "reader": 2,
+    "error": "PDF has no text layer (probably scanned)",
+    "tries": 1
   },
+  "notes": "Rejected automatically: duplicate of hc-chhattisgarh-3-select-list-for-recruitment-to-the-post-of-c5d81a.",
   "review": "Only the link was read. Fill in the details from the official notification.\n(PDF has no text layer (probably scanned))"
 }
