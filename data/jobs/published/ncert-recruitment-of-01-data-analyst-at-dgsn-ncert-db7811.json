@@ -1,0 +1,56 @@
+{
+  "id": "db7811b22b",
+  "slug": "ncert-recruitment-of-01-data-analyst-at-dgsn-ncert-db7811",
+  "status": "published",
+  "title": "Recruitment of 01 Data Analyst at DGSN, NCERT",
+  "organization": "NCERT",
+  "sourceId": "ncert",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "diploma",
+    "graduate",
+    "postgraduate"
+  ],
+  "ageLimit": "Up to 45 years",
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ncert.nic.in/pdf/announcement/vacancies/projectstaffvacancy/DGSN-670-DA-13-11.pdf",
+    "official": "https://ncert.nic.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://ncert.nic.in/pdf/announcement/vacancies/projectstaffvacancy/DGSN-670-DA-13-11.pdf"
+    }
+  ],
+  "foundAt": "2026-11-13T12:18:36.068Z",
+  "updatedAt": "2026-11-13T12:38:50.146Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "ageLimit",
+      "qualifications"
+    ],
+    "evidence": {
+      "ageLimit": "Age Limit Not more than 45 Years",
+      "qualifications": "Qualification A Study on Integration of Technology in the Teaching Learning Process of Tribal Schools: An NEP-2020 Perspective (PAC Code: 3.01) Essential Educational Qualifications • Post-Graduation in Science/ Statistics/ Mathematics/ Comm"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Age limit: from “Age Limit Not more than 45 Years”\n• Qualification: from “Qualification A Study on Integration of Technology in the Teaching Learning Process of Tribal Schools: An NEP-2020 Perspective (PAC Code: 3.01) Essential Educational Qualifications • Post-Graduation in Science/ Statistics/ Mathematics/ Comm”",
+  "publishedAt": "2026-11-13T12:38:50.146Z"
+}

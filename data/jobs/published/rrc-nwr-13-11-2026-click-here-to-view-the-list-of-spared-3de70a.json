@@ -1,0 +1,51 @@
+{
+  "id": "3de70ad0e4",
+  "slug": "rrc-nwr-13-11-2026-click-here-to-view-the-list-of-spared-3de70a",
+  "status": "published",
+  "title": "the list of spared candidates for GDCE 04/2023",
+  "organization": "RRC North Western Railway (Jaipur)",
+  "sourceId": "rrc-nwr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": "2026-11-22"
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://rrcjaipur.in/storeWebFiles/1024_95531969.PDF",
+    "official": "https://www.rrcjaipur.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://rrcjaipur.in/storeWebFiles/1024_95531969.PDF"
+    }
+  ],
+  "foundAt": "2026-11-13T12:18:36.068Z",
+  "updatedAt": "2026-11-13T12:38:50.146Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.exam"
+    ],
+    "evidence": {
+      "dates.exam": "Exam date Exam City 1 NWRG111919 ABHISHEK TANWAR NARAYAN DASS TANWAR AII JE TM 22.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Exam date: from “Exam date Exam City 1 NWRG111919 ABHISHEK TANWAR NARAYAN DASS TANWAR AII JE TM 22.11.2026”",
+  "publishedAt": "2026-11-13T12:38:50.146Z"
+}

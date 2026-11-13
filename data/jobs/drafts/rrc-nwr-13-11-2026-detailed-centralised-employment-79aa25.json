@@ -1,0 +1,42 @@
+{
+  "id": "79aa25ce4a",
+  "slug": "rrc-nwr-13-11-2026-detailed-centralised-employment-79aa25",
+  "status": "draft",
+  "title": "Detailed Centralised Employment Notification CEN 09/2025 for Level-1",
+  "organization": "RRC North Western Railway (Jaipur)",
+  "sourceId": "rrc-nwr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-03-02",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://rrcjaipur.in/storeWebFiles/1020_18183101.PDF",
+    "official": "https://www.rrcjaipur.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-13T12:18:36.068Z",
+  "updatedAt": "2026-11-13T12:18:36.068Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "Closing date & time of online submission of Applications 02.03.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Closing date & time of online submission of Applications 02.03.2026”"
+}

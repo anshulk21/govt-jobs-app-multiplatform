@@ -1,0 +1,52 @@
+{
+  "id": "525c1a3780",
+  "slug": "exim-bank-advertisement-no-hrm-mt-m-2026-27-05-525c1a",
+  "status": "published",
+  "title": "Advertisement No. Hrm/Mt/M/2026-27/05 — Exim Bank",
+  "organization": "Exim Bank — Careers",
+  "sourceId": "exim-bank",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": 50,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-12-11",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.eximbankindia.in/sites/default/files/2026-11/MT%20%20M%20Recruitment%20Advertisement%2012-11-2026.pdf",
+    "official": "https://www.eximbankindia.in/careers",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-11/MT%20%20M%20Recruitment%20Advertisement%2012-11-2026.pdf"
+    }
+  ],
+  "foundAt": "2026-11-13T12:18:36.068Z",
+  "updatedAt": "2026-11-13T12:38:50.146Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last day for applying and payment of Examination fee 11-12-2026",
+      "vacancies": "Total No. of posts – 50"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last day for applying and payment of Examination fee 11-12-2026”\n• Vacancies: from “Total No. of posts – 50”",
+  "publishedAt": "2026-11-13T12:38:50.146Z"
+}

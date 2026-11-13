@@ -1,0 +1,60 @@
+{
+  "id": "6c2f145977",
+  "slug": "rrc-nwr-news-events-6c2f14",
+  "status": "published",
+  "title": "News & Events — RRC North Western Railway (Jaipur)",
+  "organization": "RRC North Western Railway (Jaipur)",
+  "sourceId": "rrc-nwr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": 2,
+  "qualifications": [],
+  "ageLimit": "Up to 40 years",
+  "fee": "₹500, ₹400",
+  "dates": {
+    "notification": "2026-06-29",
+    "applyStart": "2026-07-06",
+    "lastDate": "2026-08-05",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrcjaipur.in/Notice?a=Advt-Id-26",
+    "official": "https://www.rrcjaipur.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-06-29",
+      "url": "https://www.rrcjaipur.in/Notice?a=Advt-Id-26"
+    }
+  ],
+  "foundAt": "2026-11-13T12:18:36.068Z",
+  "updatedAt": "2026-11-13T12:38:50.146Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart",
+      "dates.notification",
+      "vacancies",
+      "ageLimit",
+      "fee"
+    ],
+    "evidence": {
+      "dates.lastDate": "Closing Date and time of online application 05/08/2026",
+      "dates.applyStart": "Opening date of online application 06/07/2026",
+      "dates.notification": "Date of Publication of Notification 29/06/2026",
+      "vacancies": "02 posts",
+      "ageLimit": "upper age limit will be up to 40 years",
+      "fee": "Examination Fee:- 4.1 Fee Payable:- (I) For all candidates except the fee concession categories mentioned below at Sl. No. II Out of this fee of Rs 500/- an amount of Rs 400/- shall be refunded in due"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Closing Date and time of online application 05/08/2026”\n• Apply from: from “Opening date of online application 06/07/2026”\n• Notification date: from “Date of Publication of Notification 29/06/2026”\n• Vacancies: from “02 posts”\n• Age limit: from “upper age limit will be up to 40 years”\n• Fee: from “Examination Fee:- 4.1 Fee Payable:- (I) For all candidates except the fee concession categories mentioned below at Sl. No. II Out of this fee of Rs 500/- an amount of Rs 400/- shall be refunded in due”",
+  "publishedAt": "2026-11-13T12:38:50.146Z"
+}
