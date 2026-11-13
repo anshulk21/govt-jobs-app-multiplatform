@@ -1,0 +1,51 @@
+{
+  "id": "cca8279b8b",
+  "slug": "mn-police-corrigendum-in-partial-modification-of-this-office-cca827",
+  "status": "published",
+  "title": "Corrigendum in partial modification of this office notification of E/31/21/2021-PHQ(Adm)(Pt-I) dated 02/11/2026 in connection with one time relaxation of 2(two) years in the…",
+  "organization": "Manipur — Police Recruitment Board",
+  "sourceId": "mn-police",
+  "level": "state",
+  "state": "MN",
+  "category": "Police",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-02",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://manipurpolice.gov.in/corrigendum/",
+    "official": "https://manipurpolice.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-02",
+      "url": "https://manipurpolice.gov.in/corrigendum/"
+    }
+  ],
+  "foundAt": "2026-11-13T11:09:47.769Z",
+  "updatedAt": "2026-11-13T11:21:25.276Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 02/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dated 02/11/2026”",
+  "publishedAt": "2026-11-13T11:21:25.276Z"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "a3bf768c60",
+  "slug": "dd-admin-pwd-providing-and-fixing-decorative-items-and-other-a3bf76-2",
+  "status": "rejected",
+  "title": "PWD: Providing and Fixing Decorative items and other allied works for WIP Visit at Daman District. (E-30604)",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-12",
+    "applyStart": null,
+    "lastDate": "2026-11-17",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ddd.gov.in/notice/pwd-providing-and-fixing-decorative-items-and-other-allied-works-for-wip-visit-at-daman-district-e-30604/",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-13T11:09:47.769Z",
+  "updatedAt": "2026-11-13T11:09:47.769Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 17/11/2026",
+      "dates.notification": "Date of publication: 12/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 17/11/2026”\n• Notification date: from “Date of publication: 12/11/2026”"
+}

@@ -32,8 +32,9 @@
     "method": "pdf-regex",
     "fields": [],
     "evidence": {},
-    "tries": 3,
-    "error": "PDF not read (getaddrinfo ENOTFOUND mphc.gov.in)"
+    "tries": 1,
+    "error": "PDF not read (getaddrinfo EAI_AGAIN mphc.gov.in)",
+    "reader": 2
   },
   "review": "Read from the PDF automatically. Check each value against the notification:"
 }
