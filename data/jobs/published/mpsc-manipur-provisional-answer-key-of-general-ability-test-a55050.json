@@ -1,0 +1,53 @@
+{
+  "id": "a550501c68",
+  "slug": "mpsc-manipur-provisional-answer-key-of-general-ability-test-a55050",
+  "status": "published",
+  "title": "Provisional Answer Key of General Ability Test (Civil Engineering)",
+  "organization": "Manipur Public Service Commission",
+  "sourceId": "mpsc-manipur",
+  "level": "state",
+  "state": "MN",
+  "category": "PSC",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mpscmanipur.gov.in/files/GAT_CE.pdf",
+    "official": "https://mpscmanipur.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://mpscmanipur.gov.in/files/GAT_CE.pdf"
+    },
+    {
+      "stage": "answer-key",
+      "date": "2026-11-13",
+      "url": "https://mpscmanipur.gov.in/files/GAT_CE.pdf"
+    }
+  ],
+  "foundAt": "2026-11-13T15:18:54.200Z",
+  "updatedAt": "2026-11-13T15:28:45.024Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-11-13T15:28:45.024Z"
+}

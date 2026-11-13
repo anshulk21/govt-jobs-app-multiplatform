@@ -1,0 +1,51 @@
+{
+  "id": "3074515ff4",
+  "slug": "goa-gssc-notice-reg-pre-verification-of-documents-307451",
+  "status": "published",
+  "title": "Notice reg. pre-verification of documents - Agriculture Assistant - Advertisement No. 2 of Year 2025(PDF, opens in the document viewer)",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-13",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-pre-verification-of-documents-agriculture-assistant-advertisement-no-2-of-year-2025.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-13",
+      "url": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-pre-verification-of-documents-agriculture-assistant-advertisement-no-2-of-year-2025.pdf"
+    }
+  ],
+  "foundAt": "2026-11-13T15:18:54.200Z",
+  "updatedAt": "2026-11-13T15:28:45.024Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 13/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 13/11/2026”",
+  "publishedAt": "2026-11-13T15:28:45.024Z"
+}
