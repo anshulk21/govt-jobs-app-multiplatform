@@ -1,0 +1,48 @@
+{
+  "id": "952c590e4f",
+  "slug": "rrc-wr-click-here-to-view-download-list-of-candidates-952c59",
+  "status": "published",
+  "title": "/ List of Candidates Shortlisted for Physical Efficiency Test (PET)",
+  "organization": "RRC Western Railway (Mumbai)",
+  "sourceId": "rrc-wr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrc-wr.com/rrwc/Files/b3242df3-c071-4db8-96fe-c03d4b2bdfd5.pdf",
+    "official": "https://www.rrc-wr.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.rrc-wr.com/rrwc/Files/b3242df3-c071-4db8-96fe-c03d4b2bdfd5.pdf"
+    }
+  ],
+  "foundAt": "2026-11-13T18:18:54.419Z",
+  "updatedAt": "2026-11-13T18:37:31.291Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-11-13T18:37:31.291Z"
+}
