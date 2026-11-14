@@ -1,0 +1,43 @@
+{
+  "id": "0ed22b634a",
+  "slug": "hc-chhattisgarh-4-albeit-mere-participation-in-the-selection-0ed22b-2",
+  "status": "rejected",
+  "title": "Albeit, mere participation in the selection process does not confer any indefeasible right to appointment upon a candidate, the decision to abandon an ongoing recruitment…",
+  "organization": "High Court of Chhattisgarh",
+  "sourceId": "hc-chhattisgarh",
+  "level": "state",
+  "state": "CG",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-04-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://highcourt.cg.gov.in/Afr/view_file_afr.php?token=MzgxNTJ8MTc5NDY3MzY5Nw%3D%3D.828d3519c9ba018716383509c3d099d1b04c5f1b6f7d72696ca15b5d80093d42",
+    "official": "https://highcourt.cg.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-14T15:18:35.207Z",
+  "updatedAt": "2026-11-14T15:18:35.207Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 23.04.2025"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2025-04-23).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 23.04.2025”"
+}

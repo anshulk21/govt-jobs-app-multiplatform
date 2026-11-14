@@ -1,0 +1,42 @@
+{
+  "id": "d040904aa9",
+  "slug": "nta-extension-of-registration-dates-for-the-national-d04090",
+  "status": "draft",
+  "title": "Extension of Registration Dates for the National Institute of Fashion Technology Entrance Examination (NIFTEE)–2027",
+  "organization": "National Testing Agency",
+  "sourceId": "nta",
+  "level": "central",
+  "state": null,
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-11-17",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://nta.ac.in/Download/Notice/Notice_20261114165715.pdf",
+    "official": "https://nta.ac.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-14T15:18:35.207Z",
+  "updatedAt": "2026-11-14T15:18:35.207Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for submission of online application with late fee 17 November 2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last date for submission of online application with late fee 17 November 2026”"
+}
