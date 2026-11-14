@@ -1,0 +1,39 @@
+{
+  "id": "f7d9535712",
+  "slug": "dl-police-f7d953",
+  "status": "draft",
+  "title": "पाकिस्तानी नागरिकों के पंजीकरण संबंधी दिशानिर्देश",
+  "organization": "Delhi Police",
+  "sourceId": "dl-police",
+  "level": "ut",
+  "state": "DL",
+  "category": "Police",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhipolice.gov.in/doc/passport_verification.pdf",
+    "official": "https://delhipolice.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-14T18:28:03.459Z",
+  "updatedAt": "2026-11-14T18:28:03.459Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}
