@@ -1,0 +1,54 @@
+{
+  "id": "9a4965a761",
+  "slug": "dd-admin-namo-college-of-allied-health-sciences-silvassa-d-9a4965-2",
+  "status": "rejected",
+  "title": "NAMO College of Allied Health Sciences Silvassa, D&NH",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "10th",
+    "12th"
+  ],
+  "ageLimit": "Up to 25 years",
+  "fee": "₹500, ₹300",
+  "dates": {
+    "notification": "2026-11-14",
+    "applyStart": null,
+    "lastDate": "2026-11-21",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s371e09b16e21f7b6919bbfc43f6a5b2f0/uploads/2026/11/202611141864407376.pdf",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-14T09:19:04.729Z",
+  "updatedAt": "2026-11-14T09:19:04.729Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification",
+      "ageLimit",
+      "fee",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for submission of application forms 21st November 2026",
+      "dates.notification": "Date of Notification 14th November 2026",
+      "ageLimit": "upper age limit for applicants shall be 25 years",
+      "fee": "Application fee will be Rs.500/- (Rupees Five Hundred Only) for all applicants except SC/ST applicants for whom the fee will be Rs.300/- (Rupees Three Hundred Only). The fee shall be paid online and i",
+      "qualifications": "ELIGIBILITY CRITERIA A candidate who desires admission shall: i. A citizen of India. ii. Have completed 17 years of age on 31st December of the Academic Year for which the admissions are being conducted. iii. Candidate should be medically f"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last date for submission of application forms 21st November 2026”\n• Notification date: from “Date of Notification 14th November 2026”\n• Age limit: from “upper age limit for applicants shall be 25 years”\n• Fee: from “Application fee will be Rs.500/- (Rupees Five Hundred Only) for all applicants except SC/ST applicants for whom the fee will be Rs.300/- (Rupees Three Hundred Only). The fee shall be paid online and i”\n• Qualification: from “ELIGIBILITY CRITERIA A candidate who desires admission shall: i. A citizen of India. ii. Have completed 17 years of age on 31st December of the Academic Year for which the admissions are being conducted. iii. Candidate should be medically f”"
+}
