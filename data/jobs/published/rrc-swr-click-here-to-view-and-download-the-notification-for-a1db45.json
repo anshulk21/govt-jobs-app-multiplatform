@@ -1,0 +1,63 @@
+{
+  "id": "a1db45aec0",
+  "slug": "rrc-swr-click-here-to-view-and-download-the-notification-for-a1db45",
+  "status": "published",
+  "title": "and the Notification for filling up of posts in Level-2 and Level-1 against Scouts and Guides Quota for the year 2026-27 over SWR and RWF/YNK",
+  "organization": "RRC South Western Railway (Hubballi)",
+  "sourceId": "rrc-swr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": 2,
+  "qualifications": [
+    "10th",
+    "12th",
+    "iti",
+    "diploma",
+    "graduate",
+    "postgraduate"
+  ],
+  "ageLimit": null,
+  "fee": "₹500, ₹400",
+  "dates": {
+    "notification": "2026-11-14",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrchubli.in/pdf/DOC-20261113-WA0134.pdf",
+    "official": "https://www.rrchubli.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-14",
+      "url": "https://www.rrchubli.in/pdf/DOC-20261113-WA0134.pdf"
+    }
+  ],
+  "foundAt": "2026-11-14T06:18:56.122Z",
+  "updatedAt": "2026-11-14T06:37:43.264Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "vacancies",
+      "fee",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.notification": "dated 14.11.2026",
+      "vacancies": "02 posts",
+      "fee": "EXAMINATION FEE: (A) The examination fee for all candidates except those mentioned in para (B) below : Rs.500/- (Five Hundred only) with a provision for refunding Rs.400/- to those who actually appe",
+      "qualifications": "QUALIFICATIONS: 2.1 Minimum Prescribed Educational Qualification: Sl. No. Posts in Essential Minimum Prescribed Qualification 1 Group ‘C’ Level-2 Passed 12th (+2 stage) or its equivalent examination from recognized Board with not less than"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 14.11.2026”\n• Vacancies: from “02 posts”\n• Fee: from “EXAMINATION FEE: (A) The examination fee for all candidates except those mentioned in para (B) below : Rs.500/- (Five Hundred only) with a provision for refunding Rs.400/- to those who actually appe”\n• Qualification: from “QUALIFICATIONS: 2.1 Minimum Prescribed Educational Qualification: Sl. No. Posts in Essential Minimum Prescribed Qualification 1 Group ‘C’ Level-2 Passed 12th (+2 stage) or its equivalent examination from recognized Board with not less than”",
+  "publishedAt": "2026-11-14T06:37:43.264Z"
+}
