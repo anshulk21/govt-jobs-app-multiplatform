@@ -1,8 +1,8 @@
 {
-  "id": "195b59f2b4",
-  "slug": "hc-andhra-pradesh-judgment-195b59",
-  "status": "draft",
-  "title": "Judgment — High Court of Andhra Pradesh",
+  "id": "b5507fe05c",
+  "slug": "hc-andhra-pradesh-orders-passed-in-house-motion-wp-s-r-no-b5507f-2",
+  "status": "rejected",
+  "title": "Orders Passed in House Motion - Wp.(S.r.)no. 45234 of 2026 Dated 24.10.2026",
   "organization": "High Court of Andhra Pradesh",
   "sourceId": "hc-andhra-pradesh",
   "level": "state",
@@ -21,7 +21,7 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://digi-services.aphc.ap.gov.in/eaphcr/docs/sci/eng/231122142722_eng.pdf",
+    "notification": "https://aphc.gov.in/docs/notification_1792872753_0.pdf",
     "official": "https://aphc.gov.in/",
     "apply": null
   },
@@ -29,11 +29,11 @@
   "foundAt": "2026-10-24T21:18:47.377Z",
   "updatedAt": "2026-10-24T21:18:47.377Z",
   "extraction": {
-    "method": "link-only",
+    "method": "pdf-regex",
     "fields": [],
     "evidence": {},
-    "error": "PDF not read (ETIMEDOUT: )",
     "tries": 3
   },
-  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (ETIMEDOUT: ))"
+  "notes": "Rejected automatically: unclear for 21+ days.",
+  "review": "Read from the PDF automatically. Check each value against the notification:"
 }
