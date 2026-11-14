@@ -1,0 +1,42 @@
+{
+  "id": "4524cc5262",
+  "slug": "hc-tripura-notification-dated-13-11-2026-constitution-of-4524cc",
+  "status": "draft",
+  "title": "NOTIFICATION Dated 13-11-2026:constitution of ‘Internal Complaints Committee’ to redress the complaints of sexual harassment made by women and transgender persons against the…",
+  "organization": "High Court of Tripura",
+  "sourceId": "hc-tripura",
+  "level": "state",
+  "state": "TR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-01-06",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26839",
+    "official": "https://thc.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-14T10:36:51.572Z",
+  "updatedAt": "2026-11-14T10:36:51.572Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 06.01.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 06.01.2026”"
+}
