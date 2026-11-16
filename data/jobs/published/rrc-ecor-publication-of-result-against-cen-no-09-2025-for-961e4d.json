@@ -1,0 +1,53 @@
+{
+  "id": "961e4de4f1",
+  "slug": "rrc-ecor-publication-of-result-against-cen-no-09-2025-for-961e4d",
+  "status": "published",
+  "title": "Publication of Result against CEN No. 09/2025 for Level-1 Posts.",
+  "organization": "RRC East Coast Railway (Bhubaneswar)",
+  "sourceId": "rrc-ecor",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrcbbs.org.in/RESULT_09-2025.pdf",
+    "official": "https://www.rrcbbs.org.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.rrcbbs.org.in/RESULT_09-2025.pdf"
+    },
+    {
+      "stage": "result",
+      "date": "2026-11-16",
+      "url": "https://www.rrcbbs.org.in/RESULT_09-2025.pdf"
+    }
+  ],
+  "foundAt": "2026-11-16T21:18:39.684Z",
+  "updatedAt": "2026-11-16T21:42:29.660Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-11-16T21:42:29.660Z"
+}

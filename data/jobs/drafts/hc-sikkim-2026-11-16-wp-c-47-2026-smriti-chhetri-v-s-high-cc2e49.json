@@ -1,0 +1,42 @@
+{
+  "id": "cc2e493a28",
+  "slug": "hc-sikkim-2026-11-16-wp-c-47-2026-smriti-chhetri-v-s-high-cc2e49",
+  "status": "draft",
+  "title": "2026-11-16 - WP(C)/47/2026 - Smriti Chhetri v/s High Court of Sikkim and Ors.",
+  "organization": "High Court of Sikkim",
+  "sourceId": "hc-sikkim",
+  "level": "state",
+  "state": "SK",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-07-31",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcs.gov.in/hcs/hg_orders/201100000472026_7.pdf",
+    "official": "https://hcs.gov.in/hcs/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-16T21:18:39.684Z",
+  "updatedAt": "2026-11-16T21:18:39.684Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 31.07.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 31.07.2026”"
+}
