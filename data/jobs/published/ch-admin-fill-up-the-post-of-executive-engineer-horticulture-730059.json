@@ -1,0 +1,54 @@
+{
+  "id": "730059c57b",
+  "slug": "ch-admin-fill-up-the-post-of-executive-engineer-horticulture-730059",
+  "status": "published",
+  "title": "Fill-up the post of Executive Engineer (Horticulture) in the Engineering Department, UT, on deputation basis",
+  "organization": "Chandigarh Administration",
+  "sourceId": "ch-admin",
+  "level": "ut",
+  "state": "CH",
+  "category": "Other",
+  "postName": null,
+  "vacancies": 1,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-14",
+    "applyStart": null,
+    "lastDate": "2026-12-29",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://chandigarh.gov.in/cadmin//uploads/1794822008_487c340f9747f58636ff.pdf",
+    "official": "https://chandigarh.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-14",
+      "url": "https://chandigarh.gov.in/cadmin//uploads/1794822008_487c340f9747f58636ff.pdf"
+    }
+  ],
+  "foundAt": "2026-11-16T15:18:54.055Z",
+  "updatedAt": "2026-11-16T15:42:55.248Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date for applying to the post is 29.12.2026",
+      "dates.notification": "date of publication of the vacancy/post in the Employment News i.e. for the vacancy published in Employment News on 14.11.2026",
+      "vacancies": "NUMBER OF POST :01"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date for applying to the post is 29.12.2026”\n• Notification date: from “date of publication of the vacancy/post in the Employment News i.e. for the vacancy published in Employment News on 14.11.2026”\n• Vacancies: from “NUMBER OF POST :01”",
+  "publishedAt": "2026-11-16T15:42:55.248Z"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "af8ac6ac9b",
+  "slug": "rrc-nwr-16-11-2026-important-information-regarding-e-call-af8ac6",
+  "status": "published",
+  "title": "Important information Regarding E call letter for Junior Engineer and Train Manager against GDCE Notification 04/2023",
+  "organization": "RRC North Western Railway (Jaipur)",
+  "sourceId": "rrc-nwr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": "2026-11-22"
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://rrcjaipur.in/storeWebFiles/1027_10337910.PDF",
+    "official": "https://www.rrcjaipur.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://rrcjaipur.in/storeWebFiles/1027_10337910.PDF"
+    },
+    {
+      "stage": "admit-card",
+      "date": "2026-11-16",
+      "url": "https://rrcjaipur.in/storeWebFiles/1027_10337910.PDF"
+    }
+  ],
+  "foundAt": "2026-11-16T15:18:54.055Z",
+  "updatedAt": "2026-11-16T15:42:55.248Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.exam"
+    ],
+    "evidence": {
+      "dates.exam": "Exam date Exam City 1 NWRG111919 ABHISHEK TANWAR NARAYAN DASS TANWAR AII JE TM 22.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Exam date: from “Exam date Exam City 1 NWRG111919 ABHISHEK TANWAR NARAYAN DASS TANWAR AII JE TM 22.11.2026”",
+  "publishedAt": "2026-11-16T15:42:55.248Z"
+}

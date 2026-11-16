@@ -1,0 +1,51 @@
+{
+  "id": "b9766e2ce1",
+  "slug": "npsc-notification-no-npsc-exam-11-cese-2021-dt-16-11-2026-b9766e",
+  "status": "published",
+  "title": "Notification No. NPSC/EXAM-11/CESE/2021 dt. 16.11.2026 ( CESE 2026 Disability Certificate Re-verification) New",
+  "organization": "Nagaland Public Service Commission",
+  "sourceId": "npsc",
+  "level": "state",
+  "state": "NL",
+  "category": "PSC",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-16",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://npsc.nagaland.gov.in/notification/179482429521853",
+    "official": "https://npsc.nagaland.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-16",
+      "url": "https://npsc.nagaland.gov.in/notification/179482429521853"
+    }
+  ],
+  "foundAt": "2026-11-16T15:18:54.055Z",
+  "updatedAt": "2026-11-16T15:42:55.248Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dt. 16.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dt. 16.11.2026”",
+  "publishedAt": "2026-11-16T15:42:55.248Z"
+}

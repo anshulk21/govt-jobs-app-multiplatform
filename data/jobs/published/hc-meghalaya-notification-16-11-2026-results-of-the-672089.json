@@ -1,0 +1,56 @@
+{
+  "id": "6720898cb0",
+  "slug": "hc-meghalaya-notification-16-11-2026-results-of-the-672089",
+  "status": "published",
+  "title": "Notification 16.11.2026: Results of the Financial Bid Evaluation for Supply...",
+  "organization": "High Court of Meghalaya",
+  "sourceId": "hc-meghalaya",
+  "level": "state",
+  "state": "ML",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-16",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://meghalayahighcourt.nic.in/notification-16112026-results-financial-bid-evaluation-supply-installation-high-speed-scanner-13",
+    "official": "https://meghalayahighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-16",
+      "url": "https://meghalayahighcourt.nic.in/notification-16112026-results-financial-bid-evaluation-supply-installation-high-speed-scanner-13"
+    },
+    {
+      "stage": "result",
+      "date": "2026-11-16",
+      "url": "https://meghalayahighcourt.nic.in/notification-16112026-results-financial-bid-evaluation-supply-installation-high-speed-scanner-13"
+    }
+  ],
+  "foundAt": "2026-11-16T15:18:54.055Z",
+  "updatedAt": "2026-11-16T15:42:55.248Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated 16th November, 2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated 16th November, 2026”",
+  "publishedAt": "2026-11-16T15:42:55.248Z"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ae49254282",
+  "slug": "kvs-6-57-7-45-ae4925",
+  "status": "published",
+  "title": "केंद्रीय विद्यालय संगठन में सहायक अनुभाग अधिकारी के वेतन स्तर-6 के 57 पदों के प्रत्यर्पण के बदले वेतन स्तर-7 में अनुभाग अधिकारी के 45 पदों के सृजन की स्वीकृति के संबंध में। नई",
+  "organization": "Kendriya Vidyalaya Sangathan",
+  "sourceId": "kvs",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": 45,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-09",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/11/2026111641.pdf",
+    "official": "https://kvs.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-09",
+      "url": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/11/2026111641.pdf"
+    }
+  ],
+  "foundAt": "2026-11-16T15:18:54.055Z",
+  "updatedAt": "2026-11-16T15:42:55.248Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.notification": "dated 09.11.2026",
+      "vacancies": "45 posts"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 09.11.2026”\n• Vacancies: from “45 posts”",
+  "publishedAt": "2026-11-16T15:42:55.248Z"
+}

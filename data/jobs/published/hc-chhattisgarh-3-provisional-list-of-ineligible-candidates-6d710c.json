@@ -1,0 +1,52 @@
+{
+  "id": "6d710c2693",
+  "slug": "hc-chhattisgarh-3-provisional-list-of-ineligible-candidates-6d710c",
+  "status": "published",
+  "title": "Provisional List of Ineligible Candidates for recruitment to the post of contingency paid employee 2026.",
+  "organization": "High Court of Chhattisgarh",
+  "sourceId": "hc-chhattisgarh",
+  "level": "state",
+  "state": "CG",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "12th"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://highcourt.cg.gov.in/noti/view_file_noti.php?token=MzgxNzR8MTc5NDg0NjQ2OQ%3D%3D.431e3dc30cfee2ff3c527f49f1014e27a4f9419e1f55595a1d6a2ed1f26636d9",
+    "official": "https://highcourt.cg.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://highcourt.cg.gov.in/noti/view_file_noti.php?token=MzgxNzR8MTc5NDg0NjQ2OQ%3D%3D.431e3dc30cfee2ff3c527f49f1014e27a4f9419e1f55595a1d6a2ed1f26636d9"
+    }
+  ],
+  "foundAt": "2026-11-16T15:18:54.055Z",
+  "updatedAt": "2026-11-16T15:42:55.248Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "eligibility No. (Shri/Smt/Ku.} | Husband’s Name bonafide| gory | yang (Shri) resident of 6.6. 1 1 |PRAMOD IANJOR SINGH | '25/02/1997| M | Yes UR | No |. NO OBJECTION KUMAR MARKAM CERTIFICATE NOT ENCLOSED. 2 2 |TIKESH KUMAR |ASHWA"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “eligibility No. (Shri/Smt/Ku.} | Husband’s Name bonafide| gory | yang (Shri) resident of 6.6. 1 1 |PRAMOD IANJOR SINGH | '25/02/1997| M | Yes UR | No |. NO OBJECTION KUMAR MARKAM CERTIFICATE NOT ENCLOSED. 2 2 |TIKESH KUMAR |ASHWA”",
+  "publishedAt": "2026-11-16T15:42:55.248Z"
+}
