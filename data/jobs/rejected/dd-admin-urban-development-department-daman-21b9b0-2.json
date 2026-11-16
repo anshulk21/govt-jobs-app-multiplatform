@@ -1,0 +1,50 @@
+{
+  "id": "21b9b0f4e0",
+  "slug": "dd-admin-urban-development-department-daman-21b9b0-2",
+  "status": "rejected",
+  "title": "Urban Development Department, Daman — Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "graduate",
+    "postgraduate"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-13",
+    "applyStart": null,
+    "lastDate": "2026-11-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ddd.gov.in/notice/urban-development-department-daman/",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-16T06:18:37.049Z",
+  "updatedAt": "2026-11-16T06:18:37.049Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "qualifications",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date of application . i.e. on 30th Nov, 2026",
+      "qualifications": "Educational Qualification & Work Experience Field of Work Experience Age Criteria 1 State Mission Manager (SMM) (01 Post) Consolidated Salary: ₹75,000/- per month Post-graduate degree in Management, Urban Planning, Social Sciences, Public",
+      "dates.notification": "Date of publication: 13/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date of application . i.e. on 30th Nov, 2026”\n• Qualification: from “Educational Qualification & Work Experience Field of Work Experience Age Criteria 1 State Mission Manager (SMM) (01 Post) Consolidated Salary: ₹75,000/- per month Post-graduate degree in Management, Urban Planning, Social Sciences, Public”\n• Notification date: from “Date of publication: 13/11/2026”"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "3eb3d15c5d",
+  "slug": "hc-andhra-pradesh-orders-passed-in-house-motion-wp-s-r-no-3eb3d1",
+  "status": "draft",
+  "title": "Orders Passed in House Motion - Wp.(S.r.)no. 48244 of 2026 Dated 15.11.2026",
+  "organization": "High Court of Andhra Pradesh",
+  "sourceId": "hc-andhra-pradesh",
+  "level": "state",
+  "state": "AP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-14",
+    "applyStart": null,
+    "lastDate": "2026-11-16",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aphc.gov.in/docs/notification_1794750029_0.pdf",
+    "official": "https://aphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-16T06:18:37.049Z",
+  "updatedAt": "2026-11-16T06:18:37.049Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date of filing nominations i.e., 16.11.2026",
+      "dates.notification": "dated 14.11.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date of filing nominations i.e., 16.11.2026”\n• Notification date: from “dated 14.11.2026”"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "8bd6acc9be",
+  "slug": "hc-andhra-pradesh-orders-passed-in-house-motion-wp-s-r-no-8bd6ac",
+  "status": "draft",
+  "title": "Orders Passed in House Motion - Wp.(S.r.)no. 48246 of 2026 Dated 15.11.2026",
+  "organization": "High Court of Andhra Pradesh",
+  "sourceId": "hc-andhra-pradesh",
+  "level": "state",
+  "state": "AP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-06",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aphc.gov.in/docs/notification_1794750087_0.pdf",
+    "official": "https://aphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-16T06:18:37.049Z",
+  "updatedAt": "2026-11-16T06:18:37.049Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 06.11.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 06.11.2026”"
+}
