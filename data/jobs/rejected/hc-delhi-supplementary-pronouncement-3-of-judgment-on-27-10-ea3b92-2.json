@@ -1,13 +1,13 @@
 {
-  "id": "e67668274e",
-  "slug": "rrc-sr-instructions-for-uploading-documents-in-oirms-portal-e67668",
-  "status": "draft",
-  "title": "Instructions for uploading documents in OIRMS portal",
-  "organization": "RRC Southern Railway (Chennai)",
-  "sourceId": "rrc-sr",
-  "level": "central",
-  "state": null,
-  "category": "Railway",
+  "id": "ea3b923815",
+  "slug": "hc-delhi-supplementary-pronouncement-3-of-judgment-on-27-10-ea3b92-2",
+  "status": "rejected",
+  "title": "Supplementary Pronouncement-3 of Judgment on 27.10.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
   "postName": null,
   "vacancies": null,
   "qualifications": [],
@@ -21,8 +21,8 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://www.rrcmas.in/downloads/instructions-orims.pdf",
-    "official": "https://www.rrcmas.in/",
+    "notification": "https://delhihighcourt.nic.in/files/2026-10/announcements/jud_1_for_27.10.2026.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
     "apply": null
   },
   "timeline": [],
@@ -32,8 +32,9 @@
     "method": "pdf-regex",
     "fields": [],
     "evidence": {},
-    "tries": 2,
+    "tries": 3,
     "reader": 2
   },
+  "notes": "Rejected automatically: unclear for 21+ days.",
   "review": "Read from the PDF automatically. Check each value against the notification:"
 }
