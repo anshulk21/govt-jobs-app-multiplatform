@@ -1,0 +1,42 @@
+{
+  "id": "097c8f9588",
+  "slug": "hc-delhi-w-p-c-14795-2025-delhi-tamil-education-association-097c8f",
+  "status": "draft",
+  "title": "W.P.(C) - 14795/2025, Delhi Tamil Education Association (REGD.) Vs Government of NCT of Delhi & ANR., Judgment Date 17.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": 107,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/SVN17112026CW147952025_193621.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-17T16:10:20.603Z",
+  "updatedAt": "2026-11-17T16:10:20.603Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "vacancies"
+    ],
+    "evidence": {
+      "vacancies": "107 vacancies"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Vacancies: from “107 vacancies”"
+}

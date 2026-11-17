@@ -1,0 +1,42 @@
+{
+  "id": "d0cc3e0d31",
+  "slug": "hc-delhi-pronouncement-of-judgement-on-18-11-2026-238-58-kb-d0cc3e",
+  "status": "draft",
+  "title": "Pronouncement of Judgement on 18.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-09-02",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/files/2026-11/announcements/combined_pro_18.11.2026.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-17T16:10:20.603Z",
+  "updatedAt": "2026-11-17T16:10:20.603Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dt. 02.09.2025"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dt. 02.09.2025”"
+}
