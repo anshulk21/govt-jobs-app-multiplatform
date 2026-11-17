@@ -1,0 +1,39 @@
+{
+  "id": "bf53f5ac53",
+  "slug": "hc-delhi-bank-account-details-of-this-court-for-depositing-bf53f5",
+  "status": "draft",
+  "title": "Bank Account Details of this Court for depositing Amount pursuant to the Hon’ble Court’s order.",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/files/2025-12/bank_account_details_dhc.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-17T12:18:56.878Z",
+  "updatedAt": "2026-11-17T12:18:56.878Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

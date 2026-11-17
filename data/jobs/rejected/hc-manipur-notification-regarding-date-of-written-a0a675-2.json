@@ -1,0 +1,43 @@
+{
+  "id": "a0a675a2ea",
+  "slug": "hc-manipur-notification-regarding-date-of-written-a0a675-2",
+  "status": "rejected",
+  "title": "Notification regarding date of Written Examination for recruitment to the 11(Eleven) vacant posts of System Assistant in the High Court of Manipur.",
+  "organization": "High Court of Manipur",
+  "sourceId": "hc-manipur",
+  "level": "state",
+  "state": "MN",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-12-26",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcmimphal.nic.in/Documents/written%20exam%20date%20SA.pdf",
+    "official": "https://hcmimphal.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-17T12:18:56.878Z",
+  "updatedAt": "2026-11-17T12:18:56.878Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 26th December, 2025"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2025-12-26).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 26th December, 2025”"
+}

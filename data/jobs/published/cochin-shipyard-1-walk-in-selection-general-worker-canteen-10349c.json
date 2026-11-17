@@ -1,0 +1,50 @@
+{
+  "id": "10349c298c",
+  "slug": "cochin-shipyard-1-walk-in-selection-general-worker-canteen-10349c",
+  "status": "published",
+  "title": "1 Walk-in-Selection - General Worker (Canteen) on Contract Basis for CSL, Kochi on 24 November 2026 at Recreation Club, Thevara Gate, Cochin Shipyard Limited, Kochi - 682 015…",
+  "organization": "Cochin Shipyard — Careers",
+  "sourceId": "cochin-shipyard",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-11-24",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cochinshipyard.in/careerdetail/career_locations/831",
+    "official": "https://cochinshipyard.in/Careers",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://cochinshipyard.in/careerdetail/career_locations/831"
+    }
+  ],
+  "foundAt": "2026-11-17T12:18:56.878Z",
+  "updatedAt": "2026-11-17T12:37:43.897Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 24-11-2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 24-11-2026”",
+  "publishedAt": "2026-11-17T12:37:43.897Z"
+}

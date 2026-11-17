@@ -1,0 +1,42 @@
+{
+  "id": "68b33680ab",
+  "slug": "hc-delhi-public-notice-informing-all-concerned-that-with-68b336",
+  "status": "draft",
+  "title": "Public Notice informing all concerned that with effect from 11:00 a.m. on 7th February, 2026, the maximum size of the e-file that can be uploaded/filed through 'Online e-Filing…",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-02-06",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/files/2026-02/16it.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-17T12:18:56.878Z",
+  "updatedAt": "2026-11-17T12:18:56.878Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 06.02.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 06.02.2026”"
+}

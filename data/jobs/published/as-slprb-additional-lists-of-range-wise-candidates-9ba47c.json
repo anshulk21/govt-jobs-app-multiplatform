@@ -1,0 +1,48 @@
+{
+  "id": "9ba47cef7c",
+  "slug": "as-slprb-additional-lists-of-range-wise-candidates-9ba47c",
+  "status": "published",
+  "title": "Additional Lists of Range wise Candidates",
+  "organization": "State Level Police Recruitment Board, Assam",
+  "sourceId": "as-slprb",
+  "level": "state",
+  "state": "AS",
+  "category": "Police",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://slprbassam.in/pdf/Notice2026/17112026/additional_list_range_wise.pdf",
+    "official": "https://slprbassam.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://slprbassam.in/pdf/Notice2026/17112026/additional_list_range_wise.pdf"
+    }
+  ],
+  "foundAt": "2026-11-17T12:18:56.878Z",
+  "updatedAt": "2026-11-17T12:37:43.897Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-11-17T12:37:43.897Z"
+}

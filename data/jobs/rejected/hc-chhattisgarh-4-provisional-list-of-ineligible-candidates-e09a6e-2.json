@@ -1,0 +1,45 @@
+{
+  "id": "e09a6efd86",
+  "slug": "hc-chhattisgarh-4-provisional-list-of-ineligible-candidates-e09a6e-2",
+  "status": "rejected",
+  "title": "Provisional List of Ineligible Candidates for recruitment to the post of contingency paid employee 2026.",
+  "organization": "High Court of Chhattisgarh",
+  "sourceId": "hc-chhattisgarh",
+  "level": "state",
+  "state": "CG",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "12th"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://highcourt.cg.gov.in/noti/view_file_noti.php?token=MzgxNzR8MTc5NDkyMjA2Nw%3D%3D.71459c12fdd3d77a41ab7036c958a1dd6805b44fd3dcfd7e341add48a4521e54",
+    "official": "https://highcourt.cg.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-17T12:18:56.878Z",
+  "updatedAt": "2026-11-17T12:18:56.878Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "eligibility No. (Shri/Smt/Ku.} | Husband’s Name bonafide| gory | yang (Shri) resident of 6.6. 1 1 |PRAMOD IANJOR SINGH | '25/02/1997| M | Yes UR | No |. NO OBJECTION KUMAR MARKAM CERTIFICATE NOT ENCLOSED. 2 2 |TIKESH KUMAR |ASHWA"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: duplicate of hc-chhattisgarh-3-provisional-list-of-ineligible-candidates-6d710c.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “eligibility No. (Shri/Smt/Ku.} | Husband’s Name bonafide| gory | yang (Shri) resident of 6.6. 1 1 |PRAMOD IANJOR SINGH | '25/02/1997| M | Yes UR | No |. NO OBJECTION KUMAR MARKAM CERTIFICATE NOT ENCLOSED. 2 2 |TIKESH KUMAR |ASHWA”"
+}
