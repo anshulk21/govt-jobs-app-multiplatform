@@ -1,0 +1,45 @@
+{
+  "id": "87681c2f4b",
+  "slug": "dd-admin-public-works-department-district-panchayat-daman-87681c-2",
+  "status": "rejected",
+  "title": "Public Works Department, District Panchayat, Daman: Write-off of Well & Pannel Room at Marwad. at Marwad G.G.Panchayat, Nani Daman.",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-16",
+    "applyStart": null,
+    "lastDate": "2026-11-23",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ddd.gov.in/notice/public-works-department-district-panchayat-daman-write-off-of-well-pannel-room-at-marwad-at-marwad-g-g-panchayat-nani-daman/",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-17T06:19:00.069Z",
+  "updatedAt": "2026-11-17T06:19:00.069Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 23/11/2026",
+      "dates.notification": "Date of publication: 16/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 23/11/2026”\n• Notification date: from “Date of publication: 16/11/2026”"
+}
