@@ -1,0 +1,59 @@
+{
+  "id": "13ef326966",
+  "slug": "bpcl-click-here-to-view-detailed-advertisement-13ef32",
+  "status": "published",
+  "title": "Detailed Advertisement — Bharat Petroleum Current Openings",
+  "organization": "Bharat Petroleum — Current Openings",
+  "sourceId": "bpcl",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "diploma",
+    "engineering"
+  ],
+  "ageLimit": "Up to 35 years",
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-11-09",
+    "lastDate": "2026-11-29",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.bharatpetroleum.in/images/files/BPCL-SRD-Entry-Level-Advertisement.pdf",
+    "official": "https://www.bharatpetroleum.in/careers/job-openings",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.bharatpetroleum.in/images/files/BPCL-SRD-Entry-Level-Advertisement.pdf"
+    }
+  ],
+  "foundAt": "2026-11-17T03:19:03.969Z",
+  "updatedAt": "2026-11-17T03:40:30.544Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart",
+      "ageLimit",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for submission of Online Applications 29th Nov 2026",
+      "dates.applyStart": "Commencement of Online Applications 09th Nov 2026",
+      "ageLimit": "Maximum age – 35 years",
+      "qualifications": "Essential Qualification Work Experience Post identified as suitable for following categories 1 Associate Executive (Engineering) 33 BE / B. Tech. / B.Sc. (Engineering) in Chemical / Mechanical / Electrical / Civil / Instrumentation & Electr"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “Last date for submission of Online Applications 29th Nov 2026”\n• Apply from: from “Commencement of Online Applications 09th Nov 2026”\n• Age limit: from “Maximum age – 35 years”\n• Qualification: from “Essential Qualification Work Experience Post identified as suitable for following categories 1 Associate Executive (Engineering) 33 BE / B. Tech. / B.Sc. (Engineering) in Chemical / Mechanical / Electrical / Civil / Instrumentation & Electr”",
+  "publishedAt": "2026-11-17T03:40:30.544Z"
+}

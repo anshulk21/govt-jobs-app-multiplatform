@@ -1,0 +1,58 @@
+{
+  "id": "f0fb8eeef4",
+  "slug": "coal-india-notice-for-engagement-of-pmis-interns-in-pilot-f0fb8e",
+  "status": "published",
+  "title": "Notice for engagement of PMIS Interns in Pilot-III | November 2026",
+  "organization": "Coal India Ltd",
+  "sourceId": "coal-india",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "iti",
+    "diploma",
+    "postgraduate"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-11-02",
+    "lastDate": "2026-12-02",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://d3u7ubx0okog7j.cloudfront.net/documents/PMIS_Engagement_Notice_Dated_30102026_-_for_website_1.pdf",
+    "official": "https://www.coalindia.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://d3u7ubx0okog7j.cloudfront.net/documents/PMIS_Engagement_Notice_Dated_30102026_-_for_website_1.pdf"
+    }
+  ],
+  "foundAt": "2026-11-17T03:19:03.969Z",
+  "updatedAt": "2026-11-17T03:40:30.544Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.lastDate": "End Date: 2nd December, 2026",
+      "dates.applyStart": "Application Start Date: 2nd November, 2026",
+      "qualifications": "Eligibility and Selection: Candidates possessing ITI, Diploma, Graduate, Postgraduate or Class 12 qualifications are eligible to apply. Preference will be given in the following order: ITI, Diploma, Graduate, Postgraduate and Class 12. With"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “End Date: 2nd December, 2026”\n• Apply from: from “Application Start Date: 2nd November, 2026”\n• Qualification: from “Eligibility and Selection: Candidates possessing ITI, Diploma, Graduate, Postgraduate or Class 12 qualifications are eligible to apply. Preference will be given in the following order: ITI, Diploma, Graduate, Postgraduate and Class 12. With”",
+  "publishedAt": "2026-11-17T03:40:30.544Z"
+}
