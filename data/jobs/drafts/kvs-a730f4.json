@@ -1,0 +1,42 @@
+{
+  "id": "a730f409b1",
+  "slug": "kvs-a730f4",
+  "status": "draft",
+  "title": "नया केन्द्रीय विद्यालय बिहारशरीफ शहर, जिला नालंदा, बिहार खोलने के संबंध में । नई",
+  "organization": "Kendriya Vidyalaya Sangathan",
+  "sourceId": "kvs",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-10-03",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/11/2026111896.pdf",
+    "official": "https://kvs.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-18T09:18:47.670Z",
+  "updatedAt": "2026-11-18T09:18:47.670Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 03.10.2025"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 03.10.2025”"
+}
