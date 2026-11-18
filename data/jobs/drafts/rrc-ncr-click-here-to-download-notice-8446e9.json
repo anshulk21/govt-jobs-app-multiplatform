@@ -1,0 +1,42 @@
+{
+  "id": "8446e9f733",
+  "slug": "rrc-ncr-click-here-to-download-notice-8446e9",
+  "status": "draft",
+  "title": "Notice",
+  "organization": "RRC North Central Railway (Prayagraj)",
+  "sourceId": "rrc-ncr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-18",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://rrcpryj.org/wp-content/uploads/2026/11/CCAA-Notice_Hindi-and-english.pdf",
+    "official": "https://rrcpryj.org/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-18T15:19:10.411Z",
+  "updatedAt": "2026-11-18T15:19:10.411Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 18.11.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 18.11.2026”"
+}

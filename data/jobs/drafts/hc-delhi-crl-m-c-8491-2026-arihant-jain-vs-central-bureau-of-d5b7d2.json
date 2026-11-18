@@ -1,0 +1,42 @@
+{
+  "id": "d5b7d2f3fd",
+  "slug": "hc-delhi-crl-m-c-8491-2026-arihant-jain-vs-central-bureau-of-d5b7d2",
+  "status": "draft",
+  "title": "Crl.m.c. - 8491/2026, Arihant JAIN Vs Central Bureau of Investigation, Judgment Date 18.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-03",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/58718112026CRLMM84912026_180117.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-18T15:19:10.411Z",
+  "updatedAt": "2026-11-18T15:19:10.411Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 03.11.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 03.11.2026”"
+}

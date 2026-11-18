@@ -1,0 +1,42 @@
+{
+  "id": "c80f1d26d5",
+  "slug": "hc-patna-notice-regarding-parking-c80f1d",
+  "status": "draft",
+  "title": "Notice regarding parking — Patna High Court",
+  "organization": "Patna High Court",
+  "sourceId": "hc-patna",
+  "level": "state",
+  "state": "BR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-25",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://patnahighcourt.gov.in/getfile/MTEyNTk=-ZH88JhAo7VI=",
+    "official": "https://patnahighcourt.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-18T15:19:10.411Z",
+  "updatedAt": "2026-11-18T15:19:10.411Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 25.10.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 25.10.2026”"
+}
