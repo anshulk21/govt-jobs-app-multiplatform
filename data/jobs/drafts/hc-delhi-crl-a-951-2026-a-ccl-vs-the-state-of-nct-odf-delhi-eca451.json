@@ -1,0 +1,42 @@
+{
+  "id": "eca45174c3",
+  "slug": "hc-delhi-crl-a-951-2026-a-ccl-vs-the-state-of-nct-odf-delhi-eca451",
+  "status": "draft",
+  "title": "CRL.A. - 951/2026, A....CCL Vs the State of NCT ODF Delhi, Judgment Date 17.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-06-06",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/59217112026CRLA9512026_093022.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-18T06:19:09.443Z",
+  "updatedAt": "2026-11-18T06:19:09.443Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 06th June, 2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 06th June, 2026”"
+}
