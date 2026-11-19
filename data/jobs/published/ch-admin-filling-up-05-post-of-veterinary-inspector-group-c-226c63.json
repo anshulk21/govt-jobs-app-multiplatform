@@ -1,0 +1,56 @@
+{
+  "id": "226c63d00e",
+  "slug": "ch-admin-filling-up-05-post-of-veterinary-inspector-group-c-226c63",
+  "status": "published",
+  "title": "Filling up 05 post of Veterinary Inspector (Group C) in the pay Level-5 as per 7th CPC on Deputation Basis.",
+  "organization": "Chandigarh Administration",
+  "sourceId": "ch-admin",
+  "level": "ut",
+  "state": "CH",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "10th",
+    "12th",
+    "diploma"
+  ],
+  "ageLimit": "Up to 56 years",
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://chandigarh.gov.in/cadmin//uploads/1795084652_6ad44444f5fdf143f3e4.pdf",
+    "official": "https://chandigarh.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://chandigarh.gov.in/cadmin//uploads/1795084652_6ad44444f5fdf143f3e4.pdf"
+    }
+  ],
+  "foundAt": "2026-11-19T11:49:45.741Z",
+  "updatedAt": "2026-11-19T11:58:56.930Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "ageLimit",
+      "qualifications"
+    ],
+    "evidence": {
+      "ageLimit": "age limit for appointment by deputation shall be Not exceeding 56 years",
+      "qualifications": "qualification and experience to fill up the 05(Five) posts of ‘Veterinary Inspector’(Group ‘C’) in Department of Animal Husbandry & Fisheries, purely on deputation basis in the Pay Level 5 (Rs.29200-92300) as per 7thCentral Pay Commission a"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Age limit: from “age limit for appointment by deputation shall be Not exceeding 56 years”\n• Qualification: from “qualification and experience to fill up the 05(Five) posts of ‘Veterinary Inspector’(Group ‘C’) in Department of Animal Husbandry & Fisheries, purely on deputation basis in the Pay Level 5 (Rs.29200-92300) as per 7thCentral Pay Commission a”",
+  "publishedAt": "2026-11-19T11:58:56.930Z"
+}
