@@ -1,0 +1,50 @@
+{
+  "id": "6e23a20990",
+  "slug": "sail-rsp-conduct-of-cbt-for-engagement-of-young-6e23a2",
+  "status": "published",
+  "title": "\"RSP: Conduct of CBT for Engagement of Young Professionals w.r.t Advt.No. RSP/R-YP/2026-01 dtd 03/07/2026”",
+  "organization": "SAIL — Careers",
+  "sourceId": "sail",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-19",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_19112026_153228.pdf",
+    "official": "https://sailcareers.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-19",
+      "url": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_19112026_153228.pdf"
+    }
+  ],
+  "foundAt": "2026-11-19T12:18:48.108Z",
+  "updatedAt": "2026-11-19T12:40:02.049Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated 19/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated 19/11/2026”",
+  "publishedAt": "2026-11-19T12:40:02.049Z"
+}

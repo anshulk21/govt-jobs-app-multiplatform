@@ -1,0 +1,42 @@
+{
+  "id": "8c67abb4b7",
+  "slug": "hc-delhi-w-p-crl-3088-2026-azim-khan-vs-state-gnct-of-delhi-8c67ab",
+  "status": "draft",
+  "title": "W.p.(Crl) - 3088/2026, AZIM KHAN Vs State GNCT of Delhi, Judgment Date 19.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-25",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/60819112026CRLW30882026_173849.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-19T12:18:48.108Z",
+  "updatedAt": "2026-11-19T12:18:48.108Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 25.09.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 25.09.2026”"
+}

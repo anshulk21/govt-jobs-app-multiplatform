@@ -1,0 +1,50 @@
+{
+  "id": "b8f15c0f34",
+  "slug": "hc-andhra-pradesh-andhra-pradesh-state-judicial-academy-b8f15c",
+  "status": "published",
+  "title": "ANDHRA PRADESH STATE JUDICIAL ACADEMY –TRAINING - Nomination of 07 District Judges (Entry Level) by Direct Recruitment to undergo 04 weeks of Practical Training from 23.11.2026…",
+  "organization": "High Court of Andhra Pradesh",
+  "sourceId": "hc-andhra-pradesh",
+  "level": "state",
+  "state": "AP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-11",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aphc.gov.in/docs/notification_1795085988_0.pdf",
+    "official": "https://aphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-08-11",
+      "url": "https://aphc.gov.in/docs/notification_1795085988_0.pdf"
+    }
+  ],
+  "foundAt": "2026-11-19T12:18:48.108Z",
+  "updatedAt": "2026-11-19T12:40:02.049Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 11.08.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 11.08.2026”",
+  "publishedAt": "2026-11-19T12:40:02.049Z"
+}
