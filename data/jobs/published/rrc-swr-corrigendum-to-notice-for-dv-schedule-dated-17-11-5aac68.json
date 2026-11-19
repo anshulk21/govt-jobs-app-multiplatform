@@ -1,0 +1,51 @@
+{
+  "id": "5aac683080",
+  "slug": "rrc-swr-corrigendum-to-notice-for-dv-schedule-dated-17-11-5aac68",
+  "status": "published",
+  "title": "Corrigendum to Notice for DV Schedule Dated 17.11.2026",
+  "organization": "RRC South Western Railway (Hubballi)",
+  "sourceId": "rrc-swr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-17",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrchubli.in/pdf/CORRIGENDUMnew.pdf",
+    "official": "https://www.rrchubli.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-17",
+      "url": "https://www.rrchubli.in/pdf/CORRIGENDUMnew.pdf"
+    }
+  ],
+  "foundAt": "2026-11-19T18:19:15.339Z",
+  "updatedAt": "2026-11-19T18:39:11.017Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "DATED 17.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “DATED 17.11.2026”",
+  "publishedAt": "2026-11-19T18:39:11.017Z"
+}
