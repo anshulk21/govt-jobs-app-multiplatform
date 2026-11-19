@@ -1,0 +1,52 @@
+{
+  "id": "9ebe002fa0",
+  "slug": "ibps-indian-bank-engagement-of-apprentices-registration-from-9ebe00",
+  "status": "published",
+  "title": "Indian Bank Engagement of Apprentices Registration From 05-Nov-2026",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-11-05",
+    "lastDate": "2026-12-10",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ibpsreg.ibps.in/inbraoct26/",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://ibpsreg.ibps.in/inbraoct26/"
+    }
+  ],
+  "foundAt": "2026-11-19T09:19:45.721Z",
+  "updatedAt": "2026-11-19T09:39:23.791Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for printing your application 10/12/2026",
+      "dates.applyStart": "Commencement of online registration of application 05/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date for printing your application 10/12/2026”\n• Apply from: from “Commencement of online registration of application 05/11/2026”",
+  "publishedAt": "2026-11-19T09:39:23.791Z"
+}

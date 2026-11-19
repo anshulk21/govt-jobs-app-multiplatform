@@ -1,0 +1,42 @@
+{
+  "id": "a2c8d0a098",
+  "slug": "kvs-2027-28-a2c8d0",
+  "status": "draft",
+  "title": "संशोधित कार्यालय आदेश – केन्द्रीय विद्यालय मुगलमैदान जिला किश्तवाड, जम्मू एवं कश्मीर का संचालन सत्र 2027-28 के संबंध में। नई",
+  "organization": "Kendriya Vidyalaya Sangathan",
+  "sourceId": "kvs",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-07-16",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/11/2026111948.pdf",
+    "official": "https://kvs.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-19T09:19:45.721Z",
+  "updatedAt": "2026-11-19T09:19:45.721Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 16.07.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 16.07.2026”"
+}
