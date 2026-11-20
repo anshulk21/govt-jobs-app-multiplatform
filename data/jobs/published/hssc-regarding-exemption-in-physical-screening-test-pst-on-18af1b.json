@@ -1,0 +1,51 @@
+{
+  "id": "18af1ba640",
+  "slug": "hssc-regarding-exemption-in-physical-screening-test-pst-on-18af1b",
+  "status": "published",
+  "title": "Regarding exemption in Physical Screening Test (PST) on medical ground",
+  "organization": "Haryana Staff Selection Commission (also Haryana Police)",
+  "sourceId": "hssc",
+  "level": "state",
+  "state": "HR",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-20",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hssc.gov.in/file/ac1f23cd-a1e2-1e66-81a1-f8f2b862000b/publicNotice",
+    "official": "https://hssc.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-20",
+      "url": "https://hssc.gov.in/file/ac1f23cd-a1e2-1e66-81a1-f8f2b862000b/publicNotice"
+    }
+  ],
+  "foundAt": "2026-11-20T20:29:03.227Z",
+  "updatedAt": "2026-11-20T20:38:59.353Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 20.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 20.11.2026”",
+  "publishedAt": "2026-11-20T20:38:59.353Z"
+}
