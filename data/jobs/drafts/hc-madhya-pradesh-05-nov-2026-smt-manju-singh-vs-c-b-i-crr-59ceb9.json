@@ -1,0 +1,42 @@
+{
+  "id": "59ceb940fd",
+  "slug": "hc-madhya-pradesh-05-nov-2026-smt-manju-singh-vs-c-b-i-crr-59ceb9",
+  "status": "draft",
+  "title": "SMT MANJU SINGH vs C.B.I. - CRR/04167/2026 Principal Seat Jabalpur",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-18",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/jabalpur/MPHCJB/2026/CRR/4167/CRR_4167_2026_FinalOrder_05-11-2026.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-20T02:24:26.140Z",
+  "updatedAt": "2026-11-20T02:24:26.140Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 18.08.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 18.08.2026”"
+}
