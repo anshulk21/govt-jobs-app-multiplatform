@@ -1,0 +1,54 @@
+{
+  "id": "2404aaca07",
+  "slug": "icmr-advertisement-no-icmr-rectt-sc-d-02-2026-rpcell-2404aa",
+  "status": "published",
+  "title": "Advertisement No. ICMR/Rectt/Sc-D/02/2026-RPCell - Scientist-D (Non-Medical) at ICMR-NIRBI, Kolkata (The online application portal (https://recruitment.icmr.org.in) for this…",
+  "organization": "ICMR",
+  "sourceId": "icmr",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": "Up to 45 years",
+  "fee": "₹1,500, nil for some categories",
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": "2026-12-31",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.icmr.gov.in/post/advertisement-no-icmr-rectt-sc-d-02-2026-rpcell-scientist-d-non-medical-at-icmr-nirbi-kolkata-the-online-application-portal-https-recruitment-icmr-org-in-for-this-advertisement-shall-be-live-shortly-last-date-december-31-2026",
+    "official": "https://www.icmr.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.icmr.gov.in/post/advertisement-no-icmr-rectt-sc-d-02-2026-rpcell-scientist-d-non-medical-at-icmr-nirbi-kolkata-the-online-application-portal-https-recruitment-icmr-org-in-for-this-advertisement-shall-be-live-shortly-last-date-december-31-2026"
+    }
+  ],
+  "foundAt": "2026-11-20T11:51:26.686Z",
+  "updatedAt": "2026-11-20T12:10:21.201Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "ageLimit",
+      "fee"
+    ],
+    "evidence": {
+      "dates.lastDate": "LAST DATE FOR RECEIPT OF APPLICATIONS: 31.12.2026",
+      "ageLimit": "Upper age limit is 45 years",
+      "fee": "Application Fee (non-refundable) of Rs.1500/- (Rupees one thousand five hundred only) is required. SC/ST/Women/PWD/EWS candidates are exempted from application fee. Application Fee is to be paid by ca"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “LAST DATE FOR RECEIPT OF APPLICATIONS: 31.12.2026”\n• Age limit: from “Upper age limit is 45 years”\n• Fee: from “Application Fee (non-refundable) of Rs.1500/- (Rupees one thousand five hundred only) is required. SC/ST/Women/PWD/EWS candidates are exempted from application fee. Application Fee is to be paid by ca”",
+  "publishedAt": "2026-11-20T12:10:21.201Z"
+}

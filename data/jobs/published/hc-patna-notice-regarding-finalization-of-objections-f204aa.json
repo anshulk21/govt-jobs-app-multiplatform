@@ -1,0 +1,51 @@
+{
+  "id": "f204aa93e2",
+  "slug": "hc-patna-notice-regarding-finalization-of-objections-f204aa",
+  "status": "published",
+  "title": "Notice regarding finalization of objections received against MCQs of Preliminary Test held on 18.09.2026 under Ex-Cadre Assistant Recruitment Examination, 2026.",
+  "organization": "Patna High Court",
+  "sourceId": "hc-patna",
+  "level": "state",
+  "state": "BR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-20",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://patnahighcourt.gov.in/getfile/MTEyNzA=-10ND3L2OqJ4=",
+    "official": "https://patnahighcourt.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-20",
+      "url": "https://patnahighcourt.gov.in/getfile/MTEyNzA=-10ND3L2OqJ4="
+    }
+  ],
+  "foundAt": "2026-11-20T11:51:26.686Z",
+  "updatedAt": "2026-11-20T12:10:21.201Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 20th November, 2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 20th November, 2026”",
+  "publishedAt": "2026-11-20T12:10:21.201Z"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "80829715e8",
+  "slug": "hc-andhra-pradesh-district-judges-fixing-up-of-common-808297",
+  "status": "draft",
+  "title": "DISTRICT JUDGES - Fixing up of common seniority among the District Judges who were appointed from the years 2014 to 2026 - Communicated to the officers to submit their…",
+  "organization": "High Court of Andhra Pradesh",
+  "sourceId": "hc-andhra-pradesh",
+  "level": "state",
+  "state": "AP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-09-26",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aphc.gov.in/docs/notification_1795157220_0.pdf",
+    "official": "https://aphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-20T11:51:26.686Z",
+  "updatedAt": "2026-11-20T11:51:26.686Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 26.09.2025"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 26.09.2025”"
+}

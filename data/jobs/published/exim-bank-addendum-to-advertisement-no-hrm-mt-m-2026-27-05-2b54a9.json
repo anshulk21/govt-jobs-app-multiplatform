@@ -1,0 +1,55 @@
+{
+  "id": "2b54a998eb",
+  "slug": "exim-bank-addendum-to-advertisement-no-hrm-mt-m-2026-27-05-2b54a9",
+  "status": "published",
+  "title": "Addendum to Advertisement No. Hrm/Mt/M/2026-27/05",
+  "organization": "Exim Bank — Careers",
+  "sourceId": "exim-bank",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": 60,
+  "qualifications": [
+    "postgraduate"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.eximbankindia.in/sites/default/files/2026-11/Addendum%20-%20Final_0.pdf",
+    "official": "https://www.eximbankindia.in/careers",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-11/Addendum%20-%20Final_0.pdf"
+    }
+  ],
+  "foundAt": "2026-11-20T11:51:26.686Z",
+  "updatedAt": "2026-11-20T12:10:21.201Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "vacancies",
+      "qualifications"
+    ],
+    "evidence": {
+      "vacancies": "Total No. of posts – 60",
+      "qualifications": "Qualifications/ Experience Management Trainee (Banking Operations – Credit/ Loans/ Advances/ Treasury & Accounts/ Internal Audit/ Risk Management) (Total No. of posts – 60) Minimum 60% aggregate marks / equivalent Cumulative Grade Points"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Vacancies: from “Total No. of posts – 60”\n• Qualification: from “Qualifications/ Experience Management Trainee (Banking Operations – Credit/ Loans/ Advances/ Treasury & Accounts/ Internal Audit/ Risk Management) (Total No. of posts – 60) Minimum 60% aggregate marks / equivalent Cumulative Grade Points”",
+  "publishedAt": "2026-11-20T12:10:21.201Z"
+}
