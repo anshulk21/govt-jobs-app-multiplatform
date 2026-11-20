@@ -1,0 +1,47 @@
+{
+  "id": "cc21403f7b",
+  "slug": "npsc-notification-no-npsc-cese-2012-dt-19-11-2026-cese-2026-cc2140",
+  "status": "draft",
+  "title": "Notification No.NPSC/CESE-2012 dt. 19.11.2026 (CESE 2026 Second Shortlist) New",
+  "organization": "Nagaland Public Service Commission",
+  "sourceId": "npsc",
+  "level": "state",
+  "state": "NL",
+  "category": "PSC",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "postgraduate",
+    "bed"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-19",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://npsc.nagaland.gov.in/notification/179514768486596",
+    "official": "https://npsc.nagaland.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-20T06:19:15.273Z",
+  "updatedAt": "2026-11-20T06:19:15.273Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification",
+      "qualifications"
+    ],
+    "evidence": {
+      "dates.notification": "dt. 19.11.2026",
+      "qualifications": "qualification. (d) Pass Certificate of HSLC, HSSLC, Degree, Post Graduate, NET, PhD, B.Ed, M.Ed, issued by Board/University. In the absence of Degree Pass Certificate issued by University, candidates may submit Provisional Pass Certificate"
+    },
+    "reader": 2
+  },
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dt. 19.11.2026”\n• Qualification: from “qualification. (d) Pass Certificate of HSLC, HSSLC, Degree, Post Graduate, NET, PhD, B.Ed, M.Ed, issued by Board/University. In the absence of Degree Pass Certificate issued by University, candidates may submit Provisional Pass Certificate”"
+}

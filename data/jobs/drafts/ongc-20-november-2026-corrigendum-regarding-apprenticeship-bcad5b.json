@@ -1,0 +1,44 @@
+{
+  "id": "bcad5b422f",
+  "slug": "ongc-20-november-2026-corrigendum-regarding-apprenticeship-bcad5b",
+  "status": "draft",
+  "title": "Corrigendum regarding apprenticeship engagement under NATS for FY 27-28",
+  "organization": "ONGC",
+  "sourceId": "ongc",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-29",
+    "applyStart": null,
+    "lastDate": "2026-11-29",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ongcindia.com/documents/77751/2660534/NATSCorrigendum_201126.pdf/7c6851a9-b8ca-482d-d160-d3ccfae6aa18",
+    "official": "https://ongcindia.com/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-20T06:19:15.273Z",
+  "updatedAt": "2026-11-20T06:19:15.273Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date for submission of applications under NATS (BOAT) has been extended upto 29.11.2026",
+      "dates.notification": "Date of Notification: 29.10.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date for submission of applications under NATS (BOAT) has been extended upto 29.11.2026”\n• Notification date: from “Date of Notification: 29.10.2026”"
+}
