@@ -1,0 +1,42 @@
+{
+  "id": "2155c95633",
+  "slug": "hc-delhi-ex-f-a-74-2026-tilak-raj-vs-shikha-mathur-judgment-2155c9",
+  "status": "draft",
+  "title": "EX.F.A. - 74/2026, TILAK RAJ Vs SHIKHA MATHUR, Judgment date 21.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-04-13",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/68021112026EFA742026_152312.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-21T19:24:55.022Z",
+  "updatedAt": "2026-11-21T19:24:55.022Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 13.04.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 13.04.2026”"
+}

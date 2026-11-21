@@ -1,0 +1,47 @@
+{
+  "id": "76b4cae865",
+  "slug": "rj-recruitment-view-document-76b4ca",
+  "status": "published",
+  "title": "Document — Rajasthan Recruitment Portal",
+  "organization": "Rajasthan Recruitment Portal",
+  "sourceId": "rj-recruitment",
+  "level": "state",
+  "state": "RJ",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://recruitment.rajasthan.gov.in/notificationdocview?ID=Mha61WYxWZ%2BKKzacrMgEHw%3D%3D",
+    "official": "https://recruitment.rajasthan.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://recruitment.rajasthan.gov.in/notificationdocview?ID=Mha61WYxWZ%2BKKzacrMgEHw%3D%3D"
+    }
+  ],
+  "foundAt": "2026-11-21T19:24:55.022Z",
+  "updatedAt": "2026-11-21T19:44:35.846Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-11-21T19:44:35.846Z"
+}

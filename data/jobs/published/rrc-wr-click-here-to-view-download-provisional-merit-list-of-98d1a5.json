@@ -1,0 +1,56 @@
+{
+  "id": "98d1a58cfd",
+  "slug": "rrc-wr-click-here-to-view-download-provisional-merit-list-of-98d1a5",
+  "status": "published",
+  "title": "/ Provisional Merit List of Employees Qualified For Document Verification - Junior Engineer (TMC)",
+  "organization": "RRC Western Railway (Mumbai)",
+  "sourceId": "rrc-wr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-01-08",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrc-wr.com/rrwc/Files/7b963bbd-0960-4d4a-a1d7-0371f6238637.pdf",
+    "official": "https://www.rrc-wr.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2025-01-08",
+      "url": "https://www.rrc-wr.com/rrwc/Files/7b963bbd-0960-4d4a-a1d7-0371f6238637.pdf"
+    },
+    {
+      "stage": "result",
+      "date": "2026-11-21",
+      "url": "https://www.rrc-wr.com/rrwc/Files/7b963bbd-0960-4d4a-a1d7-0371f6238637.pdf"
+    }
+  ],
+  "foundAt": "2026-11-21T19:24:55.022Z",
+  "updatedAt": "2026-11-21T19:44:35.846Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 08-01-2025"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 08-01-2025”",
+  "publishedAt": "2026-11-21T19:44:35.846Z"
+}

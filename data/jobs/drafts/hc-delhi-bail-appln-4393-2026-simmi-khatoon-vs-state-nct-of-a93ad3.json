@@ -1,0 +1,42 @@
+{
+  "id": "a93ad3048a",
+  "slug": "hc-delhi-bail-appln-4393-2026-simmi-khatoon-vs-state-nct-of-a93ad3",
+  "status": "draft",
+  "title": "BAIL Appln. - 4393/2026, Simmi Khatoon Vs State NCT of Delhi, Judgment Date 21.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-16",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/59221112026BA43932026_180443.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-21T19:24:55.022Z",
+  "updatedAt": "2026-11-21T19:24:55.022Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 16th August, 2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 16th August, 2026”"
+}
