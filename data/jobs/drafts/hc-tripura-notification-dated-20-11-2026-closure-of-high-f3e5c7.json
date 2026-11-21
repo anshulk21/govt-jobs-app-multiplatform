@@ -1,0 +1,42 @@
+{
+  "id": "f3e5c7088f",
+  "slug": "hc-tripura-notification-dated-20-11-2026-closure-of-high-f3e5c7",
+  "status": "draft",
+  "title": "NOTIFICATION Dated 20-11-2026: Closure of High Court and District Courts on 27.11.2026 in Connection with General Election to Urban Local Bodies, 2026.",
+  "organization": "High Court of Tripura",
+  "sourceId": "hc-tripura",
+  "level": "state",
+  "state": "TR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-13",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26854",
+    "official": "https://thc.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-21T02:25:32.182Z",
+  "updatedAt": "2026-11-21T02:25:32.182Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 13.11.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 13.11.2026”"
+}

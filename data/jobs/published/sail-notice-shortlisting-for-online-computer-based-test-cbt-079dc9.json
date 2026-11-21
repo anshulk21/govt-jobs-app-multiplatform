@@ -1,0 +1,50 @@
+{
+  "id": "079dc9e83b",
+  "slug": "sail-notice-shortlisting-for-online-computer-based-test-cbt-079dc9",
+  "status": "published",
+  "title": "Notice — Shortlisting for online Computer Based Test (CBT) ref advt. no ISP/YP/2026/01 dated 22/05/2026",
+  "organization": "SAIL — Careers",
+  "sourceId": "sail",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-05-22",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/DSP_News%20&%20Jobs_20112026_213002.pdf",
+    "official": "https://sailcareers.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-05-22",
+      "url": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/DSP_News%20&%20Jobs_20112026_213002.pdf"
+    }
+  ],
+  "foundAt": "2026-11-21T02:25:32.182Z",
+  "updatedAt": "2026-11-21T02:44:42.990Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 22/05/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 22/05/2026”",
+  "publishedAt": "2026-11-21T02:44:42.990Z"
+}
