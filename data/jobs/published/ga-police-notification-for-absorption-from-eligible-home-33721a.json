@@ -1,0 +1,52 @@
+{
+  "id": "33721a9cc2",
+  "slug": "ga-police-notification-for-absorption-from-eligible-home-33721a",
+  "status": "published",
+  "title": "Notification for absorption from eligible Home Guard Volunteers to the post of Police Constable in Goa Police Department..",
+  "organization": "Goa — Police Recruitment Board",
+  "sourceId": "ga-police",
+  "level": "state",
+  "state": "GA",
+  "category": "Police",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "10th"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://citizen.goapolice.gov.in/documents/2003747/6267451/Home+Guard.PDF/d652ebf3-e4e6-400e-adea-a2f8d7575f0a",
+    "official": "https://citizen.goapolice.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://citizen.goapolice.gov.in/documents/2003747/6267451/Home+Guard.PDF/d652ebf3-e4e6-400e-adea-a2f8d7575f0a"
+    }
+  ],
+  "foundAt": "2026-11-21T11:17:45.156Z",
+  "updatedAt": "2026-11-21T11:27:16.923Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "qualifications required for Home Guard Volunteers, are as under:- l. Passed Secondary School certificate Examination from recosnised Board or equivalent qualification. 2. Worked as Home Guard Volunteers for at least l g years as on 23.11.20"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “qualifications required for Home Guard Volunteers, are as under:- l. Passed Secondary School certificate Examination from recosnised Board or equivalent qualification. 2. Worked as Home Guard Volunteers for at least l g years as on 23.11.20”",
+  "publishedAt": "2026-11-21T11:27:16.923Z"
+}
