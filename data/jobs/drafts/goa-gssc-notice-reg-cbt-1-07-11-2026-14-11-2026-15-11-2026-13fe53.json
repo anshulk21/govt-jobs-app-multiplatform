@@ -1,0 +1,42 @@
+{
+  "id": "13fe53ea45",
+  "slug": "goa-gssc-notice-reg-cbt-1-07-11-2026-14-11-2026-15-11-2026-13fe53",
+  "status": "draft",
+  "title": "Notice reg. CBT-1- 07.11.2026, 14.11.2026, 15.11.2026, 21.11.2026 and 22.11.2026(PDF, opens in the document viewer)",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-22",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-cbt-1-07-11-2026-14-11-2026-15-11-2026-21-11-2026-and-22-11-2026.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-22T19:48:06.843Z",
+  "updatedAt": "2026-11-22T19:48:06.843Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 22/11/2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 22/11/2026”"
+}
