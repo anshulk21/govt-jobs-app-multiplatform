@@ -1,0 +1,58 @@
+{
+  "id": "38d1715bb5",
+  "slug": "ld-admin-md-ayush-final-list-38d171",
+  "status": "published",
+  "title": "MD Ayush Final list — Lakshadweep Administration",
+  "organization": "Lakshadweep Administration",
+  "sourceId": "ld-admin",
+  "level": "ut",
+  "state": "LD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-23",
+    "applyStart": null,
+    "lastDate": "2026-12-31",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://lakshadweep.gov.in/notice/md-ayush-final-list/",
+    "official": "https://lakshadweep.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-23",
+      "url": "https://lakshadweep.gov.in/notice/md-ayush-final-list/"
+    },
+    {
+      "stage": "result",
+      "date": "2026-11-23",
+      "url": "https://lakshadweep.gov.in/notice/md-ayush-final-list/"
+    }
+  ],
+  "foundAt": "2026-11-23T13:02:02.431Z",
+  "updatedAt": "2026-11-23T13:10:54.278Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 31/12/2026",
+      "dates.notification": "Date of publication: 23/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 31/12/2026”\n• Notification date: from “Date of publication: 23/11/2026”",
+  "publishedAt": "2026-11-23T13:10:54.278Z"
+}

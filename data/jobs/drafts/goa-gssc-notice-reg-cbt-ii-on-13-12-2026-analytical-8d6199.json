@@ -1,0 +1,44 @@
+{
+  "id": "8d61991122",
+  "slug": "goa-gssc-notice-reg-cbt-ii-on-13-12-2026-analytical-8d6199",
+  "status": "draft",
+  "title": "Notice reg. CBT-II on 13.12.2026 - Analytical Assistant, Laboratory Assistant, Police Constable Driver - Grade-III, Constable -Greaser, Constable -Electrician(PDF, opens in the…",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": 1,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-12-05",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/whats-new/notice-reg-cbt-ii-on-13-12-2026-analytical-assistant-laboratory-assistant-police-constable-driver-grade-iii-constable-greaser-constable-electrician.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-23T13:02:02.431Z",
+  "updatedAt": "2026-11-23T13:02:02.431Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "vacancies"
+    ],
+    "evidence": {
+      "dates.notification": "dated 05/12/2025",
+      "vacancies": "Number of Posts 1"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 05/12/2025”\n• Vacancies: from “Number of Posts 1”"
+}

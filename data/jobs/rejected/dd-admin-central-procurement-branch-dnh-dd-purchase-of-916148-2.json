@@ -1,0 +1,45 @@
+{
+  "id": "9161489950",
+  "slug": "dd-admin-central-procurement-branch-dnh-dd-purchase-of-916148-2",
+  "status": "rejected",
+  "title": "Central Procurement Branch, DNH & DD: Purchase of Dialysis Materials for NAMO Hospital Daman under Medical and Public Health Service Daman for the year 2026- 27. retender",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-20",
+    "applyStart": null,
+    "lastDate": "2026-12-11",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ddd.gov.in/notice/central-procurement-branch-dnh-dd-purchase-of-dialysis-materials-for-namo-hospital-daman-under-medical-and-public-health-service-daman-for-the-year-2026-27-retender/",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-23T13:02:02.431Z",
+  "updatedAt": "2026-11-23T13:02:02.431Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "End Date/Time 11-12-2026",
+      "dates.notification": "Dated: 20-11-2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: not a job notice.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “End Date/Time 11-12-2026”\n• Notification date: from “Dated: 20-11-2026”"
+}
