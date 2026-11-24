@@ -1,0 +1,52 @@
+{
+  "id": "c893a0da9e",
+  "slug": "br-btsc-raise-objection-for-advt-no-20-2025-dentist-letter-c893a0",
+  "status": "published",
+  "title": "Raise Objection for Advt No-20/2025 (Dentist) (Letter No. 3885)",
+  "organization": "Bihar Technical Service Commission",
+  "sourceId": "br-btsc",
+  "level": "state",
+  "state": "BR",
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-23",
+    "applyStart": null,
+    "lastDate": "2026-11-27",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://btsc.bihar.gov.in/node/1246",
+    "official": "https://btsc.bihar.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-23",
+      "url": "https://btsc.bihar.gov.in/node/1246"
+    }
+  ],
+  "foundAt": "2026-11-24T02:16:46.736Z",
+  "updatedAt": "2026-11-24T02:35:34.646Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "End Date 27-11-2026",
+      "dates.notification": "dated 23-11-2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “End Date 27-11-2026”\n• Notification date: from “dated 23-11-2026”",
+  "publishedAt": "2026-11-24T02:35:34.646Z"
+}

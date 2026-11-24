@@ -1,0 +1,38 @@
+{
+  "id": "b9e0cb213b",
+  "slug": "hc-manipur-calendar-2027-for-high-court-manipur-b9e0cb",
+  "status": "draft",
+  "title": "Calendar 2027 for High Court Manipur",
+  "organization": "High Court of Manipur",
+  "sourceId": "hc-manipur",
+  "level": "state",
+  "state": "MN",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcmimphal.nic.in/Documents/2027%20calendar_0001.pdf",
+    "official": "https://hcmimphal.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-24T02:16:46.736Z",
+  "updatedAt": "2026-11-24T02:16:46.736Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "83b0e836d6",
+  "slug": "hc-madhya-pradesh-19-nov-2026-vijay-kumar-tiwari-vs-shri-83b0e8",
+  "status": "draft",
+  "title": "VIJAY KUMAR TIWARI vs SHRI RAGHVENDRA SINGH - CONC/07766/2026 Principal Seat Jabalpur",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-04-30",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/jabalpur/MPHCJB/2026/CONC/7766/CONC_7766_2026_FinalOrder_19-11-2026_digi.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-24T02:16:46.736Z",
+  "updatedAt": "2026-11-24T02:16:46.736Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 30.04.2025"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 30.04.2025”"
+}

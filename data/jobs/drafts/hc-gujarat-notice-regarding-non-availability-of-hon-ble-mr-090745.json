@@ -1,0 +1,42 @@
+{
+  "id": "090745a5d4",
+  "slug": "hc-gujarat-notice-regarding-non-availability-of-hon-ble-mr-090745",
+  "status": "draft",
+  "title": "Notice regarding non-availability of Hon'ble Mr. Justice P.M.Raval on 23.11.2026 and Re-arrangement of taking up the matters of Hon'ble Court (Coram: Hon'ble Ms. Justice…",
+  "organization": "High Court of Gujarat",
+  "sourceId": "hc-gujarat",
+  "level": "state",
+  "state": "GJ",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-02",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notice%20regarding%20non-availability%20of%20Honble%20Mr.%20Justice%20P.M.Raval%20on%2023.11.2026%20and%20Re-arrangement%20of%20taking%20up%20the%20matters%20of%20Hon'ble%20Court%20(Coram%20:%20Honble%20Ms.%20Justice%20Sangeeta%20K.%20Vishen%20and%20Honble%20Mr.%20Justice%20P.M.Raval).pdf",
+    "official": "https://gujarathighcourt.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-24T02:16:46.736Z",
+  "updatedAt": "2026-11-24T02:16:46.736Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 02/11/2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 02/11/2026”"
+}

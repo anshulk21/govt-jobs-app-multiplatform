@@ -1,0 +1,42 @@
+{
+  "id": "3c1f5c6f51",
+  "slug": "hc-delhi-cm-m-2061-2026-dr-subalakshmi-palayan-vs-r-3c1f5c",
+  "status": "draft",
+  "title": "CM(M) - 2061/2026, DR. Subalakshmi Palayan Vs R. Rajalakshmi and ORS, Judgment Date 23.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-08-14",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/67923112026CMM20612026_185832.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-24T02:16:46.736Z",
+  "updatedAt": "2026-11-24T02:16:46.736Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 14.08.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 14.08.2026”"
+}

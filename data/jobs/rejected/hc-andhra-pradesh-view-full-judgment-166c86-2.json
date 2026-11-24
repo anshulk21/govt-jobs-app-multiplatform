@@ -1,0 +1,40 @@
+{
+  "id": "166c8629e8",
+  "slug": "hc-andhra-pradesh-view-full-judgment-166c86-2",
+  "status": "rejected",
+  "title": "Full Judgment — High Court of Andhra Pradesh",
+  "organization": "High Court of Andhra Pradesh",
+  "sourceId": "hc-andhra-pradesh",
+  "level": "state",
+  "state": "AP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aphc.gov.in/docs/circulated_judgements/judgment_WPC_1000_2022.pdf",
+    "official": "https://aphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-24T02:16:46.736Z",
+  "updatedAt": "2026-11-24T02:16:46.736Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2022).",
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}
