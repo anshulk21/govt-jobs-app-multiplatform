@@ -1,0 +1,53 @@
+{
+  "id": "7effdc35af",
+  "slug": "goa-gssc-provisional-result-physical-efficiency-test-pet-7effdc",
+  "status": "published",
+  "title": "Provisional Result - Physical Efficiency Test - PET - Police Constable (Female)(PDF, opens in the document viewer)",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/recruitment/candidates/results/provisional-result-pet-pet-police-constable-female-candidates.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://gssc.goa.gov.in/docs/recruitment/candidates/results/provisional-result-pet-pet-police-constable-female-candidates.pdf"
+    },
+    {
+      "stage": "result",
+      "date": "2026-11-24",
+      "url": "https://gssc.goa.gov.in/docs/recruitment/candidates/results/provisional-result-pet-pet-police-constable-female-candidates.pdf"
+    }
+  ],
+  "foundAt": "2026-11-24T13:53:40.331Z",
+  "updatedAt": "2026-11-24T14:02:26.723Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-11-24T14:02:26.723Z"
+}
