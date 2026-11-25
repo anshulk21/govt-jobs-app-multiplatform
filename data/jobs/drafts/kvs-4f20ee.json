@@ -1,0 +1,42 @@
+{
+  "id": "4f20ee5dcc",
+  "slug": "kvs-4f20ee",
+  "status": "draft",
+  "title": "भारत सरकार द्वारा जारी कार्यालय ज्ञापन नई",
+  "organization": "Kendriya Vidyalaya Sangathan",
+  "sourceId": "kvs",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-01",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/11/2026112567.pdf",
+    "official": "https://kvs.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-25T08:45:39.118Z",
+  "updatedAt": "2026-11-25T08:45:39.118Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 01-09-2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 01-09-2026”"
+}

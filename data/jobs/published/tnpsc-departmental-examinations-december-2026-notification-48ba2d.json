@@ -1,0 +1,53 @@
+{
+  "id": "48ba2df716",
+  "slug": "tnpsc-departmental-examinations-december-2026-notification-48ba2d",
+  "status": "published",
+  "title": "Departmental Examinations - December 2026 (Notification)",
+  "organization": "Tamil Nadu Public Service Commission",
+  "sourceId": "tnpsc",
+  "level": "state",
+  "state": "TN",
+  "category": "PSC",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": "₹200",
+  "dates": {
+    "notification": "2026-11-25",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.tnpsc.gov.in/english/DNotification.aspx",
+    "official": "https://www.tnpsc.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-25",
+      "url": "https://www.tnpsc.gov.in/english/DNotification.aspx"
+    }
+  ],
+  "foundAt": "2026-11-25T08:45:39.118Z",
+  "updatedAt": "2026-11-25T08:55:28.054Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification",
+      "fee"
+    ],
+    "evidence": {
+      "dates.notification": "Date of Notification : 25.11.2026",
+      "fee": "Examination fee of Rs.200/- for each test should be paid through online payment only.(Other mode of payment will not be allowed / accepted). -- 1 of 5 -- General Information: 1. The Departmental Exa"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Date of Notification : 25.11.2026”\n• Fee: from “Examination fee of Rs.200/- for each test should be paid through online payment only.(Other mode of payment will not be allowed / accepted). -- 1 of 5 -- General Information: 1. The Departmental Exa”",
+  "publishedAt": "2026-11-25T08:55:28.054Z"
+}

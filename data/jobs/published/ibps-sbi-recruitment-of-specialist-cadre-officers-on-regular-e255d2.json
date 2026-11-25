@@ -1,0 +1,52 @@
+{
+  "id": "e255d26d18",
+  "slug": "ibps-sbi-recruitment-of-specialist-cadre-officers-on-regular-e255d2",
+  "status": "published",
+  "title": "SBI Recruitment Of Specialist Cadre Officers on Regular Basis Registration From 20-Nov-2026",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": "2026-11-20",
+    "lastDate": "2026-12-25",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ibpsreg.ibps.in/sbifteoct26/",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://ibpsreg.ibps.in/sbifteoct26/"
+    }
+  ],
+  "foundAt": "2026-11-25T08:45:39.118Z",
+  "updatedAt": "2026-11-25T08:55:28.054Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for printing your application 25/12/2026",
+      "dates.applyStart": "Commencement of online registration of application 20/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date for printing your application 25/12/2026”\n• Apply from: from “Commencement of online registration of application 20/11/2026”",
+  "publishedAt": "2026-11-25T08:55:28.054Z"
+}
