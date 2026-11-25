@@ -1,0 +1,39 @@
+{
+  "id": "a9f0765c34",
+  "slug": "rrc-swr-notice-for-uploading-documents-in-oirms-portal-for-a9f076-2",
+  "status": "rejected",
+  "title": "Notice for Uploading Documents in Oirms Portal for Document Verification Against CEN NO.08/2024",
+  "organization": "RRC South Western Railway (Hubballi)",
+  "sourceId": "rrc-swr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrchubli.in/pdf/Notice%20on%20OIRMS.pdf",
+    "official": "https://www.rrchubli.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-25T19:23:33.831Z",
+  "updatedAt": "2026-11-25T19:23:33.831Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2024).",
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

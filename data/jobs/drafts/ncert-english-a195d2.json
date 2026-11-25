@@ -1,0 +1,45 @@
+{
+  "id": "a195d245f1",
+  "slug": "ncert-english-a195d2",
+  "status": "draft",
+  "title": "English",
+  "organization": "NCERT",
+  "sourceId": "ncert",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "graduate",
+    "postgraduate"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ncert.nic.in/division/der/pdf/NDF_2026_English.pdf",
+    "official": "https://ncert.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-25T19:23:33.831Z",
+  "updatedAt": "2026-11-25T19:23:33.831Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "qualifications"
+    ],
+    "evidence": {
+      "qualifications": "Eligibility 1. Good Academic record with at least 60% marks at both Graduate and Post Graduate Levels. 2. Candidates registered for Ph.D. degree in a recognized university/ or working towards their Ph.D. registration are eligible to apply."
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Qualification: from “Eligibility 1. Good Academic record with at least 60% marks at both Graduate and Post Graduate Levels. 2. Candidates registered for Ph.D. degree in a recognized university/ or working towards their Ph.D. registration are eligible to apply.”"
+}

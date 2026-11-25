@@ -1,0 +1,42 @@
+{
+  "id": "ee6f9cc474",
+  "slug": "hc-delhi-w-p-c-17207-2026-santoshi-devi-vs-new-delhi-ee6f9c",
+  "status": "draft",
+  "title": "W.P.(C) - 17207/2026, Santoshi DEVI Vs New Delhi Municipal Council & ANR., Judgment Date 23.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-05",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/PMS23112026CW172072026_182031.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-25T19:23:33.831Z",
+  "updatedAt": "2026-11-25T19:23:33.831Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 05th November, 2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 05th November, 2026”"
+}

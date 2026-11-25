@@ -1,0 +1,42 @@
+{
+  "id": "6b04867882",
+  "slug": "hc-delhi-w-p-c-14872-2026-maneet-gupta-vs-registrar-of-6b0486",
+  "status": "draft",
+  "title": "W.P.(C) - 14872/2026, Maneet Gupta Vs Registrar of Cooperative Societies & ORS., Judgment Date 23.11.2026",
+  "organization": "Delhi High Court",
+  "sourceId": "hc-delhi",
+  "level": "ut",
+  "state": "DL",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-09-18",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://delhihighcourt.nic.in/app/showFileJudgment/78023112026CW148722026_154952.pdf",
+    "official": "https://delhihighcourt.nic.in/web/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-25T19:23:33.831Z",
+  "updatedAt": "2026-11-25T19:23:33.831Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 18th September, 2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 18th September, 2026”"
+}

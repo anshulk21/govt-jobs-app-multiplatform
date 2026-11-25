@@ -1,0 +1,56 @@
+{
+  "id": "b63e60415a",
+  "slug": "npsc-notification-no-npsc-exam-5-2022-dt-25-11-2026-final-b63e60",
+  "status": "published",
+  "title": "Notification No. NPSC/EXAM-5/2022 dt. 25.11.2026 (Final Results of Common Educational Services Examination 2026) New",
+  "organization": "Nagaland Public Service Commission",
+  "sourceId": "npsc",
+  "level": "state",
+  "state": "NL",
+  "category": "PSC",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-25",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://npsc.nagaland.gov.in/results/179562124433898",
+    "official": "https://npsc.nagaland.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-25",
+      "url": "https://npsc.nagaland.gov.in/results/179562124433898"
+    },
+    {
+      "stage": "result",
+      "date": "2026-11-25",
+      "url": "https://npsc.nagaland.gov.in/results/179562124433898"
+    }
+  ],
+  "foundAt": "2026-11-25T19:23:33.831Z",
+  "updatedAt": "2026-11-25T19:42:29.147Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dt. 25.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dt. 25.11.2026”",
+  "publishedAt": "2026-11-25T19:42:29.147Z"
+}

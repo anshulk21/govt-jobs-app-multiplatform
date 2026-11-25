@@ -1,0 +1,45 @@
+{
+  "id": "7b5b3e4eb4",
+  "slug": "ld-admin-construction-of-play-ground-for-government-senior-7b5b3e-2",
+  "status": "rejected",
+  "title": "Construction of Play Ground for Government Senior Basic School at Agatti Island",
+  "organization": "Lakshadweep Administration",
+  "sourceId": "ld-admin",
+  "level": "ut",
+  "state": "LD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-25",
+    "applyStart": null,
+    "lastDate": "2026-12-16",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://lakshadweep.gov.in/notice/construction-of-play-ground-for-government-senior-basic-school-at-agatti-island/",
+    "official": "https://lakshadweep.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-25T19:23:33.831Z",
+  "updatedAt": "2026-11-25T19:23:33.831Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 16/12/2026",
+      "dates.notification": "Date of publication: 25/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 16/12/2026”\n• Notification date: from “Date of publication: 25/11/2026”"
+}
