@@ -1,0 +1,38 @@
+{
+  "id": "2d0211771c",
+  "slug": "ncert-hindi-2d0211",
+  "status": "draft",
+  "title": "Hindi",
+  "organization": "NCERT",
+  "sourceId": "ncert",
+  "level": "central",
+  "state": null,
+  "category": "Teaching",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ncert.nic.in/pdf/notice/NDF_Advt_HI_2026.pdf",
+    "official": "https://ncert.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-26T17:00:49.828Z",
+  "updatedAt": "2026-11-26T17:00:49.828Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

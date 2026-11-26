@@ -1,0 +1,58 @@
+{
+  "id": "df128808ff",
+  "slug": "ld-admin-final-list-of-the-candidate-higher-education-df1288",
+  "status": "published",
+  "title": "Final list of the candidate – higher education",
+  "organization": "Lakshadweep Administration",
+  "sourceId": "ld-admin",
+  "level": "ut",
+  "state": "LD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-26",
+    "applyStart": null,
+    "lastDate": "2026-12-30",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://lakshadweep.gov.in/notice/final-list-of-the-candidate-higher-education/",
+    "official": "https://lakshadweep.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-26",
+      "url": "https://lakshadweep.gov.in/notice/final-list-of-the-candidate-higher-education/"
+    },
+    {
+      "stage": "result",
+      "date": "2026-11-26",
+      "url": "https://lakshadweep.gov.in/notice/final-list-of-the-candidate-higher-education/"
+    }
+  ],
+  "foundAt": "2026-11-26T17:00:49.828Z",
+  "updatedAt": "2026-11-26T17:21:11.391Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date: 30/12/2026",
+      "dates.notification": "Date of publication: 26/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Last date: from “Last date: 30/12/2026”\n• Notification date: from “Date of publication: 26/11/2026”",
+  "publishedAt": "2026-11-26T17:21:11.391Z"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "4298c17284",
+  "slug": "hc-patna-notice-with-regard-to-filling-up-of-the-vacancies-4298c1-2",
+  "status": "rejected",
+  "title": "Notice With regard to filling up of the vacancies in the cadre of District Judge (Entry Level), against 25% quota (through Limited Departmental Competitive Examination) for the…",
+  "organization": "Patna High Court",
+  "sourceId": "hc-patna",
+  "level": "state",
+  "state": "BR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-05-23",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://patnahighcourt.gov.in/getfile/MTEyOTE=-41J9hIJ36Zs=",
+    "official": "https://patnahighcourt.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-26T17:00:49.828Z",
+  "updatedAt": "2026-11-26T17:00:49.828Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 23.05.2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2026-05-23).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 23.05.2026”"
+}

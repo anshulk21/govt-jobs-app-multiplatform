@@ -1,0 +1,56 @@
+{
+  "id": "b4fa937666",
+  "slug": "goa-gssc-selection-list-junior-engineer-civil-26-11-2026-pdf-b4fa93",
+  "status": "published",
+  "title": "Selection list - Junior Engineer - Civil - 26.11.2026(PDF, opens in the document viewer)",
+  "organization": "Goa Staff Selection Commission",
+  "sourceId": "goa-gssc",
+  "level": "state",
+  "state": "GA",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-26",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://gssc.goa.gov.in/docs/recruitment/candidates/selection-list/selection-list-je-civil-26-11-2026.pdf",
+    "official": "https://gssc.goa.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-26",
+      "url": "https://gssc.goa.gov.in/docs/recruitment/candidates/selection-list/selection-list-je-civil-26-11-2026.pdf"
+    },
+    {
+      "stage": "result",
+      "date": "2026-11-26",
+      "url": "https://gssc.goa.gov.in/docs/recruitment/candidates/selection-list/selection-list-je-civil-26-11-2026.pdf"
+    }
+  ],
+  "foundAt": "2026-11-26T17:00:49.828Z",
+  "updatedAt": "2026-11-26T17:21:11.391Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 26/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 26/11/2026”",
+  "publishedAt": "2026-11-26T17:21:11.391Z"
+}

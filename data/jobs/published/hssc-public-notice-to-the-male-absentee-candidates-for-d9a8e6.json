@@ -1,0 +1,51 @@
+{
+  "id": "d9a8e6da53",
+  "slug": "hssc-public-notice-to-the-male-absentee-candidates-for-d9a8e6",
+  "status": "published",
+  "title": "Public Notice to the MALE Absentee Candidates for Physical Screening Test (PST) for the Various Posts of Forest Department Against Advt. NOS. 13/2024, 02/2026 & 04/2026",
+  "organization": "Haryana Staff Selection Commission (also Haryana Police)",
+  "sourceId": "hssc",
+  "level": "state",
+  "state": "HR",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-19",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hssc.gov.in/file/ac1f23cd-a1e2-1e66-81a2-167701160013/publicNotice",
+    "official": "https://hssc.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-19",
+      "url": "https://hssc.gov.in/file/ac1f23cd-a1e2-1e66-81a2-167701160013/publicNotice"
+    }
+  ],
+  "foundAt": "2026-11-26T17:00:49.828Z",
+  "updatedAt": "2026-11-26T17:21:11.391Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 19.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 19.11.2026”",
+  "publishedAt": "2026-11-26T17:21:11.391Z"
+}

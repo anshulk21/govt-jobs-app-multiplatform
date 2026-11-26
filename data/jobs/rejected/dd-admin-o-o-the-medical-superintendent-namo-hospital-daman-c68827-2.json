@@ -1,0 +1,50 @@
+{
+  "id": "c688271d13",
+  "slug": "dd-admin-o-o-the-medical-superintendent-namo-hospital-daman-c68827-2",
+  "status": "rejected",
+  "title": "O/O. the Medical Superintendent, NAMO Hospital, Daman",
+  "organization": "Administration of Dadra & Nagar Haveli and Daman & Diu",
+  "sourceId": "dd-admin",
+  "level": "ut",
+  "state": "DD",
+  "category": "Other",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [
+    "diploma",
+    "medical"
+  ],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-25",
+    "applyStart": null,
+    "lastDate": "2026-12-04",
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://ddd.gov.in/notice/o-o-the-medical-superintendent-namo-hospital-daman/",
+    "official": "https://ddd.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-26T17:00:49.828Z",
+  "updatedAt": "2026-11-26T17:00:49.828Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.lastDate",
+      "qualifications",
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.lastDate": "last date for submission of application is 04.12.2026",
+      "qualifications": "Qualification Proposed Monthly Remuneration Anaesthetist 02 Essential: 1. MBBS with PG Degree or Diploma in respective subject MS/MD/DNB from an institute recognized by NMC/MCI as per prevailing norms. 2. Candidates should be registered wit",
+      "dates.notification": "Date of publication: 25/11/2026"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: general notice from an administration website.",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Last date: from “last date for submission of application is 04.12.2026”\n• Qualification: from “Qualification Proposed Monthly Remuneration Anaesthetist 02 Essential: 1. MBBS with PG Degree or Diploma in respective subject MS/MD/DNB from an institute recognized by NMC/MCI as per prevailing norms. 2. Candidates should be registered wit”\n• Notification date: from “Date of publication: 25/11/2026”"
+}

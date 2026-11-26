@@ -1,0 +1,51 @@
+{
+  "id": "dc57d14e75",
+  "slug": "ibps-notice-for-online-personality-test-in-remote-proctored-dc57d1",
+  "status": "published",
+  "title": "Notice for Online Personality Test in Remote Proctored Mode (RPA Mode) for CRP-PO/MT-XVI",
+  "organization": "Institute of Banking Personnel Selection",
+  "sourceId": "ibps",
+  "level": "central",
+  "state": null,
+  "category": "Bank",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": "2026-11-30"
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.ibps.in/wp-content/uploads/NOTICE-FOR-PERSONALITY-TEST_CRP-PO-XVI.pdf",
+    "official": "https://www.ibps.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.ibps.in/wp-content/uploads/NOTICE-FOR-PERSONALITY-TEST_CRP-PO-XVI.pdf"
+    }
+  ],
+  "foundAt": "2026-11-26T17:00:49.828Z",
+  "updatedAt": "2026-11-26T17:21:11.391Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.exam"
+    ],
+    "evidence": {
+      "dates.exam": "Date of Test: 30.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Exam date: from “Date of Test: 30.11.2026”",
+  "publishedAt": "2026-11-26T17:21:11.391Z"
+}
