@@ -1,8 +1,8 @@
 {
-  "id": "ed97298f05",
-  "slug": "hc-andhra-pradesh-view-full-judgment-ed9729",
-  "status": "draft",
-  "title": "Full Judgment — High Court of Andhra Pradesh",
+  "id": "a86993e7a8",
+  "slug": "hc-andhra-pradesh-judgment-a86993-2",
+  "status": "rejected",
+  "title": "Judgment — High Court of Andhra Pradesh",
   "organization": "High Court of Andhra Pradesh",
   "sourceId": "hc-andhra-pradesh",
   "level": "state",
@@ -21,7 +21,7 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://aphc.gov.in/docs/imp_judgements/Anvar%20PV%20case.pdf",
+    "notification": "https://digi-services.aphc.ap.gov.in/eaphcr/docs/tel/202100047012020_2.pdf",
     "official": "https://aphc.gov.in/",
     "apply": null
   },
@@ -29,11 +29,13 @@
   "foundAt": "2026-11-05T01:30:46.150Z",
   "updatedAt": "2026-11-05T01:30:46.150Z",
   "extraction": {
-    "method": "pdf-regex",
+    "method": "link-only",
     "fields": [],
     "evidence": {},
     "reader": 2,
+    "error": "PDF not read (getaddrinfo EAI_AGAIN digi-services.aphc.ap.gov.in)",
     "tries": 3
   },
-  "review": "Read from the PDF automatically. Check each value against the notification:"
+  "notes": "Rejected automatically: unclear for 21+ days.",
+  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (timeout))"
 }

@@ -1,7 +1,7 @@
 {
-  "id": "b775e9835f",
-  "slug": "hc-andhra-pradesh-judgment-b775e9",
-  "status": "draft",
+  "id": "b0e4e3359f",
+  "slug": "hc-andhra-pradesh-judgment-b0e4e3-2",
+  "status": "rejected",
   "title": "Judgment — High Court of Andhra Pradesh",
   "organization": "High Court of Andhra Pradesh",
   "sourceId": "hc-andhra-pradesh",
@@ -21,20 +21,21 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://digi-services.aphc.ap.gov.in/eaphcr/docs/sci/tel/231122111055_tel.pdf",
+    "notification": "https://digi-services.aphc.ap.gov.in/citation_files/200300019502018_9.pdf",
     "official": "https://aphc.gov.in/",
     "apply": null
   },
   "timeline": [],
-  "foundAt": "2026-11-05T01:30:46.150Z",
-  "updatedAt": "2026-11-05T01:30:46.150Z",
+  "foundAt": "2026-11-04T21:18:55.242Z",
+  "updatedAt": "2026-11-04T21:18:55.242Z",
   "extraction": {
     "method": "link-only",
     "fields": [],
     "evidence": {},
     "reader": 2,
-    "error": "PDF not read (getaddrinfo EAI_AGAIN digi-services.aphc.ap.gov.in)",
+    "error": "PDF not read (ETIMEDOUT: )",
     "tries": 3
   },
-  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (timeout))"
+  "notes": "Rejected automatically: unclear for 21+ days.",
+  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (ETIMEDOUT: ))"
 }
