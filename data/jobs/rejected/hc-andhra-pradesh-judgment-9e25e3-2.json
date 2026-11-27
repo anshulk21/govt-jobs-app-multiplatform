@@ -1,7 +1,7 @@
 {
-  "id": "a4777b6c8d",
-  "slug": "hc-andhra-pradesh-judgment-a4777b",
-  "status": "draft",
+  "id": "9e25e368d7",
+  "slug": "hc-andhra-pradesh-judgment-9e25e3-2",
+  "status": "rejected",
   "title": "Judgment — High Court of Andhra Pradesh",
   "organization": "High Court of Andhra Pradesh",
   "sourceId": "hc-andhra-pradesh",
@@ -21,7 +21,7 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://digi-services.aphc.ap.gov.in/eaphcr/docs/tel/206300073502019_3.pdf",
+    "notification": "https://digi-services.aphc.ap.gov.in/eaphcr/docs/sci/eng/250210164640_eng.pdf",
     "official": "https://aphc.gov.in/",
     "apply": null
   },
@@ -36,5 +36,6 @@
     "error": "PDF not read (ETIMEDOUT: )",
     "tries": 3
   },
-  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (ETIMEDOUT: ))"
+  "notes": "Rejected automatically: unclear for 21+ days.",
+  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (timeout))"
 }
