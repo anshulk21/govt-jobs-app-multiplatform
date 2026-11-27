@@ -1,0 +1,43 @@
+{
+  "id": "b51ca09884",
+  "slug": "hc-patna-notice-with-regard-to-filling-up-of-the-vacancies-b51ca0-2",
+  "status": "rejected",
+  "title": "Notice With regard to filling up of the vacancies in the cadre of Civil Judge (Senior Division) against 10% quota for the year 2024-25.",
+  "organization": "Patna High Court",
+  "sourceId": "hc-patna",
+  "level": "state",
+  "state": "BR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": 42,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://patnahighcourt.gov.in/getfile/MTEyOTU=-awdKBUZfHao=",
+    "official": "https://patnahighcourt.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-27T12:38:35.116Z",
+  "updatedAt": "2026-11-27T12:38:35.116Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "vacancies"
+    ],
+    "evidence": {
+      "vacancies": "42 vacancies"
+    },
+    "reader": 2
+  },
+  "notes": "Rejected automatically: old notice (newest date mentioned: 2024).",
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Vacancies: from “42 vacancies”"
+}

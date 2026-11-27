@@ -1,0 +1,50 @@
+{
+  "id": "a55d6c1974",
+  "slug": "sail-rsp-conduct-of-personal-interaction-pi-for-engagement-a55d6c",
+  "status": "published",
+  "title": "RSP: Conduct of Personal Interaction (PI) for Engagement of Young Professionals for posts w.r.t. SSO, Ranchi & MTI, Ranchi – Advt. No. RSP/R-YP/2026-01 dated 03/07/2026",
+  "organization": "SAIL — Careers",
+  "sourceId": "sail",
+  "level": "central",
+  "state": null,
+  "category": "PSU",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-26",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_27112026_104505.pdf",
+    "official": "https://sailcareers.com/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-26",
+      "url": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_27112026_104505.pdf"
+    }
+  ],
+  "foundAt": "2026-11-27T12:38:35.116Z",
+  "updatedAt": "2026-11-27T12:57:41.852Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 26/11/2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 26/11/2026”",
+  "publishedAt": "2026-11-27T12:57:41.852Z"
+}

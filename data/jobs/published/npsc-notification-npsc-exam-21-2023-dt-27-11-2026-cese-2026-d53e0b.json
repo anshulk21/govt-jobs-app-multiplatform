@@ -1,0 +1,51 @@
+{
+  "id": "d53e0bbb7f",
+  "slug": "npsc-notification-npsc-exam-21-2023-dt-27-11-2026-cese-2026-d53e0b",
+  "status": "published",
+  "title": "Notification NPSC/EXAM-21 /2023 dt. 27.11.2026 (CESE 2026) New",
+  "organization": "Nagaland Public Service Commission",
+  "sourceId": "npsc",
+  "level": "state",
+  "state": "NL",
+  "category": "PSC",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-27",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://npsc.nagaland.gov.in/notification/179577365138572",
+    "official": "https://npsc.nagaland.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-27",
+      "url": "https://npsc.nagaland.gov.in/notification/179577365138572"
+    }
+  ],
+  "foundAt": "2026-11-27T12:38:35.116Z",
+  "updatedAt": "2026-11-27T12:57:41.852Z",
+  "extraction": {
+    "method": "page-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dt. 27.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the notice page automatically. Check each value against the notification:\n• Notification date: from “dt. 27.11.2026”",
+  "publishedAt": "2026-11-27T12:57:41.852Z"
+}

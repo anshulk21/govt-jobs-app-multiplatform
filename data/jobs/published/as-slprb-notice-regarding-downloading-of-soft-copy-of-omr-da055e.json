@@ -1,0 +1,51 @@
+{
+  "id": "da055efb70",
+  "slug": "as-slprb-notice-regarding-downloading-of-soft-copy-of-omr-da055e",
+  "status": "published",
+  "title": "Notice regarding downloading of Soft- copy of OMR Answer Sheet in connection with Departmental Examination held on 22-11-2026 for promotion to the rank of ASI (UB) Notice",
+  "organization": "State Level Police Recruitment Board, Assam",
+  "sourceId": "as-slprb",
+  "level": "state",
+  "state": "AS",
+  "category": "Police",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-27",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://slprbassam.in/pdf/Notice2026/27112026/notice_soft-copy_omr.pdf",
+    "official": "https://slprbassam.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-27",
+      "url": "https://slprbassam.in/pdf/Notice2026/27112026/notice_soft-copy_omr.pdf"
+    }
+  ],
+  "foundAt": "2026-11-27T12:38:35.116Z",
+  "updatedAt": "2026-11-27T12:57:41.852Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated:27-11-2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated:27-11-2026”",
+  "publishedAt": "2026-11-27T12:57:41.852Z"
+}

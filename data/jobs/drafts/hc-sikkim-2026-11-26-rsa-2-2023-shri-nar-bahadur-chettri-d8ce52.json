@@ -1,0 +1,42 @@
+{
+  "id": "d8ce52c439",
+  "slug": "hc-sikkim-2026-11-26-rsa-2-2023-shri-nar-bahadur-chettri-d8ce52",
+  "status": "draft",
+  "title": "2026-11-26 - RSA/2/2023 - SHRI NAR Bahadur Chettri (Khatiwada) and ANO. V/S SHRI DEVI LALL Khatiwada and ORS.",
+  "organization": "High Court of Sikkim",
+  "sourceId": "hc-sikkim",
+  "level": "state",
+  "state": "SK",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-10-16",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcs.gov.in/hcs/hg_orders/200400000022023_21.pdf",
+    "official": "https://hcs.gov.in/hcs/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-27T12:38:35.116Z",
+  "updatedAt": "2026-11-27T12:38:35.116Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 16.10.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 16.10.2026”"
+}

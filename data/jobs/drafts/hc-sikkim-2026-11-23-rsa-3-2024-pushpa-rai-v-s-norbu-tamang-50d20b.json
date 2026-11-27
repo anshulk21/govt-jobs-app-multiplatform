@@ -1,0 +1,42 @@
+{
+  "id": "50d20b4c9d",
+  "slug": "hc-sikkim-2026-11-23-rsa-3-2024-pushpa-rai-v-s-norbu-tamang-50d20b",
+  "status": "draft",
+  "title": "2026-11-23 - RSA/3/2024 - Pushpa Rai v/s Norbu Tamang",
+  "organization": "High Court of Sikkim",
+  "sourceId": "hc-sikkim",
+  "level": "state",
+  "state": "SK",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-05-31",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcs.gov.in/hcs/hg_orders/200400000032024_13.pdf",
+    "official": "https://hcs.gov.in/hcs/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-27T12:38:35.116Z",
+  "updatedAt": "2026-11-27T12:38:35.116Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 31.05.2026"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 31.05.2026”"
+}

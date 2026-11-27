@@ -1,0 +1,38 @@
+{
+  "id": "e55b403b0e",
+  "slug": "hc-rajasthan-high-court-2027-e55b40",
+  "status": "draft",
+  "title": "High Court 2027 — Rajasthan High Court",
+  "organization": "Rajasthan High Court",
+  "sourceId": "hc-rajasthan",
+  "level": "state",
+  "state": "RJ",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://hcraj.nic.in/hcraj/img/rhccal2027.pdf",
+    "official": "https://hcraj.nic.in/hcraj/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-27T12:38:35.116Z",
+  "updatedAt": "2026-11-27T12:38:35.116Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}

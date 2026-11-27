@@ -1,0 +1,50 @@
+{
+  "id": "124e6315ee",
+  "slug": "icmr-list-of-eligible-in-eligible-candidates-for-the-post-of-124e63",
+  "status": "published",
+  "title": "List of Eligible & In-Eligible Candidates for the post of Principal (Nursing College) advertised vide Advt. No. ICMR/Rectt/BMHRC/Principal/02/2026-RPCell at at ICMR-Bhopal…",
+  "organization": "ICMR",
+  "sourceId": "icmr",
+  "level": "central",
+  "state": null,
+  "category": "Health",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-05",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.icmr.gov.in/post/list-of-eligible-in-eligible-candidates-for-the-post-of-principal-nursing-college-advertised-vide-advt-no-icmr-rectt-bmhrc-principal-02-2026-rpcell-at-at-icmr-bhopal-memorial-hospital-and-research-centre-bmhrc-bhopal",
+    "official": "https://www.icmr.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-05",
+      "url": "https://www.icmr.gov.in/post/list-of-eligible-in-eligible-candidates-for-the-post-of-principal-nursing-college-advertised-vide-advt-no-icmr-rectt-bmhrc-principal-02-2026-rpcell-at-at-icmr-bhopal-memorial-hospital-and-research-centre-bmhrc-bhopal"
+    }
+  ],
+  "foundAt": "2026-11-27T12:38:35.116Z",
+  "updatedAt": "2026-11-27T12:57:41.852Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated: 5th November, 2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated: 5th November, 2026”",
+  "publishedAt": "2026-11-27T12:57:41.852Z"
+}

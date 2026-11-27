@@ -1,0 +1,42 @@
+{
+  "id": "c549cfe41e",
+  "slug": "hc-madhya-pradesh-26-nov-2026-monika-badgujar-vs-smt-pushpa-c549cf",
+  "status": "draft",
+  "title": "MONIKA BADGUJAR vs SMT. PUSHPA KAHAR - CR/00566/2025 Principal Seat Jabalpur",
+  "organization": "High Court of Madhya Pradesh",
+  "sourceId": "hc-madhya-pradesh",
+  "level": "state",
+  "state": "MP",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2025-03-12",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://mphc.gov.in/storage/upload/jabalpur/MPHCJB/2025/CR/566/CR_566_2025_FinalOrder_26-11-2026.pdf",
+    "official": "https://mphc.gov.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-27T12:38:35.116Z",
+  "updatedAt": "2026-11-27T12:38:35.116Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "dated 12.03.2025"
+    },
+    "reader": 2
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “dated 12.03.2025”"
+}
