@@ -15,8 +15,8 @@
   "fee": null,
   "dates": {
     "notification": null,
-    "applyStart": null,
-    "lastDate": null,
+    "applyStart": "2026-11-27",
+    "lastDate": "2026-12-26",
     "exam": null
   },
   "howToApply": null,
@@ -33,13 +33,18 @@
     }
   ],
   "foundAt": "2026-11-26T17:00:49.828Z",
-  "updatedAt": "2026-11-26T17:21:11.391Z",
+  "updatedAt": "2026-11-27T01:55:03.852Z",
   "extraction": {
-    "method": "link-only",
-    "fields": [],
-    "evidence": {},
+    "method": "page-regex",
+    "fields": [
+      "dates.lastDate",
+      "dates.applyStart"
+    ],
+    "evidence": {
+      "dates.lastDate": "Last date for printing your application 26/12/2026",
+      "dates.applyStart": "Commencement of online registration of application 27/11/2026"
+    },
     "reader": 2,
-    "error": "Page not read (HTTP 404)",
     "tries": 1
   },
   "autoPublished": true,

@@ -44,7 +44,8 @@
     "fields": [],
     "evidence": {},
     "reader": 2,
-    "error": "PDF not read (too large (23398064 bytes))"
+    "error": "PDF not read (timeout)",
+    "tries": 1
   },
   "autoPublished": true,
   "quiet": true,

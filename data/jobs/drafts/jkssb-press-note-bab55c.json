@@ -1,0 +1,39 @@
+{
+  "id": "bab55c4886",
+  "slug": "jkssb-press-note-bab55c",
+  "status": "draft",
+  "title": "Press Note — J&K Services Selection Board",
+  "organization": "J&K Services Selection Board",
+  "sourceId": "jkssb",
+  "level": "ut",
+  "state": "JK",
+  "category": "Subordinate Services",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://jkssb.nic.in/Pdf/Press_Note_26112026.pdf",
+    "official": "https://jkssb.nic.in/",
+    "apply": null
+  },
+  "timeline": [],
+  "foundAt": "2026-11-27T01:46:54.359Z",
+  "updatedAt": "2026-11-27T01:46:54.359Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2,
+    "tries": 1
+  },
+  "review": "Read from the PDF automatically. Check each value against the notification:"
+}
