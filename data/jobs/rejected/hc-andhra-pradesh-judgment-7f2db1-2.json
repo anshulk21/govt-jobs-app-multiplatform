@@ -1,7 +1,7 @@
 {
-  "id": "d74525867d",
-  "slug": "hc-andhra-pradesh-judgment-d74525",
-  "status": "draft",
+  "id": "7f2db17b08",
+  "slug": "hc-andhra-pradesh-judgment-7f2db1-2",
+  "status": "rejected",
   "title": "Judgment — High Court of Andhra Pradesh",
   "organization": "High Court of Andhra Pradesh",
   "sourceId": "hc-andhra-pradesh",
@@ -21,13 +21,13 @@
   },
   "howToApply": null,
   "links": {
-    "notification": "https://digi-services.aphc.ap.gov.in/eaphcr/docs/tel/206300302862021_4.pdf",
+    "notification": "https://digi-services.aphc.ap.gov.in/eaphcr/docs/sci/eng/250303163118_eng.pdf",
     "official": "https://aphc.gov.in/",
     "apply": null
   },
   "timeline": [],
-  "foundAt": "2026-11-07T17:46:42.561Z",
-  "updatedAt": "2026-11-07T17:46:42.561Z",
+  "foundAt": "2026-11-07T09:18:55.553Z",
+  "updatedAt": "2026-11-07T09:18:55.553Z",
   "extraction": {
     "method": "link-only",
     "fields": [],
@@ -36,5 +36,6 @@
     "error": "PDF not read (ETIMEDOUT: )",
     "tries": 3
   },
-  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (ETIMEDOUT: ))"
+  "notes": "Rejected automatically: unclear for 21+ days.",
+  "review": "Only the link was read. Fill in the details from the official notification.\n(PDF not read (timeout))"
 }
