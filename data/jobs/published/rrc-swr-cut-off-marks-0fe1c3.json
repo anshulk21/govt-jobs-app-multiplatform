@@ -1,0 +1,52 @@
+{
+  "id": "0fe1c3ab18",
+  "slug": "rrc-swr-cut-off-marks-0fe1c3",
+  "status": "published",
+  "title": "Cut-off Marks — RRC South Western Railway (Hubballi)",
+  "organization": "RRC South Western Railway (Hubballi)",
+  "sourceId": "rrc-swr",
+  "level": "central",
+  "state": null,
+  "category": "Railway",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": null,
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://www.rrchubli.in/pdf/PET%20cut%20off%20against%20CEN%20No%2009-2025.pdf",
+    "official": "https://www.rrchubli.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": null,
+      "url": "https://www.rrchubli.in/pdf/PET%20cut%20off%20against%20CEN%20No%2009-2025.pdf"
+    },
+    {
+      "stage": "result",
+      "date": "2026-11-28",
+      "url": "https://www.rrchubli.in/pdf/PET%20cut%20off%20against%20CEN%20No%2009-2025.pdf"
+    }
+  ],
+  "foundAt": "2026-11-28T07:59:03.175Z",
+  "updatedAt": "2026-11-28T08:18:24.721Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [],
+    "evidence": {},
+    "reader": 2
+  },
+  "autoPublished": true,
+  "quiet": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:",
+  "publishedAt": "2026-11-28T08:18:24.721Z"
+}

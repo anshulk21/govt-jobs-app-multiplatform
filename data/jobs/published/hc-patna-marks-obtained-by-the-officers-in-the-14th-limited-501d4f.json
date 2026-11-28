@@ -1,0 +1,50 @@
+{
+  "id": "501d4fb98d",
+  "slug": "hc-patna-marks-obtained-by-the-officers-in-the-14th-limited-501d4f",
+  "status": "published",
+  "title": "Marks obtained by the officers in the 14th Limited Competitive Examination held for filling up of the vacancies in the cadre of District Judge (Entry Level), against 10% quota…",
+  "organization": "Patna High Court",
+  "sourceId": "hc-patna",
+  "level": "state",
+  "state": "BR",
+  "category": "High Court",
+  "postName": null,
+  "vacancies": null,
+  "qualifications": [],
+  "ageLimit": null,
+  "fee": null,
+  "dates": {
+    "notification": "2026-11-26",
+    "applyStart": null,
+    "lastDate": null,
+    "exam": null
+  },
+  "howToApply": null,
+  "links": {
+    "notification": "https://patnahighcourt.gov.in/EXAM/LoginJOLimited10.aspx",
+    "official": "https://patnahighcourt.gov.in/",
+    "apply": null
+  },
+  "timeline": [
+    {
+      "stage": "notification",
+      "date": "2026-11-26",
+      "url": "https://patnahighcourt.gov.in/EXAM/LoginJOLimited10.aspx"
+    }
+  ],
+  "foundAt": "2026-11-28T07:59:03.175Z",
+  "updatedAt": "2026-11-28T08:18:24.721Z",
+  "extraction": {
+    "method": "pdf-regex",
+    "fields": [
+      "dates.notification"
+    ],
+    "evidence": {
+      "dates.notification": "Dated : 26.11.2026"
+    },
+    "reader": 2
+  },
+  "autoPublished": true,
+  "review": "Read from the PDF automatically. Check each value against the notification:\n• Notification date: from “Dated : 26.11.2026”",
+  "publishedAt": "2026-11-28T08:18:24.721Z"
+}
